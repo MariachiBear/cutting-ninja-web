@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useUserStore } from '~/stores/user'
+import { useUserStore } from '~/store/user'
 
-const user = useUserStore()
-const name = ref(user.savedName)
+const userState = useUserStore.getState()
+const name = ref(userState.savedName)
 
 const router = useRouter()
 const go = () => {
@@ -11,6 +11,7 @@ const go = () => {
 }
 
 const { t } = useI18n()
+
 </script>
 
 <template>

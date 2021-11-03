@@ -1,16 +1,18 @@
-<script setup lang="ts">
-// https://github.com/vueuse/head
+<script setup lang="ts">import { useUserStore } from './store/user'
 
-// they will be rendered correctly in the html results with vite-ssg
+const isReady = ref(false)
+
 useHead({
   title: 'URL Shortener - RUBN/COND',
-  meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
-  ],
+})
+
+tryOnMounted(async() => {
+  await useUserStore.init()
+  isReady.value = true
 })
 
 </script>
 
 <template>
-  <router-view />
+  <router-view v-if="isReady" />
 </template>
