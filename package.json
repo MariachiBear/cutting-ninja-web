@@ -1,17 +1,13 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "cross-env NODE_ENV=production vite-ssg build",
-    "dev": "vite --port 3333 --open",
-    "lint": "eslint \"**/*.{vue,ts,js}\"",
-    "test": "cypress open",
-    "preview": "vite preview",
-    "preview-https": "serve dist",
-    "typecheck": "vue-tsc --noEmit"
+  "author": "Rubén Conde <dev@rubn.xyz>",
+  "bugs": {
+    "url": "https://github.com/RubenConde/url-shortener-front/issues"
   },
   "dependencies": {
     "@vueuse/core": "6.7.4",
     "@vueuse/head": "0.6.0",
+    "base-64": "^1.0.0",
+    "idb-keyval": "^6.0.3",
     "nprogress": "0.2.0",
     "pinia": "2.0.0",
     "prism-theme-vars": "0.2.2",
@@ -20,10 +16,12 @@
     "vue-i18n": "9.1.9",
     "vue-router": "4.0.12"
   },
+  "description": "URL Shortener front-end site",
   "devDependencies": {
     "@antfu/eslint-config": "0.10.0",
     "@iconify-json/carbon": "1.0.8",
     "@intlify/vite-plugin-vue-i18n": "3.0.0",
+    "@types/base-64": "^1.0.0",
     "@types/markdown-it-link-attributes": "3.0.1",
     "@types/nprogress": "0.2.0",
     "@vitejs/plugin-vue": "1.9.4",
@@ -51,5 +49,23 @@
     "vite-plugin-windicss": "1.4.12",
     "vite-ssg": "0.15.6",
     "vue-tsc": "0.28.10"
-  }
+  },
+  "homepage": "https://github.com/RubenConde/url-shortener-front#readme",
+  "license": "MIT",
+  "name": "url-shortener-front",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenConde/url-shortener-front.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "dev": "cross-env NODE_ENV=development vite --port 3333 --open",
+    "lint": "eslint \"**/*.{vue,ts,js}\"",
+    "preview": "vite preview",
+    "preview-https": "serve dist",
+    "test": "cypress open",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "version": "0.0.0"
 }

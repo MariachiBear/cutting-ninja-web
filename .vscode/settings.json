@@ -1,5 +1,20 @@
 {
-  "cSpell.words": ["Vitesse"],
+  "cSpell.words": [
+    "antfu",
+    "attributify",
+    "iconify",
+    "intlify",
+    "noopener",
+    "nprogress",
+    "pinia",
+    "pnpm",
+    "typecheck",
+    "unplugin",
+    "vitejs",
+    "Vitesse",
+    "vueuse",
+    "windicss"
+  ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,

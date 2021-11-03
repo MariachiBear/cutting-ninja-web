@@ -1,5 +1,5 @@
-import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
+import { defineConfig } from 'windicss/helpers'
 import typography from 'windicss/plugin/typography'
 
 export default defineConfig({
@@ -10,6 +10,7 @@ export default defineConfig({
   plugins: [
     typography(),
   ],
+
   theme: {
     extend: {
       typography: {
