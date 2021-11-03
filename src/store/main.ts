@@ -1,6 +1,4 @@
-import { createStore, del, get, set } from 'idb-keyval'
-
-export const indexedDB = createStore('RUBN/COND', 'URL-Shortener')
+import { del, get, set } from 'idb-keyval'
 
 export abstract class Store<T extends Object> {
   protected state: T
@@ -42,11 +40,11 @@ export abstract class PersistentStore<T extends Object> extends Store<T> {
   async init() {
     if (!this.isInitialized.value) {
       // Sets initial state to IDB
-      await set(this.initialStoreName, JSON.stringify(this.getState()), indexedDB)
+      await set(this.initialStoreName, JSON.stringify(this.getState()))
 
-      const initialStateFromIDB: string | undefined = await get(this.initialStoreName, indexedDB)
+      const initialStateFromIDB: string | undefined = await get(this.initialStoreName)
 
-      const stateFromIDB: string | undefined = await get(this.storeName, indexedDB)
+      const stateFromIDB: string | undefined = await get(this.storeName)
 
       // Sets state to IDB
       Object.assign(this.state, JSON.parse(String(stateFromIDB ?? initialStateFromIDB)))
@@ -55,7 +53,7 @@ export abstract class PersistentStore<T extends Object> extends Store<T> {
       watch(
         () => this.state,
         async(val) => {
-          await set(this.storeName, JSON.stringify(val), indexedDB)
+          await set(this.storeName, JSON.stringify(val))
         },
         { deep: true },
       )
@@ -68,7 +66,7 @@ export abstract class PersistentStore<T extends Object> extends Store<T> {
     * Resets all values to the initial state.
     */
   async reset() {
-    const initialStateFromIDB: string | undefined = await get(this.initialStoreName, indexedDB)
+    const initialStateFromIDB: string | undefined = await get(this.initialStoreName)
 
     if (initialStateFromIDB)
       Object.assign(this.state, JSON.parse(initialStateFromIDB))
@@ -79,7 +77,7 @@ export abstract class PersistentStore<T extends Object> extends Store<T> {
     */
   async delete() {
     await this.reset()
-    await del(this.initialStoreName, indexedDB)
-    await del(this.storeName, indexedDB)
+    await del(this.initialStoreName)
+    await del(this.storeName)
   }
 }
