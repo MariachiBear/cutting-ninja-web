@@ -63,7 +63,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production vite-ssg build",
     "dev": "cross-env NODE_ENV=development vite --port 3333 --open",
-    "lint": "eslint \"**/*.{vue,ts,js}\"",
+    "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore . --color",
+    "eslint:format": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore . --fix",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "cypress open",

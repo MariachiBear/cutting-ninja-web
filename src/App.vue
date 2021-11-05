@@ -1,18 +1,18 @@
-<script setup lang="ts">import { useUserStore } from './store/user'
+<script setup lang="ts">
+import { useUserStore } from './store/user';
 
-const isReady = ref(false)
+const isReady = ref(false);
 
 useHead({
-  title: 'URL Shortener - RUBN/COND',
-})
+   title: 'URL Shortener - RUBN/COND',
+});
 
-tryOnMounted(async() => {
-  await useUserStore.init()
-  isReady.value = true
-})
-
+tryOnMounted(async () => {
+   await useUserStore.init();
+   isReady.value = true;
+});
 </script>
 
 <template>
-  <router-view v-if="isReady" />
+   <router-view v-if="isReady" />
 </template>

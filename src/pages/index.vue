@@ -1,9 +1,8 @@
-
 <template>
-  <Hero />
+   <Hero />
 </template>
 
 <route lang="yaml">
 meta:
-  layout: home
+   layout: home
 </route>

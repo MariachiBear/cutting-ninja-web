@@ -4,17 +4,17 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
-    CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
-    CarbonLanguage: typeof import('~icons/carbon/language')['default']
-    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
+    CarbonCampsite: typeof import('~icons/carbon/campsite')['default'];
+    CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default'];
+    CarbonLanguage: typeof import('~icons/carbon/language')['default'];
+    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default'];
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
-    CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default']
+    CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default'];
     CarbonSun: typeof import('~icons/carbon/sun')['default']
-    CarbonWarning: typeof import('~icons/carbon/warning')['default']
+    CarbonWarning: typeof import('~icons/carbon/warning')['default'];
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
-    MdiGit: typeof import('~icons/mdi/git')['default']
+    MdiGit: typeof import('~icons/mdi/git')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']
     MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
     MdiKnife: typeof import('~icons/mdi/knife')['default']
@@ -25,8 +25,8 @@ declare module 'vue' {
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     README: typeof import('./components/README.md')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
-    SocialLink: typeof import('./components/Footer/SocialLink.vue')['default']
-    TextLink: typeof import('./components/Footer/TextLink.vue')['default']
+    SocialLink: typeof import('./components/Footer/SocialLink.vue')['default'];
+    TextLink: typeof import('./components/Footer/TextLink.vue')['default'];
   }
 }
 
