@@ -11,7 +11,7 @@ const extendedColors = {
   'melon': '#FFB4A2',
   'old-lavender': '#6D6875',
   'pastel-pink': '#E5989B',
-  'rocket-metallic': '#7A7682',
+  'rocket-metallic': '#4e4b53',
   'mountbatten-pink': '#917681',
 }
 

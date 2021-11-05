@@ -12,10 +12,21 @@ declare module 'vue' {
     CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     CarbonWarning: typeof import('~icons/carbon/warning')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
+    Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
+    MdiGit: typeof import('~icons/mdi/git')['default']
+    MdiGithub: typeof import('~icons/mdi/github')['default']
+    MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
+    MdiKnife: typeof import('~icons/mdi/knife')['default']
+    MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
+    MdiLoginVariant: typeof import('~icons/mdi/login-variant')['default']
+    MdiLogoutVariant: typeof import('~icons/mdi/logout-variant')['default']
+    MdiTwitter: typeof import('~icons/mdi/twitter')['default']
+    Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     README: typeof import('./components/README.md')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
+    SocialLink: typeof import('./components/Footer/SocialLink.vue')['default']
+    TextLink: typeof import('./components/Footer/TextLink.vue')['default']
   }
 }
 

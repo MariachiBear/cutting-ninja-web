@@ -1,17 +1,15 @@
-<script setup lang="ts">
-
-</script>
 
 <template>
-  <div class="bg-unbleached-silk text-warm-gray-800 min-h-screen w-1/1 overflow-hidden flex flex-col justify-center items-center">
-    <section class="flex flex-col lg:flex-row justify-between w-11/12 xl:space-x-10">
+  <div class="bg-unbleached-silk dark:bg-jet min-h-screen w-1/1 overflow-hidden flex flex-col justify-center items-center relative">
+    <Navbar />
+    <section class="flex flex-col lg:flex-row justify-between w-11/12 md:gap-10">
       <!-- content - start -->
       <div class="xl:w-6/12 flex flex-col justify-center items-center lg:items-start sm:text-center lg:text-left lg:py-12 xl:py-24">
         <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">
           Revolutionary way to build the web
         </h1>
 
-        <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">
+        <p class="lg:w-4/5 xl:text-lg leading-relaxed mb-8 md:mb-12">
           This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.
         </p>
 
@@ -21,8 +19,8 @@
 
       <!-- image - start -->
       <div class="xl:w-6/12 lg:h-full bg-gray-100 overflow-hidden shadow-2xl rounded-lg hidden lg:flex relative">
-        <div class="w-full h-full bg-jet absolute opacity-90 flex flex-col justify-center items-center">
-          <p class="lg:w-4/5 text-warm-gray-300 xl:text-lg leading-relaxed mb-8 md:mb-12">
+        <div class="w-full h-full bg-jet dark:bg-unbleached-silk absolute flex flex-col justify-center items-center overflow-hidden">
+          <p class="lg:w-4/5 xl:text-lg leading-relaxed mb-8 md:mb-12 text-warm-gray-300 dark:text-warm-gray-800">
             This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.
           </p>
         </div>
