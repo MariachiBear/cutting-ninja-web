@@ -3,31 +3,31 @@ lockfileVersion: 5.3
 specifiers:
   '@antfu/eslint-config': 0.10.0
   '@iconify-json/carbon': 1.0.9
-  '@iconify-json/mdi': ^1.0.8
+  '@iconify-json/mdi': 1.0.8
   '@intlify/vite-plugin-vue-i18n': 3.0.0
-  '@types/base-64': ^1.0.0
+  '@types/base-64': 1.0.0
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 1.9.4
   '@vue/compiler-sfc': 3.2.21
-  '@vue/eslint-config-prettier': ^6.0.0
+  '@vue/eslint-config-prettier': 6.0.0
   '@vue/server-renderer': 3.2.21
   '@vueuse/core': 6.7.6
   '@vueuse/head': 0.6.0
-  base-64: ^1.0.0
+  axios: ^0.24.0
   critters: 0.0.14
   cross-env: 7.0.3
   cypress: 8.7.0
   eslint: 8.1.0
   eslint-plugin-cypress: 2.12.1
-  eslint-plugin-prettier: ^4.0.0
+  eslint-plugin-prettier: 4.0.0
   https-localhost: 4.7.0
-  idb-keyval: ^6.0.3
+  idb-keyval: 6.0.3
   markdown-it-link-attributes: 3.0.0
   markdown-it-prism: 2.2.1
   nprogress: 0.2.0
   pnpm: 6.20.3
-  prettier: ^2.4.1
+  prettier: 2.4.1
   prism-theme-vars: 0.2.2
   typescript: 4.4.4
   unplugin-auto-import: 0.4.13
@@ -50,7 +50,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 6.7.6_vue@3.2.21
   '@vueuse/head': 0.6.0_vue@3.2.21
-  base-64: 1.0.0
+  axios: 0.24.0
   idb-keyval: 6.0.3
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
@@ -2255,6 +2255,14 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: true
 
+  /axios/0.24.0:
+    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+    dependencies:
+      follow-redirects: 1.14.5
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /babel-plugin-dynamic-import-node/2.3.3:
     resolution: {integrity: sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==}
     dependencies:
@@ -2307,10 +2315,6 @@ packages:
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
-
-  /base-64/1.0.0:
-    resolution: {integrity: sha512-kwDPIFCGx0NZHog36dj+tHiwP4QMzsZ3AgMViUBKI0+V5n4U0ufTCUMhnQ04diaRI8EX/QcPfql7zlhZ7j4zgg==}
-    dev: false
 
   /bcrypt-pbkdf/1.0.2:
     resolution: {integrity: sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=}
@@ -3897,6 +3901,16 @@ packages:
   /flatted/3.2.2:
     resolution: {integrity: sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==}
     dev: true
+
+  /follow-redirects/1.14.5:
+    resolution: {integrity: sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}

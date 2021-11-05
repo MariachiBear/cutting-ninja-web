@@ -6,6 +6,7 @@
   "dependencies": {
     "@vueuse/core": "6.7.6",
     "@vueuse/head": "0.6.0",
+    "axios": "^0.24.0",
     "idb-keyval": "6.0.3",
     "nprogress": "0.2.0",
     "prism-theme-vars": "0.2.2",
