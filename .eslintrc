@@ -1,7 +1,9 @@
 {
-  "extends": [
-    "@antfu"
-  ],
+ "extends": [
+  "@antfu/eslint-config",
+  "@vue/prettier",
+  "@vue/prettier/@typescript-eslint"
+],
   "rules": {
     "semi": "off",
     "@typescript-eslint/semi": [
