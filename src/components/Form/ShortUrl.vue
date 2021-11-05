@@ -19,7 +19,6 @@
       <button href="#_" class="relative px-5 py-2 font-medium group !outline-none">
          <span
             class="
-               dark:hidden
                absolute
                inset-0
                w-full
@@ -31,12 +30,12 @@
                translate-x-0
                -skew-x-12
                bg-english-lavender
+               dark:bg-mountbatten-pink dark:group-hover:bg-english-lavender
                group-hover:bg-mountbatten-pink group-hover:skew-x-12
             "
          ></span>
          <span
             class="
-               dark:hidden
                absolute
                inset-0
                w-full
@@ -47,43 +46,8 @@
                transform
                skew-x-12
                bg-mountbatten-pink
+               dark:bg-english-lavender dark:group-hover:bg-mountbatten-pink
                group-hover:bg-english-lavender group-hover:-skew-x-12
-            "
-         ></span>
-
-         <span
-            class="
-               hidden
-               dark:block
-               absolute
-               inset-0
-               w-full
-               h-full
-               transition-all
-               duration-400
-               ease-out
-               transform
-               skew-x-12
-               bg-mountbatten-pink
-               group-hover:bg-english-lavender group-hover:-skew-x-12
-            "
-         ></span>
-         <span
-            class="
-               hidden
-               dark:block
-               absolute
-               inset-0
-               w-full
-               h-full
-               transition-all
-               duration-400
-               ease-out
-               transform
-               translate-x-0
-               -skew-x-12
-               bg-english-lavender
-               group-hover:bg-mountbatten-pink group-hover:skew-x-12
             "
          ></span>
 
