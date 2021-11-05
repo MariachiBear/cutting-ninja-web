@@ -48,6 +48,18 @@ p,h1 {
   hover:text-english-lavender;
 }
 
+*::-webkit-scrollbar-track {
+   @apply bg-old-lavender rounded-none ;
+}
+
+*::-webkit-scrollbar {
+   @apply w-1 md:w-2 lg:w-2.5 ;
+}
+
+*::-webkit-scrollbar-thumb {
+   @apply bg-english-lavender  rounded-none;
+}
+
 .text-btn {
   @apply inline-block cursor-pointer select-none
     transition-all duration-300 ease-in-out

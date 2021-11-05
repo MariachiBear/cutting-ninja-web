@@ -1,34 +1,34 @@
 {
-  "cSpell.words": [
-    "antfu",
-    "attributify",
-    "iconify",
-    "intlify",
-    "keyval",
-    "noopener",
-    "nprogress",
-    "Parens",
-    "pinia",
-    "pnpm",
-    "RUBN",
-    "typecheck",
-    "unplugin",
-    "vitejs",
-    "Vitesse",
-    "vueuse",
-    "windi",
-    "windicss"
-  ],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": "locales",
-  "i18n-ally.sortKeys": true,
-  "prettier.enable": false,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-  },
-  "files.associations": {
-    "*.css": "postcss",
-  },
-  "editor.formatOnSave": true,
+   "cSpell.words": [
+      "antfu",
+      "attributify",
+      "iconify",
+      "intlify",
+      "keyval",
+      "noopener",
+      "nprogress",
+      "Parens",
+      "pinia",
+      "pnpm",
+      "RUBN",
+      "typecheck",
+      "unplugin",
+      "vitejs",
+      "Vitesse",
+      "vueuse",
+      "windi",
+      "windicss"
+   ],
+   "i18n-ally.keystyle": "nested",
+   "i18n-ally.localesPaths": "locales",
+   "i18n-ally.sortKeys": true,
+   "prettier.enable": true,
+   "typescript.tsdk": "node_modules/typescript/lib",
+   "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+   },
+   "files.associations": {
+      "*.css": "postcss"
+   },
+   "editor.formatOnSave": true
 }
