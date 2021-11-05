@@ -22,6 +22,8 @@ declare module 'vue' {
     MdiLoginVariant: typeof import('~icons/mdi/login-variant')['default']
     MdiLogoutVariant: typeof import('~icons/mdi/logout-variant')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
+    MdiWeatherNight: typeof import('~icons/mdi/weather-night')['default']
+    MdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     README: typeof import('./components/README.md')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']

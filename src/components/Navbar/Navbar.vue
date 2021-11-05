@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { isDark, toggleDark } from '~/composables';
 
+const isDarkDelayed = useDebounce(isDark, 200);
+
 const { t } = useI18n();
 </script>
 
@@ -17,20 +19,36 @@ const { t } = useI18n();
 
       <nav class="flex gap-3 md:gap-6">
          <button
-            class="icon-btn !outline-none text-xl xl:text-2xl"
+            class="icon-btn !outline-none text-xl xl:text-2xl relative"
             :title="t('button.toggle_dark')"
             @click="toggleDark()"
          >
-            <carbon-moon v-if="isDark" />
-            <carbon-sun v-else />
+            <mdi-weather-night
+               v-if="isDarkDelayed"
+               class="animate-spin dark:animate-none transition-opacity duration-300"
+               :class="[!isDark ? 'opacity-0' : 'opacity-100']"
+            />
+            <mdi-white-balance-sunny
+               v-else
+               class="animate-none dark:animate-spin transition-opacity duration-300"
+               :class="[isDark ? 'opacity-0' : 'opacity-100']"
+            />
          </button>
          <button
             class="icon-btn !outline-none text-xl xl:text-2xl"
             :title="t('button.toggle_dark')"
             @click="toggleDark()"
          >
-            <mdi-logout-variant v-if="isDark" />
-            <mdi-login-variant v-else />
+            <mdi-logout-variant
+               v-if="isDarkDelayed"
+               class="transition-opacity duration-600"
+               :class="[!isDark ? 'opacity-0' : 'opacity-100']"
+            />
+            <mdi-login-variant
+               v-else
+               class="transition-opacity duration-600"
+               :class="[isDark ? 'opacity-0' : 'opacity-100']"
+            />
          </button>
       </nav>
    </header>

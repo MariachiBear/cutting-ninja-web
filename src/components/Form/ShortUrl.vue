@@ -87,14 +87,9 @@
             "
          ></span>
 
-         <span
-            class="
-               relative
-               text-warm-gray-50
-               dark:text-warm-gray-700 dark:group-hover:text-warm-gray-50 dark:duration-200
-            "
-            >Short that URL</span
-         >
+         <span class="relative text-warm-gray-50 dark:text-warm-gray-200 dark:duration-200">
+            Short that URL
+         </span>
       </button>
    </form>
 </template>
