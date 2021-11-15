@@ -14,20 +14,27 @@ declare module 'vue' {
     CarbonWarning: typeof import('~icons/carbon/warning')['default'];
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
+    MdiDelete: typeof import('~icons/mdi/delete')['default']
     MdiGit: typeof import('~icons/mdi/git')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']
     MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
     MdiKnife: typeof import('~icons/mdi/knife')['default']
+    MdiLink: typeof import('~icons/mdi/link')['default']
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
+    MdiLinkVariant: typeof import('~icons/mdi/link-variant')['default']
     MdiLoginVariant: typeof import('~icons/mdi/login-variant')['default']
     MdiLogoutVariant: typeof import('~icons/mdi/logout-variant')['default']
+    MdiTableEye: typeof import('~icons/mdi/table-eye')['default']
+    MdiTableEyeOff: typeof import('~icons/mdi/table-eye-off')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
+    MdiVariant: typeof import('~icons/mdi/variant')['default']
     MdiWeatherNight: typeof import('~icons/mdi/weather-night')['default']
     MdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     README: typeof import('./components/README.md')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
     SocialLink: typeof import('./components/Footer/SocialLink.vue')['default'];
+    StoredUrls: typeof import('./components/Table/StoredUrls.vue')['default']
     TextLink: typeof import('./components/Footer/TextLink.vue')['default'];
   }
 }
