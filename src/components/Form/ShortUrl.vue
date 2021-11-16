@@ -2,13 +2,16 @@
 import { useURLStore } from '~/store/url';
 
 const url = ref<string>();
+const isLoading = ref(false);
 
 const isButtonDisabled = computed(() => !url.value);
 
-const onSubmit = () => {
+const onSubmit = async () => {
    if (url.value) {
-      useURLStore.shortUrl(url.value);
+      isLoading.value = true;
+      await useURLStore.shortUrl(url.value).then(() => useURLStore.toggleIsTableVisible(true));
       url.value = '';
+      isLoading.value = false;
    }
 };
 </script>
@@ -45,6 +48,9 @@ const onSubmit = () => {
             transition-opacity
             duration-200
             disabled:cursor-not-allowed disabled:opacity-50
+            flex flex-row
+            justify-center
+            items-center
          "
       >
          <span
@@ -85,7 +91,11 @@ const onSubmit = () => {
             ]"
          ></span>
 
-         <span class="relative text-warm-gray-50 dark:text-warm-gray-200 dark:duration-200">
+         <mdi-loading
+            v-if="isLoading"
+            class="relative text-warm-gray-50 dark:text-warm-gray-200 animate-spin text-xl"
+         />
+         <span v-else class="relative text-warm-gray-50 dark:text-warm-gray-200">
             Short that URL
          </span>
       </button>

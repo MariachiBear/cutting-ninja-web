@@ -3,9 +3,7 @@ import { useURLStore } from '~/store/url';
 
 const urlState = useURLStore.getState();
 
-tryOnMounted(() => {
-   useURLStore.updateStoredUrl();
-});
+// useIntervalFn(() => useURLStore.updateStoredUrl(), 1000);
 </script>
 
 <template>
@@ -38,7 +36,7 @@ tryOnMounted(() => {
                         font-semibold
                         px-6
                         py-3
-                        text-left text-xs
+                        text-center text-xs
                         uppercase
                      "
                   >
@@ -56,24 +54,7 @@ tryOnMounted(() => {
                         border-l-0 border-r-0
                         whitespace-nowrap
                         font-semibold
-                        text-left
-                     "
-                  >
-                     Visits
-                  </th>
-                  <th
-                     class="
-                        px-6
-                        align-middle
-                        border border-solid border-warm-gray-300
-                        dark:border-warm-gray-700
-                        py-3
-                        text-xs
-                        uppercase
-                        border-l-0 border-r-0
-                        whitespace-nowrap
-                        font-semibold
-                        text-left
+                        text-center
                      "
                   >
                      Short name
@@ -90,7 +71,25 @@ tryOnMounted(() => {
                         border-l-0 border-r-0
                         whitespace-nowrap
                         font-semibold
-                        text-left
+                        text-center
+                     "
+                  >
+                     Visits
+                  </th>
+
+                  <th
+                     class="
+                        px-6
+                        align-middle
+                        border border-solid border-warm-gray-300
+                        dark:border-warm-gray-700
+                        py-3
+                        text-xs
+                        uppercase
+                        border-l-0 border-r-0
+                        whitespace-nowrap
+                        font-semibold
+                        text-center
                      "
                   >
                      Actions
@@ -107,16 +106,20 @@ tryOnMounted(() => {
                      dark:border-warm-gray-700
                   "
                >
-                  <th class="px-6 text-xs whitespace-nowrap truncate max-w-60" :title="url.longUrl">
+                  <th
+                     class="px-6 text-xs whitespace-nowrap truncate max-w-60 text-left"
+                     :title="url.longUrl"
+                  >
                      {{ url.longUrl }}
                   </th>
-                  <td class="px-6 text-xs whitespace-nowrap">
-                     {{ url.visits }}
-                  </td>
-                  <td class="px-6 text-xs whitespace-nowrap">
+
+                  <td class="px-6 text-xs whitespace-nowrap text-center">
                      {{ url.shortUrl }}
                   </td>
-                  <td class="px-6 py-2 text-lg flex flex-row">
+                  <td class="px-6 text-xs whitespace-nowrap text-center filter blur-sm">
+                     {{ url.visits }}
+                  </td>
+                  <td class="px-6 py-2 text-lg flex flex-row justify-center">
                      <a
                         :href="`https://rubn.xyz/${url.shortUrl}`"
                         target="_blank"
