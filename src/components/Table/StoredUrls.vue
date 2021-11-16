@@ -11,160 +11,92 @@ whenever(copied, () => console.log(text.value, 'copied'));
 </script>
 
 <template>
-   <div class="break-words flex flex-col h-full relative transition-colors w-full">
-      <div class="flex flex-col justify-center h-11">
-         <h3 class="w-full px-2 font-semibold text-base dark:text-warm-gray-800 text-warm-gray-300">
-            Your URL's
-         </h3>
-      </div>
+   <div class="w-full h-full overflow-auto">
+      <table class="w-full h-full relative">
+         <thead>
+            <tr
+               class="
+                  all-300
+                  dark:shadow-white
+                  lg:shadow-white lg:dark:shadow-black
+                  main-theme-bg-inverse
+                  shadow
+                  sticky
+                  text-theme-inverse
+                  top-0
+                  z-50
+               "
+            >
+               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+                  Page name
+               </th>
+               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+                  Short name
+               </th>
+               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+                  Visits
+               </th>
+               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+                  Actions
+               </th>
+            </tr>
+         </thead>
 
-      <div class="block w-full overflow-x-auto h-full">
-         <table
-            class="
-               items-center
-               bg-transparent
-               w-full
-               border-collapse
-               dark:text-warm-gray-800
-               text-warm-gray-300
-            "
-         >
-            <thead>
-               <tr>
-                  <th
-                     class="
-                        border border-solid border-warm-gray-300 border-l-0 border-r-0
-                        dark:border-warm-gray-700
-                        font-semibold
-                        px-6
-                        py-3
-                        text-center text-xs
-                        uppercase
-                     "
-                  >
-                     Page name
-                  </th>
-                  <th
-                     class="
-                        px-6
-                        align-middle
-                        border border-solid border-warm-gray-300
-                        dark:border-warm-gray-700
-                        py-3
-                        text-xs
-                        uppercase
-                        border-l-0 border-r-0
-                        whitespace-nowrap
-                        font-semibold
-                        text-center
-                     "
-                  >
-                     Short name
-                  </th>
-                  <th
-                     class="
-                        px-6
-                        align-middle
-                        border border-solid border-warm-gray-300
-                        dark:border-warm-gray-700
-                        py-3
-                        text-xs
-                        uppercase
-                        border-l-0 border-r-0
-                        whitespace-nowrap
-                        font-semibold
-                        text-center
-                     "
-                  >
-                     Visits
-                  </th>
-
-                  <th
-                     class="
-                        px-6
-                        align-middle
-                        border border-solid border-warm-gray-300
-                        dark:border-warm-gray-700
-                        py-3
-                        text-xs
-                        uppercase
-                        border-l-0 border-r-0
-                        whitespace-nowrap
-                        font-semibold
-                        text-center
-                     "
-                  >
-                     Actions
-                  </th>
-               </tr>
-            </thead>
-
-            <tbody>
-               <tr
-                  v-for="(url, index) in urlState.storedUrls"
-                  :key="index"
-                  class="
-                     border border-solid border-t-0 border-l-0 border-r-0 border-warm-gray-300
-                     dark:border-warm-gray-700
-                  "
+         <tbody>
+            <tr
+               v-for="(url, index) in urlState.storedUrls"
+               :key="index"
+               class="
+                  border border-solid border-t-0 border-l-0 border-r-0 border-warm-gray-600
+                  colors-300
+                  dark:border-warm-gray-300
+                  lg:border-warm-gray-300 lg:dark:border-warm-gray-600
+                  main-theme-bg-inverse
+                  text-theme-inverse
+               "
+            >
+               <th
+                  class="max-w-50 px-3 text-left text-xs truncate whitespace-nowrap"
+                  :title="url.longUrl"
                >
-                  <th
-                     class="px-6 text-xs whitespace-nowrap truncate max-w-60 text-left"
-                     :title="url.longUrl"
-                  >
-                     {{ url.longUrl }}
-                  </th>
+                  {{ url.longUrl }}
+               </th>
 
-                  <td class="px-6 text-xs whitespace-nowrap text-center">
-                     {{ url.shortUrl }}
-                  </td>
-                  <td class="px-6 text-xs whitespace-nowrap text-center filter blur-sm">
-                     {{ url.visits }}
-                  </td>
-                  <td class="px-6 py-2 text-lg flex flex-row justify-center gap-1">
-                     <a
-                        :href="`https://rubn.xyz/${url.shortUrl}`"
-                        target="_blank"
-                        class="
-                           text-blue-400
-                           dark:text-blue-400
-                           align-middle
-                           flex flex-row
-                           items-center
-                        "
-                     >
-                        <mdi-link-variant />
-                     </a>
-                     <button
-                        class="
-                           !outline-none
-                           text-red-400
-                           dark:text-red-400
-                           align-middle
-                           flex flex-row
-                           items-center
-                        "
-                        @click="deleteUrl(url)"
-                     >
-                        <mdi-delete />
-                     </button>
-                     <button
-                        class="
-                           !outline-none
-                           text-warm-gray-300
-                           dark:text-warm-gray-700
-                           align-middle
-                           flex flex-row
-                           items-center
-                        "
-                        @click="copy(`https://rubn.xyz/${url.shortUrl}`)"
-                     >
-                        <mdi-content-copy />
-                     </button>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
+               <td class="px-3 text-center text-xs whitespace-nowrap">
+                  {{ url.shortUrl }}
+               </td>
+               <td class="blur-sm filter px-3 text-center text-xs whitespace-nowrap">
+                  {{ url.visits }}
+               </td>
+               <td class="flex flex-row gap-1 justify-center px-3 py-2 text-lg">
+                  <a
+                     :href="`https://rubn.xyz/${url.shortUrl}`"
+                     target="_blank"
+                     class="
+                        text-blue-400
+                        dark:text-blue-400
+                        align-middle
+                        flex flex-row
+                        items-center
+                     "
+                  >
+                     <mdi-link-variant />
+                  </a>
+                  <button
+                     class="text-red-400 dark:text-red-400 align-middle flex flex-row items-center"
+                     @click="deleteUrl(url)"
+                  >
+                     <mdi-delete />
+                  </button>
+                  <button
+                     class="align-middle all-300 text-theme-inverse flex flex-row items-center"
+                     @click="copy(`https://rubn.xyz/${url.shortUrl}`)"
+                  >
+                     <mdi-content-copy />
+                  </button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
    </div>
 </template>

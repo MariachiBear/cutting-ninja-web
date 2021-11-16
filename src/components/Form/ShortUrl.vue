@@ -17,55 +17,43 @@ const onSubmit = async () => {
 </script>
 
 <template>
-   <form class="w-full flex flex-col gap-5 lg:flex-row justify-between" @submit.prevent="onSubmit">
+   <form
+      class="flex flex-col gap-5 items-center justify-between lg:flex-row w-full"
+      @submit.prevent="onSubmit"
+   >
       <input
          v-model="url"
          placeholder="https://github.com/url-shortener-front"
          class="
-            shadow-lg
-            w-full
-            flex-1
             bg-warm-gray-50
-            text-warm-gray-800
+            flex-1
             placeholder-gray-500
-            rounded
-            outline-none
-            px-3
-            py-2
+            p-2
+            rounded-sm
+            shadow
+            text-warm-gray-800
+            w-full
          "
       />
 
       <button
          :disabled="isButtonDisabled"
-         href="#_"
          class="
-            relative
-            px-5
-            py-2
+            all-300
+            disabled:cursor-not-allowed disabled:opacity-40
+            flex flex-row
             font-medium
             group
-            !outline-none
-            transition-opacity
-            duration-200
-            disabled:cursor-not-allowed disabled:opacity-50
-            flex flex-row
-            justify-center
             items-center
+            justify-center
+            px-5
+            py-2
+            relative
+            transition-opacity
          "
       >
          <span
-            class="
-               absolute
-               inset-0
-               w-full
-               h-full
-               transition-all
-               duration-400
-               ease-out
-               transform
-               translate-x-0
-               -skew-x-12
-            "
+            class="-skew-x-12 absolute all-300 inset-0 transform translate-x-0"
             :class="[
                isButtonDisabled
                   ? 'bg-gray-400 dark:bg-gray-600'
@@ -73,17 +61,7 @@ const onSubmit = async () => {
             ]"
          ></span>
          <span
-            class="
-               absolute
-               inset-0
-               w-full
-               h-full
-               transition-all
-               duration-400
-               ease-out
-               transform
-               skew-x-12
-            "
+            class="all-300 absolute inset-0 transform skew-x-12"
             :class="[
                isButtonDisabled
                   ? 'bg-gray-500 dark:bg-gray-500'
@@ -91,13 +69,8 @@ const onSubmit = async () => {
             ]"
          ></span>
 
-         <mdi-loading
-            v-if="isLoading"
-            class="relative text-warm-gray-50 dark:text-warm-gray-200 animate-spin text-xl"
-         />
-         <span v-else class="relative text-warm-gray-50 dark:text-warm-gray-200">
-            Short that URL
-         </span>
+         <mdi-loading v-if="isLoading" class="relative text-warm-gray-50 animate-spin text-xl" />
+         <span v-else class="relative text-warm-gray-50"> Short that URL </span>
       </button>
    </form>
 </template>

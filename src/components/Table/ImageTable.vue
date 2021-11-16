@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useURLStore } from '~/store/url';
+
 const urlState = useURLStore.getState();
-const toggle = () => useURLStore.toggleIsTableVisible();
 const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState.isTableVisible);
 </script>
 
@@ -9,89 +9,40 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
    <div
       style="aspect-ratio: 16/9"
       class="
-         bg-gray-100
+         bg-warm-gray-700 bg-opacity-80
+         flex flex-col
+         group
          h-full
-         hidden
-         lg:flex lg:max-h-1/2
+         items-center
+         justify-center
+         lg:max-h-1/2 lg:rounded-sm lg:shadow-2xl
          overflow-visible
          relative
-         shadow-2xl
-         w-full
          rounded-sm
+         w-full
          xl:max-w-6/12
-         flex flex-col
-         justify-center
-         items-center
-         group
       "
    >
-      <mdi-loading class="animate-spin absolute text-8xl z-10" />
-      <button
-         style="box-shadow: 0 -0.1em 0.2em rgb(0 0 0 / 0.15)"
-         class="
-            absolute
-            bg-white
-            px-2
-            pt-1.5
-            pb-3
-            right-0
-            text-xl
-            top-0
-            transition-all
-            duration-500
-            transform
-            -translate-y-10 -translate-x-5
-            z-0
-            rounded-t-md
-            !outline-none
-            hover:opacity-100
-            !text-warm-gray-500
-            group-hover:-translate-y-10 group-hover:opacity-90
-            -translate-y-0
-            opacity-0
-         "
-         :class="[urlState.storedUrls.length === 0 ? '!-translate-y-0 !opacity-0' : '']"
-         @click="toggle"
-      >
-         <mdi-image v-if="isTableVisible" />
-         <mdi-view-list v-else />
-      </button>
+      <Toggle />
+
+      <mdi-loading class="animate-spin absolute text-7xl z-10 text-warm-gray-100" />
 
       <img
-         src="https://source.unsplash.com/collection/97219782/1600x900"
-         loading="lazy"
-         alt="Photo by Fakurian Design"
+         src="https://source.unsplash.com/1600x900/daily"
+         alt="Photo of the day"
          class="
-            w-full
-            h-full
+            contrast-75
+            filter
+            lg:rounded-sm
             object-cover object-center
             overflow-hidden
-            z-20
-            rounded-sm
-            filter
-            contrast-75
             saturate-70
+            z-20
          "
-         style="box-shadow: 0 -0.2em 0.3em rgb(0 0 0 / 0.2)"
       />
 
       <div
-         class="
-            absolute
-            bg-jet
-            dark:bg-unbleached-silk
-            flex flex-col
-            h-full
-            items-center
-            justify-center
-            overflow-hidden
-            rounded-sm
-            w-full
-            z-30
-            transition-all
-            duration-300
-            ease-in-out
-         "
+         class="absolute all-300 h-full items-center lg:rounded-sm overflow-hidden w-full z-30"
          :class="[
             isTableVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
          ]"

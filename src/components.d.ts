@@ -14,6 +14,7 @@ declare module 'vue' {
     CarbonWarning: typeof import('~icons/carbon/warning')['default'];
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
+    HeroText: typeof import('./components/HeroText.vue')['default']
     ImageTable: typeof import('./components/Table/ImageTable.vue')['default']
     MdiContentCopy: typeof import('~icons/mdi/content-copy')['default']
     MdiDelete: typeof import('~icons/mdi/delete')['default']
@@ -41,6 +42,7 @@ declare module 'vue' {
     SocialLink: typeof import('./components/Footer/SocialLink.vue')['default'];
     StoredUrls: typeof import('./components/Table/StoredUrls.vue')['default']
     TextLink: typeof import('./components/Footer/TextLink.vue')['default'];
+    Toggle: typeof import('./components/Table/Toggle.vue')['default']
   }
 }
 
