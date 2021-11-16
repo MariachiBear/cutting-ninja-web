@@ -35,6 +35,13 @@ class URLStore extends PersistentStore<URL> {
       this.state.storedUrls = newStoredUrls;
    }
 
+   async deleteUrl(url: IURL) {
+      await urlApi.delete(url._id).finally(() => {
+         const urlIndex = this.state.storedUrls.indexOf(url);
+         this.state.storedUrls.splice(urlIndex, 1);
+      });
+   }
+
    toggleIsTableVisible(state?: boolean) {
       this.state.isTableVisible = typeof state === 'boolean' ? state : !this.state.isTableVisible;
    }

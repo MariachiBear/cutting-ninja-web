@@ -1,59 +1,59 @@
 @import './markdown.css';
 
-
-
 html,
 body,
 #app {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+   height: 100%;
+   margin: 0;
+   padding: 0;
 }
 
 html.dark {
-  background: black;
+   background: black;
 }
 
 #nprogress {
-  pointer-events: none;
+   pointer-events: none;
 }
 
 #nprogress .bar {
-  @apply bg-english-lavender opacity-75;
+   @apply bg-english-lavender opacity-75;
 
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
+   position: fixed;
+   z-index: 9999;
+   top: 0;
+   left: 0;
 
-  width: 100%;
-  height: 0.3rem;
+   width: 100%;
+   height: 0.3rem;
 }
 
-div {
-  @apply transition-colors duration-300 ease-in-out;
+th,
+td {
+   @apply transition-colors duration-300 ease-in-out;
 }
 
 button,
 a,
 span,
-p,h1 {
-  @apply text-warm-gray-800 dark:text-warm-gray-300;
-    @apply transition-colors duration-300 ease-in-out;
- }
+p,
+h1 {
+   @apply text-warm-gray-800 dark:text-warm-gray-300;
+   @apply transition-colors duration-300 ease-in-out;
+}
 
 .icon-btn {
-  @apply inline-block cursor-pointer select-none
+   @apply inline-block cursor-pointer select-none
     transition-all duration-300 ease-in-out
   hover:text-english-lavender;
 }
 
 *::-webkit-scrollbar-track {
-   @apply bg-old-lavender rounded-none ;
+   @apply bg-old-lavender rounded-none;
 }
 
 *::-webkit-scrollbar {
-   @apply w-1 md:w-2 lg:w-2.5 ;
+   @apply w-1 md:w-2 lg:w-2.5;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -61,7 +61,7 @@ p,h1 {
 }
 
 .text-btn {
-  @apply inline-block cursor-pointer select-none
+   @apply inline-block cursor-pointer select-none
     transition-all duration-300 ease-in-out
     hover:text-english-lavender;
 }

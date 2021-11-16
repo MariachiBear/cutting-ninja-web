@@ -15,9 +15,9 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
          lg:flex lg:max-h-1/2
          overflow-visible
          relative
-         rounded-lg
          shadow-2xl
          w-full
+         rounded-sm
          xl:max-w-6/12
          flex flex-col
          justify-center
@@ -67,7 +67,7 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
             object-cover object-center
             overflow-hidden
             z-20
-            rounded-lg
+            rounded-sm
             filter
             contrast-75
             saturate-70
@@ -80,19 +80,21 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
             absolute
             bg-jet
             dark:bg-unbleached-silk
-            duration-500
-            ease-in-out
             flex flex-col
             h-full
             items-center
             justify-center
             overflow-hidden
-            transition-opacity
-            rounded-lg
+            rounded-sm
             w-full
             z-30
+            transition-all
+            duration-300
+            ease-in-out
          "
-         :class="[isTableVisible ? 'opacity-100' : 'opacity-0']"
+         :class="[
+            isTableVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
+         ]"
       >
          <StoredUrls />
       </div>

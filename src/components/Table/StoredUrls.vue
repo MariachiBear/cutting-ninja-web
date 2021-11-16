@@ -2,31 +2,33 @@
 import { useURLStore } from '~/store/url';
 
 const urlState = useURLStore.getState();
+const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
+const { text, copy, copied } = useClipboard();
 
-// useIntervalFn(() => useURLStore.updateStoredUrl(), 1000);
+useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 60);
+
+whenever(copied, () => console.log(text.value, 'copied'));
 </script>
 
 <template>
-   <div
-      class="
-         break-words
-         dark:text-warm-gray-800
-         duration-50
-         ease-in-out
-         flex flex-col
-         h-full
-         relative
-         text-warm-gray-300
-         transition-colors
-         w-full
-      "
-   >
+   <div class="break-words flex flex-col h-full relative transition-colors w-full">
       <div class="flex flex-col justify-center h-11">
-         <h3 class="w-full px-2 font-semibold text-base">Your URL's</h3>
+         <h3 class="w-full px-2 font-semibold text-base dark:text-warm-gray-800 text-warm-gray-300">
+            Your URL's
+         </h3>
       </div>
 
       <div class="block w-full overflow-x-auto h-full">
-         <table class="items-center bg-transparent w-full border-collapse">
+         <table
+            class="
+               items-center
+               bg-transparent
+               w-full
+               border-collapse
+               dark:text-warm-gray-800
+               text-warm-gray-300
+            "
+         >
             <thead>
                <tr>
                   <th
@@ -119,7 +121,7 @@ const urlState = useURLStore.getState();
                   <td class="px-6 text-xs whitespace-nowrap text-center filter blur-sm">
                      {{ url.visits }}
                   </td>
-                  <td class="px-6 py-2 text-lg flex flex-row justify-center">
+                  <td class="px-6 py-2 text-lg flex flex-row justify-center gap-1">
                      <a
                         :href="`https://rubn.xyz/${url.shortUrl}`"
                         target="_blank"
@@ -133,19 +135,32 @@ const urlState = useURLStore.getState();
                      >
                         <mdi-link-variant />
                      </a>
-                     <a
-                        :href="`https://rubn.xyz/${url.shortUrl}`"
-                        target="_blank"
+                     <button
                         class="
+                           !outline-none
                            text-red-400
                            dark:text-red-400
                            align-middle
                            flex flex-row
                            items-center
                         "
+                        @click="deleteUrl(url)"
                      >
                         <mdi-delete />
-                     </a>
+                     </button>
+                     <button
+                        class="
+                           !outline-none
+                           text-warm-gray-300
+                           dark:text-warm-gray-700
+                           align-middle
+                           flex flex-row
+                           items-center
+                        "
+                        @click="copy(`https://rubn.xyz/${url.shortUrl}`)"
+                     >
+                        <mdi-content-copy />
+                     </button>
                   </td>
                </tr>
             </tbody>

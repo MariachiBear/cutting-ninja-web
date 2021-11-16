@@ -15,6 +15,7 @@ declare module 'vue' {
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     ImageTable: typeof import('./components/Table/ImageTable.vue')['default']
+    MdiContentCopy: typeof import('~icons/mdi/content-copy')['default']
     MdiDelete: typeof import('~icons/mdi/delete')['default']
     MdiGit: typeof import('~icons/mdi/git')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']
