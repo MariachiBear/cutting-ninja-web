@@ -35,8 +35,8 @@ class URLStore extends PersistentStore<URL> {
       this.state.storedUrls = newStoredUrls;
    }
 
-   toogleIsTableVisible() {
-      this.state.isTableVisible = !this.state.isTableVisible;
+   toggleIsTableVisible(state?: boolean) {
+      this.state.isTableVisible = typeof state === 'boolean' ? state : !this.state.isTableVisible;
    }
 }
 
