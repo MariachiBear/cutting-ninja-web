@@ -8,14 +8,17 @@ declare module 'vue' {
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default'];
     CarbonLanguage: typeof import('~icons/carbon/language')['default'];
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default'];
-    CarbonMoon: typeof import('~icons/carbon/moon')['default']
+    CarbonMoon: typeof import('~icons/carbon/moon')['default'];
     CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default'];
-    CarbonSun: typeof import('~icons/carbon/sun')['default']
+    CarbonSun: typeof import('~icons/carbon/sun')['default'];
     CarbonWarning: typeof import('~icons/carbon/warning')['default'];
+    Dialog: typeof import('./components/UI/Dialog.vue')['default']
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     HeroText: typeof import('./components/HeroText.vue')['default']
+    IconButton: typeof import('./components/UI/IconButton.vue')['default'];
     ImageTable: typeof import('./components/Table/ImageTable.vue')['default']
+    MdiClose: typeof import('~icons/mdi/close')['default']
     MdiContentCopy: typeof import('~icons/mdi/content-copy')['default']
     MdiDelete: typeof import('~icons/mdi/delete')['default']
     MdiGit: typeof import('~icons/mdi/git')['default'];
@@ -23,7 +26,7 @@ declare module 'vue' {
     MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
     MdiImage: typeof import('~icons/mdi/image')['default']
     MdiKnife: typeof import('~icons/mdi/knife')['default']
-    MdiLink: typeof import('~icons/mdi/link')['default']
+    MdiLink: typeof import('~icons/mdi/link')['default'];
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     MdiLinkVariant: typeof import('~icons/mdi/link-variant')['default']
     MdiLoading: typeof import('~icons/mdi/loading')['default']
@@ -32,10 +35,12 @@ declare module 'vue' {
     MdiTableEye: typeof import('~icons/mdi/table-eye')['default']
     MdiTableEyeOff: typeof import('~icons/mdi/table-eye-off')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
-    MdiVariant: typeof import('~icons/mdi/variant')['default']
+    MdiVariant: typeof import('~icons/mdi/variant')['default'];
     MdiViewList: typeof import('~icons/mdi/view-list')['default']
     MdiWeatherNight: typeof import('~icons/mdi/weather-night')['default']
     MdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
+    Modal: typeof import('./components/UI/Modal.vue')['default']
+    'Modal copy': typeof import('./components/UI/Dialog.vue')['default'];
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     README: typeof import('./components/README.md')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
