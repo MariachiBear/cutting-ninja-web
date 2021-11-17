@@ -8,10 +8,6 @@ const sourceImg = computed(
       `https://source.boringavatars.com/bauhaus/120/${email.value}?colors=E8BAA2,B5838D,4e4b53,E5989B`
 );
 
-// watch(email, (newValue) => {
-//    sourceImg.value = `https://source.boringavatars.com/bauhaus/120/${newValue}?colors=F8D9C9,B5838D,3D3A41,E5989B`;
-// });
-
 const isDarkDelayed = useDebounce(isDark, 150);
 const [isLoginModalOpen, toggleIsLoginModalOpen] = useToggle(false);
 
@@ -49,11 +45,11 @@ const { t } = useI18n();
             :title="t('button.toggle_dark')"
             @click="toggleDark()"
          >
-            <mdi-weather-night
+            <ic-baseline-dark-mode
                class="animate-spin dark:animate-none opacity-300"
                :class="[!isDarkDelayed ? 'opacity-0' : 'opacity-100']"
             />
-            <mdi-white-balance-sunny
+            <ic-baseline-light-mode
                class="absolute animate-none dark:animate-spin opacity-300"
                :class="[isDarkDelayed ? 'opacity-0' : 'opacity-100']"
             />
@@ -63,11 +59,11 @@ const { t } = useI18n();
             :title="t('button.toggle_dark')"
             @click="toggleIsLoginModalOpen()"
          >
-            <mdi-logout-variant
+            <ic-baseline-logout
                class="opacity-300"
                :class="[!isDark ? 'opacity-0' : 'opacity-100']"
             />
-            <mdi-login-variant
+            <ic-baseline-login
                class="absolute opacity-300"
                :class="[isDark ? 'opacity-0' : 'opacity-100']"
             />

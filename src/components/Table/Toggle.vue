@@ -31,11 +31,11 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
       @click="toggle"
    >
       <div class="flex flex-col relative">
-         <mdi-image
+         <ic-baseline-image
             class="absolute opacity-300"
             :class="[!isTableVisible ? 'opacity-0' : 'opacity-100']"
          />
-         <mdi-view-list
+         <ic-baseline-table-rows
             class="opacity-300"
             :class="[isTableVisible ? 'opacity-0' : 'opacity-100']"
          />

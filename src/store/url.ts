@@ -1,3 +1,4 @@
+import { promiseTimeout } from '@vueuse/core';
 import UrlRepository from '../API/repositories/urls';
 import { PersistentStore } from './main';
 
@@ -17,9 +18,10 @@ class URLStore extends PersistentStore<URL> {
    }
 
    async shortUrl(longUrl: string) {
+      await promiseTimeout(500);
       await urlApi
          .create({ longUrl })
-         .then((response) => {
+         .then(async (response) => {
             this.state.storedUrls.push(response.data);
          })
          .catch(() => console.error);

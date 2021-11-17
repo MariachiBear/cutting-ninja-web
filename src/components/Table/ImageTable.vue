@@ -2,6 +2,7 @@
 import { useURLStore } from '~/store/url';
 
 const urlState = useURLStore.getState();
+const isImgLoaded = ref(false);
 const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState.isTableVisible);
 </script>
 
@@ -23,13 +24,13 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
          xl:max-w-6/12
       "
    >
-      <Toggle />
+      <Toggle v-if="isImgLoaded" />
 
       <mdi-loading class="animate-spin absolute text-7xl z-10 text-warm-gray-100" />
 
       <img
-         src="https://source.unsplash.com/1600x900/daily"
-         alt="Photo of the day"
+         src="https://source.unsplash.com/collection/317099/1600x900"
+         alt="Photo"
          class="
             contrast-75
             filter
@@ -39,6 +40,7 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
             saturate-70
             z-20
          "
+         @load="isImgLoaded = true"
       />
 
       <div

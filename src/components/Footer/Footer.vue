@@ -1,30 +1,37 @@
 <template>
    <div
       class="
-         bg-warm-gray-50
+         bg-unbleached-sand
          dark:bg-rocket-metallic
-         text-warm-gray-800
-         dark:text-warm-gray-300
-         p-4
-         sm:p-10
+         text-theme
+         p-4 p-10
          lg:p-12
+         shadow-inner
+         colors-300
       "
    >
       <footer class="max-w-screen-2xl px-4 md:px-8 mx-auto">
          <div
             class="
+               border-t border-b border-warm-gray-400
                flex flex-col
                gap-5
-               md:flex-row
-               justify-between
                items-center
-               border-t border-b
+               justify-between
+               md:flex-row
                py-6
-               border-warm-gray-300
-               dark:border-warm-gray-400
             "
          >
-            <nav class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6">
+            <nav
+               class="
+                  flex flex-wrap
+                  justify-center
+                  md:justify-start
+                  gap-x-4 gap-y-2
+                  md:gap-6
+                  all-300
+               "
+            >
                <a class="text-btn">Blog</a>
                <a class="text-btn">About</a>
                <a class="text-btn">Contact</a>
