@@ -1,15 +1,22 @@
 <script setup lang="ts">
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
+import ReloadPrompt from './components/UI/ReloadPrompt.vue';
+import { useURLStore } from './store/url';
+import { useUserStore } from './store/user';
+
+const isReady = ref(false);
+
 useHead({
-  title: 'Vitesse',
-  meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
-  ],
-})
+   title: 'URL Shortener - RUBN/COND',
+});
+
+tryOnMounted(async () => {
+   await useUserStore.init();
+   await useURLStore.init();
+   isReady.value = true;
+});
 </script>
 
 <template>
-  <router-view />
+   <router-view v-if="isReady" />
+   <ReloadPrompt />
 </template>

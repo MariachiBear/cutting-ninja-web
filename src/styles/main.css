@@ -1,43 +1,86 @@
 @import './markdown.css';
 
+/* SCROLL STYLES */
+*::-webkit-scrollbar-track {
+   @apply bg-old-lavender rounded-none;
+}
+
+*::-webkit-scrollbar-corner {
+   @apply bg-old-lavender rounded-none;
+}
+
+*::-webkit-scrollbar {
+   @apply w-2 lg:w-2.5 h-2 lg:h-2.5;
+}
+
+*::-webkit-scrollbar-thumb {
+   @apply bg-english-lavender rounded-none;
+}
+
+input,
+select,
+textarea,
+button,
+th {
+   -ms-touch-action: none !important;
+   -webkit-tap-highlight-color: transparent !important;
+   outline-width: 0 !important;
+   outline: none !important;
+   touch-action: none !important;
+}
+
 html,
 body,
 #app {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-html.dark {
-  background: #121212;
+   @apply h-full p-0 m-0;
 }
 
 #nprogress {
-  pointer-events: none;
+   pointer-events: none;
 }
 
 #nprogress .bar {
-  @apply bg-teal-600 opacity-75;
-
-  position: fixed;
-  z-index: 1031;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 2px;
-}
-
-.btn {
-  @apply px-4 py-1 rounded inline-block
-    bg-teal-600 text-white cursor-pointer
-    hover:bg-teal-700
-    disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
+   @apply bg-english-lavender opacity-75;
+   @apply fixed z-9999 top-0 left-0;
+   @apply w-full h-1.5;
 }
 
 .icon-btn {
-  @apply inline-block cursor-pointer select-none
-    opacity-75 transition duration-200 ease-in-out
-    hover:opacity-100 hover:text-teal-600;
-  font-size: 0.9em;
+   @apply inline-block cursor-pointer hover:text-english-lavender transition-colors ease-in-out duration-200;
+}
+
+.text-btn {
+   @apply inline-block cursor-pointer hover:text-english-lavender transition-colors ease-in-out duration-200;
+}
+
+.text-theme {
+   @apply text-warm-gray-700 dark:text-warm-gray-300;
+}
+
+.text-theme-inverse {
+   @apply text-warm-gray-300 dark:text-warm-gray-800;
+}
+
+.main-theme-bg {
+   @apply bg-unbleached-silk dark:bg-jet;
+}
+
+.main-theme-bg-inverse {
+   @apply bg-jet dark:bg-unbleached-silk;
+}
+
+.colors-300 {
+   @apply transition-colors ease-in-out duration-300;
+}
+
+.opacity-300 {
+   @apply transition-opacity ease-in-out duration-300;
+}
+
+.transform-300 {
+   @apply transition-transform ease-in-out duration-300;
+}
+
+.all-300 {
+   @apply transition-all ease-in-out duration-300;
 }
