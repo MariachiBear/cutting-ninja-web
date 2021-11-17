@@ -68,10 +68,10 @@ whenever(
 
          <div class="flex-grow"></div>
 
-         <button v-if="offlineReady" class="hover:text-blue-500" @click="updateServiceWorker(true)">
+         <button v-if="offlineReady" class="hover:text-blue-500" @click="close()">
             {{ t('button.close') }}
          </button>
-         <button v-if="needRefresh" class="hover:text-blue-500" @click="close()">
+         <button v-if="needRefresh" class="hover:text-blue-500" @click="updateServiceWorker(true)">
             {{ t('button.reload_now') }}
          </button>
       </div>
