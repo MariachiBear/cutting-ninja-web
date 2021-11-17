@@ -48,6 +48,7 @@ export default defineConfig({
       range(100).map((i) => `h-${i}/100`),
       range(1000).map((i) => `w-${i}`),
       range(1000).map((i) => `h-${i}`),
+      range(1000).map((i) => `z-${i}`),
       range(4000).map((i) => `w-${i}px`),
       range(4000).map((i) => `h-${i}px`),
    ],

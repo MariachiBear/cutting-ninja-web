@@ -27,20 +27,20 @@ useResizeObserver(signup, (entries) => {
    >
       <Login
          ref="login"
-         class="transform all-300"
+         class="transform all-300 w-full"
          :class="[
             isLogin
-               ? 'translate-x-0 opacity-100 pointer-events-auto'
-               : 'translate-x-full opacity-0 pointer-events-none absolute',
+               ? '-translate-x-0 opacity-100 pointer-events-auto'
+               : '-translate-x-full opacity-0 pointer-events-none absolute',
          ]"
       />
       <Signup
          ref="signup"
-         class="transform all-300"
+         class="transform all-300 w-full"
          :class="[
             isLogin
-               ? '-translate-x-full opacity-0 pointer-events-none absolute'
-               : '-translate-x-0 opacity-100 pointer-events-auto',
+               ? 'translate-x-full opacity-0 pointer-events-none absolute'
+               : 'translate-x-0 opacity-100 pointer-events-auto',
          ]"
       />
 
@@ -48,8 +48,8 @@ useResizeObserver(signup, (entries) => {
          class="text-sm text-center text-gray-500 transform all-300"
          :class="[
             isLogin
-               ? 'translate-x-0 opacity-100 pointer-events-auto'
-               : 'translate-x-full opacity-0 pointer-events-none absolute',
+               ? '-translate-x-0 opacity-100 pointer-events-auto'
+               : '-translate-x-full opacity-0 pointer-events-none absolute',
          ]"
       >
          Don&#x27;t have an account yet?
@@ -60,8 +60,8 @@ useResizeObserver(signup, (entries) => {
          class="text-sm text-center text-gray-500 transform all-300"
          :class="[
             isLogin
-               ? '-translate-x-full opacity-0 pointer-events-none absolute'
-               : '-translate-x-0 opacity-100 pointer-events-auto',
+               ? 'translate-x-full opacity-0 pointer-events-none absolute'
+               : 'translate-x-0 opacity-100 pointer-events-auto',
          ]"
       >
          Don have an account already?

@@ -14,9 +14,8 @@
          overflow-hidden
          top-0
          w-full
-         z-9999
       "
-      :class="[modelValue ? 'opacity-100 ' : 'pointer-events-none opacity-0']"
+      :class="[modelValue ? 'opacity-100 z-9999' : 'pointer-events-none opacity-0 z-0']"
    >
       <div class="bg-black h-full w-full fixed opacity-70 dark:opacity-70" />
 
@@ -26,7 +25,7 @@
             main-theme-bg
             overflow-x-hidden
             all-300
-            transform-gpu
+            transform
             text-theme
             min-w-11/12
             max-h-11/12
@@ -38,8 +37,8 @@
          "
          :class="[
             isPersistent ? 'duration-150' : '',
-            modelValue ? 'opacity-100' : 'scale-70 opacity-0',
-            isShaking ? 'scale-102' : 'scale-100',
+            modelValue ? 'opacity-100 scale-100' : 'pointer-events-none scale-70 opacity-0',
+            isShaking ? 'scale-105' : 'scale-100',
          ]"
       >
          <section class="p-2 mb-2 flex flex-row justify-between items-center">
@@ -117,7 +116,7 @@ onClickOutside(
       set(modelValue, !!props.isPersistent && get(modelValue));
       if (props.isPersistent) {
          toggleIsShaking();
-         promiseTimeout(200).then(() => toggleIsShaking());
+         promiseTimeout(100).then(() => toggleIsShaking());
       }
    },
    {

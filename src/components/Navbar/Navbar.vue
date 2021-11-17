@@ -63,7 +63,7 @@ const { t } = useI18n();
          </button>
       </nav>
    </header>
-   <Dialog v-model="isLoginModalOpen" :has-action-buttons="false">
+   <Dialog v-model="isLoginModalOpen" :has-action-buttons="false" is-persistent>
       <LoginTabs />
    </Dialog>
 </template>
