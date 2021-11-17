@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ReloadPrompt from './components/UI/ReloadPrompt.vue';
 import { useURLStore } from './store/url';
 import { useUserStore } from './store/user';
 
@@ -17,4 +18,5 @@ tryOnMounted(async () => {
 
 <template>
    <router-view v-if="isReady" />
+   <ReloadPrompt />
 </template>

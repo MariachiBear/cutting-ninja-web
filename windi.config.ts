@@ -16,11 +16,41 @@ const extendedColors = {
    'unbleached-sand': '#FAE8DF',
 };
 
+const range = (size: number, startAt = 1) => Array.from(Array(size).keys()).map((i) => i + startAt);
+
+const safeClassesColors = () => {
+   const colorsNames = Object.keys(extendedColors);
+   const bgClasses = colorsNames.map((color) => `bg-${color}`);
+   const textClasses = colorsNames.map((color) => `text-${color}`);
+   const borderClasses = colorsNames.map((color) => `border-${color}`);
+   const fillClasses = colorsNames.map((color) => `fill-${color}`);
+
+   return [...bgClasses, ...textClasses, ...borderClasses, ...fillClasses];
+};
+
+const safeDarkClassesColors = () => {
+   const colorClasses = safeClassesColors();
+   return colorClasses.map((color) => `dark:${color}`);
+};
+
 export default defineConfig({
    darkMode: 'class',
    // https://windicss.org/posts/v30.html#attributify-mode
    attributify: true,
-
+   safelist: [
+      ...safeClassesColors(),
+      ...safeDarkClassesColors(),
+      range(100).map((i) => `max-w-${i}/100`),
+      range(100).map((i) => `max-h-${i}/100`),
+      range(100).map((i) => `min-w-${i}/100`),
+      range(100).map((i) => `min-h-${i}/100`),
+      range(100).map((i) => `w-${i}/100`),
+      range(100).map((i) => `h-${i}/100`),
+      range(1000).map((i) => `w-${i}`),
+      range(1000).map((i) => `h-${i}`),
+      range(4000).map((i) => `w-${i}px`),
+      range(4000).map((i) => `h-${i}px`),
+   ],
    plugins: [typography()],
 
    theme: {

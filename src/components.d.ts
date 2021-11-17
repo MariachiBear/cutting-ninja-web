@@ -4,14 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonCampsite: typeof import('~icons/carbon/campsite')['default'];
-    CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default'];
-    CarbonLanguage: typeof import('~icons/carbon/language')['default'];
-    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default'];
-    CarbonMoon: typeof import('~icons/carbon/moon')['default'];
-    CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default'];
-    CarbonSun: typeof import('~icons/carbon/sun')['default'];
-    CarbonWarning: typeof import('~icons/carbon/warning')['default'];
+    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Dialog: typeof import('./components/UI/Dialog.vue')['default']
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
@@ -26,43 +19,25 @@ declare module 'vue' {
     IcBaselineLogout: typeof import('~icons/ic/baseline-logout')['default']
     IcBaselineOpenInNew: typeof import('~icons/ic/baseline-open-in-new')['default']
     IcBaselineTableRows: typeof import('~icons/ic/baseline-table-rows')['default']
-    IconButton: typeof import('./components/UI/IconButton.vue')['default'];
-    IcTwotoneOpenInNew: typeof import('~icons/ic/twotone-open-in-new')['default'];
     ImageTable: typeof import('./components/Table/ImageTable.vue')['default']
     Login: typeof import('./components/Form/Login.vue')['default']
-    'Login copy': typeof import('./components/Form/Signup.vue')['default'];
     LoginTabs: typeof import('./components/Login/LoginTabs.vue')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
-    MdiClose: typeof import('~icons/mdi/close')['default'];
-    MdiContentCopy: typeof import('~icons/mdi/content-copy')['default'];
-    MdiDelete: typeof import('~icons/mdi/delete')['default'];
-    MdiGit: typeof import('~icons/mdi/git')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']
     MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
     MdiImage: typeof import('~icons/mdi/image')['default']
     MdiKnife: typeof import('~icons/mdi/knife')['default']
-    MdiLink: typeof import('~icons/mdi/link')['default'];
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
-    MdiLinkVariant: typeof import('~icons/mdi/link-variant')['default'];
     MdiLoading: typeof import('~icons/mdi/loading')['default']
-    MdiLoginVariant: typeof import('~icons/mdi/login-variant')['default'];
-    MdiLogoutVariant: typeof import('~icons/mdi/logout-variant')['default'];
-    MdiTableEye: typeof import('~icons/mdi/table-eye')['default'];
-    MdiTableEyeOff: typeof import('~icons/mdi/table-eye-off')['default'];
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
-    MdiVariant: typeof import('~icons/mdi/variant')['default'];
     MdiViewList: typeof import('~icons/mdi/view-list')['default']
-    MdiWeatherNight: typeof import('~icons/mdi/weather-night')['default'];
-    MdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default'];
     Modal: typeof import('./components/UI/Modal.vue')['default']
-    'Modal copy': typeof import('./components/UI/Dialog.vue')['default'];
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     README: typeof import('./components/README.md')['default']
+    ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
     Signup: typeof import('./components/Form/Signup.vue')['default']
-    SocialLink: typeof import('./components/Footer/SocialLink.vue')['default'];
     StoredUrls: typeof import('./components/Table/StoredUrls.vue')['default']
-    TextLink: typeof import('./components/Footer/TextLink.vue')['default'];
     Toggle: typeof import('./components/Table/Toggle.vue')['default']
   }
 }
