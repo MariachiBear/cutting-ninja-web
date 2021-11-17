@@ -8,6 +8,7 @@ const { text, copy, copied } = useClipboard();
 
 const isSmallScreen = or(sm, md);
 const urlState = useURLStore.getState();
+const baseURL = String(import.meta.env.VITE_API_BASE_URL);
 
 const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
 
@@ -107,7 +108,7 @@ whenever(copied, () => console.log(text.value, 'copied'));
                <td class="px-3 text-center whitespace-nowrap">
                   <div class="flex flex-row gap-1 justify-center px-3 py-2 text-lg">
                      <a
-                        :href="`https://rubn.xyz/${url.shortUrl}`"
+                        :href="`${baseURL}${url.shortUrl}`"
                         target="_blank"
                         class="
                            text-blue-400

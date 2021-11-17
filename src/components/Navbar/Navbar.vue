@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { isDark, toggleDark } from '~/composables';
 
-const email = ref('');
-
-const sourceImg = computed(
-   () =>
-      `https://source.boringavatars.com/bauhaus/120/${email.value}?colors=E8BAA2,B5838D,4e4b53,E5989B`
-);
-
 const isDarkDelayed = useDebounce(isDark, 150);
 const [isLoginModalOpen, toggleIsLoginModalOpen] = useToggle(false);
 
@@ -70,26 +63,7 @@ const { t } = useI18n();
          </button>
       </nav>
    </header>
-   <Dialog v-model="isLoginModalOpen">
-      <img
-         :src="sourceImg"
-         class="
-            2xl:w-50 2xl:h-50
-            3xl:w-60 3xl:h-60
-            4k:w-100 4k:h-100
-            4xl:w-65 4xl:h-65
-            5xl:w-80 5xl:h-80
-            bg-accent bg-opacity-20
-            h-30
-            lg:w-40 lg:h-40
-            md:w-35 md:h-35
-            object-contain
-            rounded-full
-            shadow-md
-            w-30
-         "
-         alt="logo"
-      />
-      <input v-model="email" type="text" />
+   <Dialog v-model="isLoginModalOpen" :has-action-buttons="false">
+      <LoginTabs />
    </Dialog>
 </template>
