@@ -88,17 +88,20 @@ whenever(copied, () => console.log(text.value, 'copied'));
                         opacity-300
                         absolute
                         p-1
-                        dark:bg-light-blue-400
-                        bg-light-blue-800
+                        lg:dark:bg-light-blue-400 lg:bg-light-blue-800
+                        dark:bg-light-blue-700
+                        bg-light-blue-300
                         rounded-sm
                         z-10
                         font-medium
                         opacity-0
                         hover:opacity-100
                      "
+                     :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
                      style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
-                     >You need to log in to view this info</span
                   >
+                     Log in to see this
+                  </span>
                   <span class="blur-sm filter font-semibold">{{ url.visits }}</span>
                </td>
                <td class="px-3 text-center whitespace-nowrap">
