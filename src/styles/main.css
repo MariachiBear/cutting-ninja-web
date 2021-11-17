@@ -5,12 +5,16 @@
    @apply bg-old-lavender rounded-none;
 }
 
+*::-webkit-scrollbar-corner {
+   @apply bg-old-lavender rounded-none;
+}
+
 *::-webkit-scrollbar {
    @apply w-2 lg:w-2.5 h-2 lg:h-2.5;
 }
 
 *::-webkit-scrollbar-thumb {
-   @apply bg-english-lavender  rounded-none;
+   @apply bg-english-lavender rounded-none;
 }
 
 input,
@@ -41,6 +45,14 @@ body,
    @apply w-full h-1.5;
 }
 
+.icon-btn {
+   @apply inline-block cursor-pointer hover:text-english-lavender transition-colors ease-in-out duration-200;
+}
+
+.text-btn {
+   @apply inline-block cursor-pointer hover:text-english-lavender transition-colors ease-in-out duration-200;
+}
+
 .text-theme {
    @apply text-warm-gray-700 dark:text-warm-gray-300;
 }
@@ -55,14 +67,6 @@ body,
 
 .main-theme-bg-inverse {
    @apply bg-jet dark:bg-unbleached-silk;
-}
-
-.icon-btn {
-   @apply inline-block cursor-pointer select-none hover:text-english-lavender;
-}
-
-.text-btn {
-   @apply inline-block cursor-pointer select-none hover:text-english-lavender;
 }
 
 .colors-300 {

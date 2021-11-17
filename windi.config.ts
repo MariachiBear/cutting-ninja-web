@@ -3,16 +3,17 @@ import { defineConfig } from 'windicss/helpers';
 import typography from 'windicss/plugin/typography';
 
 const extendedColors = {
-   jet: '#3d3a41',
-   'unbleached-silk': '#f8d9c9',
+   jet: '#3D3A41',
+   'unbleached-silk': '#F8D9C9',
    apricot: '#FFCDB2',
    'desert-sand': '#E8BAA2',
    'english-lavender': '#B5838D',
    melon: '#FFB4A2',
    'old-lavender': '#6D6875',
    'pastel-pink': '#E5989B',
-   'rocket-metallic': '#4e4b53',
+   'rocket-metallic': '#4E4B53',
    'mountbatten-pink': '#917681',
+   'unbleached-sand': '#FAE8DF',
 };
 
 export default defineConfig({
