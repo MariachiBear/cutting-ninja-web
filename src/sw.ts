@@ -115,7 +115,7 @@ registerRoute(
 registerRoute(
    /^https:\/\/source\.unsplash\.com\/collection/,
    new CacheFirst({
-      cacheName: 'ux-key-assets',
+      cacheName: 'unsplash_assets',
       plugins: [
          new CacheableResponsePlugin({
             statuses: [0, 200],
