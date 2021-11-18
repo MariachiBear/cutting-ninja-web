@@ -46,7 +46,7 @@ const userFn = async () => {
          <UserInfo v-if="isLoggedIn" />
 
          <button
-            class="flex flex-col icon-btn relative text-xl xl:text-2xl"
+            class="flex flex-col icon-btn relative text-3xl xl:text-2xl"
             :title="t('button.toggle_dark')"
             @click="toggleDark()"
          >
@@ -60,7 +60,7 @@ const userFn = async () => {
             />
          </button>
          <button
-            class="flex flex-col icon-btn relative text-xl xl:text-2xl"
+            class="flex flex-col icon-btn relative text-3xl xl:text-2xl"
             :title="t(isLoggedIn ? 'button.logout' : 'button.login')"
             @click="userFn"
          >

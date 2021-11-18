@@ -15,17 +15,17 @@
          top-0
          w-full
       "
-      :class="[modelValue ? 'opacity-100 z-9999' : 'pointer-events-none opacity-0 z-0']"
+      :class="[modelValue ? 'opacity-100 z-9999' : 'pointer-events-none opacity-0 -z-10']"
    >
-      <div class="bg-black h-full w-full fixed opacity-70 dark:opacity-70" />
+      <div class="bg-black h-full w-full fixed opacity-70 dark:opacity-70" @click="clickOutside" />
 
       <div
          ref="content"
          class="
             main-theme-bg
             overflow-x-hidden
-            all-300
             transform
+            all-300
             text-theme
             min-w-11/12
             max-h-11/12
@@ -36,9 +36,8 @@
             overflow-y-auto
          "
          :class="[
-            isPersistent ? 'duration-150' : '',
-            modelValue ? 'opacity-100 scale-100' : 'pointer-events-none scale-70 opacity-0',
-            isShaking ? 'scale-105' : 'scale-100',
+            modelValue ? 'scale-100' : 'scale-50',
+            isShaking ? 'animated animate-duration-200 animate-shake-x' : '',
          ]"
       >
          <section class="p-2 mb-2 flex flex-row justify-between items-center">
@@ -90,7 +89,7 @@
 </template>
 
 <script setup lang="ts">
-import { get, onKeyUp, promiseTimeout, set } from '@vueuse/core';
+import { onKeyUp, promiseTimeout, set } from '@vueuse/core';
 
 const emits = defineEmits(['update:modelValue']);
 
@@ -110,19 +109,14 @@ const [isShaking, toggleIsShaking] = useToggle(false);
 
 const close = () => set(modelValue, false);
 
-onClickOutside(
-   content,
-   () => {
-      set(modelValue, !!props.isPersistent && get(modelValue));
-      if (props.isPersistent) {
-         toggleIsShaking();
-         promiseTimeout(100).then(() => toggleIsShaking());
-      }
-   },
-   {
-      event: 'mouseup',
+const clickOutside = () => {
+   if (props.isPersistent) {
+      toggleIsShaking();
+      promiseTimeout(200).then(() => toggleIsShaking());
+   } else {
+      set(modelValue, false);
    }
-);
+};
 
 onKeyUp('Escape', close);
 
