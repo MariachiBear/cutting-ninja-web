@@ -19,7 +19,9 @@ tryOnMounted(async () => {
    await useURLStore.init();
    isReady.value = true;
    AxiosInstance.defaults.headers.common.Authorization = `Bearer ${userState.user?.accessToken}`;
-   if (isLoggedIn.value) await useUserStore.checkLogin().then();
+   if (isLoggedIn.value) {
+      await useUserStore.checkLogin();
+   }
 });
 </script>
 

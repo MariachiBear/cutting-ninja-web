@@ -21,7 +21,13 @@ const onSubmit = async () => {
       class="flex flex-col gap-5 items-center justify-between lg:flex-row w-full"
       @submit.prevent="onSubmit"
    >
-      <Input v-model="url" class="flex-1 w-full relative" is-required type="url" />
+      <Input
+         v-model="url"
+         class="flex-1 w-full relative"
+         is-required
+         type="url"
+         placeholder="https://github.com/RubenConde/url-shortener-front"
+      />
 
       <button
          type="submit"

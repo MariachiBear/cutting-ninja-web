@@ -20,7 +20,10 @@ class URLStore extends PersistentStore<URL> {
 
    async takeUrls() {
       if (this.state.storedUrls.length > 0) {
-         await urlApi.take({ urls: this.state.storedUrls });
+         await urlApi.take({ urls: this.state.storedUrls }).catch((err) => {
+            console.error(err);
+            return false;
+         });
       }
    }
 
@@ -31,20 +34,35 @@ class URLStore extends PersistentStore<URL> {
          .then(async (response) => {
             this.state.storedUrls.push(response.data);
          })
-         .catch(() => console.error);
+         .catch((err) => {
+            console.error(err);
+            return false;
+         });
    }
 
    async updateStoredUrl() {
-      await userApi.getMyUrls().then(async (response) => {
-         this.state.storedUrls = response.data;
-      });
+      await userApi
+         .getMyUrls()
+         .then(async (response) => {
+            this.state.storedUrls = response.data;
+         })
+         .catch((err) => {
+            console.error(err);
+            return false;
+         });
    }
 
    async deleteUrl(url: IURL) {
-      await urlApi.delete(url._id).finally(() => {
-         const urlIndex = this.state.storedUrls.indexOf(url);
-         this.state.storedUrls.splice(urlIndex, 1);
-      });
+      await urlApi
+         .delete(url._id)
+         .catch((err) => {
+            console.error(err);
+            return false;
+         })
+         .finally(() => {
+            const urlIndex = this.state.storedUrls.indexOf(url);
+            this.state.storedUrls.splice(urlIndex, 1);
+         });
    }
 
    toggleIsTableVisible(state?: boolean) {

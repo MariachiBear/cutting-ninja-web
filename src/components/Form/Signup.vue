@@ -8,11 +8,16 @@ const firstName = ref('');
 const lastName = ref('');
 const isLoading = ref(false);
 
-const login = async () => {
+const signup = async () => {
    isLoading.value = true;
-   await useUserStore.signup(email.value, password.value, firstName.value, lastName.value);
-   isLoading.value = false;
-   emit('signedup');
+   await useUserStore
+      .signup(email.value, password.value, firstName.value, lastName.value)
+      .then((result) => {
+         if (result) {
+            isLoading.value = false;
+            emit('signedup');
+         }
+      });
 };
 
 const emailValidation = (value: string): boolean | string => {
@@ -22,6 +27,10 @@ const emailValidation = (value: string): boolean | string => {
 };
 
 const requiredValidation = (value: string): boolean | string => !!value || 'Is required';
+
+const minCharacters = (value: string): boolean | string =>
+   value.length >= 10 || `Need at least ${10 - value.length} more characters`;
+
 const sourceImg = computed(
    () =>
       `https://source.boringavatars.com/bauhaus/120/${email.value}?colors=E8BAA2,B5838D,4e4b53,E5989B`
@@ -53,7 +62,7 @@ const sourceImg = computed(
             />
             <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign up</h1>
          </div>
-         <form action="" class="p-5 pb-4 flex flex-col gap-1" @submit.prevent="login">
+         <form action="" class="p-5 pb-4 flex flex-col gap-1" @submit.prevent="signup">
             <Input
                v-model="firstName"
                label="First name"
@@ -82,7 +91,7 @@ const sourceImg = computed(
                type="password"
                is-required
                placeholder="An amazing password, like 'password'"
-               :validation-functions="{ requiredValidation }"
+               :validation-functions="{ requiredValidation, minCharacters }"
             />
             <div class="flex flex-row justify-center">
                <LoginButton>Sign up</LoginButton>

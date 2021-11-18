@@ -40,6 +40,7 @@
       "markdown-it-prism": "2.2.1",
       "pnpm": "6.22.2",
       "prettier": "2.4.1",
+      "rimraf": "^3.0.2",
       "typescript": "4.4.4",
       "unplugin-auto-import": "0.4.14",
       "unplugin-icons": "0.12.18",
@@ -63,7 +64,7 @@
       "url": "git+https://github.com/RubenConde/url-shortener-front.git"
    },
    "scripts": {
-      "build": "cross-env NODE_ENV=production vite-ssg build",
+      "build": "rimraf dist && cross-env NODE_ENV=production vite-ssg build",
       "dev": "cross-env NODE_ENV=development vite --port 3333 --open",
       "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore . --color",
       "eslint:format": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore . --fix",

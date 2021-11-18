@@ -10,10 +10,13 @@ const isLoading = ref(false);
 
 const login = async () => {
    isLoading.value = true;
-   await useUserStore.login(email.value, password.value);
-   await useURLStore.updateStoredUrl();
-   isLoading.value = false;
-   emit('logged');
+   await useUserStore.login(email.value, password.value).then(async (result) => {
+      if (result) {
+         await useURLStore.updateStoredUrl();
+         isLoading.value = false;
+         emit('logged');
+      }
+   });
 };
 
 const emailValidation = (value: string): boolean | string => {

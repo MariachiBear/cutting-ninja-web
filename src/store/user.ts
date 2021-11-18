@@ -29,7 +29,10 @@ class UserStore extends PersistentStore<User> {
             useURLStore.takeUrls();
             return true;
          })
-         .catch(() => false);
+         .catch((err) => {
+            console.error(err);
+            return false;
+         });
 
       return result;
    }
@@ -41,7 +44,10 @@ class UserStore extends PersistentStore<User> {
             this.login(email, password);
             return true;
          })
-         .catch(() => false);
+         .catch((err) => {
+            console.error(err);
+            return false;
+         });
 
       return result;
    }
@@ -50,16 +56,23 @@ class UserStore extends PersistentStore<User> {
       const result = await clear()
          .then(() => {
             localStorage.clear();
-            // location.reload();
             return true;
          })
-         .catch(() => false);
+         .catch((err) => {
+            console.error(err);
+            return false;
+         });
 
       return result;
    }
 
    async checkLogin() {
-      await userApi.getMe().catch(() => this.logout());
+      await userApi
+         .getMe()
+         .then(() => {
+            useURLStore.updateStoredUrl();
+         })
+         .catch(() => this.logout());
    }
 }
 
