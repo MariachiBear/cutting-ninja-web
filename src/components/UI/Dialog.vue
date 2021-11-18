@@ -20,20 +20,16 @@
       <div class="bg-black h-full w-full fixed opacity-70 dark:opacity-70" @click="clickOutside" />
 
       <div
-         ref="content"
          class="
-            main-theme-bg
-            overflow-x-hidden
-            transform
             all-300
-            text-theme
-            min-w-11/12
+            main-theme-bg
             max-h-11/12
-            xl:min-w-1/4
-            min-h-1/12
-            xl:min-h-1/4
+            min-h-1/12 min-w-11/12
+            overflow-x-hidden overflow-y-auto
             rounded
-            overflow-y-auto
+            text-theme
+            transform
+            xl:min-h-1/4 xl:min-w-1/4
          "
          :class="[
             modelValue ? 'scale-100' : 'scale-50',
@@ -52,9 +48,9 @@
             <button
                class="
                   colors-300
+                  dark:hover:bg-opacity-20
                   dark:hover:bg-red-900
                   dark:hover:text-red-400
-                  dark:hover:bg-opacity-20
                   dark:text-red-600
                   font-medium
                   hover:bg-red-100 hover:text-red-600
@@ -104,7 +100,6 @@ const props = defineProps({
 
 const { modelValue } = useVModels(props, emits);
 
-const content = ref<HTMLElement>();
 const [isShaking, toggleIsShaking] = useToggle(false);
 
 const close = () => set(modelValue, false);

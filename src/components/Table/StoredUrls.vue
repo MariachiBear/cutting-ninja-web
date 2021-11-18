@@ -15,9 +15,15 @@ const baseURL = String(import.meta.env.VITE_API_BASE_URL);
 
 const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
 
-const { pause } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10);
+const { pause, resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10);
 
-whenever(() => !isLoggedIn.value, pause);
+tryOnMounted(() => {
+   if (isLoggedIn.value) {
+      resume();
+   } else {
+      pause();
+   }
+});
 
 // eslint-disable-next-line no-console
 whenever(copied, () => console.info(text.value, 'copied'));

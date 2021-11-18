@@ -61,6 +61,7 @@ body,
    @apply text-warm-gray-300 dark:text-warm-gray-800;
 }
 
+html,
 .main-theme-bg {
    @apply bg-unbleached-silk dark:bg-jet;
 }
