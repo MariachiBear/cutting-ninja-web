@@ -1,16 +1,3 @@
-<script setup lang="ts">
-import User from '~/API/repositories/user';
-
-const userRepository = new User();
-
-tryOnMounted(async () => {
-   await userRepository.signIn({
-      email: 'rubencondemag96@gmail.com',
-      password: '587d5c5ddb',
-   });
-});
-</script>
-
 <template>
    <div
       class="

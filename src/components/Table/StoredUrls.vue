@@ -2,6 +2,9 @@
 import { or } from '@vueuse/core';
 import { siteBreakpoints } from '~/composables';
 import { useURLStore } from '~/store/url';
+import { useUserStore } from '~/store/user';
+
+const isLoggedIn = useUserStore.isUserLoggedIn();
 
 const { sm, md } = siteBreakpoints;
 const { text, copy, copied } = useClipboard();
@@ -12,7 +15,13 @@ const baseURL = String(import.meta.env.VITE_API_BASE_URL);
 
 const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
 
-useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 60);
+const { pause, resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 30, {
+   immediate: false,
+});
+
+whenever(() => isLoggedIn.value, resume);
+
+whenever(() => !isLoggedIn.value, pause);
 
 whenever(copied, () => console.log(text.value, 'copied'));
 </script>
@@ -85,6 +94,7 @@ whenever(copied, () => console.log(text.value, 'copied'));
                </td>
                <td class="px-3 text-center text-xs whitespace-nowrap relative">
                   <span
+                     v-if="!isLoggedIn"
                      class="
                         opacity-300
                         absolute
@@ -103,7 +113,9 @@ whenever(copied, () => console.log(text.value, 'copied'));
                   >
                      Log in to see this
                   </span>
-                  <span class="blur-sm filter font-semibold">{{ url.visits }}</span>
+                  <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">{{
+                     url.visits
+                  }}</span>
                </td>
                <td class="px-3 text-center whitespace-nowrap">
                   <div class="flex flex-row gap-1 justify-center px-3 py-2 text-lg">

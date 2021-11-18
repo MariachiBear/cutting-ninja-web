@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import { isDark, toggleDark } from '~/composables';
+import { useUserStore } from '~/store/user';
+
+const isLoggedIn = useUserStore.isUserLoggedIn();
 
 const isDarkDelayed = useDebounce(isDark, 150);
 const [isLoginModalOpen, toggleIsLoginModalOpen] = useToggle(false);
 
 const { t } = useI18n();
+
+const userFn = async () => {
+   if (isLoggedIn.value) {
+      await useUserStore.logout();
+      location.reload();
+   } else toggleIsLoginModalOpen();
+};
 </script>
 
 <template>
@@ -32,7 +42,9 @@ const { t } = useI18n();
          URL Shortener
       </a>
 
-      <nav class="flex flex-row gap-2 lg:gap-4">
+      <nav class="flex flex-row gap-2 lg:gap-4 items-center justify-center">
+         <UserInfo v-if="isLoggedIn" />
+
          <button
             class="flex flex-col icon-btn relative text-xl xl:text-2xl"
             :title="t('button.toggle_dark')"
@@ -50,20 +62,23 @@ const { t } = useI18n();
          <button
             class="flex flex-col icon-btn relative text-xl xl:text-2xl"
             :title="t('button.toggle_dark')"
-            @click="toggleIsLoginModalOpen()"
+            @click="userFn"
          >
             <ic-baseline-logout
                class="opacity-300"
-               :class="[!isDark ? 'opacity-0' : 'opacity-100']"
+               :class="[!isLoggedIn ? 'opacity-0' : 'opacity-100']"
             />
             <ic-baseline-login
                class="absolute opacity-300"
-               :class="[isDark ? 'opacity-0' : 'opacity-100']"
+               :class="[isLoggedIn ? 'opacity-0' : 'opacity-100']"
             />
          </button>
       </nav>
    </header>
    <Dialog v-model="isLoginModalOpen" :has-action-buttons="false" is-persistent>
-      <LoginTabs />
+      <LoginTabs
+         @logged="toggleIsLoginModalOpen(false)"
+         @signedup="toggleIsLoginModalOpen(false)"
+      />
    </Dialog>
 </template>

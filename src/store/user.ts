@@ -1,31 +1,62 @@
-import { PersistentStore } from './main';
+import { clear } from 'idb-keyval';
+import AxiosInstance from '~/API/index';
+import UserRepository from '~/API/repositories/user';
+import { PersistentStore } from '~/store/main';
 
+const userApi = new UserRepository();
 export interface User extends Object {
-   savedName: string;
-   previousNames: string[];
+   user: IUser | null;
 }
 
 class UserStore extends PersistentStore<User> {
    protected data(): User {
       return {
-         savedName: '',
-         previousNames: [],
+         user: null,
       };
    }
 
-   otherNames() {
-      return computed(() =>
-         this.state.previousNames.filter((name) => name !== this.state.savedName).sort()
-      );
+   isUserLoggedIn() {
+      return computed(() => Boolean(this.state.user));
    }
 
-   setNewName(name: string) {
-      if (this.state.savedName) {
-         this.state.previousNames.push(this.state.savedName);
-         this.state.previousNames = Array.from(new Set(this.state.previousNames));
-      }
+   async login(email: string, password: string) {
+      const result = await userApi
+         .signIn({ email, password })
+         .then(async (response) => {
+            this.state.user = response.data;
+            AxiosInstance.defaults.headers.common.Authorization = `Bearer ${this.state.user.accessToken}`;
+            return true;
+         })
+         .catch(() => false);
 
-      this.state.savedName = name;
+      return result;
+   }
+
+   async signup(email: string, password: string, firstName: string, lastName: string) {
+      const result = await userApi
+         .signUp({ email, password, firstName, lastName })
+         .then(async () => {
+            this.login(email, password);
+            return true;
+         })
+         .catch(() => false);
+
+      return result;
+   }
+
+   async logout() {
+      const result = await clear()
+         .then(() => {
+            localStorage.clear();
+            return true;
+         })
+         .catch(() => false);
+
+      return result;
+   }
+
+   async checkLogin() {
+      await userApi.getMe().catch(() => this.logout());
    }
 }
 

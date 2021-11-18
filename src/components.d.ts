@@ -39,6 +39,7 @@ declare module 'vue' {
     Signup: typeof import('./components/Form/Signup.vue')['default']
     StoredUrls: typeof import('./components/Table/StoredUrls.vue')['default']
     Toggle: typeof import('./components/Table/Toggle.vue')['default']
+    UserInfo: typeof import('./components/Navbar/UserInfo.vue')['default']
   }
 }
 

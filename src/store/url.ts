@@ -1,9 +1,10 @@
 import { promiseTimeout } from '@vueuse/core';
-import UrlRepository from '../API/repositories/urls';
-import { PersistentStore } from './main';
+import UrlRepository from '~/API/repositories/urls';
+import UserRepository from '~/API/repositories/user';
+import { PersistentStore } from '~/store/main';
 
 const urlApi = new UrlRepository();
-
+const userApi = new UserRepository();
 export interface URL extends Object {
    storedUrls: IURL[];
    isTableVisible: boolean;
@@ -28,13 +29,9 @@ class URLStore extends PersistentStore<URL> {
    }
 
    async updateStoredUrl() {
-      const newStoredUrls: IURL[] = [];
-      for await (const url of this.state.storedUrls) {
-         await urlApi.show(url._id).then((response) => {
-            newStoredUrls.push(response.data);
-         });
-      }
-      this.state.storedUrls = newStoredUrls;
+      await userApi.getMyUrls().then(async (response) => {
+         this.state.storedUrls = response.data;
+      });
    }
 
    async deleteUrl(url: IURL) {

@@ -1,6 +1,19 @@
 <script setup lang="ts">
-const email = ref('');
+import { useUserStore } from '~/store/user';
+const emit = defineEmits(['signedup']);
 
+const email = ref('');
+const password = ref('');
+const firstName = ref('');
+const lastName = ref('');
+const isLoading = ref(false);
+
+const login = async () => {
+   isLoading.value = true;
+   await useUserStore.signup(email.value, password.value, firstName.value, lastName.value);
+   isLoading.value = false;
+   emit('signedup');
+};
 const sourceImg = computed(
    () =>
       `https://source.boringavatars.com/bauhaus/120/${email.value}?colors=E8BAA2,B5838D,4e4b53,E5989B`
@@ -33,7 +46,7 @@ const sourceImg = computed(
                />
                <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign up</h1>
             </div>
-            <form action="" class="p-5 pb-4">
+            <form action="" class="p-5 pb-4" @submit.prevent="login">
                <div class="mb-4">
                   <label
                      for="first_name"
@@ -43,6 +56,7 @@ const sourceImg = computed(
                   </label>
                   <input
                      id="first_name"
+                     v-model="firstName"
                      type="text"
                      name="first_name"
                      placeholder="Jhon"
@@ -68,6 +82,7 @@ const sourceImg = computed(
                   </label>
                   <input
                      id="last_name"
+                     v-model="lastName"
                      type="text"
                      name="last_name"
                      placeholder="Doe"
@@ -124,6 +139,7 @@ const sourceImg = computed(
                   </div>
                   <input
                      id="signup_password"
+                     v-model="password"
                      type="password"
                      name="signup_password"
                      placeholder="An amazing password, like 'password'"

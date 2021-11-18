@@ -1,3 +1,22 @@
+<script setup lang="ts">
+import { useURLStore } from '~/store/url';
+import { useUserStore } from '~/store/user';
+
+const emit = defineEmits(['logged']);
+
+const email = ref('');
+const password = ref('');
+const isLoading = ref(false);
+
+const login = async () => {
+   isLoading.value = true;
+   await useUserStore.login(email.value, password.value);
+   await useURLStore.updateStoredUrl();
+   isLoading.value = false;
+   emit('logged');
+};
+</script>
+
 <template>
    <div class="flex items-center all-300">
       <div class="container mx-auto">
@@ -6,7 +25,7 @@
                <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign in</h1>
                <p class="text-gray-500 dark:text-gray-400">to access your account</p>
             </div>
-            <form action="" class="p-5 pb-4">
+            <form action="" class="p-5 pb-4" @submit.prevent="login">
                <div class="mb-4">
                   <label
                      for="login_email"
@@ -16,6 +35,7 @@
                   </label>
                   <input
                      id="login_email"
+                     v-model="email"
                      type="email"
                      name="login_email"
                      placeholder="example@email.com"
@@ -46,6 +66,7 @@
                   </div>
                   <input
                      id="login_password"
+                     v-model="password"
                      type="password"
                      name="login_password"
                      placeholder="An amazing password, like 'password'"
