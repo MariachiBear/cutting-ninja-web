@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { or } from '@vueuse/core';
+import { DateTime } from 'luxon';
 import { siteBreakpoints } from '~/composables';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
@@ -17,6 +18,16 @@ const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
 
 const { pause, resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10);
 
+const getValidDates = (createdAt: string) => {
+   const today = DateTime.now().startOf('day');
+   const creationDay = DateTime.fromISO(createdAt).startOf('day');
+   const duration = today.diff(creationDay, 'days');
+
+   const validDates = Number(import.meta.env.VITE_VALIDITY_DAYS) - duration.days;
+
+   return validDates;
+};
+
 tryOnMounted(() => {
    if (isLoggedIn.value) {
       resume();
@@ -24,6 +35,8 @@ tryOnMounted(() => {
       pause();
    }
 });
+
+whenever(isLoggedIn, resume);
 
 // eslint-disable-next-line no-console
 whenever(copied, () => console.info(text.value, 'copied'));
@@ -53,8 +66,17 @@ whenever(copied, () => console.info(text.value, 'copied'));
                <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
                   Page name
                </th>
-               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+               <th
+                  v-if="isLoggedIn"
+                  class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap"
+               >
                   Short name
+               </th>
+               <th
+                  v-else
+                  class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap"
+               >
+                  Expiration time
                </th>
                <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
                   Visits
@@ -92,9 +114,14 @@ whenever(copied, () => console.info(text.value, 'copied'));
                   {{ url.longUrl }}
                </td>
 
-               <td class="px-3 text-center text-xs whitespace-nowrap">
+               <td v-if="isLoggedIn" class="px-3 text-center text-xs whitespace-nowrap">
                   {{ url.shortUrl }}
                </td>
+
+               <td v-else class="px-3 text-center text-xs whitespace-nowrap">
+                  {{ getValidDates(url.createdAt) }}
+               </td>
+
                <td class="px-3 text-center text-xs whitespace-nowrap relative">
                   <span
                      v-if="!isLoggedIn"

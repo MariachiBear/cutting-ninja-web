@@ -7,6 +7,7 @@ specifiers:
   '@iconify-json/mdi': 1.0.10
   '@intlify/vite-plugin-vue-i18n': 3.1.0
   '@types/base-64': 1.0.0
+  '@types/luxon': ^2.0.7
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 1.9.4
@@ -24,6 +25,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   https-localhost: 4.7.0
   idb-keyval: 6.0.3
+  luxon: ^2.1.1
   markdown-it-link-attributes: 3.0.0
   markdown-it-prism: 2.2.1
   nprogress: 0.2.0
@@ -54,6 +56,7 @@ dependencies:
   '@vueuse/head': 0.6.0_vue@3.2.21
   axios: 0.24.0
   idb-keyval: 6.0.3
+  luxon: 2.1.1
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
   vue: 3.2.21
@@ -68,6 +71,7 @@ devDependencies:
   '@iconify-json/mdi': 1.0.10
   '@intlify/vite-plugin-vue-i18n': 3.1.0_vite@2.6.14+vue-i18n@9.1.9
   '@types/base-64': 1.0.0
+  '@types/luxon': 2.0.7
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 1.9.4_vite@2.6.14
@@ -1671,6 +1675,10 @@ packages:
 
   /@types/linkify-it/3.0.2:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+    dev: true
+
+  /@types/luxon/2.0.7:
+    resolution: {integrity: sha512-AxiYycfO+/M4VIH0ribSr2iPFC+APewpJIaQSydwVnzorK3mjSFXkA3HmhQidGx44MpwaatFyEkbW/WD4zdDaQ==}
     dev: true
 
   /@types/markdown-it-link-attributes/3.0.1:
@@ -5093,6 +5101,11 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /luxon/2.1.1:
+    resolution: {integrity: sha512-6VQVNw7+kQu3hL1ZH5GyOhnk8uZm21xS7XJ/6vDZaFNcb62dpFDKcH8TI5NkoZOdMRxr7af7aYGrJlE/Wv0i1w==}
+    engines: {node: '>=12'}
+    dev: false
 
   /magic-string/0.25.7:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
