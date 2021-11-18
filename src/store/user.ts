@@ -2,6 +2,7 @@ import { clear } from 'idb-keyval';
 import AxiosInstance from '~/API/index';
 import UserRepository from '~/API/repositories/user';
 import { PersistentStore } from '~/store/main';
+import { useURLStore } from '~/store/url';
 
 const userApi = new UserRepository();
 export interface User extends Object {
@@ -25,6 +26,7 @@ class UserStore extends PersistentStore<User> {
          .then(async (response) => {
             this.state.user = response.data;
             AxiosInstance.defaults.headers.common.Authorization = `Bearer ${this.state.user.accessToken}`;
+            useURLStore.takeUrls();
             return true;
          })
          .catch(() => false);
@@ -48,6 +50,7 @@ class UserStore extends PersistentStore<User> {
       const result = await clear()
          .then(() => {
             localStorage.clear();
+            // location.reload();
             return true;
          })
          .catch(() => false);

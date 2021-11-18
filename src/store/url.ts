@@ -18,6 +18,12 @@ class URLStore extends PersistentStore<URL> {
       };
    }
 
+   async takeUrls() {
+      if (this.state.storedUrls.length > 0) {
+         await urlApi.take({ urls: this.state.storedUrls });
+      }
+   }
+
    async shortUrl(longUrl: string) {
       await promiseTimeout(500);
       await urlApi

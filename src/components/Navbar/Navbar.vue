@@ -61,7 +61,7 @@ const userFn = async () => {
          </button>
          <button
             class="flex flex-col icon-btn relative text-xl xl:text-2xl"
-            :title="t('button.toggle_dark')"
+            :title="t(isLoggedIn ? 'button.logout' : 'button.login')"
             @click="userFn"
          >
             <ic-baseline-logout

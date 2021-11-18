@@ -8,6 +8,8 @@ const isReady = ref(false);
 
 const userState = useUserStore.getState();
 
+const isLoggedIn = useUserStore.isUserLoggedIn();
+
 useHead({
    title: 'URL Shortener - RUBN/COND',
 });
@@ -17,6 +19,7 @@ tryOnMounted(async () => {
    await useURLStore.init();
    isReady.value = true;
    AxiosInstance.defaults.headers.common.Authorization = `Bearer ${userState.user?.accessToken}`;
+   if (isLoggedIn.value) await useUserStore.checkLogin().then();
 });
 </script>
 
