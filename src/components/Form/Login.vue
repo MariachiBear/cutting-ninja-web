@@ -69,12 +69,12 @@
                         dark:bg-rocket-metallic
                         duration-150
                         ease-in-out
+                        flex flex-row
                         font-semibold
                         group
                         hover:pl-10 hover:pr-6
-                        inline-flex
                         items-center
-                        justify-start
+                        justify-center
                         overflow-hidden
                         pl-4
                         pr-12
@@ -88,53 +88,55 @@
                      <span
                         class="
                            absolute
+                           bg-english-lavender
                            bottom-0
-                           left-0
-                           w-full
-                           h-1
-                           transition-all
                            duration-150
                            ease-in-out
-                           bg-english-lavender
                            group-hover:h-full
+                           h-1
+                           left-0
+                           transition-all
+                           w-full
                         "
                      ></span>
                      <span
                         class="
                            absolute
-                           right-0
-                           pr-4
                            duration-200
                            ease-out
-                           transform
                            group-hover:translate-x-12
+                           pr-4
+                           right-0
+                           transform
+                           flex
                         "
                      >
                         <mdi-arrow-right class="text-english-lavender" />
                      </span>
                      <span
                         class="
+                           -translate-x-12
                            absolute
+                           duration-200
+                           ease-out
+                           group-hover:translate-x-0
                            left-0
                            pl-2.5
-                           -translate-x-12
                            transform
-                           group-hover:translate-x-0
-                           ease-out
-                           duration-200
+                           flex
                         "
                      >
                         <mdi-arrow-right class="text-gray-50" />
                      </span>
                      <span
                         class="
-                           relative
-                           w-full
-                           text-left
-                           transition-colors
                            duration-200
                            ease-in-out
                            group-hover:text-white
+                           relative
+                           text-left
+                           transition-colors
+                           w-full
                         "
                      >
                         Sign in
