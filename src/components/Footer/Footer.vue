@@ -32,23 +32,23 @@
                   all-300
                "
             >
-               <a class="text-btn">Blog</a>
-               <a class="text-btn">About</a>
-               <a class="text-btn">Contact</a>
-               <a class="text-btn">Source Code</a>
+               <a class="text-btn" href="https://rubn.xyz/DiSUi">Blog</a>
+               <a class="text-btn" href="https://rubn.xyz/tp-Ph">About</a>
+               <a class="text-btn" href="mailto:contact@rubn.xyz">Contact</a>
+               <a class="text-btn" href="https://rubn.xyz/adfYv">Source Code</a>
             </nav>
 
             <div class="flex gap-4">
-               <a target="_blank" class="icon-btn text-xl">
+               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/yzFOO">
                   <mdi-twitter />
                </a>
-               <a target="_blank" class="icon-btn text-xl">
+               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/VvY6B">
                   <mdi-linkedin />
                </a>
-               <a target="_blank" class="icon-btn text-xl">
+               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/6sa6L">
                   <mdi-github />
                </a>
-               <a target="_blank" class="icon-btn text-xl">
+               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/FnNhb">
                   <mdi-gitlab />
                </a>
             </div>
