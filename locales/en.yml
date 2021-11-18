@@ -7,18 +7,16 @@ button:
   toggle_langs: Change languages
   reload_now: Reload now
   close: Close
-intro:
-  desc: Opinionated Vite Starter Template
-  dynamic-route: Demo of dynamic route
-  hi: Hi, {name}!
-  aka: Also known as
-  whats-your-name: What's your name?
-not-found: Not found
+  login: Login
+  logout: Logout
+
 label: 
   offline_ready: The application is ready to work offline.
   new_content: New content available, click on the reload button to update.
   close_in: Close in
   reload_in: Reload in
+  not-found: Not found
+
 unit: 
   second: second | seconds
 

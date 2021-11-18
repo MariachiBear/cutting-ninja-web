@@ -12,6 +12,7 @@ const extendedColors = {
    'old-lavender': '#6D6875',
    'pastel-pink': '#E5989B',
    'rocket-metallic': '#4E4B53',
+   'rocket-metallic2': '#535258',
    'mountbatten-pink': '#917681',
    'unbleached-sand': '#FAE8DF',
 };

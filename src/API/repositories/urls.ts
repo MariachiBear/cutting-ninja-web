@@ -17,10 +17,14 @@ export default class URLs {
    }
 
    update(id: string, data: Record<string, unknown>) {
-      return Repository.patch(`${resource}/${id}`, data);
+      return Repository.put(`${resource}/${id}`, data);
    }
 
    delete(id: string) {
       return Repository.delete(`${resource}/${id}`);
+   }
+
+   take(data: { urls: IURL[] }) {
+      return Repository.put(`${resource}/take`, data);
    }
 }

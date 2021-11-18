@@ -9,8 +9,13 @@ export default class User {
       return Repository.post(`${resource}/sign-in`, payload);
    }
 
-   signUp(payload: { email: string; password: string }): Promise<AxiosResponse<IUser>> {
-      return Repository.post(`${resource}/sign-in`, payload);
+   signUp(payload: {
+      email: string;
+      password: string;
+      firstName: string;
+      lastName: string;
+   }): Promise<AxiosResponse<IUser>> {
+      return Repository.post(`${resource}/sign-up`, payload);
    }
 
    getMe(): Promise<AxiosResponse<IUser>> {
@@ -19,5 +24,9 @@ export default class User {
 
    updateMe(data: IUser) {
       return Repository.put(`${resource}/me`, data);
+   }
+
+   getMyUrls(): Promise<AxiosResponse<IURL[]>> {
+      return Repository.get(`${resource}/me/urls`);
    }
 }

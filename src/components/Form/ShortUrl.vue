@@ -21,22 +21,16 @@ const onSubmit = async () => {
       class="flex flex-col gap-5 items-center justify-between lg:flex-row w-full"
       @submit.prevent="onSubmit"
    >
-      <input
+      <Input
          v-model="url"
-         placeholder="https://github.com/url-shortener-front"
-         class="
-            bg-warm-gray-50
-            flex-1
-            placeholder-gray-500
-            p-2
-            rounded-sm
-            shadow
-            text-warm-gray-800
-            w-full
-         "
+         class="flex-1 w-full relative"
+         is-required
+         type="url"
+         placeholder="https://github.com/RubenConde/url-shortener-front"
       />
 
       <button
+         type="submit"
          :disabled="isButtonDisabled"
          class="
             all-300
@@ -70,7 +64,9 @@ const onSubmit = async () => {
          ></span>
 
          <mdi-loading v-if="isLoading" class="relative text-warm-gray-50 animate-spin text-xl" />
-         <span v-else class="relative text-warm-gray-50"> Short that URL </span>
+         <span v-else class="relative text-warm-gray-50 text-2xl lg:text-base">
+            Short that URL
+         </span>
       </button>
    </form>
 </template>

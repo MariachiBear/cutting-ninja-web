@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { set } from '@vueuse/core';
 
+const emit = defineEmits(['logged', 'signedup']);
+
 const isLogin = ref(true);
 const login = ref<HTMLElement>();
 const signup = ref<HTMLElement>();
@@ -33,6 +35,7 @@ useResizeObserver(signup, (entries) => {
                ? '-translate-x-0 opacity-100 pointer-events-auto'
                : '-translate-x-full opacity-0 pointer-events-none absolute',
          ]"
+         @logged="emit('logged')"
       />
       <Signup
          ref="signup"
@@ -42,6 +45,7 @@ useResizeObserver(signup, (entries) => {
                ? 'translate-x-full opacity-0 pointer-events-none absolute'
                : 'translate-x-0 opacity-100 pointer-events-auto',
          ]"
+         @signedup="emit('signedup')"
       />
 
       <p

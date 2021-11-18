@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { or } from '@vueuse/core';
+import { DateTime } from 'luxon';
 import { siteBreakpoints } from '~/composables';
 import { useURLStore } from '~/store/url';
+import { useUserStore } from '~/store/user';
+
+const isLoggedIn = useUserStore.isUserLoggedIn();
 
 const { sm, md } = siteBreakpoints;
 const { text, copy, copied } = useClipboard();
@@ -12,9 +16,30 @@ const baseURL = String(import.meta.env.VITE_API_BASE_URL);
 
 const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
 
-useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 60);
+const { pause, resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10);
 
-whenever(copied, () => console.log(text.value, 'copied'));
+const getValidDates = (createdAt: string) => {
+   const today = DateTime.now().startOf('day');
+   const creationDay = DateTime.fromISO(createdAt).startOf('day');
+   const duration = today.diff(creationDay, 'days');
+
+   const validDates = Number(import.meta.env.VITE_VALIDITY_DAYS) - duration.days;
+
+   return validDates;
+};
+
+tryOnMounted(() => {
+   if (isLoggedIn.value) {
+      resume();
+   } else {
+      pause();
+   }
+});
+
+whenever(isLoggedIn, resume);
+
+// eslint-disable-next-line no-console
+whenever(copied, () => console.info(text.value, 'copied'));
 </script>
 
 <template>
@@ -41,8 +66,17 @@ whenever(copied, () => console.log(text.value, 'copied'));
                <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
                   Page name
                </th>
-               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+               <th
+                  v-if="isLoggedIn"
+                  class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap"
+               >
                   Short name
+               </th>
+               <th
+                  v-else
+                  class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap"
+               >
+                  Expiration time
                </th>
                <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
                   Visits
@@ -80,11 +114,17 @@ whenever(copied, () => console.log(text.value, 'copied'));
                   {{ url.longUrl }}
                </td>
 
-               <td class="px-3 text-center text-xs whitespace-nowrap">
+               <td v-if="isLoggedIn" class="px-3 text-center text-xs whitespace-nowrap">
                   {{ url.shortUrl }}
                </td>
+
+               <td v-else class="px-3 text-center text-xs whitespace-nowrap">
+                  {{ getValidDates(url.createdAt) }}
+               </td>
+
                <td class="px-3 text-center text-xs whitespace-nowrap relative">
                   <span
+                     v-if="!isLoggedIn"
                      class="
                         opacity-300
                         absolute
@@ -103,7 +143,9 @@ whenever(copied, () => console.log(text.value, 'copied'));
                   >
                      Log in to see this
                   </span>
-                  <span class="blur-sm filter font-semibold">{{ url.visits }}</span>
+                  <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">{{
+                     url.visits
+                  }}</span>
                </td>
                <td class="px-3 text-center whitespace-nowrap">
                   <div class="flex flex-row gap-1 justify-center px-3 py-2 text-lg">
