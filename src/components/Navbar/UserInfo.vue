@@ -32,7 +32,7 @@ const sourceImg = computed(
          alt="logo"
       />
 
-      <span v-if="!isSmallScreen" class="max-w-100 truncate">
+      <span v-if="!isSmallScreen" class="max-w-100 truncate text-theme colors-300">
          {{ userState.user?.firstName }} {{ userState.user?.lastName }}
       </span>
    </button>
