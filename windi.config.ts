@@ -56,6 +56,9 @@ export default defineConfig({
    plugins: [typography()],
 
    theme: {
+      fontFamily: {
+         sans: ['Poppins', 'sans-serif'],
+      },
       extend: {
          colors: extendedColors,
          typography: {
