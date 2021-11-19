@@ -15,7 +15,7 @@
          top-0
          w-full
       "
-      :class="[modelValue ? 'opacity-100 z-9999' : 'pointer-events-none opacity-0 -z-10']"
+      :class="[modelValue ? 'opacity-100 z-9998' : 'pointer-events-none opacity-0 -z-10']"
    >
       <div class="bg-black h-full w-full fixed opacity-70 dark:opacity-70" @click="clickOutside" />
 
@@ -23,7 +23,7 @@
          class="
             all-300
             main-theme-bg
-            max-h-11/12
+            max-h-11/12 max-w-11/12
             min-h-1/12 min-w-11/12
             overflow-x-hidden overflow-y-auto
             rounded

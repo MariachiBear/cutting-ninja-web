@@ -2,6 +2,7 @@
 import { or } from '@vueuse/core';
 import { DateTime } from 'luxon';
 import { siteBreakpoints } from '~/composables';
+import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
 
@@ -14,7 +15,7 @@ const isSmallScreen = or(sm, md);
 const urlState = useURLStore.getState();
 const baseURL = String(import.meta.env.VITE_API_BASE_URL);
 
-const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url);
+const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url, isLoggedIn.value);
 
 const { pause, resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10);
 
@@ -39,7 +40,9 @@ tryOnMounted(() => {
 whenever(isLoggedIn, resume);
 
 // eslint-disable-next-line no-console
-whenever(copied, () => console.info(text.value, 'copied'));
+whenever(copied, () =>
+   useNotificationStore.showSuccessNotification(`${text.value} copied successfully`)
+);
 </script>
 
 <template>
@@ -63,25 +66,25 @@ whenever(copied, () => console.info(text.value, 'copied'));
                "
                :class="[isSmallScreen ? 'text-theme-inverse' : 'text-theme']"
             >
-               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+               <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
                   Page name
                </th>
                <th
                   v-if="isLoggedIn"
-                  class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap"
+                  class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap"
                >
                   Short name
                </th>
                <th
                   v-else
-                  class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap"
+                  class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap"
                >
                   Expiration time
                </th>
-               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+               <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
                   Visits
                </th>
-               <th class="font-semibold px-6 py-3 text-center text-xs uppercase whitespace-nowrap">
+               <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
                   Actions
                </th>
             </tr>
@@ -108,56 +111,50 @@ whenever(copied, () => console.info(text.value, 'copied'));
                ]"
             >
                <td
-                  class="max-w-50 px-3 text-left text-xs truncate whitespace-nowrap font-semibold"
+                  class="max-w-50 px-3 text-left text-sm lg:text-xs truncate whitespace-nowrap"
                   :title="url.longUrl"
                >
                   {{ url.longUrl }}
                </td>
 
-               <td v-if="isLoggedIn" class="px-3 text-center text-xs whitespace-nowrap">
+               <td v-if="isLoggedIn" class="px-3 text-center text-sm lg:text-xs whitespace-nowrap">
                   {{ url.shortUrl }}
                </td>
 
-               <td v-else class="px-3 text-center text-xs whitespace-nowrap">
-                  {{ getValidDates(url.createdAt) }}
+               <td v-else class="px-3 text-center text-sm lg:text-xs whitespace-nowrap">
+                  Still valid
+                  <span class="font-semibold textstro">{{ getValidDates(url.createdAt) }}</span>
+                  days
                </td>
 
-               <td class="px-3 text-center text-xs whitespace-nowrap relative">
-                  <span
-                     v-if="!isLoggedIn"
-                     class="
-                        opacity-300
-                        absolute
-                        p-1
-                        lg:dark:bg-light-blue-400 lg:bg-light-blue-800
-                        dark:bg-light-blue-700
-                        bg-light-blue-300
-                        rounded-sm
-                        z-10
-                        font-medium
-                        opacity-0
-                        hover:opacity-100
-                     "
-                     :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
-                     style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
-                  >
-                     Log in to see this
+               <td
+                  class="
+                     px-3
+                     text-center text-sm
+                     lg:text-xs
+                     whitespace-nowrap
+                     relative
+                     overflow-hidden
+                  "
+               >
+                  <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">
+                     {{ url.visits }}
                   </span>
-                  <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">{{
-                     url.visits
-                  }}</span>
                </td>
                <td class="px-3 text-center whitespace-nowrap">
-                  <div class="flex flex-row gap-1 justify-center px-3 py-2 text-lg">
+                  <div class="flex flex-row gap-1 justify-center px-3 py-2 text-xl lg:text-lg">
                      <a
                         :href="`${baseURL}${url.shortUrl}`"
                         target="_blank"
                         class="
-                           text-blue-400
+                           text-blue-500
+                           lg:text-blue-400
                            dark:text-blue-400
+                           lg:dark:text-blue-500
                            align-middle
                            flex flex-row
                            items-center
+                           colors-300
                         "
                         title="Go to page"
                      >

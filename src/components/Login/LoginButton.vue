@@ -45,6 +45,7 @@
             right-0
             transform
             flex
+            text-xl
          "
       >
          <mdi-arrow-right class="text-english-lavender" />
@@ -60,6 +61,7 @@
             pl-2.5
             transform
             flex
+            text-xl
          "
       >
          <mdi-arrow-right class="text-gray-50" />

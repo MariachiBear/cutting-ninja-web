@@ -63,7 +63,10 @@ const onSubmit = async () => {
             ]"
          ></span>
 
-         <mdi-loading v-if="isLoading" class="relative text-warm-gray-50 animate-spin text-xl" />
+         <mdi-loading
+            v-if="isLoading"
+            class="relative text-warm-gray-50 animate-spin text-2xl lg:text-xl"
+         />
          <span v-else class="relative text-warm-gray-50 text-2xl lg:text-base">
             Short that URL
          </span>

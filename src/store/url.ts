@@ -2,6 +2,7 @@ import { promiseTimeout } from '@vueuse/core';
 import UrlRepository from '~/API/repositories/urls';
 import UserRepository from '~/API/repositories/user';
 import { PersistentStore } from '~/store/main';
+import { useNotificationStore } from '~/store/notification';
 
 const urlApi = new UrlRepository();
 const userApi = new UserRepository();
@@ -33,6 +34,8 @@ class URLStore extends PersistentStore<URL> {
          .create({ longUrl })
          .then(async (response) => {
             this.state.storedUrls.push(response.data);
+            useNotificationStore.showSuccessNotification('URL shorted successfully');
+            return true;
          })
          .catch((err) => {
             console.error(err);
@@ -52,17 +55,20 @@ class URLStore extends PersistentStore<URL> {
          });
    }
 
-   async deleteUrl(url: IURL) {
-      await urlApi
-         .delete(url._id)
-         .catch((err) => {
-            console.error(err);
-            return false;
-         })
-         .finally(() => {
-            const urlIndex = this.state.storedUrls.indexOf(url);
-            this.state.storedUrls.splice(urlIndex, 1);
-         });
+   async deleteUrl(url: IURL, isLoggedIn: boolean) {
+      if (isLoggedIn)
+         await urlApi
+            .delete(url._id)
+            .then(() => {
+               return true;
+            })
+            .catch((err) => {
+               console.error(err);
+               return false;
+            });
+      const urlIndex = this.state.storedUrls.indexOf(url);
+      this.state.storedUrls.splice(urlIndex, 1);
+      useNotificationStore.showSuccessNotification('URL deleted successfully');
    }
 
    toggleIsTableVisible(state?: boolean) {
