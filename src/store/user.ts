@@ -2,6 +2,7 @@ import { clear } from 'idb-keyval';
 import AxiosInstance from '~/API/index';
 import UserRepository from '~/API/repositories/user';
 import { PersistentStore } from '~/store/main';
+import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
 
 const userApi = new UserRepository();
@@ -27,10 +28,12 @@ class UserStore extends PersistentStore<User> {
             this.state.user = response.data;
             AxiosInstance.defaults.headers.common.Authorization = `Bearer ${this.state.user.accessToken}`;
             useURLStore.takeUrls();
+            useNotificationStore.showSuccessNotification('Logged successfully');
             return true;
          })
          .catch((err) => {
             console.error(err);
+            useNotificationStore.showErrorNotification('Sign in failed. Verify your credentials');
             return false;
          });
 
@@ -46,6 +49,13 @@ class UserStore extends PersistentStore<User> {
          })
          .catch((err) => {
             console.error(err);
+            switch (err.response.status) {
+               case 409:
+                  useNotificationStore.showErrorNotification(
+                     'An user with this email already exists'
+                  );
+                  break;
+            }
             return false;
          });
 

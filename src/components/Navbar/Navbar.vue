@@ -19,23 +19,11 @@ const userFn = async () => {
 
 <template>
    <header
-      class="
-         absolute
-         colors-300
-         flex flex-row
-         items-center
-         justify-between
-         left-0
-         lg:p-4
-         p-2
-         text-theme
-         top-0
-         w-full
-      "
+      class="absolute flex flex-row items-center justify-between left-0 lg:p-4 p-2 top-0 w-full"
    >
       <a
          href="/"
-         class="font-bold gap-1 inline-flex items-center text-xl xl:text-3xl"
+         class="font-bold gap-1 inline-flex items-center text-xl xl:text-3xl text-theme colors-300"
          aria-label="logo"
       >
          <mdi-knife class="md:text-5xl text-english-lavender text-3xl" />
@@ -46,7 +34,7 @@ const userFn = async () => {
          <UserInfo v-if="isLoggedIn" />
 
          <button
-            class="flex flex-col icon-btn relative text-3xl xl:text-2xl"
+            class="flex flex-col icon-btn relative text-3xl xl:text-2xl text-theme"
             :title="t('button.toggle_dark')"
             @click="toggleDark()"
          >
@@ -60,7 +48,7 @@ const userFn = async () => {
             />
          </button>
          <button
-            class="flex flex-col icon-btn relative text-3xl xl:text-2xl"
+            class="flex flex-col icon-btn relative text-3xl xl:text-2xl text-theme"
             :title="t(isLoggedIn ? 'button.logout' : 'button.login')"
             @click="userFn"
          >

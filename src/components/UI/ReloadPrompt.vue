@@ -43,7 +43,7 @@ whenever(
          section-padding
          shadow-inner
          w-full
-         z-1000
+         z-9999
       "
       :class="[isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none']"
       role="alert"

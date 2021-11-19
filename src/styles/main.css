@@ -47,7 +47,7 @@ body,
 }
 
 .icon-btn {
-   @apply inline-block cursor-pointer hover:text-english-lavender transition-colors ease-in-out duration-200;
+   @apply inline-block cursor-pointer hover:text-english-lavender dark:hover:text-english-lavender transition-colors ease-in-out duration-200;
 }
 
 .text-btn {
@@ -55,11 +55,11 @@ body,
 }
 
 .text-theme {
-   @apply text-warm-gray-700 dark:text-warm-gray-300;
+   @apply text-warm-gray-800 dark:text-warm-gray-100;
 }
 
 .text-theme-inverse {
-   @apply text-warm-gray-300 dark:text-warm-gray-800;
+   @apply text-warm-gray-100 dark:text-warm-gray-800;
 }
 
 html,
