@@ -53,7 +53,7 @@ export default defineConfig({
       range(4000).map((i) => `w-${i}px`),
       range(4000).map((i) => `h-${i}px`),
    ],
-   plugins: [typography()],
+   plugins: [typography(), require('@windicss/plugin-question-mark')],
 
    theme: {
       fontFamily: {

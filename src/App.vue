@@ -21,7 +21,7 @@ tryOnMounted(async () => {
    if (isLoggedIn.value) {
       await useUserStore.checkLogin();
    }
-   await useNotificationStore.init();
+   await useNotificationStore.init().then(async () => await useNotificationStore.reset());
 });
 </script>
 
