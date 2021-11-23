@@ -4,25 +4,31 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonWarning: typeof import('~icons/carbon/warning')['default']
+    CarbonWarning: typeof import('~icons/carbon/warning')['default'];
     Dialog: typeof import('./components/UI/Dialog.vue')['default']
+    Dropdown: typeof import('./components/Navbar/Dropdown.vue')['default']
+    'Dropdown copy': typeof import('./components/Navbar/MobileMenu.vue')['default'];
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     HeroText: typeof import('./components/HeroText.vue')['default']
-    IcBaselineCheckBox: typeof import('~icons/ic/baseline-check-box')['default']
+    IcBaselineCheckBox: typeof import('~icons/ic/baseline-check-box')['default'];
     IcBaselineClose: typeof import('~icons/ic/baseline-close')['default']
     IcBaselineContentCopy: typeof import('~icons/ic/baseline-content-copy')['default']
     IcBaselineDarkMode: typeof import('~icons/ic/baseline-dark-mode')['default']
+    IcBaselineDashboard: typeof import('~icons/ic/baseline-dashboard')['default']
     IcBaselineDelete: typeof import('~icons/ic/baseline-delete')['default']
     IcBaselineImage: typeof import('~icons/ic/baseline-image')['default']
     IcBaselineLightMode: typeof import('~icons/ic/baseline-light-mode')['default']
     IcBaselineLogin: typeof import('~icons/ic/baseline-login')['default']
+    IcBaselineLogIn: typeof import('~icons/ic/baseline-log-in')['default']
     IcBaselineLogout: typeof import('~icons/ic/baseline-logout')['default']
+    IcBaselineLogOut: typeof import('~icons/ic/baseline-log-out')['default']
     IcBaselineOpenInNew: typeof import('~icons/ic/baseline-open-in-new')['default']
+    IcBaselineSettings: typeof import('~icons/ic/baseline-settings')['default']
     IcBaselineTableRows: typeof import('~icons/ic/baseline-table-rows')['default']
-    IconButton: typeof import('~icons/ic/on-button')['default']
+    IconButton: typeof import('~icons/ic/on-button')['default'];
     IcOutlineCheckBox: typeof import('~icons/ic/outline-check-box')['default']
-    IcOutlineDangerBox: typeof import('~icons/ic/outline-danger-box')['default']
+    IcOutlineDangerBox: typeof import('~icons/ic/outline-danger-box')['default'];
     IcOutlineDangerous: typeof import('~icons/ic/outline-dangerous')['default']
     IcOutlineInfo: typeof import('~icons/ic/outline-info')['default']
     IcOutlineWarningAmber: typeof import('~icons/ic/outline-warning-amber')['default']
@@ -32,18 +38,19 @@ declare module 'vue' {
     LoginButton: typeof import('./components/Login/LoginButton.vue')['default']
     LoginTabs: typeof import('./components/Login/LoginTabs.vue')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
-    MdiClose: typeof import('~icons/mdi/close')['default']
-    MdiEyeOffOutline: typeof import('~icons/mdi/eye-off-outline')['default']
-    MdiEyeOutline: typeof import('~icons/mdi/eye-outline')['default']
+    MdiClose: typeof import('~icons/mdi/close')['default'];
+    MdiEyeOffOutline: typeof import('~icons/mdi/eye-off-outline')['default'];
+    MdiEyeOutline: typeof import('~icons/mdi/eye-outline')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']
     MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
-    MdiHome: typeof import('~icons/mdi/home')['default']
-    MdiImage: typeof import('~icons/mdi/image')['default']
+    MdiHome: typeof import('~icons/mdi/home')['default'];
+    MdiImage: typeof import('~icons/mdi/image')['default'];
     MdiKnife: typeof import('~icons/mdi/knife')['default']
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     MdiLoading: typeof import('~icons/mdi/loading')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
-    MdiViewList: typeof import('~icons/mdi/view-list')['default']
+    MdiViewList: typeof import('~icons/mdi/view-list')['default'];
+    MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default']
     Modal: typeof import('./components/UI/Modal.vue')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     Notification: typeof import('./components/UI/Notification.vue')['default']
