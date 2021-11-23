@@ -67,7 +67,7 @@
       "url": "git+https://github.com/RubenConde/url-shortener-front.git"
    },
    "scripts": {
-      "build": "rimraf dist && cross-env NODE_ENV=production vite-ssg build",
+      "build": "rimraf dist && cross-env NODE_ENV=production vite build",
       "dev": "cross-env NODE_ENV=development vite --port 3333 --open",
       "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore . --color",
       "eslint:format": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore . --fix",
