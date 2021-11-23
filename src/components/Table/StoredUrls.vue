@@ -15,9 +15,10 @@ const isSmallScreen = or(sm, md);
 const urlState = useURLStore.getState();
 const baseURL = String(import.meta.env.VITE_API_BASE_URL);
 
-const deleteUrl = (url: IURL) => useURLStore.deleteUrl(url, isLoggedIn.value);
-
 const { pause, resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10);
+
+const activeIndex = ref<number | null>(null);
+const [isConfirmOpen, toggleIsConfirmOpen] = useToggle(false);
 
 const getValidDates = (createdAt: string) => {
    const today = DateTime.now().startOf('day');
@@ -28,6 +29,12 @@ const getValidDates = (createdAt: string) => {
 
    return validDates;
 };
+
+const deleteUrl = (url: IURL) =>
+   useURLStore.deleteUrl(url, isLoggedIn.value).then(() => {
+      toggleIsConfirmOpen(false);
+      activeIndex.value = null;
+   });
 
 tryOnMounted(() => {
    if (isLoggedIn.value) {
@@ -55,9 +62,9 @@ whenever(copied, () =>
             <tr
                class="
                   all-300
+                  bg-mountbatten-pink
                   dark:shadow-white
                   lg:shadow-white lg:dark:shadow-black
-                  bg-mountbatten-pink
                   shadow
                   sticky
                   text-theme
@@ -90,25 +97,27 @@ whenever(copied, () =>
             </tr>
          </thead>
 
-         <tbody>
+         <tbody
+            class="divide-y-1"
+            :class="[
+               isSmallScreen
+                  ? 'divide-warm-gray-400 dark:divide-warm-gray-600'
+                  : 'divide-warm-gray-600 dark:divide-warm-gray-400',
+            ]"
+         >
             <tr
                v-for="(url, index) in urlState.storedUrls"
                :key="index"
                class="
-                  border border-solid border-t-0 border-l-0 border-r-0
                   colors-300
                   dark:hover:bg-white dark:hover:bg-opacity-10
                   hover:bg-black hover:bg-opacity-10
-                  lg:hover:bg-white
-                  lg:hover:bg-opacity-10
                   lg:dark:hover:bg-black
                   lg:dark:hover:bg-opacity-10
+                  lg:hover:bg-opacity-10
+                  lg:hover:bg-white
                "
-               :class="[
-                  isSmallScreen
-                     ? 'text-theme border-warm-gray-400 dark:border-warm-gray-600'
-                     : 'text-theme-inverse border-warm-gray-600 dark:border-warm-gray-400',
-               ]"
+               :class="[isSmallScreen ? 'text-theme ' : 'text-theme-inverse ']"
             >
                <td
                   class="max-w-50 px-3 text-left text-sm lg:text-xs truncate whitespace-nowrap"
@@ -129,20 +138,73 @@ whenever(copied, () =>
 
                <td
                   class="
-                     px-3
-                     text-center text-sm
                      lg:text-xs
-                     whitespace-nowrap
-                     relative
                      overflow-hidden
+                     px-3
+                     relative
+                     text-center text-sm
+                     whitespace-nowrap
                   "
                >
                   <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">
                      {{ url.visits }}
                   </span>
                </td>
-               <td class="px-3 text-center whitespace-nowrap">
+
+               <td class="text-center whitespace-nowrap relative overflow-hidden">
+                  <div
+                     class="
+                        absolute
+                        all-300
+                        bg-english-lavender
+                        flex flex-col
+                        h-full
+                        items-center
+                        justify-between
+                        lg:flex-row lg:gap-1 lg:p-2
+                        p-1
+                        text-theme
+                        transform
+                        w-full
+                     "
+                     :class="[
+                        isConfirmOpen && activeIndex === index
+                           ? 'translate-x-0'
+                           : 'translate-x-full ',
+                     ]"
+                  >
+                     <span class="text-xs font-semibold lg:flex-grow text-left"
+                        >Delete this URL?</span
+                     >
+
+                     <div class="flex flex-row justify-around w-full items-center">
+                        <ic-baseline-check class="cursor-pointer" @click="deleteUrl(url)" />
+                        <ic-baseline-close
+                           class="cursor-pointer"
+                           @click="
+                              toggleIsConfirmOpen(false);
+                              activeIndex = null;
+                           "
+                        />
+                     </div>
+                  </div>
                   <div class="flex flex-row gap-1 justify-center px-3 py-2 text-xl lg:text-lg">
+                     <button
+                        class="
+                           text-red-400
+                           dark:text-red-400
+                           align-middle
+                           flex flex-row
+                           items-center
+                        "
+                        title="Delete URL"
+                        @click="
+                           activeIndex = index;
+                           toggleIsConfirmOpen(true);
+                        "
+                     >
+                        <ic-baseline-delete />
+                     </button>
                      <a
                         :href="`${baseURL}${url.shortUrl}`"
                         target="_blank"
@@ -160,19 +222,6 @@ whenever(copied, () =>
                      >
                         <ic-baseline-open-in-new />
                      </a>
-                     <button
-                        class="
-                           text-red-400
-                           dark:text-red-400
-                           align-middle
-                           flex flex-row
-                           items-center
-                        "
-                        title="Delete URL"
-                        @click="deleteUrl(url)"
-                     >
-                        <ic-baseline-delete />
-                     </button>
                      <button
                         class="align-middle all-300 flex flex-row items-center"
                         :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"

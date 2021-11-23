@@ -21,7 +21,7 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
          relative
          rounded-sm
          w-full
-         xl:max-w-6/12
+         lg:max-w-6/12
       "
    >
       <Toggle v-if="isImgLoaded" />

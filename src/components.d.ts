@@ -11,6 +11,7 @@ declare module 'vue' {
     Footer: typeof import('./components/Footer/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     HeroText: typeof import('./components/HeroText.vue')['default']
+    IcBaselineCheck: typeof import('~icons/ic/baseline-check')['default']
     IcBaselineCheckBox: typeof import('~icons/ic/baseline-check-box')['default'];
     IcBaselineClose: typeof import('~icons/ic/baseline-close')['default']
     IcBaselineContentCopy: typeof import('~icons/ic/baseline-content-copy')['default']

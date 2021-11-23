@@ -9,6 +9,7 @@
          relative
          w-full
          colors-300
+         py-10
       "
    >
       <Navbar />
