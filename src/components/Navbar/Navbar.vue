@@ -8,18 +8,22 @@ const isDarkDelayed = useDebounce(isDark, 150);
 const [isLoginModalOpen, toggleIsLoginModalOpen] = useToggle(false);
 
 const { t } = useI18n();
-
-const userFn = async () => {
-   if (isLoggedIn.value) {
-      await useUserStore.logout();
-      location.reload();
-   } else toggleIsLoginModalOpen();
-};
 </script>
 
 <template>
    <header
-      class="absolute flex flex-row items-center justify-between left-0 lg:p-4 p-2 top-0 w-full"
+      class="
+         absolute
+         flex flex-row
+         items-center
+         justify-between
+         left-0
+         lg:p-4
+         p-2
+         top-0
+         w-full
+         z-40
+      "
    >
       <a
          href="/"
@@ -47,19 +51,14 @@ const userFn = async () => {
                :class="[isDarkDelayed ? 'opacity-0' : 'opacity-100']"
             />
          </button>
+
          <button
+            v-if="!isLoggedIn"
             class="flex flex-col icon-btn relative text-3xl xl:text-2xl text-theme"
-            :title="t(isLoggedIn ? 'button.logout' : 'button.login')"
-            @click="userFn"
+            :title="t('button.sign_in')"
+            @click="toggleIsLoginModalOpen()"
          >
-            <ic-baseline-logout
-               class="opacity-300"
-               :class="[!isLoggedIn ? 'opacity-0' : 'opacity-100']"
-            />
-            <ic-baseline-login
-               class="absolute opacity-300"
-               :class="[isLoggedIn ? 'opacity-0' : 'opacity-100']"
-            />
+            <ic-baseline-log-in />
          </button>
       </nav>
    </header>

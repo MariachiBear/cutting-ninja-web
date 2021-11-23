@@ -1,14 +1,64 @@
 button:
   about: À propos de
-  back: Retour
-  go: Essayer
+  account_settings: Paramètres du compte
+  back: Dos
+  close: Fermer
+  dashboard: Tableau de bord
+  go: GO
   home: Accueil
-  toggle_dark: Basculer en mode sombre
+  reload_now: Rechargez maintenant
+  short_that_url: Raccourcir l'URL
+  sign_in: Se connecter
+  sign_out: Se déconnecter
+  sign_up: S'inscrire
+  toggle_dark: Basculer le mode sombre
   toggle_langs: Changer de langue
-intro:
-  desc: Exemple d'application Vite
-  dynamic-route: Démo de route dynamique
-  hi: Salut, {name}!
-  aka: Aussi connu sous le nom de
-  whats-your-name: Comment t'appelles-tu ?
-not-found: Page non trouvée
+label:
+  about: À propos de
+  actions: Actions
+  already_account_question: Vous avez déjà un compte ?
+  blog: Blog
+  close_in: Fermer
+  contact: Contact
+  copied_success: '{url} copié avec succès'
+  copy: Copie
+  delete: Supprimer
+  delete_question: Supprimer cette URL ?
+  deleted_success: '{url} supprimé avec succès'
+  email: 'Courriel :'
+  email_address: Adresse électronique
+  expiration_time: Délai d'expiration
+  first_name: Prénom
+  go_to: Aller à
+  invalid_email: Courriel non valide
+  is_required: Est nécessaire
+  last_name: Nom de famille
+  main_phrase: >-
+    Il est facile de se lasser des longues URL. C'est pénible de devoir écrire
+    un lien aussi long qu'un livre. Pour cela et bien plus encore, raccourcissez
+    vos URL et tout ira mieux.
+  new_content: >-
+    Nouveau contenu disponible, cliquez sur le bouton de rechargement pour
+    mettre à jour.
+  'no': Non
+  no_account_question: Vous n'avez pas encore de compte ?
+  not-found: Non trouvé
+  offline_ready: L'application est prête à fonctionner hors ligne.
+  page_name: Nom de la page
+  password: Mot de passe
+  password_placeholder: Un mot de passe étonnant... comme "mot de passe".
+  reload_in: Recharge en
+  short_name: Nom court
+  shorted_success: URL court-circuitée avec succès
+  show_picture: Voir la photo
+  show_table: Afficher la table
+  signed_in_as: Signé en tant que
+  signed_in_success: Connecté avec succès
+  source_code: Code source
+  still_valid: Toujours valable pour
+  to_access: pour accéder à votre compte
+  visits: Visites
+  'yes': Oui
+unit:
+  day: jour | jours
+  second: seconde | secondes

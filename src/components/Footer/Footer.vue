@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
+
 <template>
    <div
       class="
@@ -31,23 +35,51 @@
                   md:gap-6 md:justify-start
                "
             >
-               <a class="text-btn" target="_blank" href="https://rubn.xyz/DiSUi">Blog</a>
-               <a class="text-btn" target="_blank" href="https://rubn.xyz/tp-Ph">About</a>
-               <a class="text-btn" target="_blank" href="mailto:contact@rubn.xyz">Contact</a>
-               <a class="text-btn" target="_blank" href="https://rubn.xyz/adfYv">Source Code</a>
+               <a class="text-btn" target="_blank" href="https://rubn.xyz/DiSUi">
+                  {{ t('label.blog') }}
+               </a>
+               <a class="text-btn" target="_blank" href="https://rubn.xyz/tp-Ph">
+                  {{ t('label.about') }}
+               </a>
+               <a class="text-btn" target="_blank" href="mailto:contact@rubn.xyz">
+                  {{ t('label.contact') }}
+               </a>
+               <a class="text-btn" target="_blank" href="https://rubn.xyz/adfYv">
+                  {{ t('label.source_code') }}
+               </a>
             </nav>
 
             <div class="flex gap-4">
-               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/yzFOO">
+               <a
+                  target="_blank"
+                  class="icon-btn text-xl"
+                  title="Twitter"
+                  href="https://rubn.xyz/yzFOO"
+               >
                   <mdi-twitter />
                </a>
-               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/VvY6B">
+               <a
+                  target="_blank"
+                  class="icon-btn text-xl"
+                  title="Linked In"
+                  href="https://rubn.xyz/VvY6B"
+               >
                   <mdi-linkedin />
                </a>
-               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/6sa6L">
+               <a
+                  target="_blank"
+                  class="icon-btn text-xl"
+                  title="Github"
+                  href="https://rubn.xyz/6sa6L"
+               >
                   <mdi-github />
                </a>
-               <a target="_blank" class="icon-btn text-xl" href="https://rubn.xyz/FnNhb">
+               <a
+                  target="_blank"
+                  class="icon-btn text-xl"
+                  title="Gitlab"
+                  href="https://rubn.xyz/FnNhb"
+               >
                   <mdi-gitlab />
                </a>
             </div>

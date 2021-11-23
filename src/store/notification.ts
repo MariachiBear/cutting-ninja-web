@@ -21,7 +21,7 @@ class NotificationStore extends PersistentStore<Notification> {
    }
 
    private showNotification(type?: string, msTime?: number) {
-      if (!this.state.isOpen && !this.state.isActive) {
+      if (!this.state.isOpen) {
          this.state.isActive = true;
 
          if (type) this.state.type = type;
@@ -36,28 +36,28 @@ class NotificationStore extends PersistentStore<Notification> {
       }
    }
 
-   showSuccessNotification(message: string, seconds = 5) {
+   showSuccessNotification(message: string, seconds = 3) {
       this.state.message = message;
-      const multiplicand = 1000;
-      this.showNotification('success', seconds * multiplicand);
+      const milliseconds = seconds * 1000;
+      this.showNotification('success', milliseconds);
    }
 
-   showErrorNotification(message: string, seconds = 5) {
+   showErrorNotification(message: string, seconds = 3) {
       this.state.message = message;
-      const multiplicand = 1000;
-      this.showNotification('error', seconds * multiplicand);
+      const milliseconds = seconds * 1000;
+      this.showNotification('error', milliseconds);
    }
 
-   showInfoNotification(message: string, seconds = 5) {
+   showInfoNotification(message: string, seconds = 3) {
       this.state.message = message;
-      const multiplicand = 1000;
-      this.showNotification('info', seconds * multiplicand);
+      const milliseconds = seconds * 1000;
+      this.showNotification('info', milliseconds);
    }
 
-   showWarningNotification(message: string, seconds = 5) {
+   showWarningNotification(message: string, seconds = 3) {
       this.state.message = message;
-      const multiplicand = 1000;
-      this.showNotification('warning', seconds * multiplicand);
+      const milliseconds = seconds * 1000;
+      this.showNotification('warning', milliseconds);
    }
 }
 

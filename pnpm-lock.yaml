@@ -16,6 +16,7 @@ specifiers:
   '@vue/server-renderer': 3.2.22
   '@vueuse/core': 6.9.1
   '@vueuse/head': 0.6.0
+  '@windicss/plugin-question-mark': ^0.1.1
   axios: ^0.24.0
   critters: 0.0.14
   cross-env: 7.0.3
@@ -78,6 +79,7 @@ devDependencies:
   '@vue/compiler-sfc': 3.2.22
   '@vue/eslint-config-prettier': 6.0.0_5ef9ff6669b626527300390dc84546fb
   '@vue/server-renderer': 3.2.22_vue@3.2.21
+  '@windicss/plugin-question-mark': 0.1.1
   critters: 0.0.14
   cross-env: 7.0.3
   cypress: 9.0.0
@@ -2126,6 +2128,10 @@ packages:
       windicss: 3.2.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@windicss/plugin-question-mark/0.1.1:
+    resolution: {integrity: sha512-LTnySh28mFncJqCw7VjZzYD3HkJynjHQ8wAIgsZUPTi8WzDJtUeYyFc8/ImXGL/jon55zzg9yy9y/lUyCvvrmA==}
     dev: true
 
   /@windicss/plugin-utils/1.5.1:

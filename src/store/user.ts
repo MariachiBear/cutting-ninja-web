@@ -28,7 +28,6 @@ class UserStore extends PersistentStore<User> {
             this.state.user = response.data;
             AxiosInstance.defaults.headers.common.Authorization = `Bearer ${this.state.user.accessToken}`;
             useURLStore.takeUrls();
-            useNotificationStore.showSuccessNotification('Logged successfully');
             return true;
          })
          .catch((err) => {
