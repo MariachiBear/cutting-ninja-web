@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useURLStore } from '~/store/url';
+const { t } = useI18n();
 const urlState = useURLStore.getState();
 const toggle = () => useURLStore.toggleIsTableVisible();
 const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState.isTableVisible);
@@ -27,7 +28,7 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
          z-0
       "
       :class="[urlState.storedUrls.length === 0 ? '!-translate-y-0 !opacity-0' : '']"
-      :title="isTableVisible ? 'Show picture' : 'Show table'"
+      :title="t(`label.${isTableVisible ? 'show_picture' : 'show_table'}`)"
       @click="toggle"
    >
       <div class="flex flex-col relative">

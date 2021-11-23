@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
+
+const { t } = useI18n();
 
 const emit = defineEmits(['logged']);
 
@@ -15,6 +18,7 @@ const login = async () => {
          await useURLStore.updateStoredUrl();
          isLoading.value = false;
          emit('logged');
+         useNotificationStore.showSuccessNotification(t('label.signed_in_success'));
       }
    });
 };
@@ -22,22 +26,24 @@ const login = async () => {
 const emailValidation = (value: string): boolean | string => {
    const pattern =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   return pattern.test(value) || 'Invalid email';
+   return pattern.test(value) || t('label.invalid_email');
 };
 
-const requiredValidation = (value: string): boolean | string => !!value || 'Is required';
+const requiredValidation = (value: string): boolean | string => !!value || t('label.is_required');
 </script>
 
 <template>
    <div class="container mx-auto">
       <div class="text-center">
-         <h1 class="mb-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign in</h1>
-         <p class="text-gray-500 dark:text-gray-400">to access your account</p>
+         <h1 class="mb-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+            {{ t('button.sign_in') }}
+         </h1>
+         <p class="text-gray-500 dark:text-gray-400">{{ t('label.to_access') }}</p>
       </div>
       <form action="" class="p-5 flex flex-col gap-1" @submit.prevent="login">
          <Input
             v-model="email"
-            label="Email address"
+            :label="t('label.email_address')"
             type="email"
             is-required
             placeholder="email@example.com"
@@ -45,15 +51,15 @@ const requiredValidation = (value: string): boolean | string => !!value || 'Is r
          />
          <Input
             v-model="password"
-            label="Password"
+            :label="t('label.password')"
             type="password"
             is-required
-            placeholder="An amazing password, like 'password'"
+            :placeholder="t('label.password_placeholder')"
             :validation-functions="{ requiredValidation }"
          />
 
          <div class="flex flex-row justify-center">
-            <LoginButton> Sign in </LoginButton>
+            <LoginButton> {{ t('button.sign_in') }} </LoginButton>
          </div>
       </form>
    </div>

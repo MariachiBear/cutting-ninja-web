@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { set } from '@vueuse/core';
 
+const { t } = useI18n();
+
 const emit = defineEmits(['logged', 'signedup']);
 
 const isLogin = ref(true);
@@ -56,8 +58,10 @@ useResizeObserver(signup, (entries) => {
                : '-translate-x-full opacity-0 pointer-events-none absolute',
          ]"
       >
-         Don&#x27;t have an account yet?
-         <button class="text-english-lavender" @click="isLogin = false">Sign up</button>
+         {{ t('label.no_account_question') }}
+         <button class="text-english-lavender" @click="isLogin = false">
+            {{ t('button.sign_up') }}
+         </button>
       </p>
 
       <p
@@ -68,8 +72,10 @@ useResizeObserver(signup, (entries) => {
                : 'translate-x-0 opacity-100 pointer-events-auto',
          ]"
       >
-         Don have an account already?
-         <button class="text-english-lavender" @click="isLogin = true">Sign in</button>
+         {{ t('label.already_account_question') }}
+         <button class="text-english-lavender" @click="isLogin = true">
+            {{ t('button.sign_in') }}
+         </button>
       </p>
    </div>
 </template>

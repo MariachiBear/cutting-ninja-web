@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
+
+const { t } = useI18n();
 
 const url = ref<string>();
 const isLoading = ref(false);
@@ -9,7 +12,12 @@ const isButtonDisabled = computed(() => !url.value);
 const onSubmit = async () => {
    if (url.value) {
       isLoading.value = true;
-      await useURLStore.shortUrl(url.value).then(() => useURLStore.toggleIsTableVisible(true));
+      await useURLStore.shortUrl(url.value).then((result) => {
+         if (result) {
+            useURLStore.toggleIsTableVisible(true);
+            useNotificationStore.showSuccessNotification(t('label.shorted_success'));
+         }
+      });
       url.value = '';
       isLoading.value = false;
    }
@@ -68,7 +76,7 @@ const onSubmit = async () => {
             class="relative text-warm-gray-50 animate-spin text-2xl lg:text-xl"
          />
          <span v-else class="relative text-warm-gray-50 text-2xl lg:text-base">
-            Short that URL
+            {{ t('button.short_that_url') }}
          </span>
       </button>
    </form>

@@ -6,6 +6,8 @@ import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
 
+const { t } = useI18n();
+
 const isLoggedIn = useUserStore.isUserLoggedIn();
 
 const { sm, md } = siteBreakpoints;
@@ -31,9 +33,14 @@ const getValidDates = (createdAt: string) => {
 };
 
 const deleteUrl = (url: IURL) =>
-   useURLStore.deleteUrl(url, isLoggedIn.value).then(() => {
-      toggleIsConfirmOpen(false);
-      activeIndex.value = null;
+   useURLStore.deleteUrl(url, isLoggedIn.value).then((result) => {
+      if (result) {
+         toggleIsConfirmOpen(false);
+         activeIndex.value = null;
+         useNotificationStore.showSuccessNotification(
+            t('label.deleted_success', { url: `${baseURL}${url.shortUrl}` })
+         );
+      }
    });
 
 tryOnMounted(() => {
@@ -48,7 +55,7 @@ whenever(isLoggedIn, resume);
 
 // eslint-disable-next-line no-console
 whenever(copied, () =>
-   useNotificationStore.showSuccessNotification(`${text.value} copied successfully`)
+   useNotificationStore.showSuccessNotification(t('label.copied_success', { url: text.value }))
 );
 </script>
 
@@ -74,25 +81,25 @@ whenever(copied, () =>
                :class="[isSmallScreen ? 'text-theme-inverse' : 'text-theme']"
             >
                <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
-                  Page name
+                  {{ t('label.page_name') }}
                </th>
                <th
                   v-if="isLoggedIn"
                   class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap"
                >
-                  Short name
+                  {{ t('label.short_name') }}
                </th>
                <th
                   v-else
                   class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap"
                >
-                  Expiration time
+                  {{ t('label.expiration_time') }}
                </th>
                <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
-                  Visits
+                  {{ t('label.visits') }}
                </th>
                <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
-                  Actions
+                  {{ t('label.actions') }}
                </th>
             </tr>
          </thead>
@@ -131,9 +138,9 @@ whenever(copied, () =>
                </td>
 
                <td v-else class="px-3 text-center text-sm lg:text-xs whitespace-nowrap">
-                  Still valid
+                  {{ t('label.still_valid') }}
                   <span class="font-semibold textstro">{{ getValidDates(url.createdAt) }}</span>
-                  days
+                  {{ t('unit.day', getValidDates(url.createdAt)) }}
                </td>
 
                <td
@@ -173,19 +180,26 @@ whenever(copied, () =>
                            : 'translate-x-full ',
                      ]"
                   >
-                     <span class="text-xs font-semibold lg:flex-grow text-left"
-                        >Delete this URL?</span
-                     >
+                     <span class="text-xs font-semibold lg:flex-grow text-left">
+                        {{ t('label.delete_question') }}
+                     </span>
 
-                     <div class="flex flex-row justify-around w-full items-center">
-                        <ic-baseline-check class="cursor-pointer" @click="deleteUrl(url)" />
-                        <ic-baseline-close
-                           class="cursor-pointer"
+                     <div
+                        class="flex flex-row justify-around w-full lg:w-auto items-center lg:gap-2"
+                     >
+                        <button :title="t('label.yes')" class="flex" @click="deleteUrl(url)">
+                           <ic-baseline-check />
+                        </button>
+                        <button
+                           :title="t('label.no')"
+                           class="flex"
                            @click="
                               toggleIsConfirmOpen(false);
                               activeIndex = null;
                            "
-                        />
+                        >
+                           <ic-baseline-close />
+                        </button>
                      </div>
                   </div>
                   <div class="flex flex-row gap-1 justify-center px-3 py-2 text-xl lg:text-lg">
@@ -197,7 +211,7 @@ whenever(copied, () =>
                            flex flex-row
                            items-center
                         "
-                        title="Delete URL"
+                        :title="t('label.delete')"
                         @click="
                            activeIndex = index;
                            toggleIsConfirmOpen(true);
@@ -218,14 +232,14 @@ whenever(copied, () =>
                            items-center
                            colors-300
                         "
-                        title="Go to page"
+                        :title="t('label.go_to')"
                      >
                         <ic-baseline-open-in-new />
                      </a>
                      <button
                         class="align-middle all-300 flex flex-row items-center"
                         :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
-                        title="Copy URL"
+                        :title="t('label.copy')"
                         @click="copy(`https://rubn.xyz/${url.shortUrl}`)"
                      >
                         <ic-baseline-content-copy />

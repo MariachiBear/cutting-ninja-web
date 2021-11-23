@@ -2,7 +2,6 @@ import { promiseTimeout } from '@vueuse/core';
 import UrlRepository from '~/API/repositories/urls';
 import UserRepository from '~/API/repositories/user';
 import { PersistentStore } from '~/store/main';
-import { useNotificationStore } from '~/store/notification';
 
 const urlApi = new UrlRepository();
 const userApi = new UserRepository();
@@ -30,17 +29,18 @@ class URLStore extends PersistentStore<URL> {
 
    async shortUrl(longUrl: string) {
       await promiseTimeout(500);
-      await urlApi
+      const result = await urlApi
          .create({ longUrl })
          .then(async (response) => {
             this.state.storedUrls.push(response.data);
-            useNotificationStore.showSuccessNotification('URL shorted successfully');
             return true;
          })
          .catch((err) => {
             console.error(err);
             return false;
          });
+
+      return result;
    }
 
    async updateStoredUrl() {
@@ -56,8 +56,9 @@ class URLStore extends PersistentStore<URL> {
    }
 
    async deleteUrl(url: IURL, isLoggedIn: boolean) {
+      let result = true;
       if (isLoggedIn)
-         await urlApi
+         result = await urlApi
             .delete(url._id)
             .then(() => {
                return true;
@@ -68,7 +69,7 @@ class URLStore extends PersistentStore<URL> {
             });
       const urlIndex = this.state.storedUrls.indexOf(url);
       this.state.storedUrls.splice(urlIndex, 1);
-      useNotificationStore.showSuccessNotification('URL deleted successfully');
+      return result;
    }
 
    toggleIsTableVisible(state?: boolean) {

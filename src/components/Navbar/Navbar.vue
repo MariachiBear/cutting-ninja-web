@@ -55,7 +55,7 @@ const { t } = useI18n();
          <button
             v-if="!isLoggedIn"
             class="flex flex-col icon-btn relative text-3xl xl:text-2xl text-theme"
-            :title="t(isLoggedIn ? 'button.logout' : 'button.login')"
+            :title="t('button.sign_in')"
             @click="toggleIsLoginModalOpen()"
          >
             <ic-baseline-log-in />

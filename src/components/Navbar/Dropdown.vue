@@ -3,6 +3,8 @@ import { or } from '@vueuse/core';
 import { siteBreakpoints } from '~/composables';
 import { useUserStore } from '~/store/user';
 
+const { t } = useI18n();
+
 defineProps({
    isMenuOpen: { type: Boolean, required: false, default: false },
 });
@@ -47,7 +49,7 @@ const logout = async () => {
          role="menu"
       >
          <div class="px-4 py-3 text-theme colors-300">
-            <p class="text-sm leading-5">Signed in as</p>
+            <p class="text-sm leading-5">{{ t('label.signed_in_as') }}</p>
             <p v-if="isSmallScreen" class="text-sm font-medium leading-5 truncate">
                {{ userState.user?.firstName }} {{ userState.user?.lastName }}
                <span class="text-sm">({{ userState.user?.email }})</span>
@@ -63,14 +65,14 @@ const logout = async () => {
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full"
                role="menuitem"
             >
-               Dashboard <ic-baseline-dashboard />
+               {{ t('button.dashboard') }} <ic-baseline-dashboard />
             </a>
             <a
                tabindex="0"
                class="flex items-center justify-between px-4 py-2 text-btn text-left text-sm w-full"
                role="menuitem"
             >
-               Account settings <ic-baseline-settings />
+               {{ t('button.account_settings') }} <ic-baseline-settings />
             </a>
          </div>
          <div class="py-1 text-theme colors-300">
@@ -80,7 +82,7 @@ const logout = async () => {
                role="menuitem"
                @click="logout"
             >
-               Sign out <ic-baseline-log-out />
+               {{ t('button.sign_out') }} <ic-baseline-log-out />
             </button>
          </div>
       </div>

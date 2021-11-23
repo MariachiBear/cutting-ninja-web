@@ -13,11 +13,25 @@ const messages = Object.fromEntries(
 );
 
 export const install: UserModule = ({ app }) => {
+   const langs = Object.keys(messages);
+
+   const isNavigatorLanguageTranslated = langs
+      .map((lang) => lang.includes(navigator.language.split('-')[0]))
+      .find((result) => result === true);
+
    const i18n = createI18n({
       legacy: false,
-      locale: 'en',
+      fallbackLocale: {
+         zh: ['zh-CN'],
+         default: ['en'],
+      },
+      locale: navigator.language.split('-')[0],
       messages,
    });
+
+   document
+      .getElementsByTagName('HTML')[0]
+      .setAttribute('lang', isNavigatorLanguageTranslated ? navigator.language : 'fr');
 
    app.use(i18n);
 };

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n();
 const phrases = [
    "There's no Wrong Way to Eat an URL Shortener",
    'Keep That URL Shortener Complexion',
@@ -85,8 +86,7 @@ tryOnMounted(() => {
       </h1>
 
       <p class="leading-relaxed lg:w-4/5 mb-8 md:mb-12 xl:text-lg">
-         It's easy to get tired of long URLs. It's a pain to have to write a link as long as a book.
-         For this and more, shorten your URLs and everything will be better.
+         {{ t('label.main_phrase') }}
       </p>
 
       <ShortUrl />

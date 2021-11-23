@@ -1,14 +1,64 @@
 button:
   about: Acerca de
-  back: Atrás
-  go: Ir
+  account_settings: Configuración de la cuenta
+  back: Volver
+  close: Cerrar
+  dashboard: Tablero de mandos
+  go: IR A
   home: Inicio
-  toggle_dark: Alternar modo oscuro
-  toggle_langs: Cambiar idiomas
-intro:
-  desc: Plantilla de Inicio de Vite Dogmática
-  dynamic-route: Demo de ruta dinámica
-  hi: ¡Hola, {name}!
-  aka: También conocido como
-  whats-your-name: ¿Cómo te llamas?
-not-found: No se ha encontrado
+  reload_now: Recarga ahora
+  short_that_url: Acortar esa URL
+  sign_in: Acceder
+  sign_out: Firmar la salida
+  sign_up: Inscríbete
+  toggle_dark: Activar el modo oscuro
+  toggle_langs: Cambiar de idioma
+label:
+  about: Acerca de
+  actions: Acciones
+  already_account_question: ¿Ya tienes una cuenta?
+  blog: Blog
+  close_in: Cerrar en
+  contact: Contacte con
+  copied_success: '{url} copiado con éxito'
+  copy: Copiar
+  delete: Borrar
+  delete_question: ¿Borrar esta URL?
+  deleted_success: '{url} borrado con éxito'
+  email: Envíe un correo electrónico a
+  email_address: Dirección de correo electrónico
+  expiration_time: Tiempo de caducidad
+  first_name: Nombre
+  go_to: Ir a
+  invalid_email: Correo electrónico no válido
+  is_required: Es necesario
+  last_name: Apellido
+  main_phrase: >-
+    Es fácil cansarse de las URLs largas. Es un dolor tener que escribir un
+    enlace tan largo como un libro. Por esto y más, acorta tus URLs y todo irá
+    mejor.
+  new_content: >-
+    Nuevo contenido disponible, haga clic en el botón de recarga para
+    actualizar.
+  'no': 'No'
+  no_account_question: ¿Aún no tienes una cuenta?
+  not-found: No se ha encontrado
+  offline_ready: La aplicación está preparada para trabajar sin conexión.
+  page_name: Nombre de la página
+  password: Contraseña
+  password_placeholder: Una contraseña increíble... como "contraseña"
+  reload_in: Recarga en
+  short_name: Nombre corto
+  shorted_success: URL acortada con éxito
+  show_picture: Mostrar imagen
+  show_table: Mostrar tabla
+  signed_in_as: Ingresó como
+  signed_in_success: Se ha registrado con éxito
+  source_code: Código fuente
+  still_valid: Sigue siendo válido para
+  to_access: para acceder a su cuenta
+  visits: Visitas
+  'yes': Sí
+unit:
+  day: día | días
+  second: segundo | segundos

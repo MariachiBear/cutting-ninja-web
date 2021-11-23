@@ -2,6 +2,8 @@
 import { useUserStore } from '~/store/user';
 const emit = defineEmits(['signedup']);
 
+const { t } = useI18n();
+
 const email = ref('');
 const password = ref('');
 const firstName = ref('');
@@ -60,26 +62,28 @@ const sourceImg = computed(
                "
                alt="logo"
             />
-            <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign up</h1>
+            <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+               {{ t('button.sign_up') }}
+            </h1>
          </div>
          <form action="" class="p-5 pb-4 flex flex-col gap-1" @submit.prevent="signup">
             <Input
                v-model="firstName"
-               label="First name"
+               :label="t('label.first_name')"
                is-required
                placeholder="John"
                :validation-functions="{ requiredValidation }"
             />
             <Input
                v-model="lastName"
-               label="Last name"
+               :label="t('label.last_name')"
                is-required
                placeholder="Doe"
                :validation-functions="{ requiredValidation }"
             />
             <Input
                v-model="email"
-               label="Email address"
+               :label="t('label.email_address')"
                type="email"
                is-required
                placeholder="email@example.com"
@@ -87,14 +91,14 @@ const sourceImg = computed(
             />
             <Input
                v-model="password"
-               label="Password"
+               :label="t('label.password')"
                type="password"
                is-required
-               placeholder="An amazing password, like 'password'"
+               :placeholder="t('label.password_placeholder')"
                :validation-functions="{ requiredValidation, minCharacters }"
             />
             <div class="flex flex-row justify-center">
-               <LoginButton>Sign up</LoginButton>
+               <LoginButton>{{ t('button.sign_up') }}</LoginButton>
             </div>
          </form>
       </div>
