@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
+
 <template>
    <div class="py-6 sm:py-0 h-full">
       <div class="max-w-screen-xl px-4 md:px-8 mx-auto h-full">
@@ -9,7 +13,7 @@
                   md:h-auto
                   bg-gray-100
                   overflow-hidden
-                  shadow-lg
+                  shadow-inner
                   sm:shadow-none
                   rounded-lg
                   sm:rounded-none
@@ -17,10 +21,10 @@
                "
             >
                <img
-                  src="https://source.unsplash.com/1920x1080/?lost"
+                  src="https://source.unsplash.com/960x540/?lost"
                   loading="lazy"
-                  alt="Photo by Jeremy Cai"
-                  class="w-full h-full object-cover object-center"
+                  alt="404"
+                  class="w-full h-full object-cover object-center transform all-300 hover:scale-105"
                />
             </div>
             <!-- image - end -->
@@ -38,16 +42,16 @@
                "
             >
                <p class="text-english-lavender text-sm md:text-base font-semibold uppercase mb-4">
-                  Error 404
+                  {{ t('label.error_404') }}
                </p>
                <h1
                   class="text-gray-800 text-2xl md:text-3xl font-bold text-center sm:text-left mb-2"
                >
-                  Page not found
+                  {{ t('label.page_not_found') }}
                </h1>
 
                <p class="text-gray-500 md:text-lg text-center sm:text-left mb-8">
-                  The page you’re looking for doesn’t exist.
+                  {{ t('label.not_found_text') }}
                </p>
 
                <a
@@ -146,7 +150,7 @@
                         ease
                      "
                   >
-                     Go home
+                     {{ t('button.go_home') }}
                   </span>
                </a>
             </div>
