@@ -50,11 +50,13 @@ declare module 'vue' {
     MdiKnife: typeof import('~icons/mdi/knife')['default']
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     MdiLoading: typeof import('~icons/mdi/loading')['default']
+    MdiNinja: typeof import('~icons/mdi/ninja')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
     MdiViewList: typeof import('~icons/mdi/view-list')['default'];
     MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default']
     Modal: typeof import('./components/UI/Modal.vue')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
+    NinjaHead: typeof import('./components/NinjaHead.vue')['default']
     Notification: typeof import('./components/UI/Notification.vue')['default']
     README: typeof import('./components/README.md')['default']
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']

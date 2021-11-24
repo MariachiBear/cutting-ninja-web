@@ -45,6 +45,22 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
             "
             @load="isImgLoaded = true"
          />
+         <!-- <img
+            src="https://source.unsplash.com/1600x900/?ninja"
+            alt="Photo"
+            class="
+               contrast-75
+               filter
+               lg:rounded-sm
+               object-cover object-center
+               overflow-hidden
+               saturate-70
+               transform
+               all-300
+               hover:scale-105
+            "
+            @load="isImgLoaded = true"
+         /> -->
       </div>
 
       <div

@@ -27,11 +27,32 @@ const { t } = useI18n();
    >
       <a
          href="/"
-         class="font-bold gap-1 inline-flex items-center text-xl xl:text-3xl text-theme colors-300"
+         class="
+            font-bold
+            gap-1
+            inline-flex
+            gap-2
+            items-center
+            text-xl
+            xl:text-3xl
+            text-theme
+            colors-300
+         "
          aria-label="logo"
       >
-         <mdi-knife class="md:text-5xl text-english-lavender text-3xl" />
-         URL Shortener
+         <mdi-ninja
+            class="
+               text-3xl
+               md:text-5xl
+               text-jet
+               rounded-full
+               colors-300
+               dark:bg-warm-gray-100
+               w-8
+               h-8
+            "
+         />
+         Cutting Ninja
       </a>
 
       <nav class="flex flex-row gap-2 lg:gap-4 items-center justify-center">
