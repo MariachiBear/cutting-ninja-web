@@ -5,6 +5,7 @@ button:
   close: Fermer
   dashboard: Tableau de bord
   go: ALLER
+  go_home: Rentrez à l'accueil
   home: Accueil
   reload_now: Recharger maintenant
   short_that_url: Raccourcir l'URL
@@ -27,6 +28,7 @@ label:
   deleted_success: '{url} supprimé avec succès'
   email: Courriel
   email_address: Adresse électronique
+  error_404: Erreur 404
   expiration_time: Délai d'expiration
   first_name: Prénom
   go_to: Aller à
@@ -42,9 +44,11 @@ label:
     mettre à jour.
   'no': Non
   no_account_question: Vous n'avez pas encore de compte ?
-  not-found: Non trouvé
+  not_found: Non trouvé
+  not_found_text: La page que vous recherchez n'existe pas.
   offline_ready: L'application est prête à fonctionner hors ligne.
   page_name: Nom de la page
+  page_not_found: Page non trouvée
   password: Mot de passe
   password_placeholder: Un mot de passe étonnant... comme "mot de passe".
   reload_in: Recharge en

@@ -5,6 +5,7 @@ button:
   close: Cerrar
   dashboard: Panel
   go: IR A
+  go_home: Ir al inicio
   home: Inicio
   reload_now: Recargar ahora
   short_that_url: Acortar esa URL
@@ -27,6 +28,7 @@ label:
   deleted_success: '{url} borrado con éxito'
   email: Correo electrónico
   email_address: Dirección de correo electrónico
+  error_404: Error 404
   expiration_time: Tiempo de caducidad
   first_name: Nombre
   go_to: Ir a
@@ -42,9 +44,11 @@ label:
     actualizar.
   'no': 'No'
   no_account_question: ¿Aún no tienes una cuenta?
-  not-found: No se ha encontrado
+  not_found: No se ha encontrado
+  not_found_text: La página que buscas no existe.
   offline_ready: La aplicación está preparada para trabajar sin conexión.
   page_name: Nombre de la página
+  page_not_found: Página no encontrada
   password: Contraseña
   password_placeholder: Una contraseña increíble... como "contraseña"
   reload_in: Recarga en

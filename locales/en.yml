@@ -13,6 +13,7 @@ button:
   sign_up: Sign up
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+  go_home: Go home
 label:
   about: About
   actions: Actions
@@ -40,7 +41,7 @@ label:
   new_content: New content available, click on the reload button to update.
   'no': 'No'
   no_account_question: Don't have an account yet?
-  not-found: Not found
+  not_found: Not found
   offline_ready: The application is ready to work offline.
   page_name: Page name
   password: Password
@@ -57,6 +58,9 @@ label:
   to_access: to access your account
   visits: Visits
   'yes': 'Yes'
+  error_404: Error 404
+  page_not_found: Page not found
+  not_found_text: The page you’re looking for doesn’t exist. 
 unit:
   day: day | days
   second: second | seconds

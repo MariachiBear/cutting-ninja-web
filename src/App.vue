@@ -7,10 +7,6 @@ import AxiosInstance from '~/API/index';
 
 const isReady = ref(false);
 
-useHead({
-   title: 'URL Shortener - RUBN/COND',
-});
-
 tryOnMounted(async () => {
    await useUserStore.init();
    const userState = useUserStore.getState();
