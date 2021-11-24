@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Alerts: typeof import('./components/UI/Alerts.vue')['default']
     CarbonWarning: typeof import('~icons/carbon/warning')['default'];
     Dialog: typeof import('./components/UI/Dialog.vue')['default']
     Dropdown: typeof import('./components/Navbar/Dropdown.vue')['default']
@@ -39,7 +40,7 @@ declare module 'vue' {
     LoginButton: typeof import('./components/Login/LoginButton.vue')['default']
     LoginTabs: typeof import('./components/Login/LoginTabs.vue')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
-    MdiClose: typeof import('~icons/mdi/close')['default'];
+    MdiClose: typeof import('~icons/mdi/close')['default']
     MdiEyeOffOutline: typeof import('~icons/mdi/eye-off-outline')['default'];
     MdiEyeOutline: typeof import('~icons/mdi/eye-outline')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']

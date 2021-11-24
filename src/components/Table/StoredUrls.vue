@@ -151,11 +151,37 @@ whenever(copied, () =>
                      relative
                      text-center text-sm
                      whitespace-nowrap
+                     group
                   "
                >
                   <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">
                      {{ url.visits }}
                   </span>
+                  <button
+                     v-if="!isLoggedIn"
+                     class="
+                        -translate-x-1/2 -translate-y-4/2
+                        group-hover:-translate-y-1/2
+                        absolute
+                        all-300
+                        bg-warm-gray-50
+                        text-warm-gray-700
+                        flex
+                        group-hover:opacity-100
+                        items-center
+                        justify-center
+                        left-1/2
+                        opacity-100
+                        p-1
+                        rounded-md
+                        shadow-md
+                        top-1/2
+                        transform
+                        w-full
+                     "
+                  >
+                     {{ t('button.sign_up') }}
+                  </button>
                </td>
 
                <td class="text-center whitespace-nowrap relative overflow-hidden">
@@ -202,7 +228,7 @@ whenever(copied, () =>
                         </button>
                      </div>
                   </div>
-                  <div class="flex flex-row gap-1 justify-center px-3 py-2 text-xl lg:text-lg">
+                  <div class="flex flex-row gap-1 justify-center px-3 py-1 text-xl lg:text-lg">
                      <button
                         class="
                            text-red-400
@@ -210,6 +236,14 @@ whenever(copied, () =>
                            align-middle
                            flex flex-row
                            items-center
+                           dark:hover:bg-white dark:hover:bg-opacity-10
+                           hover:bg-black hover:bg-opacity-10
+                           lg:dark:hover:bg-black
+                           lg:dark:hover:bg-opacity-10
+                           lg:hover:bg-opacity-10
+                           lg:hover:bg-white
+                           p-1
+                           rounded-sm
                         "
                         :title="t('label.delete')"
                         @click="
@@ -231,13 +265,33 @@ whenever(copied, () =>
                            flex flex-row
                            items-center
                            colors-300
+                           dark:hover:bg-white dark:hover:bg-opacity-10
+                           hover:bg-black hover:bg-opacity-10
+                           lg:dark:hover:bg-black
+                           lg:dark:hover:bg-opacity-10
+                           lg:hover:bg-opacity-10
+                           lg:hover:bg-white
+                           p-1
+                           rounded-sm
                         "
                         :title="t('label.go_to')"
                      >
                         <ic-baseline-open-in-new />
                      </a>
                      <button
-                        class="align-middle all-300 flex flex-row items-center"
+                        class="
+                           align-middle
+                           all-300
+                           flex flex-row
+                           items-center
+                           dark:hover:bg-white dark:hover:bg-opacity-10
+                           hover:bg-black hover:bg-opacity-10
+                           lg:dark:hover:bg-black
+                           lg:dark:hover:bg-opacity-10
+                           lg:hover:bg-opacity-10
+                           lg:hover:bg-white
+                           p-1
+                        "
                         :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
                         :title="t('label.copy')"
                         @click="copy(`https://rubn.xyz/${url.shortUrl}`)"
