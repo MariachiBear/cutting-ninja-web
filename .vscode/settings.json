@@ -15,6 +15,7 @@
       "pinia",
       "pnpm",
       "RUBN",
+      "rubncond",
       "typecheck",
       "unplugin",
       "vitejs",
