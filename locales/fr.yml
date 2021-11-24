@@ -44,7 +44,7 @@ label:
     mettre à jour.
   'no': Non
   no_account_question: Vous n'avez pas encore de compte ?
-  not-found: Non trouvé
+  not_found: Non trouvé
   not_found_text: La page que vous recherchez n'existe pas.
   offline_ready: L'application est prête à fonctionner hors ligne.
   page_name: Nom de la page

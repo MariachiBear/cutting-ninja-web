@@ -44,7 +44,7 @@ label:
     actualizar.
   'no': 'No'
   no_account_question: ¿Aún no tienes una cuenta?
-  not-found: No se ha encontrado
+  not_found: No se ha encontrado
   not_found_text: La página que buscas no existe.
   offline_ready: La aplicación está preparada para trabajar sin conexión.
   page_name: Nombre de la página

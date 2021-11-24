@@ -41,7 +41,7 @@ label:
   new_content: New content available, click on the reload button to update.
   'no': 'No'
   no_account_question: Don't have an account yet?
-  not-found: Not found
+  not_found: Not found
   offline_ready: The application is ready to work offline.
   page_name: Page name
   password: Password
