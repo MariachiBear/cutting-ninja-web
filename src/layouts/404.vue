@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 useHead({
-   title: `URL Shortener - ${t('label.page_not_found')}`,
+   title: `URL Shortener | ${t('label.page_not_found')}`,
 });
 </script>
 

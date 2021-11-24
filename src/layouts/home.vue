@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 useHead({
-   title: `URL Shortener - ${t('button.home')}`,
+   title: `URL Shortener | ${t('button.home')}`,
 });
 </script>
 
