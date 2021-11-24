@@ -28,20 +28,24 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
 
       <mdi-loading class="animate-spin absolute text-7xl z-10 text-warm-gray-100" />
 
-      <img
-         src="https://source.unsplash.com/collection/317099/1600x900"
-         alt="Photo"
-         class="
-            contrast-75
-            filter
-            lg:rounded-sm
-            object-cover object-center
-            overflow-hidden
-            saturate-70
-            z-20
-         "
-         @load="isImgLoaded = true"
-      />
+      <div class="w-full h-full z-20 overflow-hidden">
+         <img
+            src="https://source.unsplash.com/collection/317099/1600x900"
+            alt="Photo"
+            class="
+               contrast-75
+               filter
+               lg:rounded-sm
+               object-cover object-center
+               overflow-hidden
+               saturate-70
+               transform
+               all-300
+               hover:scale-105
+            "
+            @load="isImgLoaded = true"
+         />
+      </div>
 
       <div
          class="absolute all-300 h-full items-center lg:rounded-sm overflow-hidden w-full z-30"

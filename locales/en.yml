@@ -13,37 +13,38 @@ button:
   sign_up: Sign up
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
-
-label: 
-  'no': No
-  'yes': Yes
+label:
   about: About
   actions: Actions
   already_account_question: Don have an account already?
   blog: Blog
   close_in: Close in
   contact: Contact
-  copied_success: "{url} copied successfully"
+  copied_success: '{url} copied successfully'
   copy: Copy
-  delete_question: Delete this URL?
   delete: Delete
-  deleted_success: "{url} deleted successfully"
-  email_address: Email address
+  delete_question: Delete?
+  deleted_success: '{url} deleted successfully'
   email: Email
+  email_address: Email address
   expiration_time: Expiration time
   first_name: First name
   go_to: Go to
   invalid_email: Invalid email
   is_required: Is required
   last_name: Last name
-  main_phrase: It's easy to get tired of long URLs. It's a pain to have to write a link as long as a book. For this and more, shorten your URLs and everything will be better.
+  main_phrase: >-
+    It's easy to get tired of long URLs. It's a pain to have to write a link as
+    long as a book. For this and more, shorten your URLs and everything will be
+    better.
   new_content: New content available, click on the reload button to update.
+  'no': 'No'
   no_account_question: Don't have an account yet?
   not-found: Not found
   offline_ready: The application is ready to work offline.
   page_name: Page name
-  password_placeholder: An amazing password... like "password"
   password: Password
+  password_placeholder: An amazing password... like "password"
   reload_in: Reload in
   short_name: Short name
   shorted_success: URL shorted successfully
@@ -55,10 +56,7 @@ label:
   still_valid: Still valid for
   to_access: to access your account
   visits: Visits
-  
-
-unit: 
+  'yes': 'Yes'
+unit:
   day: day | days
   second: second | seconds
-
-

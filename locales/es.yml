@@ -3,15 +3,15 @@ button:
   account_settings: Configuración de la cuenta
   back: Volver
   close: Cerrar
-  dashboard: Tablero de mandos
+  dashboard: Panel
   go: IR A
   home: Inicio
-  reload_now: Recarga ahora
+  reload_now: Recargar ahora
   short_that_url: Acortar esa URL
   sign_in: Acceder
-  sign_out: Firmar la salida
-  sign_up: Inscríbete
-  toggle_dark: Activar el modo oscuro
+  sign_out: Cerrar sesión
+  sign_up: Registrarse
+  toggle_dark: Cambiar el modo oscuro
   toggle_langs: Cambiar de idioma
 label:
   about: Acerca de
@@ -19,13 +19,13 @@ label:
   already_account_question: ¿Ya tienes una cuenta?
   blog: Blog
   close_in: Cerrar en
-  contact: Contacte con
+  contact: Contacto
   copied_success: '{url} copiado con éxito'
   copy: Copiar
   delete: Borrar
-  delete_question: ¿Borrar esta URL?
+  delete_question: ¿Borrar?
   deleted_success: '{url} borrado con éxito'
-  email: Envíe un correo electrónico a
+  email: Correo electrónico
   email_address: Dirección de correo electrónico
   expiration_time: Tiempo de caducidad
   first_name: Nombre
@@ -52,10 +52,10 @@ label:
   shorted_success: URL acortada con éxito
   show_picture: Mostrar imagen
   show_table: Mostrar tabla
-  signed_in_as: Ingresó como
-  signed_in_success: Se ha registrado con éxito
+  signed_in_as: Sesión iniciada como
+  signed_in_success: Inicio de sesión exitoso
   source_code: Código fuente
-  still_valid: Sigue siendo válido para
+  still_valid: Válido durante
   to_access: para acceder a su cuenta
   visits: Visitas
   'yes': Sí

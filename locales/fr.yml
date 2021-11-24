@@ -1,12 +1,12 @@
 button:
   about: À propos de
   account_settings: Paramètres du compte
-  back: Dos
+  back: Retourner
   close: Fermer
   dashboard: Tableau de bord
-  go: GO
+  go: ALLER
   home: Accueil
-  reload_now: Rechargez maintenant
+  reload_now: Recharger maintenant
   short_that_url: Raccourcir l'URL
   sign_in: Se connecter
   sign_out: Se déconnecter
@@ -18,14 +18,14 @@ label:
   actions: Actions
   already_account_question: Vous avez déjà un compte ?
   blog: Blog
-  close_in: Fermer
+  close_in: Fermer dans
   contact: Contact
   copied_success: '{url} copié avec succès'
   copy: Copie
   delete: Supprimer
-  delete_question: Supprimer cette URL ?
+  delete_question: Supprimer ?
   deleted_success: '{url} supprimé avec succès'
-  email: 'Courriel :'
+  email: Courriel
   email_address: Adresse électronique
   expiration_time: Délai d'expiration
   first_name: Prénom
@@ -49,10 +49,10 @@ label:
   password_placeholder: Un mot de passe étonnant... comme "mot de passe".
   reload_in: Recharge en
   short_name: Nom court
-  shorted_success: URL court-circuitée avec succès
+  shorted_success: URL raccourcie avec succès
   show_picture: Voir la photo
   show_table: Afficher la table
-  signed_in_as: Signé en tant que
+  signed_in_as: Connecté en tant que
   signed_in_success: Connecté avec succès
   source_code: Code source
   still_valid: Toujours valable pour
