@@ -41,7 +41,7 @@ const { t } = useI18n();
                <a class="text-btn" target="_blank" href="https://nnjct.pw/tp-Ph">
                   {{ t('label.about') }}
                </a>
-               <a class="text-btn" target="_blank" href="mailto:contact@nnjct.pw">
+               <a class="text-btn" target="_blank" href="mailto:contact@rubn.xyz">
                   {{ t('label.contact') }}
                </a>
                <a class="text-btn" target="_blank" href="https://nnjct.pw/adfYv">

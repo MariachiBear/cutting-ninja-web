@@ -12,14 +12,14 @@
   status = 200
 
 [[redirects]]
-  from = "https://url-shortener-front.netlify.app"
-  to = "https://cuttingninja.page"
+  from = "https://cuttingninja.netlify.app/"
+  to = "https://cuttingninja.page/"
   status = 301
   force = true
 
 [[redirects]]
-  from= "https://url-shortener.rubenconde.com"
-  to = "https://cuttingninja.page"
+  from= "https://url-shortener.rubenconde.com/"
+  to = "https://cuttingninja.page/"
   status = 301
   force = true
 
