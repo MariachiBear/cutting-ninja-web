@@ -1,7 +1,7 @@
 {
    "background_color": "#f8d9c9",
    "categories": ["utilities", "productivity"],
-   "description": "URL Shortener",
+   "description": "Cutting Ninja",
    "display": "standalone",
    "features": ["Cross Platform", "fast", "simple", "cool"],
    "icons": [
@@ -94,7 +94,7 @@
       }
    ],
    "lang": "English",
-   "name": "URL Shortener",
+   "name": "Cutting Ninja",
    "orientation": "any",
    "prefer_related_applications": false,
    "related_applications": [
@@ -103,18 +103,18 @@
          "platform": "play"
       }
    ],
-   "short_name": "URL Shortener",
+   "short_name": "Cutting Ninja",
    "shortcuts": [
       {
-         "description": "Short an URL",
+         "description": "Cut an URL",
          "icons": [
             {
                "sizes": "192x192",
                "src": "/maskable_icon_x192.png"
             }
          ],
-         "name": "URL Shortener",
-         "short_name": "URL Shortener",
+         "name": "Cutting Ninja",
+         "short_name": "Cutting Ninja",
          "url": "/"
       }
    ],

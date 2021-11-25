@@ -13,7 +13,13 @@
 
 [[redirects]]
   from = "https://url-shortener-front.netlify.app"
-  to = "https://url-shortener.rubenconde.com"
+  to = "https://cuttingninja.page"
+  status = 301
+  force = true
+
+[[redirects]]
+  from= "https://url-shortener.rubenconde.com"
+  to = "https://cuttingninja.page"
   status = 301
   force = true
 

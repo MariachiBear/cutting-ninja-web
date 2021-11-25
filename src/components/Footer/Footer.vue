@@ -35,16 +35,16 @@ const { t } = useI18n();
                   md:gap-6 md:justify-start
                "
             >
-               <a class="text-btn" target="_blank" href="https://rubn.xyz/DiSUi">
+               <a class="text-btn" target="_blank" href="https://nnjct.pw/DiSUi">
                   {{ t('label.blog') }}
                </a>
-               <a class="text-btn" target="_blank" href="https://rubn.xyz/tp-Ph">
+               <a class="text-btn" target="_blank" href="https://nnjct.pw/tp-Ph">
                   {{ t('label.about') }}
                </a>
-               <a class="text-btn" target="_blank" href="mailto:contact@rubn.xyz">
+               <a class="text-btn" target="_blank" href="mailto:contact@nnjct.pw">
                   {{ t('label.contact') }}
                </a>
-               <a class="text-btn" target="_blank" href="https://rubn.xyz/adfYv">
+               <a class="text-btn" target="_blank" href="https://nnjct.pw/adfYv">
                   {{ t('label.source_code') }}
                </a>
             </nav>
@@ -54,7 +54,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Twitter"
-                  href="https://rubn.xyz/yzFOO"
+                  href="https://nnjct.pw/yzFOO"
                >
                   <mdi-twitter />
                </a>
@@ -62,7 +62,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Linked In"
-                  href="https://rubn.xyz/VvY6B"
+                  href="https://nnjct.pw/VvY6B"
                >
                   <mdi-linkedin />
                </a>
@@ -70,7 +70,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Github"
-                  href="https://rubn.xyz/6sa6L"
+                  href="https://nnjct.pw/6sa6L"
                >
                   <mdi-github />
                </a>
@@ -78,7 +78,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Gitlab"
-                  href="https://rubn.xyz/FnNhb"
+                  href="https://nnjct.pw/FnNhb"
                >
                   <mdi-gitlab />
                </a>

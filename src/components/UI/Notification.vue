@@ -26,7 +26,7 @@
             : 'translate-y-full lg:translate-y-0 lg:-translate-x-full pointer-events-none',
       ]"
    >
-      <p class="!font-medium text-warm-gray-800 text-sm">
+      <p class="!font-medium text-warm-gray-700 text-sm">
          {{ notificationState.message }}
       </p>
       <ic-outline-check-box v-if="notificationState.type === 'success'" class="text-2xl" />

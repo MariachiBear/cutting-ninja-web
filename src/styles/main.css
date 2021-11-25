@@ -46,6 +46,10 @@ body,
    @apply w-full h-1.5;
 }
 
+.absolute-centered {
+   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
 .icon-btn {
    @apply inline-block cursor-pointer hover:text-english-lavender dark:hover:text-english-lavender transition-colors ease-in-out duration-200;
 }
@@ -55,11 +59,11 @@ body,
 }
 
 .text-theme {
-   @apply text-warm-gray-800 dark:text-warm-gray-100;
+   @apply text-warm-gray-700 dark:text-warm-gray-100;
 }
 
 .text-theme-inverse {
-   @apply text-warm-gray-100 dark:text-warm-gray-800;
+   @apply text-warm-gray-100 dark:text-warm-gray-700;
 }
 
 html,
