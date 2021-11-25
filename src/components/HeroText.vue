@@ -81,7 +81,7 @@ tryOnMounted(() => {
          xl:py-24
       "
    >
-      <h1 class="font-bold mb-8 md:mb-12 md:text-5xl lg:text-4xl sm:text-5xl text-4xl">
+      <h1 class="font-bold mb-8 md:mb-12 md:text-5xl lg:text-4xl 2xl:text-5xl text-4xl">
          {{ activePhrase }}
       </h1>
 

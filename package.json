@@ -1,7 +1,7 @@
 {
    "author": "Rubén Conde <dev@rubn.xyz>",
    "bugs": {
-      "url": "https://github.com/RubenConde/url-shortener-front/issues"
+      "url": "https://github.com/RubenConde/cutting-ninja-page/issues"
    },
    "dependencies": {
       "@vueuse/core": "6.9.1",
@@ -58,13 +58,13 @@
       "vite-ssg": "0.16.1",
       "vue-tsc": "0.29.5"
    },
-   "homepage": "https://github.com/RubenConde/url-shortener-front#readme",
+   "homepage": "https://github.com/RubenConde/cutting-ninja-page#readme",
    "license": "MIT",
-   "name": "url-shortener-front",
+   "name": "cutting-ninja-page",
    "private": true,
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/RubenConde/url-shortener-front.git"
+      "url": "git+https://github.com/RubenConde/cutting-ninja-page.git"
    },
    "scripts": {
       "build": "rimraf dist && cross-env NODE_ENV=production vite build",
