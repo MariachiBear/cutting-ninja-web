@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 const phrases = [
-   "There's no Wrong Way to Eat an Cutting Ninja",
+   "There's no Wrong Way to Eat a Cutting Ninja",
    'Keep That Cutting Ninja Complexion',
    'Cutting Ninja as sure as the sun shines',
    'A Smooth-Running Cutting Ninja is a Relaxing Experience',
@@ -26,7 +26,7 @@ const phrases = [
    'Cutting Ninja is so Bracing',
    'Doing It Right Before Your Cutting Ninja',
    'Cutting Ninja - what more could you want?',
-   "You Can't Top an Cutting Ninja",
+   "You Can't Top a Cutting Ninja",
    'Review the facts Cutting Ninja is the best',
    '"Cutting Ninja, satisfies the need"',
    'Cutting Ninja gets me excited',
@@ -37,16 +37,16 @@ const phrases = [
    'Cutting Ninja after a long day',
    "Cutting Ninja - a class of it's own",
    "Let's Face The Music and Cutting Ninja",
-   'I wish i was an Cutting Ninja',
+   'I wish i was a Cutting Ninja',
    'Cutting Ninja Is Our Middle Name',
    'Be inspired by Cutting Ninja',
    'Cutting Ninja - It Does a Body Good',
    'Made by Cutting Ninja',
    'Make Fun of Cutting Ninja',
    'Grab Life by the Cutting Ninja',
-   'Give the Dog an Cutting Ninja',
+   'Give the Dog a Cutting Ninja',
    'Cutting Ninja for hire',
-   'More Than Just an Cutting Ninja',
+   'More Than Just a Cutting Ninja',
    'Free for all Cutting Ninja',
    'Cutting Ninja is what the world was waiting for',
    'You Deserve A Cutting Ninja Today',
@@ -81,11 +81,11 @@ tryOnMounted(() => {
          xl:py-24
       "
    >
-      <h1 class="font-bold mb-8 md:mb-12 md:text-6xl sm:text-5xl text-4xl">
+      <h1 class="font-bold mb-8 md:mb-12 md:text-5xl lg:text-4xl sm:text-5xl text-4xl">
          {{ activePhrase }}
       </h1>
 
-      <p class="leading-relaxed lg:w-4/5 mb-8 md:mb-12 xl:text-lg">
+      <p class="leading-relaxed lg:w-9/10 mb-8 md:mb-12 xl:text-lg">
          {{ t('label.main_phrase') }}
       </p>
 

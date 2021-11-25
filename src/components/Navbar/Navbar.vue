@@ -40,7 +40,8 @@ const { t } = useI18n();
          "
          aria-label="logo"
       >
-         <mdi-ninja
+         <img src="/assets/ninjahead.svg" class="w-8 h-8" />
+         <!-- <mdi-ninja
             class="
                text-3xl
                md:text-5xl
@@ -51,7 +52,7 @@ const { t } = useI18n();
                w-8
                h-8
             "
-         />
+         /> -->
          Cutting Ninja
       </a>
 

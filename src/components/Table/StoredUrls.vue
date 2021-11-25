@@ -294,7 +294,7 @@ whenever(copied, () =>
                         "
                         :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
                         :title="t('label.copy')"
-                        @click="copy(`https://rubn.xyz/${url.shortUrl}`)"
+                        @click="copy(`${baseURL}${url.shortUrl}`)"
                      >
                         <ic-baseline-content-copy />
                      </button>
