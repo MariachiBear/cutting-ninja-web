@@ -10,9 +10,9 @@ const urlState = useURLStore.getState();
 
 <template>
    <Hero />
-   <StoredUrls
+   <UrlTable
       v-if="urlState.storedUrls.length > 0 && isSmallScreen"
-      class="lg:hidden max-h-screen w-full h-100 shadow-inner"
+      class="max-h-screen w-full h-100"
    />
 </template>
 

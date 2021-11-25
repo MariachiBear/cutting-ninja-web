@@ -8,6 +8,7 @@ const userApi = new UserRepository();
 export interface URL extends Object {
    storedUrls: IURL[];
    isTableVisible: boolean;
+   activeUrl: IURL | null;
 }
 
 class URLStore extends PersistentStore<URL> {
@@ -15,8 +16,15 @@ class URLStore extends PersistentStore<URL> {
       return {
          storedUrls: [],
          isTableVisible: true,
+         activeUrl: null,
       };
    }
+
+   urlsByDate = computed(() =>
+      this.state.storedUrls.sort(
+         (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      )
+   );
 
    async takeUrls() {
       if (this.state.storedUrls.length > 0) {
@@ -70,6 +78,10 @@ class URLStore extends PersistentStore<URL> {
       const urlIndex = this.state.storedUrls.indexOf(url);
       this.state.storedUrls.splice(urlIndex, 1);
       return result;
+   }
+
+   setActiveUrl(url: IURL) {
+      this.state.activeUrl = url;
    }
 
    toggleIsTableVisible(state?: boolean) {

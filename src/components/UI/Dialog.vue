@@ -1,3 +1,38 @@
+<script setup lang="ts">
+import { onKeyUp, promiseTimeout } from '@vueuse/core';
+
+const { t } = useI18n();
+
+const emit = defineEmits(['update:modelValue', 'cancel', 'confirm']);
+
+const props = defineProps({
+   hasActionButtons: { type: Boolean, required: false, default: true },
+   isPersistent: { type: Boolean, required: false, default: false },
+   modelValue: { type: Boolean, required: true },
+   title: { type: String, required: false, default: '' },
+   toggleFunction: { type: Function, required: true },
+});
+
+const { modelValue } = useVModels(props, emit);
+
+const [isShaking, toggleIsShaking] = useToggle(false);
+
+const close = () => props.toggleFunction(false);
+
+const clickOutside = () => {
+   if (props.isPersistent) {
+      toggleIsShaking();
+      promiseTimeout(200).then(() => toggleIsShaking());
+   } else {
+      props.toggleFunction(false);
+   }
+};
+
+onKeyUp('Escape', close);
+// For IE
+onKeyUp('Esc', close);
+</script>
+
 <template>
    <div
       class="
@@ -22,6 +57,8 @@
       <div
          class="
             all-300
+            flex flex-col
+            lg:max-w-1/3
             main-theme-bg
             max-h-11/12 max-w-11/12
             min-h-1/12 min-w-11/12
@@ -29,7 +66,7 @@
             rounded
             text-theme
             transform
-            xl:min-h-1/4 xl:min-w-1/4
+            xl:min-h-1/6 xl:min-w-1/4
          "
          :class="[
             modelValue ? 'scale-100' : 'scale-50',
@@ -38,12 +75,16 @@
       >
          <section class="p-2 mb-2 flex flex-row justify-between items-center">
             <h3 v-if="title" class="text-lg font-semibold">{{ title }}</h3>
-            <div class="flex-grow" />
+            <div v-else class="flex-grow" />
             <button class="hover:text-red-700 colors-300" @click="close">
                <ic-baseline-close />
             </button>
          </section>
-         <slot :key="modelValue" />
+
+         <section class="flex-grow p-2">
+            <slot :key="modelValue" />
+         </section>
+
          <section v-if="hasActionButtons" class="p-2 mt-2 flex flex-row justify-end gap-2">
             <button
                class="
@@ -59,8 +100,9 @@
                   rounded-sm
                   text-red-500 text-sm
                "
+               @click="emit('cancel')"
             >
-               Cancel
+               {{ t('label.cancel') }}
             </button>
             <button
                class="
@@ -69,53 +111,17 @@
                   dark:bg-green-700 dark:hover:bg-green-800
                   font-medium
                   hover:bg-green-500
-                  md:w-auto
                   px-5
                   py-2
                   rounded-sm
                   text-current text-center text-white text-sm
-                  w-full
+                  w-auto
                "
+               @click="emit('confirm')"
             >
-               Confirm
+               {{ t('label.confirm') }}
             </button>
          </section>
       </div>
    </div>
 </template>
-
-<script setup lang="ts">
-import { onKeyUp, promiseTimeout } from '@vueuse/core';
-
-const emits = defineEmits(['update:modelValue']);
-
-const props = defineProps({
-   isFullScreen: { type: Boolean, required: false, default: false },
-   isPersistent: { type: Boolean, required: false, default: false },
-   isCloseButtonWhite: { type: Boolean, required: false, default: false },
-   modelValue: { type: Boolean, required: true },
-   hasActionButtons: { type: Boolean, required: false, default: true },
-   title: { type: String, required: false, default: '' },
-   toggleFunction: { type: Function, required: true },
-});
-
-const { modelValue } = useVModels(props, emits);
-
-const [isShaking, toggleIsShaking] = useToggle(false);
-
-const close = () => props.toggleFunction(false);
-
-const clickOutside = () => {
-   if (props.isPersistent) {
-      toggleIsShaking();
-      promiseTimeout(200).then(() => toggleIsShaking());
-   } else {
-      props.toggleFunction(false);
-   }
-};
-
-onKeyUp('Escape', close);
-
-// For IE
-onKeyUp('Esc', close);
-</script>

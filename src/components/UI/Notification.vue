@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useNotificationStore } from '~/store/notification';
+
+const notificationState = useNotificationStore.getState();
+</script>
+
 <template>
    <div
       class="
@@ -6,19 +12,19 @@
          bottom-0
          fixed
          flex flex-row
+         h-12
+         items-center
          justify-between
-         items-center items-center
-         justify-center
          left-0
-         lg:bottom-5 lg:rounded-r-sm lg:w-1/5
+         lg:bottom-5 lg:rounded-r-sm lg:max-w-1/5
          mx-auto
          overflow-hidden
          px-2
-         transform
          shadow-2xl
+         text-warm-gray-800
+         transform
          w-full
          z-9999
-         h-12
       "
       :class="[
          notificationState.isOpen
@@ -26,7 +32,7 @@
             : 'translate-y-full lg:translate-y-0 lg:-translate-x-full pointer-events-none',
       ]"
    >
-      <p class="!font-medium text-warm-gray-700 text-sm">
+      <p class="!font-medium text-warm-gray-800 text-sm">
          {{ notificationState.message }}
       </p>
       <ic-outline-check-box v-if="notificationState.type === 'success'" class="text-2xl" />
@@ -35,9 +41,3 @@
       <ic-outline-warning-amber v-if="notificationState.type === 'warning'" class="text-2xl" />
    </div>
 </template>
-
-<script setup lang="ts">
-import { useNotificationStore } from '~/store/notification';
-
-const notificationState = useNotificationStore.getState();
-</script>

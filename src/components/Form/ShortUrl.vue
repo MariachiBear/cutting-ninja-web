@@ -4,7 +4,7 @@ import { useURLStore } from '~/store/url';
 
 const { t } = useI18n();
 
-const url = ref<string>();
+const url = ref('');
 const isLoading = ref(false);
 
 const isButtonDisabled = computed(() => !url.value);
@@ -34,7 +34,7 @@ const onSubmit = async () => {
          class="flex-1 w-full relative"
          is-required
          type="url"
-         placeholder="https://github.com/RubenConde/url-shortener-front"
+         placeholder="https://github.com/RubenConde/cutting-ninja-page"
       />
 
       <button

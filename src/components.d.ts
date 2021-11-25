@@ -11,8 +11,9 @@ declare module 'vue' {
     Dropdown: typeof import('./components/Navbar/Dropdown.vue')['default']
     'Dropdown copy': typeof import('./components/Navbar/MobileMenu.vue')['default'];
     Footer: typeof import('./components/Footer/Footer.vue')['default']
-    Hero: typeof import('./components/Hero.vue')['default']
-    HeroText: typeof import('./components/HeroText.vue')['default']
+    Hero: typeof import('./components/Hero/Hero.vue')['default']
+    HeroImageTable: typeof import('./components/Hero/HeroImageTable.vue')['default']
+    HeroText: typeof import('./components/Hero/HeroText.vue')['default']
     IcBaselineCheck: typeof import('~icons/ic/baseline-check')['default']
     IcBaselineCheckBox: typeof import('~icons/ic/baseline-check-box')['default'];
     IcBaselineClose: typeof import('~icons/ic/baseline-close')['default']
@@ -35,7 +36,7 @@ declare module 'vue' {
     IcOutlineDangerous: typeof import('~icons/ic/outline-dangerous')['default']
     IcOutlineInfo: typeof import('~icons/ic/outline-info')['default']
     IcOutlineWarningAmber: typeof import('~icons/ic/outline-warning-amber')['default']
-    ImageTable: typeof import('./components/Table/ImageTable.vue')['default']
+    ImageTable: typeof import('./components/Hero/HeroImageTable.vue')['default'];
     Input: typeof import('./components/UI/Input.vue')['default']
     Login: typeof import('./components/Form/Login.vue')['default']
     LoginButton: typeof import('./components/Login/LoginButton.vue')['default']
@@ -59,14 +60,21 @@ declare module 'vue' {
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     NinjaHead: typeof import('./components/NinjaHead.vue')['default'];
     Notification: typeof import('./components/UI/Notification.vue')['default']
+    NoVisitsButton: typeof import('./components/UrlTable/NoVisitsButton.vue')['default']
     README: typeof import('./components/README.md')['default']
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
     SignInButton: typeof import('./components/Navbar/SignInButton.vue')['default']
     SignOutButton: typeof import('./components/Navbar/SignInButton.vue')['default'];
     Signup: typeof import('./components/Form/Signup.vue')['default']
-    StoredUrls: typeof import('./components/Table/StoredUrls.vue')['default']
-    Toggle: typeof import('./components/Table/Toggle.vue')['default']
+    StoredUrls: typeof import('./components/Table/UrlTable.vue')['default'];
+    TableHead: typeof import('./components/UrlTable/UrlTableHead.vue')['default'];
+    Toggle: typeof import('./components/ImageTable/Toggle.vue')['default']
+    UrlImage: typeof import('./components/ImageTable/UrlImage.vue')['default']
+    UrlTable: typeof import('./components/ImageTable/UrlTable.vue')['default']
+    UrlTableActions: typeof import('./components/UrlTable/UrlTableActions.vue')['default']
+    UrlTableBody: typeof import('./components/UrlTable/UrlTableBody.vue')['default']
+    UrlTableHead: typeof import('./components/UrlTable/UrlTableHead.vue')['default']
     UserInfo: typeof import('./components/Navbar/UserInfo.vue')['default']
   }
 }

@@ -2,8 +2,8 @@
 import { useURLStore } from '~/store/url';
 const { t } = useI18n();
 const urlState = useURLStore.getState();
-const toggle = () => useURLStore.toggleIsTableVisible();
 const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState.isTableVisible);
+const toggle = () => useURLStore.toggleIsTableVisible();
 </script>
 
 <template>
@@ -13,6 +13,7 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
          -translate-y-0 -translate-x-2.5
          !text-warm-gray-600
          absolute
+         all-300
          bg-warm-gray-100
          group-hover:-translate-y-10 group-hover:opacity-100
          opacity-0
@@ -24,7 +25,6 @@ const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState
          text-xl
          top-0
          transform
-         all-300
          z-0
       "
       :class="[urlState.storedUrls.length === 0 ? '!-translate-y-0 !opacity-0' : '']"

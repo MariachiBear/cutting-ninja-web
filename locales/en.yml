@@ -15,19 +15,27 @@ button:
   toggle_langs: Change languages
   go_home: Go home
 label:
+  'no': 'No'
+  'yes': 'Yes'
   about: About
   actions: Actions
   already_account_question: Don have an account already?
   blog: Blog
+  cancel: Cancel
   close_in: Close in
+  confirm:  Confirm
   contact: Contact
   copied_success: '{url} copied successfully'
+  copy_fail: '{url} copy failed'
   copy: Copy
+  delete_question: Are you sure you want to delete this URL?
+  delete_suggestion: This cannot be undone after confirmation.
   delete: Delete
-  delete_question: Delete?
+  deleted_fail: '{url} deletion failed'
   deleted_success: '{url} deleted successfully'
-  email: Email
   email_address: Email address
+  email: Email
+  error_404: Error 404
   expiration_time: Expiration time
   first_name: First name
   go_to: Go to
@@ -39,15 +47,17 @@ label:
     long as a book. For this and more, shorten your URLs and everything will be
     better.
   new_content: New content available, click on the reload button to update.
-  'no': 'No'
   no_account_question: Don't have an account yet?
+  not_found_text: The page you’re looking for doesn’t exist. 
   not_found: Not found
   offline_ready: The application is ready to work offline.
   page_name: Page name
-  password: Password
+  page_not_found: Page not found
   password_placeholder: An amazing password... like "password"
+  password: Password
   reload_in: Reload in
   short_name: Short name
+  shorted_fail: 'URL shorting failed'
   shorted_success: URL shorted successfully
   show_picture: Show picture
   show_table: Show table
@@ -57,10 +67,6 @@ label:
   still_valid: Still valid for
   to_access: to access your account
   visits: Visits
-  'yes': 'Yes'
-  error_404: Error 404
-  page_not_found: Page not found
-  not_found_text: The page you’re looking for doesn’t exist. 
 unit:
   day: day | days
   second: second | seconds

@@ -1,28 +1,30 @@
 <script setup lang="ts">
-import { set, tryOnMounted, useVModels } from '@vueuse/core';
+import { set, useVModels } from '@vueuse/core';
 import { nanoid } from 'nanoid';
 import { ref, watch } from 'vue';
 
 const emit = defineEmits(['clear', 'update:modelValue', 'validate']);
 
 const props = defineProps({
-   hasSmallIcons: { type: Boolean, required: false, default: false },
-   isClearable: { type: Boolean, required: false, default: false },
+   isClearable: { type: Boolean, required: false, default: true },
    isDisabled: { type: Boolean, required: false, default: false },
    isRequired: { type: Boolean, required: false, default: false },
    label: { type: String, required: false },
    modelValue: { type: String, required: false, default: '' },
-   placeholder: { type: String, required: false, default: '' },
+   placeholder: { type: String, required: false },
    type: { type: String, required: false, default: 'text' },
-   validationFunctions: { type: Object, required: false },
+   validationFunctions: {
+      type: Object as () => Record<string, () => boolean | string>,
+      required: false,
+   },
 });
 
-const { modelValue } = useVModels(props, emit);
-
-const calculatedType = ref('');
 const errMsg = ref('');
-const isValid = ref(true);
 const inputId = ref(nanoid());
+const isValid = ref(true);
+
+const { modelValue } = useVModels(props, emit);
+const errMsgDelayed = debouncedRef(errMsg, 150);
 
 const validateInput = (inputValue: string) => {
    if (props.validationFunctions) {
@@ -40,21 +42,16 @@ const validateInput = (inputValue: string) => {
          }
       }
    }
-   return '　';
+   return '';
 };
-
-// const toggleCalculatedType = () =>
-//    set(calculatedType, get(calculatedType) === 'password' ? 'text' : 'password');
 
 const clear = () => {
    set(modelValue, '');
    emit('clear');
 };
 
-// @ts-expect-error
+// @ts-expect-error // Correct target type
 const setValue = (event: Event) => set(modelValue, event.target?.value);
-
-tryOnMounted(() => set(calculatedType, props.type));
 
 watch(modelValue, (inputValue) => (errMsg.value = validateInput(inputValue)));
 
@@ -62,20 +59,25 @@ watch(isValid, (validValue) => emit('validate', validValue));
 </script>
 
 <template>
-   <div class="flex flex-col items-start justify-center relative my-5">
+   <div
+      class="flex flex-col items-start justify-center relative my-5"
+      :class="[isDisabled ? 'opacity-50' : '']"
+   >
       <label
          v-if="label"
          :for="inputId"
          class="
-            absolute
-            top-0
-            left-0
-            transform
             -translate-y-full
+            absolute
+            colors-300
+            dark:text-warm-gray-400
             font-semibold
+            left-0
             mb-1
-            text-sm text-gray-600
-            dark:text-gray-400
+            text-sm text-warm-gray-600
+            top-0
+            transform
+            z-0
          "
       >
          {{ label }}
@@ -86,37 +88,39 @@ watch(isValid, (validValue) => emit('validate', validValue));
          :value="modelValue"
          :disabled="isDisabled"
          :required="isRequired"
-         :type="calculatedType"
+         :type="type"
          :placeholder="placeholder"
          class="
-            colors-300
+            disabled:cursor-not-allowed
             bg-gray-100
+            colors-300
             dark:bg-rocket-metallic2
             p-2
             placeholder-gray-400
+            relative
             rounded-sm
             shadow
             text-theme
             w-full
             z-10
-            relative
          "
          @input="setValue"
       />
 
       <span
-         v-if="modelValue"
+         v-if="modelValue && isClearable"
          class="
             absolute
-            right-0
-            z-20
-            text-xl
             bg-gray-100
+            colors-300
             cursor-pointer
             dark:bg-rocket-metallic2
             flex flex-col
             p-2
+            right-0
             rounded-r-sm
+            text-theme text-xl
+            z-20
          "
          @click="clear"
       >
@@ -126,17 +130,21 @@ watch(isValid, (validValue) => emit('validate', validValue));
          class="
             absolute
             all-300
-            transform
-            translate-y-full
-            right-0
             bottom-0
-            text-red-600
             dark:text-red-400
+            right-0
+            text-red-600
+            transform
             z-0
+            font-medium
          "
-         :class="[isValid ? 'opacity-100 pointer-events-none' : 'opacity-100 pointer-events-auto']"
+         :class="[
+            isValid
+               ? 'opacity-100 pointer-events-none translate-y-0'
+               : 'opacity-100 pointer-events-auto translate-y-full',
+         ]"
       >
-         {{ errMsg }}
+         {{ errMsgDelayed }}
       </small>
    </div>
 </template>

@@ -19,12 +19,17 @@ label:
   actions: Acciones
   already_account_question: ¿Ya tienes una cuenta?
   blog: Blog
+  cancel: Cancelar
   close_in: Cerrar en
+  confirm: Confirmar
   contact: Contacto
   copied_success: '{url} copiado con éxito'
   copy: Copiar
+  copy_fail: '{url} copia fallida'
   delete: Borrar
-  delete_question: ¿Borrar?
+  delete_question: ¿Está seguro de que quiere eliminar esta URL?
+  delete_suggestion: Esto no se puede deshacer después de la confirmación.
+  deleted_fail: '{url} borrado fallido'
   deleted_success: '{url} borrado con éxito'
   email: Correo electrónico
   email_address: Dirección de correo electrónico
@@ -53,6 +58,7 @@ label:
   password_placeholder: Una contraseña increíble... como "contraseña"
   reload_in: Recarga en
   short_name: Nombre corto
+  shorted_fail: Fallo en el acortamiento de la URL
   shorted_success: URL acortada con éxito
   show_picture: Mostrar imagen
   show_table: Mostrar tabla

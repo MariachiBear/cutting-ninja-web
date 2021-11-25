@@ -19,12 +19,17 @@ label:
   actions: Actions
   already_account_question: Vous avez déjà un compte ?
   blog: Blog
+  cancel: Annuler
   close_in: Fermer dans
+  confirm: Confirmer
   contact: Contact
   copied_success: '{url} copié avec succès'
   copy: Copie
+  copy_fail: La copie de {url} a échoué
   delete: Supprimer
-  delete_question: Supprimer ?
+  delete_question: Êtes-vous sûr de vouloir supprimer cette URL ?
+  delete_suggestion: Il n'est pas possible de revenir en arrière après la confirmation.
+  deleted_fail: La suppression de {url} a échoué
   deleted_success: '{url} supprimé avec succès'
   email: Courriel
   email_address: Adresse électronique
@@ -53,6 +58,7 @@ label:
   password_placeholder: Un mot de passe étonnant... comme "mot de passe".
   reload_in: Recharge en
   short_name: Nom court
+  shorted_fail: Le raccourcissement de l'URL a échoué
   shorted_success: URL raccourcie avec succès
   show_picture: Voir la photo
   show_table: Afficher la table

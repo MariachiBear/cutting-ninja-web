@@ -13,13 +13,13 @@ const phrases = [
    'Cutting Ninja moments',
    'Inspired by Cutting Ninja',
    'Everyone loves Cutting Ninja',
-   '"I Scream, You Scream, We All Scream for Cutting Ninja"',
+   'I Scream, You Scream, We All Scream for Cutting Ninja',
    'Prepare To Want Cutting Ninja',
    'Reach for the Cutting Ninja',
-   '"Tense, Nervous, Cutting Ninja ?"',
+   'Tense, Nervous, Cutting Ninja ?',
    'Cutting Ninja shines through',
    'Cutting Ninja the wise choice',
-   '"The Man From Cutting Ninja, he says \'Yes\'"',
+   "The Man From Cutting Ninja, he says 'Yes'",
    'Put Cutting Ninja in your pipe and smoke it!',
    'Cutting Ninja no one else is better',
    "Where's Cutting Ninja ?",
@@ -28,9 +28,9 @@ const phrases = [
    'Cutting Ninja - what more could you want?',
    "You Can't Top a Cutting Ninja",
    'Review the facts Cutting Ninja is the best',
-   '"Cutting Ninja, satisfies the need"',
+   'Cutting Ninja, satisfies the need',
    'Cutting Ninja gets me excited',
-   '"Cutting Ninja, When there\'s nothing else"',
+   "Cutting Ninja, When there's nothing else",
    'Make the Most of Cutting Ninja',
    "Let's Cutting Ninja !",
    'For That Deep Down Body Cutting Ninja',
@@ -51,20 +51,15 @@ const phrases = [
    'Cutting Ninja is what the world was waiting for',
    'You Deserve A Cutting Ninja Today',
    'Let your Cutting Ninja flow',
-   "\"It's fast, it's furious, it's Cutting Ninja \"",
+   "It's fast, it's furious, it's Cutting Ninja",
    "It's Good To Talk Cutting Ninja",
    "Wouldn't You Like To Be A Cutting Ninja Too?",
    "Life's Pretty Straight Without Cutting Ninja",
    'Pleasing Cutting Ninja the World Over',
-   "It's my Cutting Ninja !",
-   'Vorsprung Durch Cutting Ninja',
+   "It's my Cutting Ninja!",
+   "Life is short, just like our URL's",
 ];
-
-const activePhrase = ref('');
-
-tryOnMounted(() => {
-   activePhrase.value = phrases[Math.floor(Math.random() * phrases.length)];
-});
+const activePhrase = ref(phrases[Math.floor(Math.random() * phrases.length)]);
 </script>
 
 <template>
@@ -79,7 +74,7 @@ tryOnMounted(() => {
          max-w-11/12
          text-center
          w-full
-         xl:gap-15
+         2xl:gap-15
       "
    >
       <h1 class="2xl:text-5xl colors-300 font-bold lg:text-4xl md:text-5xl text-4xl text-theme">
