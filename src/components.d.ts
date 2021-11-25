@@ -6,6 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Alerts: typeof import('./components/UI/Alerts.vue')['default']
     CarbonWarning: typeof import('~icons/carbon/warning')['default'];
+    DarkToggle: typeof import('./components/Navbar/DarkToggle.vue')['default']
     Dialog: typeof import('./components/UI/Dialog.vue')['default']
     Dropdown: typeof import('./components/Navbar/Dropdown.vue')['default']
     'Dropdown copy': typeof import('./components/Navbar/MobileMenu.vue')['default'];
@@ -21,9 +22,9 @@ declare module 'vue' {
     IcBaselineDelete: typeof import('~icons/ic/baseline-delete')['default']
     IcBaselineImage: typeof import('~icons/ic/baseline-image')['default']
     IcBaselineLightMode: typeof import('~icons/ic/baseline-light-mode')['default']
-    IcBaselineLogin: typeof import('~icons/ic/baseline-login')['default']
+    IcBaselineLogin: typeof import('~icons/ic/baseline-login')['default'];
     IcBaselineLogIn: typeof import('~icons/ic/baseline-log-in')['default']
-    IcBaselineLogout: typeof import('~icons/ic/baseline-logout')['default']
+    IcBaselineLogout: typeof import('~icons/ic/baseline-logout')['default'];
     IcBaselineLogOut: typeof import('~icons/ic/baseline-log-out')['default']
     IcBaselineOpenInNew: typeof import('~icons/ic/baseline-open-in-new')['default']
     IcBaselineSettings: typeof import('~icons/ic/baseline-settings')['default']
@@ -40,27 +41,29 @@ declare module 'vue' {
     LoginButton: typeof import('./components/Login/LoginButton.vue')['default']
     LoginTabs: typeof import('./components/Login/LoginTabs.vue')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
-    MdiClose: typeof import('~icons/mdi/close')['default']
+    MdiClose: typeof import('~icons/mdi/close')['default'];
     MdiEyeOffOutline: typeof import('~icons/mdi/eye-off-outline')['default'];
     MdiEyeOutline: typeof import('~icons/mdi/eye-outline')['default'];
     MdiGithub: typeof import('~icons/mdi/github')['default']
     MdiGitlab: typeof import('~icons/mdi/gitlab')['default']
     MdiHome: typeof import('~icons/mdi/home')['default'];
     MdiImage: typeof import('~icons/mdi/image')['default'];
-    MdiKnife: typeof import('~icons/mdi/knife')['default']
+    MdiKnife: typeof import('~icons/mdi/knife')['default'];
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     MdiLoading: typeof import('~icons/mdi/loading')['default']
-    MdiNinja: typeof import('~icons/mdi/ninja')['default']
+    MdiNinja: typeof import('~icons/mdi/ninja')['default'];
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
     MdiViewList: typeof import('~icons/mdi/view-list')['default'];
-    MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default']
+    MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default'];
     Modal: typeof import('./components/UI/Modal.vue')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
-    NinjaHead: typeof import('./components/NinjaHead.vue')['default']
+    NinjaHead: typeof import('./components/NinjaHead.vue')['default'];
     Notification: typeof import('./components/UI/Notification.vue')['default']
     README: typeof import('./components/README.md')['default']
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
+    SignInButton: typeof import('./components/Navbar/SignInButton.vue')['default']
+    SignOutButton: typeof import('./components/Navbar/SignInButton.vue')['default'];
     Signup: typeof import('./components/Form/Signup.vue')['default']
     StoredUrls: typeof import('./components/Table/StoredUrls.vue')['default']
     Toggle: typeof import('./components/Table/Toggle.vue')['default']

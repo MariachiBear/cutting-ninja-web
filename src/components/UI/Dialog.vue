@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import { onKeyUp, promiseTimeout, set } from '@vueuse/core';
+import { onKeyUp, promiseTimeout } from '@vueuse/core';
 
 const emits = defineEmits(['update:modelValue']);
 
@@ -96,20 +96,21 @@ const props = defineProps({
    modelValue: { type: Boolean, required: true },
    hasActionButtons: { type: Boolean, required: false, default: true },
    title: { type: String, required: false, default: '' },
+   toggleFunction: { type: Function, required: true },
 });
 
 const { modelValue } = useVModels(props, emits);
 
 const [isShaking, toggleIsShaking] = useToggle(false);
 
-const close = () => set(modelValue, false);
+const close = () => props.toggleFunction(false);
 
 const clickOutside = () => {
    if (props.isPersistent) {
       toggleIsShaking();
       promiseTimeout(200).then(() => toggleIsShaking());
    } else {
-      set(modelValue, false);
+      props.toggleFunction(false);
    }
 };
 

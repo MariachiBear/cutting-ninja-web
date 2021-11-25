@@ -12,7 +12,7 @@ const urlState = useURLStore.getState();
    <Hero />
    <StoredUrls
       v-if="urlState.storedUrls.length > 0 && isSmallScreen"
-      class="lg:hidden max-h-screen w-full h-100 shadow-inner main-theme-bg"
+      class="lg:hidden max-h-screen w-full h-100 shadow-inner"
    />
 </template>
 

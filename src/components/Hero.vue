@@ -1,22 +1,32 @@
+<script setup lang="ts">
+import { or } from '@vueuse/core';
+import { siteBreakpoints } from '~/composables';
+
+const { sm, md } = siteBreakpoints;
+const isSmallScreen = or(sm, md);
+</script>
+
 <template>
    <div
+      id="hero"
       class="
          flex flex-col
          items-center
          justify-center
-         main-theme-bg
          min-h-screen
-         relative
-         w-full
-         colors-300
+         h-full
          py-10
+         w-full
+         main-theme-bg
+         colors-300
       "
    >
       <section
-         class="flex flex-col gap-15 items-center justify-between lg:flex-row lg:w-11/12 mt-10"
+         id="hero-content"
+         class="flex flex-col gap-10 items-center justify-between lg:flex-row lg:w-11/12 my-10"
       >
          <HeroText />
-         <ImageTable class="hidden lg:flex" />
+         <ImageTable v-if="!isSmallScreen" />
       </section>
    </div>
 </template>

@@ -13,6 +13,10 @@ tryOnMounted(async () => {
 </script>
 
 <template>
-   <router-view v-if="isReady" />
+   <main v-if="isReady" class="select-none overflow-hidden z-10">
+      <router-view />
+   </main>
+   <Notification />
    <ReloadPrompt />
+   <Alerts />
 </template>

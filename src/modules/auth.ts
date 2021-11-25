@@ -10,8 +10,7 @@ export const install: UserModule = async ({ isClient, router }) => {
          AxiosInstance.defaults.headers.common.Authorization = `Bearer ${userState.user?.accessToken}`;
 
          await useUserStore.checkLogin();
-         const isLogged = useUserStore.isUserLoggedIn();
-         if (guard.meta.requiresAuth && !isLogged.value) router.replace('/');
+         if (guard.meta.requiresAuth && !useUserStore.isUserLoggedIn.value) router.replace('/');
       });
    }
 };

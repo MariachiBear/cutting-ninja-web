@@ -5,10 +5,9 @@ import { siteBreakpoints } from '~/composables';
 import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
+import { useUIStore } from '~/store/ui';
 
 const { t } = useI18n();
-
-const isLoggedIn = useUserStore.isUserLoggedIn();
 
 const { sm, md } = siteBreakpoints;
 const { text, copy, copied } = useClipboard();
@@ -33,7 +32,7 @@ const getValidDates = (createdAt: string) => {
 };
 
 const deleteUrl = (url: IURL) =>
-   useURLStore.deleteUrl(url, isLoggedIn.value).then((result) => {
+   useURLStore.deleteUrl(url, useUserStore.isUserLoggedIn.value).then((result) => {
       if (result) {
          toggleIsConfirmOpen(false);
          activeIndex.value = null;
@@ -44,14 +43,14 @@ const deleteUrl = (url: IURL) =>
    });
 
 tryOnMounted(() => {
-   if (isLoggedIn.value) {
+   if (useUserStore.isUserLoggedIn.value) {
       resume();
    } else {
       pause();
    }
 });
 
-whenever(isLoggedIn, resume);
+whenever(useUserStore.isUserLoggedIn, resume);
 
 // eslint-disable-next-line no-console
 whenever(copied, () =>
@@ -84,7 +83,7 @@ whenever(copied, () =>
                   {{ t('label.page_name') }}
                </th>
                <th
-                  v-if="isLoggedIn"
+                  v-if="useUserStore.isUserLoggedIn.value"
                   class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap"
                >
                   {{ t('label.short_name') }}
@@ -133,7 +132,10 @@ whenever(copied, () =>
                   {{ url.longUrl }}
                </td>
 
-               <td v-if="isLoggedIn" class="px-3 text-center text-sm lg:text-xs whitespace-nowrap">
+               <td
+                  v-if="useUserStore.isUserLoggedIn.value"
+                  class="px-3 text-center text-sm lg:text-xs whitespace-nowrap"
+               >
                   {{ url.shortUrl }}
                </td>
 
@@ -154,11 +156,14 @@ whenever(copied, () =>
                      group
                   "
                >
-                  <span class="font-semibold" :class="[isLoggedIn ? '' : 'blur-sm filter']">
+                  <span
+                     class="font-semibold"
+                     :class="[useUserStore.isUserLoggedIn.value ? '' : 'blur-sm filter']"
+                  >
                      {{ url.visits }}
                   </span>
                   <button
-                     v-if="!isLoggedIn"
+                     v-if="!useUserStore.isUserLoggedIn.value"
                      class="
                         -translate-x-1/2 -translate-y-4/2
                         group-hover:-translate-y-1/2
@@ -179,6 +184,7 @@ whenever(copied, () =>
                         transform
                         w-full
                      "
+                     @click="useUIStore.toggleValue('isSignModalOpen', true)"
                   >
                      {{ t('button.sign_up') }}
                   </button>

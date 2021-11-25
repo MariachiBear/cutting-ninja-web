@@ -17,9 +17,7 @@ class UserStore extends PersistentStore<User> {
       };
    }
 
-   isUserLoggedIn() {
-      return computed(() => Boolean(this.state.user && this.state.user.accessToken));
-   }
+   isUserLoggedIn = computed(() => Boolean(this.state.user && this.state.user.accessToken));
 
    async login(email: string, password: string) {
       const result = await userApi
