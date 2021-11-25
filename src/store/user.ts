@@ -18,7 +18,7 @@ class UserStore extends PersistentStore<User> {
    }
 
    isUserLoggedIn() {
-      return computed(() => Boolean(this.state.user));
+      return computed(() => Boolean(this.state.user && this.state.user.accessToken));
    }
 
    async login(email: string, password: string) {
@@ -81,7 +81,7 @@ class UserStore extends PersistentStore<User> {
          .then(() => {
             useURLStore.updateStoredUrl();
          })
-         .catch(() => this.logout());
+         .catch(() => (this.state.user = null));
    }
 }
 

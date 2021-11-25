@@ -25,8 +25,8 @@ const { t } = useI18n();
          z-40
       "
    >
-      <a
-         href="/"
+      <router-link
+         to="/"
          class="
             font-bold
             gap-1
@@ -38,6 +38,7 @@ const { t } = useI18n();
             text-theme
             colors-300
          "
+         :title="t('button.home')"
          aria-label="logo"
       >
          <img src="/assets/ninjahead.svg" class="w-8 h-8" />
@@ -54,7 +55,7 @@ const { t } = useI18n();
             "
          /> -->
          Cutting Ninja
-      </a>
+      </router-link>
 
       <nav class="flex flex-row gap-2 lg:gap-4 items-center justify-center">
          <UserInfo v-if="isLoggedIn" />
@@ -84,7 +85,7 @@ const { t } = useI18n();
          </button>
       </nav>
    </header>
-   <Dialog v-model="isLoginModalOpen" :has-action-buttons="false" is-persistent>
+   <Dialog v-if="!isLoggedIn" v-model="isLoginModalOpen" :has-action-buttons="false" is-persistent>
       <LoginTabs
          @logged="toggleIsLoginModalOpen(false)"
          @signedup="toggleIsLoginModalOpen(false)"

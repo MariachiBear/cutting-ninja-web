@@ -59,14 +59,15 @@ const logout = async () => {
             </p>
          </div>
          <div class="py-1 text-theme colors-300">
-            <a
-               href="javascript:void(0)"
+            <router-link
+               to="/dashboard"
                tabindex="2"
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full"
                role="menuitem"
+               :title="t('button.dashboard')"
             >
                {{ t('button.dashboard') }} <ic-baseline-dashboard />
-            </a>
+            </router-link>
             <a
                tabindex="0"
                class="flex items-center justify-between px-4 py-2 text-btn text-left text-sm w-full"

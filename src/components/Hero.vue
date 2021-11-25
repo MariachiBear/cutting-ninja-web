@@ -12,7 +12,6 @@
          py-10
       "
    >
-      <Navbar />
       <section
          class="flex flex-col gap-15 items-center justify-between lg:flex-row lg:w-11/12 mt-10"
       >

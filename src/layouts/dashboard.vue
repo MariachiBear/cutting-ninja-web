@@ -2,7 +2,7 @@
 const { t } = useI18n();
 
 useHead({
-   title: `Cutting Ninja | ${t('button.home')}`,
+   title: `Cutting Ninja | ${t('button.dashboard')}`,
 });
 </script>
 
@@ -10,7 +10,6 @@ useHead({
    <main class="select-none overflow-hidden">
       <Navbar />
       <router-view />
-      <Footer />
       <Notification />
    </main>
 </template>
