@@ -37,5 +37,6 @@
    "files.associations": {
       "*.css": "postcss"
    },
-   "editor.formatOnSave": true
+   "editor.formatOnSave": true,
+   "i18n-ally.sourceLanguage": "fr"
 }

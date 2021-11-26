@@ -63,7 +63,7 @@ label:
   signed_in_as: Signed in as
   signed_in_success: Signed in successfully
   source_code: Source code
-  still_valid: Still valid for
+  still_valid: Expires in
   to_access: to access your account
   visits: Visits
   'yes': 'Yes'

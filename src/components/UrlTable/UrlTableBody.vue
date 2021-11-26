@@ -23,14 +23,7 @@ const getValidDays = (createdAt: string) => {
 </script>
 
 <template>
-   <tbody
-      class="divide-y-1"
-      :class="[
-         isSmallScreen
-            ? 'divide-warm-gray-400 dark:divide-warm-gray-600'
-            : 'divide-warm-gray-600 dark:divide-warm-gray-400',
-      ]"
-   >
+   <tbody>
       <transition-group
          leave-active-class="animated animate-fade-out-left animate-duration-500"
          enter-active-class="animated animate-fade-in-left animate-duration-500"
@@ -38,12 +31,8 @@ const getValidDays = (createdAt: string) => {
          <tr
             v-for="(url, index) in urlsByDate"
             :key="url._id"
-            class="divide-x colors-300 dark:even:bg-opacity-5 dark:even:bg-warm-gray-50 dark:even:hover:bg-opacity-10 dark:hover:bg-opacity-10 dark:hover:bg-warm-gray-50 even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20 hover:bg-opacity-20 hover:bg-warm-gray-900 lg:dark:even:bg-opacity-10 lg:dark:even:bg-warm-gray-900 lg:dark:even:hover:bg-opacity-20 lg:dark:hover:bg-opacity-20 lg:dark:hover:bg-warm-gray-900 lg:even:bg-opacity-5 lg:even:bg-warm-gray-50 lg:even:hover:bg-opacity-10 lg:hover:bg-opacity-10 lg:hover:bg-warm-gray-50"
-            :class="[
-               isSmallScreen
-                  ? 'text-theme divide-warm-gray-400 dark:divide-warm-gray-600'
-                  : 'text-theme-inverse divide-warm-gray-600 dark:divide-warm-gray-400',
-            ]"
+            class="colors-300 dark:even:bg-opacity-5 dark:even:bg-warm-gray-50 dark:even:hover:bg-opacity-10 dark:hover:bg-opacity-10 dark:hover:bg-warm-gray-50 even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20 hover:bg-opacity-20 hover:bg-warm-gray-900 lg:dark:even:bg-opacity-10 lg:dark:even:bg-warm-gray-900 lg:dark:even:hover:bg-opacity-20 lg:dark:hover:bg-opacity-20 lg:dark:hover:bg-warm-gray-900 lg:even:bg-opacity-5 lg:even:bg-warm-gray-50 lg:even:hover:bg-opacity-10 lg:hover:bg-opacity-10 lg:hover:bg-warm-gray-50"
+            :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
             @mouseover="hoveredIndex = index"
             @mouseleave="hoveredIndex = null"
          >
