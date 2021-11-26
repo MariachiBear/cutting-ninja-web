@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { or, promiseTimeout } from '@vueuse/core';
 import { siteBreakpoints } from '~/composables';
 import { useNotificationStore } from '~/store/notification';
 import { useURLStore } from '~/store/url';
@@ -17,6 +17,11 @@ const { sm, md } = siteBreakpoints;
 const { text: copiedText, copy, copied: isCopied } = useClipboard({ copiedDuring: 0 });
 
 const isSmallScreen = or(sm, md);
+
+const openLink = () => {
+   window.open(urlString, '_blank')?.focus();
+   promiseTimeout(1).then(() => useURLStore.updateStoredUrl());
+};
 
 whenever(isCopied, () =>
    useNotificationStore.showSuccessNotification(
@@ -52,9 +57,7 @@ whenever(isCopied, () =>
       >
          <ic-baseline-delete />
       </button>
-      <a
-         :href="urlString"
-         target="_blank"
+      <button
          class="
             colors-300
             dark:hover:bg-white dark:hover:bg-opacity-10 dark:text-blue-400
@@ -72,9 +75,10 @@ whenever(isCopied, () =>
             text-blue-500
          "
          :title="t('label.go_to')"
+         @click="openLink()"
       >
          <ic-baseline-open-in-new />
-      </a>
+      </button>
       <button
          class="
             colors-300
