@@ -1,11 +1,11 @@
-import { PersistentStore } from './main';
+import { Store } from './main';
 
 export interface UI {
    isSignModalOpen: boolean;
    isUrlDeleteConfirmOpen: boolean;
 }
 
-class UIStore extends PersistentStore<UI> {
+class UIStore extends Store<UI> {
    protected data(): UI & Object {
       return {
          isSignModalOpen: false,
