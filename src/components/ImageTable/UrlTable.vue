@@ -7,18 +7,20 @@ import { useUserStore } from '~/store/user';
 const isUserLoggedIn = useUserStore.isUserLoggedIn;
 
 const { sm, md } = siteBreakpoints;
-const { resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 10, {
+const { resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 30, {
    immediate: isUserLoggedIn.value,
 });
 
 const isSmallScreen = or(sm, md);
 
 whenever(isUserLoggedIn, resume);
+
+tryOnMounted(() => useURLStore.updateStoredUrl());
 </script>
 
 <template>
    <div
-      class="w-full h-full colors-300 overflow-auto"
+      class="w-full h-full colors-300 overflow-auto z-10"
       :class="[isSmallScreen ? 'main-theme-bg' : 'main-theme-bg-inverse']"
    >
       <table class="w-full">

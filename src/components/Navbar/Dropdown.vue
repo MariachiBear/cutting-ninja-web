@@ -15,10 +15,7 @@ const isSmallScreen = or(sm, md);
 
 const userState = useUserStore.getState();
 
-const logout = async () => {
-   await useUserStore.logout();
-   location.reload();
-};
+const logout = async () => await useUserStore.logout().then(() => location.reload());
 </script>
 
 <template>

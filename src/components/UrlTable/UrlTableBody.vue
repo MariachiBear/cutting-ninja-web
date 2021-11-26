@@ -30,49 +30,65 @@ const getValidDays = (createdAt: string) => {
             : 'divide-warm-gray-600 dark:divide-warm-gray-400',
       ]"
    >
-      <tr
-         v-for="(url, index) in urlsByDate"
-         :key="index"
-         class="
-            colors-300
-            dark:hover:bg-white dark:hover:bg-opacity-10
-            hover:bg-black hover:bg-opacity-10
-            lg:dark:hover:bg-black
-            lg:dark:hover:bg-opacity-10
-            lg:hover:bg-opacity-10
-            lg:hover:bg-white
-         "
-         :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
+      <transition-group
+         leave-active-class="animated animate-fade-out-left animate-duration-500"
+         enter-active-class="animated animate-fade-in-left animate-duration-500"
       >
-         <!-- Page name -->
-         <td class="lg:text-xs max-w-50 px-3 text-left text-sm truncate" :title="url.longUrl">
-            {{ url.longUrl }}
-         </td>
+         <tr
+            v-for="url in urlsByDate"
+            :key="url._id"
+            class="
+               colors-300
+               dark:even:bg-opacity-5
+               dark:even:bg-warm-gray-50
+               dark:even:hover:bg-opacity-10
+               dark:hover:bg-opacity-10
+               dark:hover:bg-warm-gray-50
+               even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20
+               hover:bg-opacity-20 hover:bg-warm-gray-900
+               lg:dark:even:bg-opacity-10
+               lg:dark:even:bg-warm-gray-900
+               lg:dark:even:hover:bg-opacity-20
+               lg:dark:hover:bg-opacity-20
+               lg:dark:hover:bg-warm-gray-900
+               lg:even:bg-opacity-5
+               lg:even:bg-warm-gray-50
+               lg:even:hover:bg-opacity-10
+               lg:hover:bg-opacity-10
+               lg:hover:bg-warm-gray-50
+            "
+            :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
+         >
+            <!-- Page name -->
+            <td class="lg:text-xs max-w-50 px-3 text-left text-sm truncate" :title="url.longUrl">
+               {{ url.longUrl }}
+            </td>
 
-         <!-- Short name -->
-         <td v-if="isUserLoggedIn" class="lg:text-xs px-3 text-center text-sm">
-            {{ url.shortUrl }}
-         </td>
+            <!-- Short name -->
+            <td v-if="isUserLoggedIn" class="lg:text-xs px-3 text-center text-sm">
+               {{ url.shortUrl }}
+            </td>
 
-         <!-- Expiration tile -->
-         <td v-else class="lg:text-xs px-3 text-center text-sm">
-            {{ t('label.still_valid') }}
-            <span class="font-semibold">{{ getValidDays(url.createdAt) }}</span>
-            {{ t('unit.day', getValidDays(url.createdAt)) }}
-         </td>
+            <!-- Expiration tile -->
+            <td v-else class="lg:text-xs px-3 text-center text-sm">
+               {{ t('label.still_valid') }}
+               <span class="font-semibold">{{ getValidDays(url.createdAt) }}</span>
+               {{ t('unit.day', getValidDays(url.createdAt)) }}
+            </td>
 
-         <!-- Visits -->
-         <td class="lg:text-xs overflow-hidden px-3 relative text-center text-sm">
-            <span :class="[isUserLoggedIn ? '' : 'filter blur-sm font-black']">
-               {{ url.visits }}
-            </span>
-            <NoVisitsButton />
-         </td>
+            <!-- Visits -->
+            <td class="lg:text-xs overflow-hidden px-3 relative text-center text-sm">
+               <span :class="[isUserLoggedIn ? '' : 'filter blur-sm font-black']">
+                  {{ url.visits }}
+               </span>
+               <NoVisitsButton />
+            </td>
 
-         <!-- Actions -->
-         <td class="overflow-hidden relative text-center">
-            <UrlTableActions :url="url" />
-         </td>
-      </tr>
+            <!-- Actions -->
+            <td class="overflow-hidden relative text-center">
+               <UrlTableActions :url="url" />
+            </td>
+         </tr>
+      </transition-group>
    </tbody>
 </template>

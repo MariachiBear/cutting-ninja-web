@@ -6,11 +6,13 @@ import { useURLStore } from './store/url';
 
 const isReady = ref(false);
 
-tryOnMounted(async () => {
-   await useURLStore.init();
-   isReady.value = true;
-   await useUIStore.init();
-   await useNotificationStore.init().then(async () => await useNotificationStore.reset());
+tryOnMounted(() => {
+   const mainPromises = [useURLStore.init, useUIStore.init, useNotificationStore.init];
+   const secondaryPromises = [useUIStore.reset, useNotificationStore.reset];
+
+   Promise.all(mainPromises).then(() =>
+      Promise.all(secondaryPromises).then(() => (isReady.value = true))
+   );
 });
 </script>
 

@@ -52,15 +52,17 @@ class URLStore extends PersistentStore<URL> {
    }
 
    async updateStoredUrl() {
-      await userApi
+      const result = await userApi
          .getMyUrls()
          .then(async (response) => {
             this.state.storedUrls = response.data;
+            return true;
          })
          .catch((err) => {
             console.error(err);
             return false;
          });
+      return result;
    }
 
    async deleteUrl(url: IURL, isLoggedIn: boolean) {

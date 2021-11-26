@@ -76,9 +76,7 @@ class UserStore extends PersistentStore<User> {
    async checkLogin() {
       await userApi
          .getMe()
-         .then(() => {
-            useURLStore.updateStoredUrl();
-         })
+
          .catch(() => (this.state.user = null));
    }
 }
