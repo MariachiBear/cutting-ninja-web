@@ -29,6 +29,8 @@ declare module 'vue' {
     IcBaselineLogOut: typeof import('~icons/ic/baseline-log-out')['default']
     IcBaselineOpenInNew: typeof import('~icons/ic/baseline-open-in-new')['default']
     IcBaselineSettings: typeof import('~icons/ic/baseline-settings')['default']
+    IcBaselineStar: typeof import('~icons/ic/baseline-star')['default']
+    IcBaselineStarBorder: typeof import('~icons/ic/baseline-star-border')['default']
     IcBaselineTableRows: typeof import('~icons/ic/baseline-table-rows')['default']
     IconButton: typeof import('~icons/ic/on-button')['default'];
     IcOutlineCheckBox: typeof import('~icons/ic/outline-check-box')['default']
@@ -41,6 +43,7 @@ declare module 'vue' {
     Login: typeof import('./components/Form/Login.vue')['default']
     LoginButton: typeof import('./components/Login/LoginButton.vue')['default']
     LoginTabs: typeof import('./components/Login/LoginTabs.vue')['default']
+    Logo: typeof import('./components/Navbar/Logo.vue')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
     MdiClose: typeof import('~icons/mdi/close')['default'];
     MdiEyeOffOutline: typeof import('~icons/mdi/eye-off-outline')['default'];
@@ -53,6 +56,7 @@ declare module 'vue' {
     MdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     MdiLoading: typeof import('~icons/mdi/loading')['default']
     MdiNinja: typeof import('~icons/mdi/ninja')['default'];
+    MdiShuriken: typeof import('~icons/mdi/shuriken')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
     MdiViewList: typeof import('~icons/mdi/view-list')['default'];
     MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default'];
