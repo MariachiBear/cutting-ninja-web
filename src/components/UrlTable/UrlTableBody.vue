@@ -38,32 +38,20 @@ const getValidDays = (createdAt: string) => {
          <tr
             v-for="(url, index) in urlsByDate"
             :key="url._id"
-            class="
-               colors-300
-               dark:even:bg-opacity-5
-               dark:even:bg-warm-gray-50
-               dark:even:hover:bg-opacity-10
-               dark:hover:bg-opacity-10
-               dark:hover:bg-warm-gray-50
-               even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20
-               hover:bg-opacity-20 hover:bg-warm-gray-900
-               lg:dark:even:bg-opacity-10
-               lg:dark:even:bg-warm-gray-900
-               lg:dark:even:hover:bg-opacity-20
-               lg:dark:hover:bg-opacity-20
-               lg:dark:hover:bg-warm-gray-900
-               lg:even:bg-opacity-5
-               lg:even:bg-warm-gray-50
-               lg:even:hover:bg-opacity-10
-               lg:hover:bg-opacity-10
-               lg:hover:bg-warm-gray-50
-            "
-            :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
+            class="divide-x colors-300 dark:even:bg-opacity-5 dark:even:bg-warm-gray-50 dark:even:hover:bg-opacity-10 dark:hover:bg-opacity-10 dark:hover:bg-warm-gray-50 even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20 hover:bg-opacity-20 hover:bg-warm-gray-900 lg:dark:even:bg-opacity-10 lg:dark:even:bg-warm-gray-900 lg:dark:even:hover:bg-opacity-20 lg:dark:hover:bg-opacity-20 lg:dark:hover:bg-warm-gray-900 lg:even:bg-opacity-5 lg:even:bg-warm-gray-50 lg:even:hover:bg-opacity-10 lg:hover:bg-opacity-10 lg:hover:bg-warm-gray-50"
+            :class="[
+               isSmallScreen
+                  ? 'text-theme divide-warm-gray-400 dark:divide-warm-gray-600'
+                  : 'text-theme-inverse divide-warm-gray-600 dark:divide-warm-gray-400',
+            ]"
             @mouseover="hoveredIndex = index"
             @mouseleave="hoveredIndex = null"
          >
             <!-- Page name -->
-            <td class="lg:text-xs max-w-50 px-3 text-left text-sm truncate" :title="url.longUrl">
+            <td
+               class="lg:text-xs max-w-80 px-3 py-2 text-left break-all text-sm long-url"
+               :title="url.longUrl"
+            >
                {{ url.longUrl }}
             </td>
 

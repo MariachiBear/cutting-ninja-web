@@ -9,10 +9,10 @@ const hasAnimationTimes = ref(true);
 const hasLineDelay = ref(false);
 const hasPathDelay = ref(false);
 const isChangingName = ref(false);
-const newShownPath = ref('');
-const oldShownPath = ref('');
-const path = computed(() => route.fullPath.replace('/', ''));
-const pathIsNotHome = computed(() => path.value !== '');
+const newShownPath = ref('/');
+const oldShownPath = ref('/');
+const path = computed(() => route.fullPath);
+const pathIsNotHome = computed(() => path.value !== '/');
 
 tryOnMounted(async () => {
    oldShownPath.value = path.value;
@@ -24,11 +24,11 @@ tryOnMounted(async () => {
 });
 
 watch(path, (newVal, oldVal) => {
-   if (pathIsNotHome.value && oldVal !== '') {
+   if (pathIsNotHome.value && oldVal !== '/') {
       newShownPath.value = newVal;
       isChangingName.value = true;
    }
-   if (oldVal === '') oldShownPath.value = newVal;
+   if (oldVal === '/') oldShownPath.value = newVal;
 
    hasAnimationTimes.value = true;
    hasLineDelay.value = !pathIsNotHome.value;
@@ -44,7 +44,9 @@ watch(path, (newVal, oldVal) => {
 </script>
 
 <template>
-   <div class="h-full flex flex-row items-center justify-start overflow-hidden relative w-auto">
+   <div
+      class="h-8 flex flex-row flex-grow items-center justify-start overflow-hidden relative w-auto"
+   >
       <div class="pl-2 z-10 main-theme-bg colors-300 absolute">
          <div
             class="dark:border-r-warm-gray-100 border-r-warm-gray-700 border-r-1"
@@ -56,7 +58,7 @@ watch(path, (newVal, oldVal) => {
          />
       </div>
       <div
-         class="overflow-visible transform truncate w-full"
+         class="overflow-visible transform h-full flex items-center text-xs lg:text-lg"
          :class="[
             isPathOpen && pathIsNotHome
                ? 'translate-x-0'
@@ -66,24 +68,24 @@ watch(path, (newVal, oldVal) => {
          ]"
       >
          <span
-            class="absolute text-theme text-sm lg:text-lg overflow-visible truncate ml-4 transform"
+            class="absolute text-theme overflow-visible ml-4 transform"
             :class="[
                hasAnimationTimes ? 'duration-1200 ease-in-out' : 'duration-0',
-               isChangingName ? 'translate-y-0' : '-translate-y-full',
+               isChangingName ? 'translate-y-0 ' : '-translate-y-full opacity-0',
             ]"
          >
             {{ t(`path.${newShownPath}`) }}
          </span>
          <span
-            class="absolute text-theme text-sm lg:text-lg overflow-visible truncate ml-4 transform"
+            class="absolute text-theme overflow-visible ml-4 transform"
             :class="[
                hasAnimationTimes ? 'duration-1200 ease-in-out' : 'duration-0',
-               isChangingName ? '!translate-y-full' : 'translate-y-0',
+               isChangingName ? '!translate-y-full opacity-0' : 'translate-y-0',
             ]"
          >
             {{ t(`path.${oldShownPath}`) }}
          </span>
-         <span class="text-transparent text-sm lg:text-lg overflow-visible truncate ml-4">
+         <span class="text-transparent whitespace-nowrap">
             {{ t(`path.${newShownPath}`) }}{{ t(`path.${oldShownPath}`) }}
          </span>
       </div>

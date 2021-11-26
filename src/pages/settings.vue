@@ -1,16 +1,10 @@
 <template>
-   <div
-      class="
-         container
-         min-h-screen
-         flex flex-col
-         justify-center
-         items-center
-         main-theme-bg
-         colors-300
-      "
-   >
-      <h1>Settings</h1>
+   <div id="wrapper">
+      <div
+         class="w-full min-h-screen flex flex-col justify-center items-center main-theme-bg colors-300"
+      >
+         <h1>Settings</h1>
+      </div>
    </div>
 </template>
 

@@ -9,12 +9,14 @@ const urlState = useURLStore.getState();
 </script>
 
 <template>
-   <Hero />
-   <UrlTable
-      v-if="urlState.storedUrls.length > 0 && isSmallScreen"
-      class="max-h-screen w-full h-100"
-   />
-   <Footer />
+   <div id="wrapper">
+      <Hero />
+      <UrlTable
+         v-if="urlState.storedUrls.length > 0 && isSmallScreen"
+         class="max-h-screen w-full h-100"
+      />
+      <Footer />
+   </div>
 </template>
 
 <route lang="yaml">

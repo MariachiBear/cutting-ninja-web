@@ -14,6 +14,10 @@
    @apply w-2 lg:w-2.5 h-2 lg:h-2.5;
 }
 
+.long-url::-webkit-scrollbar {
+   @apply w-1 lg:w-1.5 h-1 lg:h-1.5;
+}
+
 *::-webkit-scrollbar-thumb {
    @apply bg-english-lavender rounded-none;
 }

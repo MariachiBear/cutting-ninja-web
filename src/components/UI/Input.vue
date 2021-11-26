@@ -14,7 +14,7 @@ const props = defineProps({
    placeholder: { type: String, required: false },
    type: { type: String, required: false, default: 'text' },
    validationFunctions: {
-      type: Object as () => Record<string, () => boolean | string>,
+      type: Object as () => Record<string, (arg: string) => boolean | string>,
       required: false,
    },
 });
@@ -66,19 +66,7 @@ watch(isValid, (validValue) => emit('validate', validValue));
       <label
          v-if="label"
          :for="inputId"
-         class="
-            -translate-y-full
-            absolute
-            colors-300
-            dark:text-warm-gray-400
-            font-semibold
-            left-0
-            mb-1
-            text-sm text-warm-gray-600
-            top-0
-            transform
-            z-0
-         "
+         class="-translate-y-full absolute colors-300 dark:text-warm-gray-400 font-semibold left-0 mb-1 text-sm text-warm-gray-600 top-0 transform z-0"
       >
          {{ label }}
       </label>
@@ -90,54 +78,19 @@ watch(isValid, (validValue) => emit('validate', validValue));
          :required="isRequired"
          :type="type"
          :placeholder="placeholder"
-         class="
-            disabled:cursor-not-allowed
-            bg-gray-100
-            colors-300
-            dark:bg-rocket-metallic2
-            p-2
-            placeholder-gray-400
-            relative
-            rounded-sm
-            shadow
-            text-theme
-            w-full
-            z-10
-         "
+         class="disabled:cursor-not-allowed bg-gray-100 colors-300 dark:bg-rocket-metallic2 p-2 placeholder-gray-400 relative rounded-sm shadow text-theme w-full z-10"
          @input="setValue"
       />
 
       <span
          v-if="modelValue && isClearable"
-         class="
-            absolute
-            bg-gray-100
-            colors-300
-            cursor-pointer
-            dark:bg-rocket-metallic2
-            flex flex-col
-            p-2
-            right-0
-            rounded-r-sm
-            text-theme text-xl
-            z-20
-         "
+         class="absolute bg-gray-100 colors-300 cursor-pointer dark:bg-rocket-metallic2 flex flex-col p-2 right-0 rounded-r-sm text-theme text-xl z-20"
          @click="clear"
       >
          <ic-baseline-close />
       </span>
       <small
-         class="
-            absolute
-            all-300
-            bottom-0
-            dark:text-red-400
-            right-0
-            text-red-600
-            transform
-            z-0
-            font-medium
-         "
+         class="absolute all-300 bottom-0 dark:text-red-400 right-0 text-red-600 transform z-0 font-medium"
          :class="[
             isValid
                ? 'opacity-100 pointer-events-none translate-y-0'
