@@ -1,9 +1,9 @@
 button:
   about: Acerca de
-  account_settings: Configuración
+  account_settings: Ajustes de cuenta
   back: Volver
   close: Cerrar
-  dashboard: Panel
+  dashboard: Panel de control
   go: IR A
   go_home: Ir al inicio
   home: Inicio
@@ -69,6 +69,9 @@ label:
   to_access: para acceder a su cuenta
   visits: Visitas
   'yes': Sí
+path:
+  dashboard: Panel de control
+  settings: Ajustes
 unit:
   day: día | días
   second: segundo | segundos

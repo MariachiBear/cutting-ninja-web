@@ -67,6 +67,9 @@ label:
   still_valid: Still valid for
   to_access: to access your account
   visits: Visits
+path: 
+  dashboard: Dashboard
+  settings: Settings
 unit:
   day: day | days
   second: second | seconds
