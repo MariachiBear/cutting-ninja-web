@@ -74,9 +74,12 @@ const getValidDays = (createdAt: string) => {
 
             <!-- Expiration tile -->
             <td v-else class="lg:text-xs px-3 text-center text-sm">
-               {{ t('label.still_valid') }}
-               <span class="font-semibold">{{ getValidDays(url.createdAt) }}</span>
-               {{ t('unit.day', getValidDays(url.createdAt)) }}
+               <div class="flex flex-row items-center justify-center gap-1 group">
+                  {{ t('label.still_valid') }}
+                  <span class="font-semibold">{{ getValidDays(url.createdAt) }}</span>
+                  {{ t('unit.day', getValidDays(url.createdAt)) }}
+                  <QuestionButton :is-shown="hoveredIndex === index" />
+               </div>
             </td>
 
             <!-- Visits -->

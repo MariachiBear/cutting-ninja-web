@@ -28,6 +28,7 @@ declare module 'vue' {
     IcBaselineLogout: typeof import('~icons/ic/baseline-logout')['default'];
     IcBaselineLogOut: typeof import('~icons/ic/baseline-log-out')['default']
     IcBaselineOpenInNew: typeof import('~icons/ic/baseline-open-in-new')['default']
+    IcBaselineQuestionMark: typeof import('~icons/ic/baseline-question-mark')['default']
     IcBaselineSettings: typeof import('~icons/ic/baseline-settings')['default']
     IcBaselineStar: typeof import('~icons/ic/baseline-star')['default']
     IcBaselineStarBorder: typeof import('~icons/ic/baseline-star-border')['default']
@@ -66,6 +67,7 @@ declare module 'vue' {
     Notification: typeof import('./components/UI/Notification.vue')['default']
     NoVisitsButton: typeof import('./components/UrlTable/NoVisitsButton.vue')['default']
     PathName: typeof import('./components/Navbar/PathName.vue')['default']
+    QuestionButton: typeof import('./components/UrlTable/QuestionButton.vue')['default']
     README: typeof import('./components/README.md')['default']
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
