@@ -51,8 +51,10 @@ const deleteUrl = async () => {
       @confirm="deleteUrl"
       @cancel="toggleUrlDeleteConfirmOpen(false)"
    >
-      <div class="flex flex-row justify-center items-center gap-5 px-5">
-         <ic-outline-warning-amber class="text-8xl" />
+      <div
+         class="bg-unbleached-sand shadow-inner flex flex-row justify-center items-center gap-5 px-5"
+      >
+         <ic-outline-warning-amber class="text-8xl text-english-lavender" />
 
          <div class="text-justify">
             <p>

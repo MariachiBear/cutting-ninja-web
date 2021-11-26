@@ -26,7 +26,7 @@ label:
   copied_success: '{url} copiado con éxito'
   copy: Copiar
   copy_fail: '{url} copia fallida'
-  delete: Borrar
+  delete: Eliminar
   delete_question: ¿Está seguro de que quiere eliminar esta URL?
   delete_suggestion: Esto no se puede deshacer después de la confirmación.
   deleted_fail: '{url} borrado fallido'
