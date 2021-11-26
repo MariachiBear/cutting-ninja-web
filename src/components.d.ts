@@ -65,6 +65,7 @@ declare module 'vue' {
     NinjaHead: typeof import('./components/NinjaHead.vue')['default'];
     Notification: typeof import('./components/UI/Notification.vue')['default']
     NoVisitsButton: typeof import('./components/UrlTable/NoVisitsButton.vue')['default']
+    PathName: typeof import('./components/Navbar/PathName.vue')['default']
     README: typeof import('./components/README.md')['default']
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']

@@ -14,10 +14,11 @@ const urlState = useURLStore.getState();
       v-if="urlState.storedUrls.length > 0 && isSmallScreen"
       class="max-h-screen w-full h-100"
    />
+   <Footer />
 </template>
 
 <route lang="yaml">
 meta:
-   layout: home
+   layout: default
    requiresAuth: false
 </route>

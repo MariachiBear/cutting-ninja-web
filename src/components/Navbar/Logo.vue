@@ -6,20 +6,17 @@ const showStar = ref(false);
 const showTrace = ref(false);
 const hasDelay = ref(true);
 
-const reset = () => {
-   showStar.value = false;
-   showTrace.value = false;
-   hasDelay.value = true;
-};
+tryOnMounted(() => {
+   promiseTimeout(500).then(() => (showStar.value = !showTrace.value));
+});
 
 whenever(showStar, () =>
-   promiseTimeout(1500).then(() => {
+   promiseTimeout(1200).then(() => {
       showStar.value = false;
       promiseTimeout(400).then(() => {
          showTrace.value = true;
          promiseTimeout(200).then(() => {
             hasDelay.value = false;
-            promiseTimeout(1000 * 30).then(reset);
          });
       });
    })
@@ -30,13 +27,14 @@ whenever(showStar, () =>
    <router-link
       to="/"
       class="
-         colors-300
+         transition-colors
+         ease-in-out
          font-semibold
          gap-2
          inline-flex
          items-center
          justify-start
-         text-theme text-2xl
+         text-theme text-xl
          lg:text-3xl
          relative
       "
@@ -71,7 +69,12 @@ whenever(showStar, () =>
             :class="showStar ? 'opacity-100' : 'opacity-0'"
          />
       </div>
-      Cutting Ninja
+      <h1
+         class="transform transition-transform duration-300 ease-in-out"
+         :class="hasDelay ? '' : 'scale-y-110'"
+      >
+         Cutting Ninja
+      </h1>
       <div
          class="
             absolute
@@ -89,7 +92,6 @@ whenever(showStar, () =>
          class="
             absolute
             border-t-2
-            lg:border-t-3
             dark:border-t-jet
             border-t-unbleached-silk
             transform

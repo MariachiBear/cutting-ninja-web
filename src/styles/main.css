@@ -22,7 +22,8 @@ input,
 select,
 textarea,
 button,
-th {
+th,
+a {
    -ms-touch-action: none !important;
    -webkit-tap-highlight-color: transparent !important;
    outline-width: 0 !important;
@@ -76,6 +77,8 @@ body,
    @apply bg-jet dark:bg-unbleached-silk;
 }
 
+html,
+body,
 .colors-300 {
    @apply transition-colors ease-in-out duration-300;
 }

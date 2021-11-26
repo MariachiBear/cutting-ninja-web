@@ -20,7 +20,7 @@ const isSmallScreen = or(sm, md);
 
 const openLink = () => {
    window.open(urlString, '_blank')?.focus();
-   promiseTimeout(1).then(() => useURLStore.updateStoredUrl());
+   promiseTimeout(100).then(() => useURLStore.updateStoredUrl());
 };
 
 whenever(isCopied, () =>

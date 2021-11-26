@@ -9,5 +9,4 @@ useHead({
 <template>
    <Navbar />
    <router-view />
-   <Footer class="z-10" />
 </template>
