@@ -15,7 +15,9 @@ const isSmallScreen = or(sm, md);
 
 whenever(isUserLoggedIn, resume);
 
-tryOnMounted(() => useURLStore.updateStoredUrl());
+tryOnMounted(() => {
+   if (isUserLoggedIn.value) useURLStore.updateStoredUrl();
+});
 </script>
 
 <template>

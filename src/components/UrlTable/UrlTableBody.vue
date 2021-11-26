@@ -8,6 +8,7 @@ import { useUserStore } from '~/store/user';
 const { t } = useI18n();
 const { sm, md } = siteBreakpoints;
 
+const hoveredIndex = ref<number | null>(null);
 const isSmallScreen = or(sm, md);
 const urlsByDate = useURLStore.urlsByDate;
 const isUserLoggedIn = useUserStore.isUserLoggedIn;
@@ -35,7 +36,7 @@ const getValidDays = (createdAt: string) => {
          enter-active-class="animated animate-fade-in-left animate-duration-500"
       >
          <tr
-            v-for="url in urlsByDate"
+            v-for="(url, index) in urlsByDate"
             :key="url._id"
             class="
                colors-300
@@ -58,6 +59,8 @@ const getValidDays = (createdAt: string) => {
                lg:hover:bg-warm-gray-50
             "
             :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
+            @mouseover="hoveredIndex = index"
+            @mouseleave="hoveredIndex = null"
          >
             <!-- Page name -->
             <td class="lg:text-xs max-w-50 px-3 text-left text-sm truncate" :title="url.longUrl">
@@ -81,7 +84,7 @@ const getValidDays = (createdAt: string) => {
                <span :class="[isUserLoggedIn ? '' : 'filter blur-sm font-black']">
                   {{ url.visits }}
                </span>
-               <NoVisitsButton />
+               <NoVisitsButton :is-shown="hoveredIndex === index" />
             </td>
 
             <!-- Actions -->

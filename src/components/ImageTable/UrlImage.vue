@@ -11,7 +11,7 @@ const emit = defineEmits(['load']);
             all-300
             contrast-75
             filter
-            group-hover:scale-105
+            hover:scale-105
             lg:rounded-sm
             object-cover object-center
             overflow-hidden
