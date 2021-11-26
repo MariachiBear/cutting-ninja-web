@@ -26,7 +26,7 @@ useResizeObserver(signup, (entries) => {
 
 <template>
    <div
-      class="w-full flex flex-col relative all-300 transform overflow-hidden pb-4 justify-center"
+      class="w-full flex flex-col relative all-300 transform overflow-hidden justify-center"
       :class="isLogin ? `h-${loginHeight}px` : `h-${signupHeight}px`"
    >
       <Login

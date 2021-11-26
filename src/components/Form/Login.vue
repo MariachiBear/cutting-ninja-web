@@ -40,7 +40,7 @@ const requiredValidation = (value: string): boolean | string => !!value || t('la
          </h1>
          <p class="text-gray-500 dark:text-gray-400">{{ t('label.to_access') }}</p>
       </div>
-      <form action="" class="p-5 flex flex-col gap-1" @submit.prevent="login">
+      <form action="" class="p-5 flex flex-col" @submit.prevent="login">
          <Input
             v-model="email"
             :label="t('label.email_address')"
@@ -58,7 +58,7 @@ const requiredValidation = (value: string): boolean | string => !!value || t('la
             :validation-functions="{ requiredValidation }"
          />
 
-         <div class="flex flex-row justify-center">
+         <div class="flex flex-row justify-center mt-5">
             <LoginButton> {{ t('button.sign_in') }} </LoginButton>
          </div>
       </form>
