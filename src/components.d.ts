@@ -14,6 +14,8 @@ declare module 'vue' {
     Hero: typeof import('./components/Hero/Hero.vue')['default']
     HeroImageTable: typeof import('./components/Hero/HeroImageTable.vue')['default']
     HeroText: typeof import('./components/Hero/HeroText.vue')['default']
+    'Ic:baselineArrowDownward': typeof import('~icons/ic/baseline-arrow-downward')['default']
+    IcBaselineArrowDownward: typeof import('~icons/ic/baseline-arrow-downward')['default']
     IcBaselineCheck: typeof import('~icons/ic/baseline-check')['default']
     IcBaselineCheckBox: typeof import('~icons/ic/baseline-check-box')['default'];
     IcBaselineClose: typeof import('~icons/ic/baseline-close')['default']
@@ -61,6 +63,7 @@ declare module 'vue' {
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
     MdiViewList: typeof import('~icons/mdi/view-list')['default'];
     MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default'];
+    MobileTableIndicator: typeof import('./components/Hero/MobileTableIndicator.vue')['default']
     Modal: typeof import('./components/UI/Modal.vue')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
     NinjaHead: typeof import('./components/NinjaHead.vue')['default'];

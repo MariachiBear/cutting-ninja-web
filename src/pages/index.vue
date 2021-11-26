@@ -13,6 +13,7 @@ const urlState = useURLStore.getState();
       <Hero />
       <UrlTable
          v-if="urlState.storedUrls.length > 0 && isSmallScreen"
+         id="mobile-table"
          class="max-h-screen w-full h-100"
       />
       <Footer />

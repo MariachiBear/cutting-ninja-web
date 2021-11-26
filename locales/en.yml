@@ -31,6 +31,7 @@ label:
   delete_suggestion: This cannot be undone after confirmation.
   deleted_fail: '{url} deletion failed'
   deleted_success: '{url} deleted successfully'
+  dont_forget_them: Don't forget them!
   email: Email
   email_address: Email address
   error_404: Error 404
@@ -62,6 +63,7 @@ label:
   show_table: Show table
   signed_in_as: Signed in as
   signed_in_success: Signed in successfully
+  small_screen_url_msg: It looks like you have already some shortened links.
   source_code: Source code
   still_valid: Expires in
   to_access: to access your account

@@ -11,7 +11,7 @@ const hasPathDelay = ref(false);
 const isChangingName = ref(false);
 const newShownPath = ref('/');
 const oldShownPath = ref('/');
-const path = computed(() => route.fullPath);
+const path = computed(() => route.path);
 const pathIsNotHome = computed(() => path.value !== '/');
 
 tryOnMounted(async () => {

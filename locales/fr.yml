@@ -31,6 +31,7 @@ label:
   delete_suggestion: Il n'est pas possible de revenir en arrière après la confirmation.
   deleted_fail: La suppression de {url} a échoué
   deleted_success: '{url} supprimé avec succès'
+  dont_forget_them: Ne les oubliez pas !
   email: Courriel
   email_address: Adresse électronique
   error_404: Erreur 404
@@ -64,6 +65,7 @@ label:
   show_table: Afficher la table
   signed_in_as: Connecté en tant que
   signed_in_success: Connecté avec succès
+  small_screen_url_msg: Il semble que vous ayez déjà des liens raccourcis.
   source_code: Code source
   still_valid: Expire dans
   to_access: pour accéder à votre compte

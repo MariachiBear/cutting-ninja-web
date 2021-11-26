@@ -31,6 +31,7 @@ label:
   delete_suggestion: Esto no se puede deshacer después de la confirmación.
   deleted_fail: '{url} borrado fallido'
   deleted_success: '{url} borrado con éxito'
+  dont_forget_them: ¡No los olvides!
   email: Correo electrónico
   email_address: Dirección de correo electrónico
   error_404: Error 404
@@ -64,6 +65,7 @@ label:
   show_table: Mostrar tabla
   signed_in_as: Sesión iniciada como
   signed_in_success: Inicio de sesión exitoso
+  small_screen_url_msg: Parece que ya tienes algunos enlaces acortados.
   source_code: Código fuente
   still_valid: Expira en
   to_access: para acceder a su cuenta

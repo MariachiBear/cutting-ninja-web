@@ -38,5 +38,5 @@
       "*.css": "postcss"
    },
    "editor.formatOnSave": true,
-   "i18n-ally.sourceLanguage": "fr"
+   "i18n-ally.sourceLanguage": "en"
 }

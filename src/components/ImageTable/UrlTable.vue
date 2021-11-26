@@ -25,7 +25,7 @@ tryOnMounted(() => {
       class="w-full h-full colors-300 overflow-auto z-10"
       :class="[isSmallScreen ? 'main-theme-bg' : 'main-theme-bg-inverse']"
    >
-      <table class="min-w-screen-md lg:min-w-full">
+      <table class="min-w-screen-md w-full lg:min-w-full">
          <UrlTableHead />
          <UrlTableBody />
       </table>

@@ -11,7 +11,7 @@ const isUserLoggedIn = useUserStore.isUserLoggedIn;
 <template>
    <button
       v-if="!isUserLoggedIn"
-      class="-translate-x-1/2 absolute all-300 bg-warm-gray-50 hover:bg-warm-gray-200 text-warm-gray-700 flex items-center justify-center left-1/2 p-1 rounded-md shadow-md top-1/2 transform w-10/12"
+      class="-translate-x-1/2 absolute all-300 bg-warm-gray-50 hover:bg-warm-gray-200 text-warm-gray-700 flex items-center justify-center left-1/2 p-1 rounded-md shadow-md top-1/2 transform w-full"
       :class="
          isShown
             ? '-translate-y-1/2 opacity-100 pointer-events-auto'

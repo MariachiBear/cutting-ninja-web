@@ -39,6 +39,7 @@ html,
 body,
 #app {
    @apply h-full p-0 m-0;
+   scroll-behavior: smooth;
 }
 
 #nprogress {
