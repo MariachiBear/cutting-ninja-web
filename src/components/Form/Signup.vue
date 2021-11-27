@@ -45,28 +45,14 @@ const sourceImg = computed(
          <div class="flex flex-col justify-center items-center">
             <img
                :src="sourceImg"
-               class="
-                  2xl:w-50 2xl:h-50
-                  3xl:w-60 3xl:h-60
-                  4k:w-100 4k:h-100
-                  4xl:w-65 4xl:h-65
-                  5xl:w-80 5xl:h-80
-                  bg-accent bg-opacity-20
-                  h-30
-                  lg:w-40 lg:h-40
-                  md:w-35 md:h-35
-                  object-contain
-                  rounded-full
-                  shadow-md
-                  w-30
-               "
+               class="2xl:w-50 2xl:h-50 3xl:w-60 3xl:h-60 4k:w-100 4k:h-100 4xl:w-65 4xl:h-65 5xl:w-80 5xl:h-80 bg-accent bg-opacity-20 h-30 lg:w-40 lg:h-40 md:w-35 md:h-35 object-contain rounded-full shadow-md w-30"
                alt="logo"
             />
             <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">
                {{ t('button.sign_up') }}
             </h1>
          </div>
-         <form action="" class="p-5 pb-4 flex flex-col gap-1" @submit.prevent="signup">
+         <form action="" class="p-5 pb-4 flex flex-col" @submit.prevent="signup">
             <Input
                v-model="firstName"
                :label="t('label.first_name')"
@@ -97,7 +83,7 @@ const sourceImg = computed(
                :placeholder="t('label.password_placeholder')"
                :validation-functions="{ requiredValidation, minCharacters }"
             />
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row justify-center mt-5">
                <LoginButton>{{ t('button.sign_up') }}</LoginButton>
             </div>
          </form>

@@ -1,7 +1,7 @@
 {
    "background_color": "#F8D9C9",
    "categories": ["utilities", "productivity"],
-   "description": "Cutting Ninja",
+   "description": "Create, shorten and share long links to make them more optimal. Analyze their statistics individually or as a group and get the highest possible efficiency.",
    "display": "standalone",
    "features": ["Cross Platform", "fast", "simple", "cool"],
    "icons": [
@@ -129,13 +129,103 @@
    ],
    "screenshots": [
       {
-         "sizes": "403x808",
-         "src": "/assets/screenshot-mobile.png",
+         "sizes": "1080x2163",
+         "src": "/assets/screenshot-mobile-01.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2180",
+         "src": "/assets/screenshot-mobile-02.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2172",
+         "src": "/assets/screenshot-mobile-03.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2164",
+         "src": "/assets/screenshot-mobile-04.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2159",
+         "src": "/assets/screenshot-mobile-05.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2146",
+         "src": "/assets/screenshot-mobile-06.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2153",
+         "src": "/assets/screenshot-mobile-07.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2161",
+         "src": "/assets/screenshot-mobile-08.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2167",
+         "src": "/assets/screenshot-mobile-09.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2177",
+         "src": "/assets/screenshot-mobile-10.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2165",
+         "src": "/assets/screenshot-mobile-11.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1080x2167",
+         "src": "/assets/screenshot-mobile-12.jpg",
+         "type": "image/jpg"
+      },
+      {
+         "sizes": "1920x1115",
+         "src": "/assets/screenshot-desktop-01.png",
          "type": "image/png"
       },
       {
-         "sizes": "1920x1117",
-         "src": "/assets/screenshot-desktop.png",
+         "sizes": "1920x1115",
+         "src": "/assets/screenshot-desktop-02.png",
+         "type": "image/png"
+      },
+      {
+         "sizes": "1920x1045",
+         "src": "/assets/screenshot-desktop-03.png",
+         "type": "image/png"
+      },
+      {
+         "sizes": "1920x1115",
+         "src": "/assets/screenshot-desktop-04.png",
+         "type": "image/png"
+      },
+      {
+         "sizes": "1920x1115",
+         "src": "/assets/screenshot-desktop-05.png",
+         "type": "image/png"
+      },
+      {
+         "sizes": "1920x1045",
+         "src": "/assets/screenshot-desktop-06.png",
+         "type": "image/png"
+      },
+      {
+         "sizes": "1920x1045",
+         "src": "/assets/screenshot-desktop-07.png",
+         "type": "image/png"
+      },
+      {
+         "sizes": "1920x1115",
+         "src": "/assets/screenshot-desktop-08.png",
          "type": "image/png"
       }
    ],

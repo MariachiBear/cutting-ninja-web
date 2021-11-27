@@ -2,32 +2,19 @@
 import { useURLStore } from '~/store/url';
 const { t } = useI18n();
 const urlState = useURLStore.getState();
-const toggle = () => useURLStore.toggleIsTableVisible();
 const isTableVisible = computed(() => urlState.storedUrls.length > 0 && urlState.isTableVisible);
+const toggle = () => useURLStore.toggleIsTableVisible();
 </script>
 
 <template>
    <button
-      style="box-shadow: 0 -0.1em 0.3em rgb(0 0 0 / 0.2)"
-      class="
-         -translate-y-0 -translate-x-2.5
-         !text-warm-gray-600
-         absolute
-         bg-warm-gray-100
-         group-hover:-translate-y-10 group-hover:opacity-100
-         opacity-0
-         pb-3
-         pt-1.5
-         px-2
-         right-0
-         rounded-t-md
-         text-xl
-         top-0
-         transform
-         all-300
-         z-0
-      "
-      :class="[urlState.storedUrls.length === 0 ? '!-translate-y-0 !opacity-0' : '']"
+      style="box-shadow: 0.1em -0.1em 0.2em rgb(0 0 0 / 0.2)"
+      class="-translate-x-2.5 !text-warm-gray-600 absolute all-300 bg-warm-gray-100 opacity-0 pb-3 pt-1.5 px-2 right-0 rounded-t-md text-xl top-0 transform z-0"
+      :class="[
+         urlState.storedUrls.length === 0
+            ? '!translate-y-0 !opacity-0'
+            : '!-translate-y-10 !opacity-100',
+      ]"
       :title="t(`label.${isTableVisible ? 'show_picture' : 'show_table'}`)"
       @click="toggle"
    >

@@ -17,9 +17,7 @@ class UserStore extends PersistentStore<User> {
       };
    }
 
-   isUserLoggedIn() {
-      return computed(() => Boolean(this.state.user));
-   }
+   isUserLoggedIn = computed(() => Boolean(this.state.user && this.state.user.accessToken));
 
    async login(email: string, password: string) {
       const result = await userApi
@@ -78,10 +76,8 @@ class UserStore extends PersistentStore<User> {
    async checkLogin() {
       await userApi
          .getMe()
-         .then(() => {
-            useURLStore.updateStoredUrl();
-         })
-         .catch(() => this.logout());
+
+         .catch(() => (this.state.user = null));
    }
 }
 

@@ -19,13 +19,19 @@ label:
   actions: Actions
   already_account_question: Vous avez déjà un compte ?
   blog: Blog
+  cancel: Annuler
   close_in: Fermer dans
+  confirm: Confirmer
   contact: Contact
   copied_success: '{url} copié avec succès'
   copy: Copie
+  copy_fail: La copie de {url} a échoué
   delete: Supprimer
-  delete_question: Supprimer ?
+  delete_question: Êtes-vous sûr de vouloir supprimer cette URL ?
+  delete_suggestion: Il n'est pas possible de revenir en arrière après la confirmation.
+  deleted_fail: La suppression de {url} a échoué
   deleted_success: '{url} supprimé avec succès'
+  dont_forget_them: Ne les oubliez pas !
   email: Courriel
   email_address: Adresse électronique
   error_404: Erreur 404
@@ -53,16 +59,31 @@ label:
   password_placeholder: Un mot de passe étonnant... comme "mot de passe".
   reload_in: Recharge en
   short_name: Nom court
+  shorted_fail: Le raccourcissement de l'URL a échoué
   shorted_success: URL raccourcie avec succès
   show_picture: Voir la photo
   show_table: Afficher la table
+  sign_in_info_main: >-
+    Les liens créés en dehors d'un compte ne sont valables que pendant 90 jours.
+    Il est recommandé d'avoir un compte pour que les liens restent actifs
+    indéfiniment.
+  sign_in_info_suggestion: >-
+    Si vous avez des liens raccourcis sur la page et qu'ils sont présents dans
+    le tableau général, lors de la connexion ou de l'enregistrement, ils seront
+    automatiquement ajoutés au compte qui entre dans le système.
+  sign_in_info_title: Durée de validité des urls
   signed_in_as: Connecté en tant que
   signed_in_success: Connecté avec succès
+  small_screen_url_msg: Il semble que vous ayez déjà des liens raccourcis.
   source_code: Code source
-  still_valid: Toujours valable pour
+  still_valid: Expire dans
   to_access: pour accéder à votre compte
   visits: Visites
   'yes': Oui
+path:
+  /: Défaut
+  /dashboard: Tableau de bord
+  /settings: Paramètres
 unit:
   day: jour | jours
   second: seconde | secondes

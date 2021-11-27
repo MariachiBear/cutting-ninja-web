@@ -163,4 +163,5 @@ const { t } = useI18n();
 <route lang="yaml">
 meta:
    layout: 404
+   requiresAuth: false
 </route>

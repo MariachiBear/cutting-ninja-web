@@ -15,10 +15,7 @@ const isSmallScreen = or(sm, md);
 
 const userState = useUserStore.getState();
 
-const logout = async () => {
-   await useUserStore.logout();
-   location.reload();
-};
+const logout = async () => await useUserStore.logout().then(() => location.reload());
 </script>
 
 <template>
@@ -59,25 +56,25 @@ const logout = async () => {
             </p>
          </div>
          <div class="py-1 text-theme colors-300">
-            <a
-               href="javascript:void(0)"
-               tabindex="2"
+            <router-link
+               to="/dashboard"
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full"
                role="menuitem"
+               :title="t('button.dashboard')"
             >
                {{ t('button.dashboard') }} <ic-baseline-dashboard />
-            </a>
-            <a
-               tabindex="0"
+            </router-link>
+            <router-link
+               to="/settings"
                class="flex items-center justify-between px-4 py-2 text-btn text-left text-sm w-full"
                role="menuitem"
+               :title="t('button.account_settings')"
             >
                {{ t('button.account_settings') }} <ic-baseline-settings />
-            </a>
+            </router-link>
          </div>
          <div class="py-1 text-theme colors-300">
             <button
-               tabindex="3"
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full"
                role="menuitem"
                @click="logout"

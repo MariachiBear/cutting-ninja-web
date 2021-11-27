@@ -1,5 +1,5 @@
 import { promiseTimeout } from '@vueuse/core';
-import { PersistentStore } from './main';
+import { Store } from './main';
 
 export interface Notification extends Object {
    isOpen: boolean;
@@ -9,7 +9,7 @@ export interface Notification extends Object {
    isActive: boolean;
 }
 
-class NotificationStore extends PersistentStore<Notification> {
+class NotificationStore extends Store<Notification> {
    protected data(): Notification {
       return {
          isOpen: false,
@@ -31,7 +31,6 @@ class NotificationStore extends PersistentStore<Notification> {
 
          promiseTimeout(this.state.msTime).then(() => {
             this.state.isOpen = false;
-            promiseTimeout(300).then(() => this.reset());
          });
       }
    }

@@ -14,6 +14,10 @@
    @apply w-2 lg:w-2.5 h-2 lg:h-2.5;
 }
 
+.long-url::-webkit-scrollbar {
+   @apply w-1 lg:w-1.5 h-1 lg:h-1.5;
+}
+
 *::-webkit-scrollbar-thumb {
    @apply bg-english-lavender rounded-none;
 }
@@ -22,7 +26,8 @@ input,
 select,
 textarea,
 button,
-th {
+th,
+a {
    -ms-touch-action: none !important;
    -webkit-tap-highlight-color: transparent !important;
    outline-width: 0 !important;
@@ -34,6 +39,7 @@ html,
 body,
 #app {
    @apply h-full p-0 m-0;
+   scroll-behavior: smooth;
 }
 
 #nprogress {
@@ -76,6 +82,8 @@ body,
    @apply bg-jet dark:bg-unbleached-silk;
 }
 
+html,
+body,
 .colors-300 {
    @apply transition-colors ease-in-out duration-300;
 }
