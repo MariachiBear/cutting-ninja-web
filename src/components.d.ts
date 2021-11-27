@@ -6,6 +6,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     Alerts: typeof import('./components/UI/Alerts.vue')['default']
     CarbonWarning: typeof import('~icons/carbon/warning')['default'];
+    ConfirmDeleteDialog: typeof import('./components/UrlTable/ConfirmDeleteDialog.vue')['default']
+    'ConfirmDeleteDialog copy': typeof import('./components/UrlTable/SignInInfoDialog.vue')['default'];
     DarkToggle: typeof import('./components/Navbar/DarkToggle.vue')['default']
     Dialog: typeof import('./components/UI/Dialog.vue')['default']
     Dropdown: typeof import('./components/Navbar/Dropdown.vue')['default']
@@ -16,7 +18,7 @@ declare module 'vue' {
     HeroText: typeof import('./components/Hero/HeroText.vue')['default']
     'Ic:baselineArrowDownward': typeof import('~icons/ic/baseline-arrow-downward')['default']
     IcBaselineArrowDownward: typeof import('~icons/ic/baseline-arrow-downward')['default']
-    IcBaselineCheck: typeof import('~icons/ic/baseline-check')['default']
+    IcBaselineCheck: typeof import('~icons/ic/baseline-check')['default'];
     IcBaselineCheckBox: typeof import('~icons/ic/baseline-check-box')['default'];
     IcBaselineClose: typeof import('~icons/ic/baseline-close')['default']
     IcBaselineContentCopy: typeof import('~icons/ic/baseline-content-copy')['default']
@@ -32,8 +34,8 @@ declare module 'vue' {
     IcBaselineOpenInNew: typeof import('~icons/ic/baseline-open-in-new')['default']
     IcBaselineQuestionMark: typeof import('~icons/ic/baseline-question-mark')['default']
     IcBaselineSettings: typeof import('~icons/ic/baseline-settings')['default']
-    IcBaselineStar: typeof import('~icons/ic/baseline-star')['default']
-    IcBaselineStarBorder: typeof import('~icons/ic/baseline-star-border')['default']
+    IcBaselineStar: typeof import('~icons/ic/baseline-star')['default'];
+    IcBaselineStarBorder: typeof import('~icons/ic/baseline-star-border')['default'];
     IcBaselineTableRows: typeof import('~icons/ic/baseline-table-rows')['default']
     IconButton: typeof import('~icons/ic/on-button')['default'];
     IcOutlineCheckBox: typeof import('~icons/ic/outline-check-box')['default']
@@ -75,6 +77,7 @@ declare module 'vue' {
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
     SignInButton: typeof import('./components/Navbar/SignInButton.vue')['default']
+    SignInInfoDialog: typeof import('./components/UrlTable/SignInInfoDialog.vue')['default']
     SignOutButton: typeof import('./components/Navbar/SignInButton.vue')['default'];
     Signup: typeof import('./components/Form/Signup.vue')['default']
     StoredUrls: typeof import('./components/Table/UrlTable.vue')['default'];
@@ -84,6 +87,7 @@ declare module 'vue' {
     UrlTable: typeof import('./components/ImageTable/UrlTable.vue')['default']
     UrlTableActions: typeof import('./components/UrlTable/UrlTableActions.vue')['default']
     UrlTableBody: typeof import('./components/UrlTable/UrlTableBody.vue')['default']
+    'UrlTableBody copy': typeof import('./components/UrlTable/UrlTableBody copy.vue')['default']
     UrlTableHead: typeof import('./components/UrlTable/UrlTableHead.vue')['default']
     UserInfo: typeof import('./components/Navbar/UserInfo.vue')['default']
   }

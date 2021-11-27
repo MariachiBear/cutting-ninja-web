@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { useUIStore } from '~/store/ui';
 defineProps({ isShown: { type: Boolean, required: true, default: false } });
 </script>
 
 <template>
    <button
       class="flex justify-center items-center rounded-full lg:hover:bg-blue-400 lg:hover:bg-opacity-20 lg:dark:hover:bg-blue-500 lg:dark:hover:bg-opacity-20 hover:bg-blue-500 hover:bg-opacity-20 dark:hover:bg-blue-400 dark:hover:bg-opacity-20 all-300"
+      @click="useUIStore.toggleValue('isSignInInfoOpen', true)"
    >
       <ic-baseline-question-mark
          style="aspect-ratio: 1"

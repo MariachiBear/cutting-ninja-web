@@ -63,6 +63,15 @@ label:
   shorted_success: URL acortada con éxito
   show_picture: Mostrar imagen
   show_table: Mostrar tabla
+  sign_in_info_main: >-
+    Los enlaces creados desde fuera de una cuenta sólo son válidos durante 90
+    días. Se recomienda tener una cuenta para mantener los enlaces activos
+    indefinidamente.
+  sign_in_info_suggestion: >-
+    Si tiene enlaces acortados en la página y están presentes en la tabla
+    general, al iniciar la sesión o registrarse se añadirán automáticamente a la
+    cuenta que entre en el sistema.
+  sign_in_info_title: Tiempo de validez de las urls
   signed_in_as: Sesión iniciada como
   signed_in_success: Inicio de sesión exitoso
   small_screen_url_msg: Parece que ya tienes algunos enlaces acortados.

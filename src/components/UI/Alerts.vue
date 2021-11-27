@@ -9,7 +9,8 @@ const { t } = useI18n();
 // UI Store
 const uiState = useUIStore.getState();
 const toggleSignModal = (value: boolean) => useUIStore.toggleValue('isSignModalOpen', value);
-const toggleUrlDeleteConfirmOpen = (value: boolean) =>
+const toggleSignInInfo = (value: boolean) => useUIStore.toggleValue('isSignInInfoOpen', value);
+const toggleUrlDeleteConfirm = (value: boolean) =>
    useUIStore.toggleValue('isUrlDeleteConfirmOpen', value);
 
 // User Store
@@ -29,7 +30,7 @@ const deleteUrl = async () => {
                t('label.deleted_fail', { url: urlState.activeUrl?.shortUrl })
             );
       });
-   toggleUrlDeleteConfirmOpen(false);
+   toggleUrlDeleteConfirm(false);
 };
 </script>
 
@@ -45,23 +46,20 @@ const deleteUrl = async () => {
    </Dialog>
    <Dialog
       v-model="uiState.isUrlDeleteConfirmOpen"
-      :toggle-function="toggleUrlDeleteConfirmOpen"
+      :toggle-function="toggleUrlDeleteConfirm"
       is-persistent
       :title="t('label.delete')"
       @confirm="deleteUrl"
-      @cancel="toggleUrlDeleteConfirmOpen(false)"
+      @cancel="toggleUrlDeleteConfirm(false)"
    >
-      <div
-         class="bg-unbleached-sand shadow-inner flex flex-row justify-center items-center gap-5 px-5"
-      >
-         <ic-outline-warning-amber class="text-8xl text-english-lavender" />
-
-         <div class="text-justify">
-            <p>
-               {{ t('label.delete_question') }}
-               <span class="font-medium">{{ t('label.delete_suggestion') }}</span>
-            </p>
-         </div>
-      </div>
+      <ConfirmDeleteDialog />
+   </Dialog>
+   <Dialog
+      v-model="uiState.isSignInInfoOpen"
+      :toggle-function="toggleSignInInfo"
+      :title="t('label.sign_in_info_title')"
+      :has-action-buttons="false"
+   >
+      <SignInInfoDialog />
    </Dialog>
 </template>

@@ -3,6 +3,7 @@ import { Store } from './main';
 export interface UI {
    isSignModalOpen: boolean;
    isUrlDeleteConfirmOpen: boolean;
+   isSignInInfoOpen: boolean;
 }
 
 class UIStore extends Store<UI> {
@@ -10,6 +11,7 @@ class UIStore extends Store<UI> {
       return {
          isSignModalOpen: false,
          isUrlDeleteConfirmOpen: false,
+         isSignInInfoOpen: false,
       };
    }
 
