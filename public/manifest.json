@@ -1,7 +1,7 @@
 {
    "background_color": "#F8D9C9",
    "categories": ["utilities", "productivity"],
-   "description": "Cutting Ninja",
+   "description": "Create, shorten and share long links to make them more optimal. Analyze their statistics individually or as a group and get the highest possible efficiency.",
    "display": "standalone",
    "features": ["Cross Platform", "fast", "simple", "cool"],
    "icons": [
