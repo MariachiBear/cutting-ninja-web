@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import { or } from '@vueuse/core';
+import { siteBreakpoints } from '~/composables';
+import { useUIStore } from '~/store/ui';
 import { useUserStore } from '~/store/user';
+
+const { sm, md } = siteBreakpoints;
+const isSmallScreen = or(sm, md);
+const isLoggedIn = useUserStore.isUserLoggedIn;
 </script>
 
 <template>
@@ -10,9 +17,14 @@ import { useUserStore } from '~/store/user';
       <PathName />
 
       <section class="flex flex-row flex-shrink-0 gap-2 lg:gap-4 items-center justify-center">
-         <UserInfo v-if="useUserStore.isUserLoggedIn.value" />
-         <DarkToggle />
-         <SignInButton />
+         <UserInfo v-if="isLoggedIn && !isSmallScreen" />
+         <DarkToggle v-if="!(isLoggedIn && isSmallScreen)" />
+         <SignInButton v-if="!isLoggedIn" />
+         <ic-baseline-density-medium
+            v-if="isLoggedIn && isSmallScreen"
+            class="text-xl text-theme colors-300"
+            @click="useUIStore.toggleValue('isMobileMenuOpen', true)"
+         />
       </section>
    </header>
 </template>

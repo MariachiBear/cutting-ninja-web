@@ -1,15 +1,20 @@
 <script setup lang="ts">
+import { or } from '@vueuse/core';
+import { siteBreakpoints } from '~/composables';
 import { useNotificationStore } from '~/store/notification';
 import { useUIStore } from '~/store/ui';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
 
 const { t } = useI18n();
+const { sm, md } = siteBreakpoints;
+const isSmallScreen = or(sm, md);
 
 // UI Store
 const uiState = useUIStore.getState();
 const toggleSignModal = (value: boolean) => useUIStore.toggleValue('isSignModalOpen', value);
 const toggleSignInInfo = (value: boolean) => useUIStore.toggleValue('isSignInInfoOpen', value);
+const toggleMobileMenu = (value: boolean) => useUIStore.toggleValue('isMobileMenuOpen', value);
 const toggleUrlDeleteConfirm = (value: boolean) =>
    useUIStore.toggleValue('isUrlDeleteConfirmOpen', value);
 
@@ -55,6 +60,7 @@ const deleteUrl = async () => {
       <ConfirmDeleteDialog />
    </Dialog>
    <Dialog
+      v-if="!isUserLoggedIn"
       v-model="uiState.isSignInInfoOpen"
       :toggle-function="toggleSignInInfo"
       :title="t('sign_in_info.title')"
@@ -62,4 +68,9 @@ const deleteUrl = async () => {
    >
       <SignInInfoDialog />
    </Dialog>
+   <MobileMenu
+      v-if="isSmallScreen && isUserLoggedIn"
+      v-model="uiState.isMobileMenuOpen"
+      :toggle-function="toggleMobileMenu"
+   />
 </template>

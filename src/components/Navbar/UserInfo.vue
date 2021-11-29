@@ -30,18 +30,7 @@ const sourceImg = computed(
             </span>
             <img
                :src="sourceImg"
-               class="
-                  lg:h-7 lg:w-7
-                  4k:w-100 4k:h-100
-                  4xl:w-10 4xl:h-10
-                  5xl:w-80 5xl:h-80
-                  bg-accent bg-opacity-20
-                  h-8
-                  object-contain
-                  rounded-full
-                  shadow-md
-                  w-8
-               "
+               class="lg:h-7 lg:w-7 4k:w-100 4k:h-100 4xl:w-10 4xl:h-10 5xl:w-80 5xl:h-80 bg-accent bg-opacity-20 h-8 object-contain rounded-full shadow-md w-8"
                alt="user"
             />
          </button>

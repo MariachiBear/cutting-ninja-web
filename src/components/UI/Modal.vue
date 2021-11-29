@@ -1,6 +1,6 @@
 <template>
    <div
-      class="all-300 backdrop-blur-sm filter fixed flex h-full items-center justify-center left-0 origin-center overflow-hidden top-0 w-full z-9997"
+      class="all-300 backdrop-blur-2 backdrop-filter fixed flex h-full items-center justify-center left-0 origin-center overflow-hidden top-0 w-full z-9997"
       :class="[modelValue ? 'opacity-100 ' : 'pointer-events-none opacity-0']"
    >
       <div class="bg-black h-full w-full fixed opacity-70 dark:opacity-70" />
