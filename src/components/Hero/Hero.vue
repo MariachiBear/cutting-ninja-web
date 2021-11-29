@@ -10,11 +10,33 @@ const urlState = useURLStore.getState();
 <template>
    <div
       id="hero"
-      class="flex relative flex-col items-center justify-center min-h-screen h-full py-10 w-full main-theme-bg colors-300 z-10"
+      class="
+         flex
+         relative
+         flex-col
+         items-center
+         justify-center
+         min-h-screen
+         h-full
+         py-10
+         w-full
+         main-theme-bg
+         colors-300
+         z-10
+      "
    >
       <section
          id="hero-content"
-         class="flex flex-col gap-10 items-center justify-between lg:flex-row lg:w-11/12 mt-20 mb-50"
+         class="
+            flex flex-col
+            gap-10
+            items-center
+            justify-between
+            lg:flex-row lg:w-11/12
+            mt-20
+            mb-50
+            lg:mt-0 lg:mb-0
+         "
       >
          <HeroText />
          <HeroImageTable v-if="!isSmallScreen" />
