@@ -11,12 +11,17 @@
   to = "/.well-known/assetlinks.json"
   status = 200
   force = true
+  
+[[redirects]]
+  from = "/manifest.json"
+  to = "/manifest.json"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
 
 [[headers]]
   for = "/.well-known/assetlinks.json"
