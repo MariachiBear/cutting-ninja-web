@@ -7,15 +7,26 @@
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [[redirects]]
-  from = "https://cuttingninja.netlify.app/"
-  to = "https://cuttingninja.page/"
-  status = 301
+  from = "/.well-known/assetlinks.json"
+  to = "/.well-known/assetlinks.json"
+  status = 200
+  force = true
+  
+[[redirects]]
+  from = "/manifest.json"
+  to = "/manifest.json"
+  status = 200
   force = true
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
 
 [[headers]]
   for = "/manifest.json"

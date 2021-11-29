@@ -1,0 +1,12 @@
+[
+   {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+         "namespace": "android_app",
+         "package_name": "page.cuttingninja.twa",
+         "sha256_cert_fingerprints": [
+            "BB:C9:A6:F7:16:2A:37:BC:00:87:B6:18:C5:89:A5:67:0D:06:55:82:28:88:EA:CC:24:08:02:B7:7A:82:50:D8"
+         ]
+      }
+   }
+]
