@@ -41,10 +41,7 @@ label:
   invalid_email: Invalid email
   is_required: Is required
   last_name: Last name
-  main_phrase: >-
-    It's easy to get tired of long URLs. It's a pain to have to write a link as
-    long as a book. For this and more, shorten your URLs and everything will be
-    better.
+  main_phrase: It's easy to get tired of long URLs. It's a pain to have to write a link as long as a book. For this and more, shorten your URLs and everything will be better.
   new_content: New content available, click on the reload button to update.
   'no': 'No'
   no_account_question: Don't have an account yet?
@@ -62,10 +59,10 @@ label:
   show_picture: Show picture
   show_table: Show table
   signed_in_as: Signed in as
-  signed_in_success: Signed in successfully
   signed_in_fail: Sign in failed. Verify your credentials
-  signed_up_success: Signed up successfully
+  signed_in_success: Signed in successfully
   signed_up_fail_409: An user with this email already exists
+  signed_up_success: Signed up successfully
   small_screen_url_msg: It looks like you have already some shortened links.
   source_code: Source code
   still_valid: Expires in
@@ -76,19 +73,64 @@ path:
   /: Default
   /dashboard: Dashboard
   /settings: Settings
+phrases:
+  '0': Get more from life with {name}.
+  '1': '{name} inside you.'
+  '10': Mamma Mia, That'so Spicy {name}!
+  '11': '{name}, just the best.'
+  '12': '{name}, the fresh maker.'
+  '13': Go To Work On A {name}.
+  '14': I want more, I want {name}.
+  '15': Saved by {name}
+  '16': '{name} have another serving.'
+  '17': If You Want To Get Ahead, Get A {name}.
+  '18': Sweet as the Moment When the {name} Went 'Pop'
+  '19': I'd walk a mile for {name}.
+  '2': It's time to think about {name}.
+  '20': Simple, Impartial {name}.
+  '21': I scream, You Scream, We All Scream for {name}.
+  '22': I need {name} right now.
+  '23': Get More From {name}.
+  '24': Melts In Your {name}, Not In Your Hand.
+  '25': '{name} as sure as the sun shines.'
+  '26': There's Always Room For {name}.
+  '27': '{name} opens the flood gates.'
+  '28': '{name}, try it, you''ll like it!'
+  '29': Where the hell is {name}?
+  '3': '{name}, satisfies the need.'
+  '30': The one and only {name}.
+  '31': The {name} is Mightier than the Sword.
+  '32': All you require is {name}.
+  '33': Just Like {name} Used To Make.
+  '34': '{name} groove.'
+  '35': The top pick... {name}.
+  '36': Does the Hard {name}, So You Don't Have To.
+  '37': You Can Do It When You {name} It.
+  '38': With A Name Like {name}, It Has To Be Good.
+  '39': Mama's got the Magic of {name}.
+  '4': I'm Not Going to Pay A Lot For This {name}.
+  '40': My {name}.
+  '41': The original {name}.
+  '42': Driven by {name}.
+  '43': Don't live a Little, live a {name}.
+  '44': I'd do anything for {name}.
+  '45': One {name} is better than two of something else.
+  '46': '{name}, it''s a kind of magic.'
+  '47': '{name} when only the best will do.'
+  '48': If You've Got the Time, We've Got the {name}.
+  '49': '{name}, one for all.'
+  '5': How Do You Eat Your {name}?
+  '50': Life is short, like the {name} URL's
+  '6': What's In Your {name}?
+  '7': '{name} enjoy when no-one''s around.'
+  '8': '{name} rules.'
+  '9': We Bring {name} to Life.
 sign_in_info:
   advantages_a: Urls visit counter
   advantages_b: Detailed dashboard access
-  complement: >-
-    Besides, links created from outside an account are only valid for 90 days.
-    With an account you can keep your links active indefinitely.
-  main: >-
-    Using Cutting Ninja with an account has several advantages in terms of
-    functionality. Some of these are:
-  suggestion: >-
-    If you have shortened links on the page and they are present in the general
-    table, when logging in or registering they will be automatically added to
-    the account that enters the system.
+  complement: Besides, links created from outside an account are only valid for 90 days. With an account you can keep your links active indefinitely.
+  main: 'Using Cutting Ninja with an account has several advantages in terms of functionality. Some of these are:'
+  suggestion: If you have shortened links on the page and they are present in the general table, when logging in or registering they will be automatically added to the account that enters the system.
   title: Why to sign in / sign up ?
 unit:
   day: day | days
