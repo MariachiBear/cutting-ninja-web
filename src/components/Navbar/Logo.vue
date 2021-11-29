@@ -1,26 +1,52 @@
 <script setup lang="ts">
 import { promiseTimeout } from '@vueuse/core';
 
+const emit = defineEmits(['update:modelValue', 'animation-end']);
+
+const props = defineProps({
+   modelValue: { type: Boolean, required: false, default: false },
+   isFromLoading: { type: Boolean, required: false, default: false },
+});
+
+const { modelValue } = useVModels(props, emit);
+
 const { t } = useI18n();
 const showStar = ref(false);
 const showTrace = ref(false);
 const hasDelay = ref(true);
 
-tryOnMounted(() => {
-   promiseTimeout(500).then(() => (showStar.value = !showTrace.value));
-});
-
-whenever(showStar, () =>
+const startAnimation = () => {
    promiseTimeout(1200).then(() => {
       showStar.value = false;
       promiseTimeout(400).then(() => {
          showTrace.value = true;
          promiseTimeout(200).then(() => {
             hasDelay.value = false;
+            promiseTimeout(400).then(() => emit('animation-end'));
          });
       });
-   })
-);
+   });
+};
+
+const resetAnimation = () => {
+   showStar.value = false;
+   showTrace.value = false;
+   hasDelay.value = true;
+};
+
+const { pause } = useIntervalFn(() => {
+   resetAnimation();
+   showStar.value = true;
+   startAnimation();
+}, 1000 * 60 * 10);
+
+whenever(modelValue, () => startAnimation());
+
+tryOnMounted(() => {
+   showStar.value = true;
+   if (props.isFromLoading) pause();
+   else promiseTimeout(500).then(() => startAnimation());
+});
 </script>
 
 <template>
@@ -29,7 +55,6 @@ whenever(showStar, () =>
       class="transition-colors flex-shrink-0 ease-in-out font-semibold gap-2 inline-flex items-center justify-start text-theme text-md md:text-lg lg:text-2xl relative"
       :title="t('button.home')"
       aria-label="logo"
-      @mouseover="showStar = !showTrace"
    >
       <img src="/assets/ninjahead.svg" class="w-8 h-8 z-10" />
       <div
@@ -45,25 +70,25 @@ whenever(showStar, () =>
          <h1 class="opacity-0">Cutting Ninja</h1>
 
          <div
-            class="absolute top-0 transform transition-transform duration-300 ease-in-out h-1/2 !overflow-hidden w-full"
-            :class="hasDelay ? '' : 'origin-left -rotate-1  '"
+            class="absolute top-0 transform transition-transform duration-300 ease-in-out h-1/2 !overflow-hidden w-full origin-left"
+            :class="hasDelay ? '-rotate-0' : '-rotate-1 -translate-y-1/8'"
          >
             <span class="absolute top-0">Cutting Ninja</span>
          </div>
          <div
-            class="absolute bottom-0 transform transition-transform duration-300 ease-in-out h-1/2 !overflow-hidden w-full"
-            :class="hasDelay ? '' : 'origin-left rotate-2 '"
+            class="absolute bottom-0 transform transition-transform duration-300 ease-in-out h-1/2 !overflow-hidden w-full origin-left"
+            :class="hasDelay ? 'rotate-0' : 'rotate-2 translate-y-1/8'"
          >
             <span class="absolute bottom-0">Cutting Ninja</span>
          </div>
       </div>
       <div
-         class="absolute border-t-1 lg:border-t-2 dark:border-white border-cool-gray-300 transform all-300 z-0"
-         :class="showTrace ? 'w-full' : 'w-0'"
-      ></div>
+         class="absolute border-t-1 lg:border-t-2 dark:border-white border-cool-gray-400 transform all-300 z-0"
+         :class="[showTrace ? 'w-full' : 'w-0', hasDelay ? '' : 'opacity-0']"
+      />
       <div
          class="absolute border-t-1 lg:border-t-2 dark:border-t-jet border-t-unbleached-silk transform all-300 z-0"
          :class="[showTrace ? 'w-full' : 'w-0', hasDelay ? 'delay-100' : '']"
-      ></div>
+      />
    </router-link>
 </template>
