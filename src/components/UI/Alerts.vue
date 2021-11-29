@@ -57,7 +57,7 @@ const deleteUrl = async () => {
    <Dialog
       v-model="uiState.isSignInInfoOpen"
       :toggle-function="toggleSignInInfo"
-      :title="t('label.sign_in_info_title')"
+      :title="t('sign_in_info.title')"
       :has-action-buttons="false"
    >
       <SignInInfoDialog />

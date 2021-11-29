@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { useUIStore } from '~/store/ui';
-defineProps({ isShown: { type: Boolean, required: true, default: false } });
+const props = defineProps({ modelValue: { type: Boolean, required: false, default: false } });
+const emit = defineEmits(['update:modelValue']);
+
+const { modelValue } = useVModels(props, emit);
 </script>
 
 <template>
-   <button
-      class="flex justify-center items-center rounded-full lg:hover:bg-blue-400 lg:hover:bg-opacity-20 lg:dark:hover:bg-blue-500 lg:dark:hover:bg-opacity-20 hover:bg-blue-500 hover:bg-opacity-20 dark:hover:bg-blue-400 dark:hover:bg-opacity-20 all-300"
-      @click="useUIStore.toggleValue('isSignInInfoOpen', true)"
-   >
-      <ic-baseline-question-mark
-         style="aspect-ratio: 1"
-         class="all-300 lg:text-blue-400 lg:dark:text-blue-500 text-blue-500 dark:text-blue-400 transform hover:rotate-20 p-1"
-         :class="isShown ? 'w-6 h-6' : 'w-0 h-0'"
-      />
-   </button>
+   <ic-baseline-question-mark
+      style="aspect-ratio: 1"
+      class="all-300 text-blue-300 transform absolute top-0 right-0 transform"
+      :class="[
+         modelValue ? 'translate-x-full scale-115 opacity-100' : 'translate-x-0 scale-50 opacity-0',
+      ]"
+   />
 </template>

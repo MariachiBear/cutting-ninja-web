@@ -78,6 +78,7 @@ declare module 'vue' {
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
     SignInButton: typeof import('./components/Navbar/SignInButton.vue')['default']
     SignInInfoDialog: typeof import('./components/UrlTable/SignInInfoDialog.vue')['default']
+    'SignInInfoDialog copy': typeof import('./components/UrlTable/SignInInfoDialog copy.vue')['default']
     SignOutButton: typeof import('./components/Navbar/SignInButton.vue')['default'];
     Signup: typeof import('./components/Form/Signup.vue')['default']
     StoredUrls: typeof import('./components/Table/UrlTable.vue')['default'];

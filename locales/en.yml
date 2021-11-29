@@ -61,9 +61,6 @@ label:
   shorted_success: URL shorted successfully
   show_picture: Show picture
   show_table: Show table
-  sign_in_info_title: Valid time for urls
-  sign_in_info_main: Links created from outside an account are only valid for 90 days. It is recommended to have an account to keep the links active indefinitely.
-  sign_in_info_suggestion: If you have shortened links on the page and they are present in the general table, when logging in or registering they will be automatically added to the account that enters the system.
   signed_in_as: Signed in as
   signed_in_success: Signed in successfully
   small_screen_url_msg: It looks like you have already some shortened links.
@@ -76,6 +73,20 @@ path:
   /: Default
   /dashboard: Dashboard
   /settings: Settings
+sign_in_info:
+  advantages_a: Urls visit counter
+  advantages_b: Detailed dashboard access
+  complement: >-
+    Besides, links created from outside an account are only valid for 90 days.
+    With an account you can keep your links active indefinitely.
+  main: >-
+    Using Cutting Ninja with an account has several advantages in terms of
+    functionality. Some of these are:
+  suggestion: >-
+    If you have shortened links on the page and they are present in the general
+    table, when logging in or registering they will be automatically added to
+    the account that enters the system.
+  title: Why to sign in / sign up ?
 unit:
   day: day | days
   second: second | seconds
