@@ -20,7 +20,7 @@ tryOnMounted(async () => {
       isLineOpen.value = true;
       isPathOpen.value = true;
    });
-   promiseTimeout(2400).then(() => (hasAnimationTimes.value = false));
+   promiseTimeout(2000).then(() => (hasAnimationTimes.value = false));
 });
 
 watch(path, (newVal, oldVal) => {
@@ -33,12 +33,12 @@ watch(path, (newVal, oldVal) => {
    hasAnimationTimes.value = true;
    hasLineDelay.value = !pathIsNotHome.value;
    hasPathDelay.value = pathIsNotHome.value;
-   promiseTimeout(1300).then(() => {
-      hasAnimationTimes.value = false;
+   promiseTimeout(1100).then(() => {
       hasPathDelay.value = false;
       isChangingName.value = false;
       hasLineDelay.value = false;
       oldShownPath.value = newVal;
+      promiseTimeout(200).then(() => (hasAnimationTimes.value = false));
    });
 });
 </script>
@@ -70,8 +70,9 @@ watch(path, (newVal, oldVal) => {
          <span
             class="absolute text-theme overflow-visible ml-4 transform"
             :class="[
-               hasAnimationTimes ? 'duration-1200 ease-in-out' : 'duration-0',
+               hasAnimationTimes && isChangingName ? 'duration-1000 ease-in-out' : '',
                isChangingName ? 'translate-y-0 ' : '-translate-y-full opacity-0',
+               !isChangingName && !hasAnimationTimes ? 'duration-300' : '',
             ]"
          >
             {{ t(`path.${newShownPath}`) }}
@@ -79,8 +80,9 @@ watch(path, (newVal, oldVal) => {
          <span
             class="absolute text-theme overflow-visible ml-4 transform"
             :class="[
-               hasAnimationTimes ? 'duration-1200 ease-in-out' : 'duration-0',
+               hasAnimationTimes && isChangingName ? 'duration-1000 ease-in-out' : '',
                isChangingName ? '!translate-y-full opacity-0' : 'translate-y-0',
+               !isChangingName && !hasAnimationTimes ? 'duration-300' : '',
             ]"
          >
             {{ t(`path.${oldShownPath}`) }}
