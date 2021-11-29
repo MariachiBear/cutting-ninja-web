@@ -54,7 +54,7 @@ label:
   page_name: Page name
   page_not_found: Page not found
   password: Password
-  password_placeholder: An amazing password... like "password"
+  password_placeholder: I hope isn't "password"
   reload_in: Reload in
   short_name: Short name
   shorted_fail: URL shorting failed

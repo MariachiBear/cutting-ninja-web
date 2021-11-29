@@ -56,7 +56,7 @@ label:
   page_name: Nombre de la página
   page_not_found: Página no encontrada
   password: Contraseña
-  password_placeholder: Una contraseña increíble... como "contraseña"
+  password_placeholder: Espero que no sea "contraseña"
   reload_in: Recarga en
   short_name: Nombre corto
   shorted_fail: Fallo en el acortamiento de la URL
