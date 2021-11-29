@@ -64,7 +64,10 @@ label:
   show_picture: Mostrar imagen
   show_table: Mostrar tabla
   signed_in_as: Sesión iniciada como
+  signed_in_fail: Fallo en el inicio de sesión. Verifique sus credenciales
   signed_in_success: Inicio de sesión exitoso
+  signed_up_fail_409: Ya existe un usuario con este correo electrónico
+  signed_up_success: Se ha registrado con éxito
   small_screen_url_msg: Parece que ya tienes algunos enlaces acortados.
   source_code: Código fuente
   still_valid: Expira en

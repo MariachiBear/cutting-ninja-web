@@ -19,6 +19,8 @@ const login = async () => {
          isLoading.value = false;
          emit('logged');
          useNotificationStore.showSuccessNotification(t('label.signed_in_success'));
+      } else {
+         useNotificationStore.showErrorNotification(t('label.signed_in_fail'));
       }
    });
 };

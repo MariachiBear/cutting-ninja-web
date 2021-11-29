@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useNotificationStore } from '~/store/notification';
 import { useUserStore } from '~/store/user';
 const emit = defineEmits(['signedup']);
 
@@ -15,9 +16,15 @@ const signup = async () => {
    await useUserStore
       .signup(email.value, password.value, firstName.value, lastName.value)
       .then((result) => {
-         if (result) {
-            isLoading.value = false;
-            emit('signedup');
+         switch (result) {
+            case true:
+               isLoading.value = false;
+               emit('signedup');
+               useNotificationStore.showSuccessNotification(t('label.signed_up_success'));
+               break;
+            case 409:
+               useNotificationStore.showErrorNotification(t('label.signed_up_fail_409'));
+               break;
          }
       });
 };
@@ -45,7 +52,21 @@ const sourceImg = computed(
          <div class="flex flex-col justify-center items-center">
             <img
                :src="sourceImg"
-               class="2xl:w-50 2xl:h-50 3xl:w-60 3xl:h-60 4k:w-100 4k:h-100 4xl:w-65 4xl:h-65 5xl:w-80 5xl:h-80 bg-accent bg-opacity-20 h-30 lg:w-40 lg:h-40 md:w-35 md:h-35 object-contain rounded-full shadow-md w-30"
+               class="
+                  2xl:w-50 2xl:h-50
+                  3xl:w-60 3xl:h-60
+                  4k:w-100 4k:h-100
+                  4xl:w-65 4xl:h-65
+                  5xl:w-80 5xl:h-80
+                  bg-accent bg-opacity-20
+                  h-30
+                  lg:w-40 lg:h-40
+                  md:w-35 md:h-35
+                  object-contain
+                  rounded-full
+                  shadow-md
+                  w-30
+               "
                alt="logo"
             />
             <h1 class="my-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">

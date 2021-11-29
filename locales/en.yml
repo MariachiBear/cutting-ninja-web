@@ -63,6 +63,9 @@ label:
   show_table: Show table
   signed_in_as: Signed in as
   signed_in_success: Signed in successfully
+  signed_in_fail: Sign in failed. Verify your credentials
+  signed_up_success: Signed up successfully
+  signed_up_fail_409: An user with this email already exists
   small_screen_url_msg: It looks like you have already some shortened links.
   source_code: Source code
   still_valid: Expires in

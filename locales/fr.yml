@@ -64,7 +64,10 @@ label:
   show_picture: Voir la photo
   show_table: Afficher la table
   signed_in_as: Connecté en tant que
+  signed_in_fail: La connexion a échoué. Vérifiez vos informations d'identification
   signed_in_success: Connecté avec succès
+  signed_up_fail_409: Un utilisateur avec cette adresse e-mail existe déjà
+  signed_up_success: Inscription réussie
   small_screen_url_msg: Il semble que vous ayez déjà des liens raccourcis.
   source_code: Code source
   still_valid: Expire dans

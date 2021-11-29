@@ -38,12 +38,7 @@ const isVisitsHelpShown = ref(false);
          <!-- Expiration tile -->
          <th v-else class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
             <span
-               class="
-                  border-0 border-b-1 border-dashed border-b-blue-300
-                  group
-                  relative
-                  cursor-pointer
-               "
+               class="border-0 border-b-1 border-dashed border-b-blue-300 relative cursor-pointer"
                @click="useUIStore.toggleValue('isSignInInfoOpen', true)"
                @mouseover="isExpirationHelpShown = true"
                @mouseleave="isExpirationHelpShown = false"
@@ -56,18 +51,17 @@ const isVisitsHelpShown = ref(false);
          <!-- Visits -->
          <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
             <span
-               class="
-                  border-0 border-b-1 border-dashed border-b-blue-300
-                  group
-                  relative
-                  cursor-pointer
+               :class="
+                  isUserLoggedIn
+                     ? ''
+                     : 'border-0 border-b-1 border-dashed border-b-blue-300 relative cursor-pointer'
                "
-               @click="useUIStore.toggleValue('isSignInInfoOpen', true)"
+               @click="useUIStore.toggleValue('isSignInInfoOpen', !isUserLoggedIn)"
                @mouseover="isVisitsHelpShown = true"
                @mouseleave="isVisitsHelpShown = false"
             >
                {{ t('label.visits') }}
-               <QuestionButton v-model="isVisitsHelpShown" />
+               <QuestionButton v-if="!isUserLoggedIn" v-model="isVisitsHelpShown" />
             </span>
          </th>
 
