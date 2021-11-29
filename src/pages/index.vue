@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { or } from '@vueuse/core';
-import { useURLStore } from '~/store/url';
 import { siteBreakpoints } from '~/composables';
+import { useURLStore } from '~/store/url';
 
 const { sm, md } = siteBreakpoints;
 const isSmallScreen = or(sm, md);

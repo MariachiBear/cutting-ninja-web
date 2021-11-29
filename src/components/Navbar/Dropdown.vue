@@ -28,20 +28,7 @@ const logout = async () => await useUserStore.logout().then(() => location.reloa
       ]"
    >
       <div
-         class="
-            absolute
-            bg-unbleached-sand
-            colors-300
-            dark:bg-rocket-metallic
-            divide-y divide-warm-gray-400
-            max-w-70
-            min-w-50
-            mt-1
-            origin-top-right
-            right-0
-            rounded-sm
-            shadow-2xl
-         "
+         class="absolute bg-unbleached-sand colors-300 dark:bg-rocket-metallic divide-y divide-warm-gray-400 max-w-70 min-w-50 mt-1 origin-top-right right-0 rounded-sm shadow-2xl"
          aria-labelledby="headlessui-menu-button-1"
          role="menu"
       >

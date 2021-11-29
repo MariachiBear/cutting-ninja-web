@@ -4,6 +4,7 @@ export interface UI {
    isSignModalOpen: boolean;
    isUrlDeleteConfirmOpen: boolean;
    isSignInInfoOpen: boolean;
+   isMobileMenuOpen: boolean;
 }
 
 class UIStore extends Store<UI> {
@@ -12,6 +13,7 @@ class UIStore extends Store<UI> {
          isSignModalOpen: false,
          isUrlDeleteConfirmOpen: false,
          isSignInInfoOpen: false,
+         isMobileMenuOpen: false,
       };
    }
 

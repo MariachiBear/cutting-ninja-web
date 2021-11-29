@@ -41,13 +41,8 @@ label:
   invalid_email: Correo electrónico no válido
   is_required: Es necesario
   last_name: Apellido
-  main_phrase: >-
-    Es fácil cansarse de las URLs largas. Es un dolor tener que escribir un
-    enlace tan largo como un libro. Por esto y más, acorta tus URLs y todo irá
-    mejor.
-  new_content: >-
-    Nuevo contenido disponible, haga clic en el botón de recarga para
-    actualizar.
+  main_phrase: Es fácil cansarse de las URLs largas. Es un dolor tener que escribir un enlace tan largo como un libro. Por esto y más, acorta tus URLs y todo irá mejor.
+  new_content: Nuevo contenido disponible, haga clic en el botón de recarga para actualizar.
   'no': 'No'
   no_account_question: ¿Aún no tienes una cuenta?
   not_found: No se ha encontrado
@@ -56,24 +51,18 @@ label:
   page_name: Nombre de la página
   page_not_found: Página no encontrada
   password: Contraseña
-  password_placeholder: Una contraseña increíble... como "contraseña"
+  password_placeholder: Espero que no sea "contraseña"
   reload_in: Recarga en
   short_name: Nombre corto
   shorted_fail: Fallo en el acortamiento de la URL
   shorted_success: URL acortada con éxito
   show_picture: Mostrar imagen
   show_table: Mostrar tabla
-  sign_in_info_main: >-
-    Los enlaces creados desde fuera de una cuenta sólo son válidos durante 90
-    días. Se recomienda tener una cuenta para mantener los enlaces activos
-    indefinidamente.
-  sign_in_info_suggestion: >-
-    Si tiene enlaces acortados en la página y están presentes en la tabla
-    general, al iniciar la sesión o registrarse se añadirán automáticamente a la
-    cuenta que entre en el sistema.
-  sign_in_info_title: Tiempo de validez de las urls
   signed_in_as: Sesión iniciada como
+  signed_in_fail: Fallo en el inicio de sesión. Verifique sus credenciales
   signed_in_success: Inicio de sesión exitoso
+  signed_up_fail_409: Ya existe un usuario con este correo electrónico
+  signed_up_success: Se ha registrado con éxito
   small_screen_url_msg: Parece que ya tienes algunos enlaces acortados.
   source_code: Código fuente
   still_valid: Expira en
@@ -84,6 +73,65 @@ path:
   /: Por defecto
   /dashboard: Panel de control
   /settings: Ajustes
+phrases:
+  '0': Aprovecha más la vida con {name}.
+  '1': '{name} dentro de ti.'
+  '10': ¡Mamma Mia, eso es picante {name}!
+  '11': '{name}, sólo el mejor.'
+  '12': '{name}, el fabricante de frescos.'
+  '13': Ir a trabajar en un {name}.
+  '14': Quiero más, quiero {name}.
+  '15': Salvado por {name}
+  '16': '{name} tenga otra porción.'
+  '17': Si quieres avanzar, hazte con un {name}.
+  '18': Dulce como el momento en que el {name} hizo 'pop'
+  '19': Caminaría una milla por {name}.
+  '2': Es hora de pensar en {name}.
+  '20': Simple, Imparcial {name}.
+  '21': Yo grito, tú gritas, todos gritamos por {name}.
+  '22': Necesito a {name} ahora mismo.
+  '23': Obtenga más de {name}.
+  '24': Se derrite en tu {name}, no en tu mano.
+  '25': '{name} tan seguro como que el sol brilla.'
+  '26': Siempre hay espacio para {name}.
+  '27': '{name} abre las compuertas.'
+  '28': '{name}, pruébalo, ¡te gustará!'
+  '29': ¿Dónde diablos está {name}?
+  '3': '{name}, satisface la necesidad.'
+  '30': El único {name}.
+  '31': El {name} es más poderoso que la espada.
+  '32': Todo lo que necesitas es {name}.
+  '33': Igual que lo hacía {name}.
+  '34': '{name} ranura.'
+  '35': La mejor elección... {name}.
+  '36': '{name} hace lo difícil, para que tú no tengas que hacerlo.'
+  '37': Puedes hacerlo cuando lo {name}.
+  '38': Con un nombre como {name}, tiene que ser bueno.
+  '39': Mamá tiene la Magia de {name}.
+  '4': No voy a pagar mucho por este {name}.
+  '40': Mi {name}.
+  '41': El {name} original.
+  '42': Conducido por {name}.
+  '43': No vivas un Poco, vive un {name}.
+  '44': Haría cualquier cosa por {name}.
+  '45': Un {name} es mejor que dos de otra cosa.
+  '46': '{name}, es una especie de magia.'
+  '47': '{name} cuando sólo el mejor lo hará.'
+  '48': Si tiene tiempo, nosotros tenemos el {name}.
+  '49': '{name}, uno para todos.'
+  '5': ¿Cómo se come su {name}?
+  '50': La vida es corta, como las URL de {nombre}
+  '6': ¿Qué hay en tu {name}?
+  '7': '{name} disfrutar cuando no hay nadie alrededor.'
+  '8': Reglas de {name}.
+  '9': Damos vida a {name}.
+sign_in_info:
+  advantages_a: Contador de visitas a urls
+  advantages_b: Acceso al panel de control detallado
+  complement: Además, los enlaces creados desde fuera de una cuenta sólo son válidos durante 90 días. Con una cuenta puedes mantener tus enlaces activos indefinidamente.
+  main: 'El uso de Cutting Ninja con una cuenta tiene varias ventajas en términos de funcionalidad. Algunas de ellas son:'
+  suggestion: Si tiene enlaces acortados en la página y están presentes en la tabla general, al iniciar la sesión o registrarse se añadirán automáticamente a la cuenta que entre en el sistema.
+  title: ¿Por qué iniciar sesión / inscribirse?
 unit:
   day: día | días
   second: segundo | segundos

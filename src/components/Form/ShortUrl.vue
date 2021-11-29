@@ -15,6 +15,7 @@ const onSubmit = async () => {
       await useURLStore.shortUrl(url.value).then((result) => {
          if (result) {
             useURLStore.toggleIsTableVisible(true);
+            document.getElementById('mobile-table')?.scrollIntoView({ behavior: 'smooth' });
             useNotificationStore.showSuccessNotification(t('label.shorted_success'));
          }
       });

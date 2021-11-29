@@ -1,3 +1,4 @@
+---
 button:
   about: À propos de
   account_settings: Paramètres du compte
@@ -30,7 +31,7 @@ label:
   delete_question: Êtes-vous sûr de vouloir supprimer cette URL ?
   delete_suggestion: Il n'est pas possible de revenir en arrière après la confirmation.
   deleted_fail: La suppression de {url} a échoué
-  deleted_success: '{url} supprimé avec succès'
+  deleted_success: '{url} supprimé avec succès '
   dont_forget_them: Ne les oubliez pas !
   email: Courriel
   email_address: Adresse électronique
@@ -41,13 +42,8 @@ label:
   invalid_email: Courriel non valide
   is_required: Est nécessaire
   last_name: Nom de famille
-  main_phrase: >-
-    Il est facile de se lasser des longues URL. C'est pénible de devoir écrire
-    un lien aussi long qu'un livre. Pour cela et bien plus encore, raccourcissez
-    vos URL et tout ira mieux.
-  new_content: >-
-    Nouveau contenu disponible, cliquez sur le bouton de rechargement pour
-    mettre à jour.
+  main_phrase: Il est facile de se lasser des longues URL. C'est pénible de devoir écrire un lien aussi long qu'un livre. Pour cela et bien plus encore, raccourcissez vos URL et tout ira mieux.
+  new_content: Nouveau contenu disponible, cliquez sur le bouton de rechargement pour mettre à jour.
   'no': Non
   no_account_question: Vous n'avez pas encore de compte ?
   not_found: Non trouvé
@@ -56,24 +52,18 @@ label:
   page_name: Nom de la page
   page_not_found: Page non trouvée
   password: Mot de passe
-  password_placeholder: Un mot de passe étonnant... comme "mot de passe".
+  password_placeholder: J'espère qu'il soit pas "mot de passe".
   reload_in: Recharge en
   short_name: Nom court
   shorted_fail: Le raccourcissement de l'URL a échoué
   shorted_success: URL raccourcie avec succès
   show_picture: Voir la photo
   show_table: Afficher la table
-  sign_in_info_main: >-
-    Les liens créés en dehors d'un compte ne sont valables que pendant 90 jours.
-    Il est recommandé d'avoir un compte pour que les liens restent actifs
-    indéfiniment.
-  sign_in_info_suggestion: >-
-    Si vous avez des liens raccourcis sur la page et qu'ils sont présents dans
-    le tableau général, lors de la connexion ou de l'enregistrement, ils seront
-    automatiquement ajoutés au compte qui entre dans le système.
-  sign_in_info_title: Durée de validité des urls
   signed_in_as: Connecté en tant que
+  signed_in_fail: La connexion a échoué. Vérifiez vos informations d'identification
   signed_in_success: Connecté avec succès
+  signed_up_fail_409: Un utilisateur avec cette adresse e-mail existe déjà
+  signed_up_success: Inscription réussie
   small_screen_url_msg: Il semble que vous ayez déjà des liens raccourcis.
   source_code: Code source
   still_valid: Expire dans
@@ -84,6 +74,65 @@ path:
   /: Défaut
   /dashboard: Tableau de bord
   /settings: Paramètres
+phrases:
+  '0': Profitez de la vie avec {name}.
+  '1': '{name} en toi.'
+  '10': Mamma Mia, That's Spicy {name} !
+  '11': '{name}, juste le meilleur.'
+  '12': '{name}, le fabricant de produits frais.'
+  '13': Va travailler sur un {name}.
+  '14': Je veux plus, je veux {name}.
+  '15': Sauvé par {name}
+  '16': '{name} prenez une autre portion.'
+  '17': Si tu veux aller de l'avant, prends un {name}.
+  '18': Doux comme le moment où le {name} a fait "pop".
+  '19': Je marcherais un kilomètre pour {name}.
+  '2': Il est temps de penser à {name}.
+  '20': Simple, Impartial {name}.
+  '21': Je crie, tu cries, nous crions tous pour {name}.
+  '22': J'ai besoin de {name} tout de suite.
+  '23': Obtenez plus de {name}.
+  '24': Il fond dans votre {name}, pas dans votre main.
+  '25': '{name} aussi sûr que le soleil brille.'
+  '26': Il y a toujours de la place pour {name}.
+  '27': '{name} ouvre les vannes.'
+  '28': '{name}, essayez-le, vous allez l''aimer !'
+  '29': Où diable est {name} ?
+  '3': '{name}, répond au besoin.'
+  '30': Le seul et unique {name}.
+  '31': Le {name} est plus puissant que l'épée.
+  '32': Tout ce dont vous avez besoin est {name}.
+  '33': Juste comme {name} avait l'habitude de faire.
+  '34': '{name} rainure.'
+  '35': Le premier choix... {name}.
+  '36': fait le difficile {name}, pour que vous n'ayez pas à le faire.
+  '37': Tu peux le faire quand tu le {name}.
+  '38': Avec un nom comme {name}, ça doit être bon.
+  '39': Maman a la magie de {name}.
+  '4': Je ne vais pas payer cher pour ce {name}.
+  '40': Mon {name}.
+  '41': L'original {name}.
+  '42': Conduit par {name}.
+  '43': Ne vis pas un petit, vis un {name}.
+  '44': Je ferais n'importe quoi pour {name}.
+  '45': Un {name} est mieux que deux de quelque chose d'autre.
+  '46': '{name}, c''est une sorte de magie.'
+  '47': '{name} quand seul le meilleur fera l''affaire.'
+  '48': Si vous avez le temps, nous avons le {name}.
+  '49': '{name}, un pour tous.'
+  '5': Comment mangez-vous votre {name} ?
+  '50': La vie est courte, comme les URL de {nom}.
+  '6': Qu'est-ce qu'il y a dans votre {name} ?
+  '7': '{name} apprécient quand personne n''est là.'
+  '8': '{name} règles.'
+  '9': Nous donnons vie à {name}.
+sign_in_info:
+  advantages_a: Compteur de visites d'urls
+  advantages_b: Accès à un tableau de bord détaillé
+  complement: En outre, les liens créés en dehors d'un compte ne sont valables que pendant 90 jours. Avec un compte, vous pouvez garder vos liens actifs indéfiniment.
+  main: 'L''utilisation de Cutting Ninja avec un compte présente plusieurs avantages en termes de fonctionnalité. En voici quelques-uns :'
+  suggestion: Si vous avez des liens raccourcis sur la page et qu'ils sont présents dans le tableau général, lors de la connexion ou de l'enregistrement, ils seront automatiquement ajoutés au compte qui entre dans le système.
+  title: Pourquoi se connecter / s'inscrire ?
 unit:
   day: jour | jours
   second: seconde | secondes

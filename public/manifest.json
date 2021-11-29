@@ -4,6 +4,7 @@
    "description": "Create, shorten and share long links to make them more optimal. Analyze their statistics individually or as a group and get the highest possible efficiency.",
    "display": "standalone",
    "features": ["Cross Platform", "fast", "simple", "cool"],
+   "iarc_rating_id": "47b73002-9fd9-4af5-a965-fb38751e77e4",
    "icons": [
       {
          "sizes": "36x36",
@@ -117,7 +118,7 @@
       }
    ],
    "id": "/",
-   "lang": "English",
+   "lang": "en-US",
    "name": "Cutting Ninja",
    "orientation": "any",
    "prefer_related_applications": false,
@@ -232,7 +233,7 @@
    "short_name": "Cutting Ninja",
    "shortcuts": [
       {
-         "description": "Cut an URL",
+         "description": "Allows you to shorten an URL",
          "icons": [
             {
                "sizes": "192x192",
@@ -246,8 +247,8 @@
                "type": "image/png"
             }
          ],
-         "name": "Cutting Ninja",
-         "short_name": "Cutting Ninja",
+         "name": "Cut an URL",
+         "short_name": "Cut an URL",
          "url": "/"
       }
    ],

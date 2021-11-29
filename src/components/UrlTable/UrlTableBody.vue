@@ -31,7 +31,26 @@ const getValidDays = (createdAt: string) => {
          <tr
             v-for="(url, index) in urlsByDate"
             :key="url._id"
-            class="colors-300 dark:even:bg-opacity-5 dark:even:bg-warm-gray-50 dark:even:hover:bg-opacity-10 dark:hover:bg-opacity-10 dark:hover:bg-warm-gray-50 even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20 hover:bg-opacity-20 hover:bg-warm-gray-900 lg:dark:even:bg-opacity-10 lg:dark:even:bg-warm-gray-900 lg:dark:even:hover:bg-opacity-20 lg:dark:hover:bg-opacity-20 lg:dark:hover:bg-warm-gray-900 lg:even:bg-opacity-5 lg:even:bg-warm-gray-50 lg:even:hover:bg-opacity-10 lg:hover:bg-opacity-10 lg:hover:bg-warm-gray-50"
+            class="
+               colors-300
+               dark:even:bg-opacity-5
+               dark:even:bg-warm-gray-50
+               dark:even:hover:bg-opacity-10
+               dark:hover:bg-opacity-10
+               dark:hover:bg-warm-gray-50
+               even:bg-opacity-10 even:bg-warm-gray-900 even:hover:bg-opacity-20
+               hover:bg-opacity-20 hover:bg-warm-gray-900
+               lg:dark:even:bg-opacity-10
+               lg:dark:even:bg-warm-gray-900
+               lg:dark:even:hover:bg-opacity-20
+               lg:dark:hover:bg-opacity-20
+               lg:dark:hover:bg-warm-gray-900
+               lg:even:bg-opacity-5
+               lg:even:bg-warm-gray-50
+               lg:even:hover:bg-opacity-10
+               lg:hover:bg-opacity-10
+               lg:hover:bg-warm-gray-50
+            "
             :class="[isSmallScreen ? 'text-theme' : 'text-theme-inverse']"
             @mouseover="hoveredIndex = index"
             @mouseleave="hoveredIndex = null"
@@ -55,7 +74,6 @@ const getValidDays = (createdAt: string) => {
                   {{ t('label.still_valid') }}
                   <span class="font-semibold">{{ getValidDays(url.createdAt) }}</span>
                   {{ t('unit.day', getValidDays(url.createdAt)) }}
-                  <QuestionButton :is-shown="hoveredIndex === index" />
                </div>
             </td>
 

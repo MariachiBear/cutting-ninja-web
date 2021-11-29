@@ -25,6 +25,7 @@ declare module 'vue' {
     IcBaselineDarkMode: typeof import('~icons/ic/baseline-dark-mode')['default']
     IcBaselineDashboard: typeof import('~icons/ic/baseline-dashboard')['default']
     IcBaselineDelete: typeof import('~icons/ic/baseline-delete')['default']
+    IcBaselineDensityMedium: typeof import('~icons/ic/baseline-density-medium')['default']
     IcBaselineImage: typeof import('~icons/ic/baseline-image')['default']
     IcBaselineLightMode: typeof import('~icons/ic/baseline-light-mode')['default']
     IcBaselineLogin: typeof import('~icons/ic/baseline-login')['default'];
@@ -64,7 +65,7 @@ declare module 'vue' {
     MdiShuriken: typeof import('~icons/mdi/shuriken')['default']
     MdiTwitter: typeof import('~icons/mdi/twitter')['default']
     MdiViewList: typeof import('~icons/mdi/view-list')['default'];
-    MobileMenu: typeof import('./components/Navbar/MobileMenu.vue')['default'];
+    MobileMenu: typeof import('./components/UI/MobileMenu.vue')['default']
     MobileTableIndicator: typeof import('./components/Hero/MobileTableIndicator.vue')['default']
     Modal: typeof import('./components/UI/Modal.vue')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
@@ -78,6 +79,7 @@ declare module 'vue' {
     ShortUrl: typeof import('./components/Form/ShortUrl.vue')['default']
     SignInButton: typeof import('./components/Navbar/SignInButton.vue')['default']
     SignInInfoDialog: typeof import('./components/UrlTable/SignInInfoDialog.vue')['default']
+    'SignInInfoDialog copy': typeof import('./components/UrlTable/SignInInfoDialog copy.vue')['default']
     SignOutButton: typeof import('./components/Navbar/SignInButton.vue')['default'];
     Signup: typeof import('./components/Form/Signup.vue')['default']
     StoredUrls: typeof import('./components/Table/UrlTable.vue')['default'];
