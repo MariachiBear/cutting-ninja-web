@@ -65,10 +65,12 @@ class UserStore extends PersistentStore<User> {
    }
 
    async checkLogin() {
-      await userApi
-         .getMe()
-
-         .catch(() => (this.state.user = null));
+      if (this.state.user != null)
+         await userApi.getMe().catch(async () => {
+            await useURLStore.delete();
+            await useURLStore.init();
+            this.state.user = null;
+         });
    }
 }
 
