@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL
+const twitterLink = import.meta.env.VITE_TWITTER_LINK
+const githubLink = import.meta.env.VITE_GITHUB_LINK
+const gitlabLink = import.meta.env.VITE_GITLAB_LINK
+const linkedinLink = import.meta.env.VITE_LINKEDIN_LINK
+const blogLink = import.meta.env.VITE_BLOG_LINK
+const aboutLink = import.meta.env.VITE_ABOUT_LINK
+const sourceCodeLink = import.meta.env.VITE_SOURCE_CODE_LINK
 </script>
 
 <template>
@@ -35,16 +43,16 @@ const { t } = useI18n();
                   md:gap-6 md:justify-start
                "
             >
-               <a class="text-btn" target="_blank" href="https://nnjct.pw/DiSUi">
+               <a class="text-btn" target="_blank" :href="blogLink">
                   {{ t('label.blog') }}
                </a>
-               <a class="text-btn" target="_blank" href="https://nnjct.pw/tp-Ph">
+               <a class="text-btn" target="_blank" :href="aboutLink">
                   {{ t('label.about') }}
                </a>
-               <a class="text-btn" target="_blank" href="mailto:contact@rubn.xyz">
+               <a class="text-btn" target="_blank" :href="`mailto:${contactEmail}`">
                   {{ t('label.contact') }}
                </a>
-               <a class="text-btn" target="_blank" href="https://nnjct.pw/adfYv">
+               <a class="text-btn" target="_blank" :href="sourceCodeLink">
                   {{ t('label.source_code') }}
                </a>
             </nav>
@@ -54,7 +62,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Twitter"
-                  href="https://nnjct.pw/yzFOO"
+                  :href="twitterLink"
                >
                   <mdi-twitter />
                </a>
@@ -62,7 +70,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Linked In"
-                  href="https://nnjct.pw/VvY6B"
+                  :href="linkedinLink"
                >
                   <mdi-linkedin />
                </a>
@@ -70,7 +78,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Github"
-                  href="https://nnjct.pw/6sa6L"
+                  :href="githubLink"
                >
                   <mdi-github />
                </a>
@@ -78,7 +86,7 @@ const { t } = useI18n();
                   target="_blank"
                   class="icon-btn text-xl"
                   title="Gitlab"
-                  href="https://nnjct.pw/FnNhb"
+                  :href="gitlabLink"
                >
                   <mdi-gitlab />
                </a>
