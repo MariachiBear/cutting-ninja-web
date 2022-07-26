@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { DateTime } from 'luxon';
 import { siteBreakpoints } from '~/composables';
 import { useURLStore } from '~/store/url';
@@ -9,7 +9,7 @@ const { t } = useI18n();
 const { sm, md } = siteBreakpoints;
 
 const hoveredIndex = ref<number | null>(null);
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 const urlsByDate = useURLStore.urlsByDate;
 const isUserLoggedIn = useUserStore.isUserLoggedIn;
 

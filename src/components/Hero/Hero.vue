@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { siteBreakpoints } from '~/composables';
 import { useURLStore } from '~/store/url';
 const { sm, md } = siteBreakpoints;
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 const urlState = useURLStore.getState();
 </script>
 
