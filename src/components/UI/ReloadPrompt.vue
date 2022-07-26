@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { get, or, set, useCounter, useIntervalFn, whenever } from '@vueuse/core';
+import { get, set, useCounter, useIntervalFn, whenever } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { useRegisterSW } from 'virtual:pwa-register/vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
@@ -10,7 +11,7 @@ const { pause } = useIntervalFn(dec, 1000);
 
 const { offlineReady, needRefresh, updateServiceWorker } = useRegisterSW();
 
-const isOpen = or(offlineReady, needRefresh);
+const isOpen = logicOr(offlineReady, needRefresh);
 
 const close = async () => {
    set(offlineReady, false);

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { isDark, siteBreakpoints, toggleDark } from '~/composables';
 import { useUserStore } from '~/store/user';
 
@@ -19,7 +19,7 @@ const route = useRoute();
 
 const { sm, md } = siteBreakpoints;
 
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 
 const userState = useUserStore.getState();
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { or, promiseTimeout } from '@vueuse/core';
+import { promiseTimeout } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { siteBreakpoints } from '~/composables';
 import { useNotificationStore } from '~/store/notification';
-import { useURLStore } from '~/store/url';
 import { useUIStore } from '~/store/ui';
+import { useURLStore } from '~/store/url';
 
 const props = defineProps({
    url: { type: Object as () => IURL, required: true },
@@ -16,7 +17,7 @@ const { t } = useI18n();
 const { sm, md } = siteBreakpoints;
 const { text: copiedText, copy, copied: isCopied } = useClipboard({ copiedDuring: 0 });
 
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 
 const openLink = () => {
    window.open(urlString, '_blank')?.focus();

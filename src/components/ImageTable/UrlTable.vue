@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { siteBreakpoints } from '~/composables';
 import { useURLStore } from '~/store/url';
 import { useUserStore } from '~/store/user';
@@ -11,7 +11,7 @@ const { resume } = useIntervalFn(() => useURLStore.updateStoredUrl(), 1000 * 30,
    immediate: isUserLoggedIn.value,
 });
 
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 
 whenever(isUserLoggedIn, resume);
 

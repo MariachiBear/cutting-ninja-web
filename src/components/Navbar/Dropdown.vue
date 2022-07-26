@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { siteBreakpoints } from '~/composables';
 import { useUserStore } from '~/store/user';
 
@@ -11,7 +11,7 @@ defineProps({
 
 const { sm, md } = siteBreakpoints;
 
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 
 const userState = useUserStore.getState();
 

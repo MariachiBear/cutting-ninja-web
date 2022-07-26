@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { or } from '@vueuse/core';
+import { logicOr } from '@vueuse/math';
 import { siteBreakpoints } from '~/composables';
 import { useUIStore } from '~/store/ui';
 import { useUserStore } from '~/store/user';
 
 const { sm, md } = siteBreakpoints;
-const isSmallScreen = or(sm, md);
+const isSmallScreen = logicOr(sm, md);
 const isLoggedIn = useUserStore.isUserLoggedIn;
 </script>
 
