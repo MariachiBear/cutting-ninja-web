@@ -35,7 +35,7 @@ const onSubmit = async () => {
          class="flex-1 w-full relative"
          is-required
          type="url"
-         placeholder="https://github.com/MariachiBear/cutting-ninja-page"
+         placeholder="https://github.com/MariachiBear/cutting-ninja-web"
       />
 
       <button
