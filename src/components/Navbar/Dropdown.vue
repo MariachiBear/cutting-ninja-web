@@ -42,7 +42,7 @@ const logout = async () => await useUserStore.logout().then(() => location.reloa
                {{ userState.user?.email }}
             </p>
          </div>
-         <!-- <div class="py-1 text-theme colors-300">
+         <div class="py-1 text-theme colors-300">
             <router-link
                to="/dashboard"
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full"
@@ -59,7 +59,7 @@ const logout = async () => await useUserStore.logout().then(() => location.reloa
             >
                {{ t('button.account_settings') }} <ic-baseline-settings />
             </router-link>
-         </div> -->
+         </div>
          <div class="py-1 text-theme colors-300">
             <button
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full"
