@@ -1,7 +1,7 @@
 {
    "author": "Rubén Conde <dev@rubn.xyz>",
    "bugs": {
-      "url": "https://github.com/MariachiBear/cutting-ninja-page/issues"
+      "url": "https://github.com/MariachiBear/cutting-ninja-web/issues"
    },
    "dependencies": {
       "@vueuse/core": "9.0.0",
@@ -60,13 +60,13 @@
       "vite-ssg": "0.20.2",
       "vue-tsc": "0.39.0"
    },
-   "homepage": "https://github.com/MariachiBear/cutting-ninja-page#readme",
+   "homepage": "https://github.com/MariachiBear/cutting-ninja-web#readme",
    "license": "MIT",
-   "name": "cutting-ninja-page",
+   "name": "cutting-ninja-web",
    "private": true,
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/MariachiBear/cutting-ninja-page.git"
+      "url": "git+https://github.com/MariachiBear/cutting-ninja-web.git"
    },
    "scripts": {
       "build": "rimraf dist && cross-env NODE_ENV=production vite build",
