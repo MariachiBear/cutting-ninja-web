@@ -58,6 +58,27 @@ class UserStore extends PersistentStore<User> {
       return result;
    }
 
+   async updateUser(userInfo: IUserUpdate) {
+      const result: number | true = await userApi
+         .updateMe(userInfo)
+         .then(async () => {
+            const userNewInfo = await userApi.getMe();
+
+            this.state.user = {
+               ...userNewInfo.data,
+               accessToken: String(this.state.user?.accessToken),
+            };
+
+            return true;
+         })
+         .catch((err) => {
+            console.error(err);
+            return err.response.status;
+         });
+
+      return result;
+   }
+
    async logout() {
       const result = await clear()
          .then(() => {
