@@ -8,3 +8,10 @@ declare interface IUser {
    role: string;
    updatedAt: string;
 }
+
+declare interface IUserUpdate {
+   email?: string;
+   firstName?: string;
+   lastName?: string;
+   password?: string;
+}
