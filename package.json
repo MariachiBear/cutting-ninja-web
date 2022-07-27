@@ -78,5 +78,5 @@
       "test": "cypress open",
       "typecheck": "vue-tsc --noEmit"
    },
-   "version": "1.0.3"
+   "version": "1.0.5"
 }
