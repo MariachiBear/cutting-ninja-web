@@ -4,17 +4,7 @@ const { t } = useI18n();
 
 <template>
    <div
-      class="
-         bg-unbleached-sand
-         dark:bg-rocket-metallic
-         prose
-         shadow-inner
-         flex flex-col
-         lg:flex-row
-         justify-center
-         items-center
-         lg:gap-5 lg:px-5
-      "
+      class="bg-unbleached-sand dark:bg-rocket-metallic prose shadow-inner flex flex-col lg:flex-row justify-center items-center lg:gap-5 lg:px-5"
    >
       <ic-outline-warning-amber
          class="text-8xl text-red-700 dark:text-red-400 opacity-50 lg:w-1/7"

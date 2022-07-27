@@ -10,17 +10,7 @@ const isVisitsHelpShown = ref(false);
 <template>
    <thead>
       <tr
-         class="
-            all-300
-            bg-mountbatten-pink
-            dark:shadow-white
-            lg:shadow-white lg:dark:shadow-black
-            shadow
-            sticky
-            text-warm-gray-100
-            top-0
-            z-10
-         "
+         class="all-300 bg-mountbatten-pink dark:shadow-white lg:shadow-white lg:dark:shadow-black shadow sticky text-warm-gray-100 top-0 z-10"
       >
          <!-- Page name -->
          <th class="font-semibold px-6 py-3 text-center text-sm uppercase whitespace-nowrap">
