@@ -22,12 +22,6 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  
-[[redirects]]
-  from = "https://cuttingninja.netlify.app/*"
-  to = "https://cuttingninja.mariachibear.com/:splat"
-  status = 301
-  force = true
 
 [[headers]]
   for = "/.well-known/assetlinks.json"
