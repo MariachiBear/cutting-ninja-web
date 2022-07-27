@@ -1,7 +1,7 @@
----
 button:
   about: À propos de
   account_settings: Paramètres du compte
+  apply: Appliquer
   back: Retourner
   close: Fermer
   dashboard: Tableau de bord
@@ -21,12 +21,14 @@ label:
   already_account_question: Vous avez déjà un compte ?
   blog: Blog
   cancel: Annuler
+  change_password: Changez votre mot de passe
   close_in: Fermer dans
   confirm: Confirmer
   contact: Contact
   copied_success: '{url} copié avec succès'
   copy: Copie
   copy_fail: La copie de {url} a échoué
+  current_password: Mot de passe actuel
   delete: Supprimer
   delete_question: Êtes-vous sûr de vouloir supprimer cette URL ?
   delete_suggestion: Il n'est pas possible de revenir en arrière après la confirmation.
@@ -40,10 +42,18 @@ label:
   first_name: Prénom
   go_to: Aller à
   invalid_email: Courriel non valide
+  is_not_identical: Le nouveau mot de passe doit être identique dans les deux champs
+  is_old_identical: Le nouveau mot de passe doit être différent de l'ancien.
   is_required: Est nécessaire
   last_name: Nom de famille
-  main_phrase: Il est facile de se lasser des longues URL. C'est pénible de devoir écrire un lien aussi long qu'un livre. Pour cela et bien plus encore, raccourcissez vos URL et tout ira mieux.
-  new_content: Nouveau contenu disponible, cliquez sur le bouton de rechargement pour mettre à jour.
+  main_phrase: >-
+    Il est facile de se lasser des longues URL. C'est pénible de devoir écrire
+    un lien aussi long qu'un livre. Pour cela et bien plus encore, raccourcissez
+    vos URL et tout ira mieux.
+  new_content: >-
+    Nouveau contenu disponible, cliquez sur le bouton de rechargement pour
+    mettre à jour.
+  new_password: Nouveau mot de passe
   'no': Non
   no_account_question: Vous n'avez pas encore de compte ?
   not_found: Non trouvé
@@ -52,6 +62,8 @@ label:
   page_name: Nom de la page
   page_not_found: Page non trouvée
   password: Mot de passe
+  password_changed: Le mot de passe a été modifié avec succès
+  password_length: La longueur du mot de passe doit être d'au moins 10 caractères
   password_placeholder: J'espère qu'il soit pas "mot de passe".
   reload_in: Recharge en
   short_name: Nom court
@@ -68,7 +80,9 @@ label:
   source_code: Code source
   still_valid: Expire dans
   to_access: pour accéder à votre compte
+  verif_new_password: Vérifiez le nouveau mot de passe
   visits: Visites
+  wrong_password: Mot de passe erroné
   'yes': Oui
 path:
   /: Défaut
@@ -129,9 +143,16 @@ phrases:
 sign_in_info:
   advantages_a: Compteur de visites d'urls
   advantages_b: Accès à un tableau de bord détaillé
-  complement: En outre, les liens créés en dehors d'un compte ne sont valables que pendant 90 jours. Avec un compte, vous pouvez garder vos liens actifs indéfiniment.
-  main: 'L''utilisation de Cutting Ninja avec un compte présente plusieurs avantages en termes de fonctionnalité. En voici quelques-uns :'
-  suggestion: Si vous avez des liens raccourcis sur la page et qu'ils sont présents dans le tableau général, lors de la connexion ou de l'enregistrement, ils seront automatiquement ajoutés au compte qui entre dans le système.
+  complement: >-
+    En outre, les liens créés en dehors d'un compte ne sont valables que pendant
+    90 jours. Avec un compte, vous pouvez garder vos liens actifs indéfiniment.
+  main: >-
+    L'utilisation de Cutting Ninja avec un compte présente plusieurs avantages
+    en termes de fonctionnalité. En voici quelques-uns :
+  suggestion: >-
+    Si vous avez des liens raccourcis sur la page et qu'ils sont présents dans
+    le tableau général, lors de la connexion ou de l'enregistrement, ils seront
+    automatiquement ajoutés au compte qui entre dans le système.
   title: Pourquoi se connecter / s'inscrire ?
 unit:
   day: jour | jours

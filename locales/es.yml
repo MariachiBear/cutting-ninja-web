@@ -1,6 +1,7 @@
 button:
   about: Acerca de
   account_settings: Ajustes de cuenta
+  apply: Aplicar
   back: Volver
   close: Cerrar
   dashboard: Panel de control
@@ -20,12 +21,14 @@ label:
   already_account_question: ¿Ya tienes una cuenta?
   blog: Blog
   cancel: Cancelar
+  change_password: Cambiar la contraseña
   close_in: Cerrar en
   confirm: Confirmar
   contact: Contacto
   copied_success: '{url} copiado con éxito'
   copy: Copiar
   copy_fail: '{url} copia fallida'
+  current_password: Contraseña actual
   delete: Eliminar
   delete_question: ¿Está seguro de que quiere eliminar esta URL?
   delete_suggestion: Esto no se puede deshacer después de la confirmación.
@@ -39,10 +42,18 @@ label:
   first_name: Nombre
   go_to: Ir a
   invalid_email: Correo electrónico no válido
+  is_not_identical: La nueva contraseña debe ser idéntica en ambos campos
+  is_old_identical: La nueva contraseña debe ser diferente de la anterior
   is_required: Es necesario
   last_name: Apellido
-  main_phrase: Es fácil cansarse de las URLs largas. Es un dolor tener que escribir un enlace tan largo como un libro. Por esto y más, acorta tus URLs y todo irá mejor.
-  new_content: Nuevo contenido disponible, haga clic en el botón de recarga para actualizar.
+  main_phrase: >-
+    Es fácil cansarse de las URLs largas. Es un dolor tener que escribir un
+    enlace tan largo como un libro. Por esto y más, acorta tus URLs y todo irá
+    mejor.
+  new_content: >-
+    Nuevo contenido disponible, haga clic en el botón de recarga para
+    actualizar.
+  new_password: Nueva contraseña
   'no': 'No'
   no_account_question: ¿Aún no tienes una cuenta?
   not_found: No se ha encontrado
@@ -51,6 +62,8 @@ label:
   page_name: Nombre de la página
   page_not_found: Página no encontrada
   password: Contraseña
+  password_changed: Contraseña cambiada con éxito
+  password_length: La longitud de la contraseña debe ser de al menos 10 caracteres
   password_placeholder: Espero que no sea "contraseña"
   reload_in: Recarga en
   short_name: Nombre corto
@@ -67,7 +80,9 @@ label:
   source_code: Código fuente
   still_valid: Expira en
   to_access: para acceder a su cuenta
+  verif_new_password: Verificar la nueva contraseña
   visits: Visitas
+  wrong_password: Contraseña incorrecta
   'yes': Sí
 path:
   /: Por defecto
@@ -128,9 +143,17 @@ phrases:
 sign_in_info:
   advantages_a: Contador de visitas a urls
   advantages_b: Acceso al panel de control detallado
-  complement: Además, los enlaces creados desde fuera de una cuenta sólo son válidos durante 90 días. Con una cuenta puedes mantener tus enlaces activos indefinidamente.
-  main: 'El uso de Cutting Ninja con una cuenta tiene varias ventajas en términos de funcionalidad. Algunas de ellas son:'
-  suggestion: Si tiene enlaces acortados en la página y están presentes en la tabla general, al iniciar la sesión o registrarse se añadirán automáticamente a la cuenta que entre en el sistema.
+  complement: >-
+    Además, los enlaces creados desde fuera de una cuenta sólo son válidos
+    durante 90 días. Con una cuenta puedes mantener tus enlaces activos
+    indefinidamente.
+  main: >-
+    El uso de Cutting Ninja con una cuenta tiene varias ventajas en términos de
+    funcionalidad. Algunas de ellas son:
+  suggestion: >-
+    Si tiene enlaces acortados en la página y están presentes en la tabla
+    general, al iniciar la sesión o registrarse se añadirán automáticamente a la
+    cuenta que entre en el sistema.
   title: ¿Por qué iniciar sesión / inscribirse?
 unit:
   day: día | días
