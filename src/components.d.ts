@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Alerts: typeof import('./components/UI/Alerts.vue')['default']
+    ChangePassword: typeof import('./components/Form/ChangePassword.vue')['default']
     ConfirmDeleteDialog: typeof import('./components/UrlTable/ConfirmDeleteDialog.vue')['default']
     DarkToggle: typeof import('./components/Navbar/DarkToggle.vue')['default']
     Dialog: typeof import('./components/UI/Dialog.vue')['default']
