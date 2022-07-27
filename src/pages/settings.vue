@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { promiseTimeout } from '@vueuse/core';
+
+const [showChangePassword, toggleChangePassword] = useToggle(true);
+const resetChangePasswordComponent = async () => {
+   toggleChangePassword(false);
+   await promiseTimeout(1);
+   toggleChangePassword(true);
+};
+</script>
+
 <template>
    <div id="wrapper">
       <div
@@ -12,7 +23,10 @@
                class="flex flex-col lg:flex-row w-full lg:w-4/5 h-full items-start"
             >
                <ChangeUserInformation />
-               <ChangePassword />
+               <ChangePassword
+                  v-if="showChangePassword"
+                  @password-changed="resetChangePasswordComponent"
+               />
             </div>
          </section>
       </div>
