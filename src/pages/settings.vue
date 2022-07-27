@@ -11,6 +11,7 @@
                id="other-settings"
                class="flex flex-col lg:flex-row w-full lg:w-4/5 h-full items-start"
             >
+               <ChangeUserInformation />
                <ChangePassword />
             </div>
          </section>
