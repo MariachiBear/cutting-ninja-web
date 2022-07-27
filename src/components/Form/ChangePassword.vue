@@ -4,6 +4,8 @@ import { useUserStore } from '~/store/user';
 
 const { t } = useI18n();
 
+const emit = defineEmits(['passwordChanged']);
+
 const userState = useUserStore.getState();
 
 const currentPassword = ref('');
@@ -18,7 +20,7 @@ const changePassword = async () => {
       return;
    }
 
-   if (!arePasswordsIdentical.value) {
+   if (arePasswordsIdentical.value) {
       useNotificationStore.showErrorNotification(t('label.is_old_identical'));
       return;
    }
@@ -29,7 +31,10 @@ const changePassword = async () => {
    if (loginResponse) {
       await useUserStore
          .updateUserPassword(newPassword.value)
-         .then(() => useNotificationStore.showSuccessNotification(t('label.password_changed')))
+         .then(() => {
+            useNotificationStore.showSuccessNotification(t('label.password_changed'));
+            emit('passwordChanged');
+         })
          .catch(() => useNotificationStore.showErrorNotification(t('label.password_length')));
    } else {
       useNotificationStore.showErrorNotification(t('label.wrong_password'));
@@ -73,7 +78,7 @@ const requiredValidation = (value: string): boolean | string => !!value || t('la
          />
 
          <div class="flex flex-row justify-end mt-5">
-            <LoginButton> {{ t('button.apply') }} </LoginButton>
+            <FormButton> {{ t('button.apply') }} </FormButton>
          </div>
       </form>
    </div>
