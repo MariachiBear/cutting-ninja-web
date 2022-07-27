@@ -15,6 +15,7 @@ button:
   sign_up: Sign up
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+  update: Update
 label:
   about: About
   actions: Actions
@@ -78,6 +79,8 @@ label:
   source_code: Source code
   still_valid: Expires in
   to_access: to access your account
+  update_info: Update your information
+  update_success: Information updated successfully
   verif_new_password: Verify the new password
   visits: Visits
   wrong_password: Wrong password

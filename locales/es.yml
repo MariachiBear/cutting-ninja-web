@@ -15,6 +15,7 @@ button:
   sign_up: Registrarse
   toggle_dark: Cambiar el modo oscuro
   toggle_langs: Cambiar de idioma
+  update: Actualización
 label:
   about: Acerca de
   actions: Acciones
@@ -80,6 +81,8 @@ label:
   source_code: Código fuente
   still_valid: Expira en
   to_access: para acceder a su cuenta
+  update_info: Actualice su información
+  update_success: Información actualizada con éxito
   verif_new_password: Verificar la nueva contraseña
   visits: Visitas
   wrong_password: Contraseña incorrecta
