@@ -7,4 +7,13 @@ declare interface IUser {
    lastName: string;
    role: string;
    updatedAt: string;
+   useGravatar?: boolean;
+}
+
+declare interface IUserUpdate {
+   email?: string;
+   firstName?: string;
+   lastName?: string;
+   password?: string;
+   useGravatar?: boolean;
 }

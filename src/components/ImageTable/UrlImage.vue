@@ -7,17 +7,7 @@ const emit = defineEmits(['load']);
       <img
          src="https://source.unsplash.com/collection/317099/1600x900"
          alt="Photo"
-         class="
-            all-300
-            contrast-75
-            filter
-            hover:scale-105
-            lg:rounded-sm
-            object-cover object-center
-            overflow-hidden
-            saturate-70
-            transform
-         "
+         class="all-300 contrast-75 filter hover:scale-105 lg:rounded-sm object-cover object-center overflow-hidden saturate-70 transform"
          @load="emit('load')"
       />
    </div>

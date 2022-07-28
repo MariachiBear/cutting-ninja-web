@@ -41,19 +41,7 @@ const onSubmit = async () => {
       <button
          type="submit"
          :disabled="isButtonDisabled"
-         class="
-            all-300
-            disabled:cursor-not-allowed disabled:opacity-40
-            flex flex-row
-            font-medium
-            group
-            items-center
-            justify-center
-            px-5
-            py-2
-            relative
-            transition-opacity
-         "
+         class="all-300 disabled:cursor-not-allowed disabled:opacity-40 flex flex-row font-medium group items-center justify-center px-5 py-2 relative transition-opacity"
       >
          <span
             class="-skew-x-12 absolute all-300 inset-0 transform translate-x-0"
