@@ -40,7 +40,7 @@ const emailValidation = (value: string): boolean | string => {
 <template>
    <div class="container mx-auto w-full lg:w-1/2">
       <div class="text-center">
-         <h1 class="mb-2 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+         <h1 class="mb-2 text-2xl font-semibold text-gray-700 dark:text-gray-200">
             {{ t('label.update_info') }}
          </h1>
       </div>
