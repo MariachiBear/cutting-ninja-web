@@ -58,6 +58,8 @@ declare module '@vue/runtime-core' {
     Notification: typeof import('./components/UI/Notification.vue')['default']
     NoVisitsButton: typeof import('./components/UrlTable/NoVisitsButton.vue')['default']
     PathName: typeof import('./components/Navbar/PathName.vue')['default']
+    ProfilePicture: typeof import('./components/UI/ProfilePicture.vue')['default']
+    ProfilePictureSettings: typeof import('./components/Form/ProfilePictureSettings.vue')['default']
     QuestionButton: typeof import('./components/UrlTable/QuestionButton.vue')['default']
     README: typeof import('./components/README.md')['default']
     ReloadPrompt: typeof import('./components/UI/ReloadPrompt.vue')['default']
