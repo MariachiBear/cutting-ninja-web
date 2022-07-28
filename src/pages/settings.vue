@@ -17,7 +17,9 @@ const resetChangePasswordComponent = async () => {
          <section
             class="flex flex-col gap-10 items-center justify-between lg:flex-row lg:w-11/12 mt-20 mb-50 lg:mt-0 lg:mb-0"
          >
-            <div id="profile-image-settings" class="w-full lg:w-1/5 h-full"></div>
+            <div id="profile-image-settings" class="w-full lg:w-1/5 h-full">
+               <ProfilePictureSettings />
+            </div>
             <div
                id="other-settings"
                class="flex flex-col lg:flex-row w-full lg:w-4/5 h-full items-start"
