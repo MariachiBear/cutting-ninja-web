@@ -14,7 +14,9 @@ watch(isGravatar, (newValue) => {
       <ProfilePicture is-from-settings :is-gravatar="isGravatar" />
 
       <div class="flex items-center justify-center w-full mb-12 text-theme text-sm">
-         <a class="mr-3 text-btn">Boring Avatars</a>
+         <a class="mr-3 text-btn border-0 border-b-1 border-dashed border-b-blue-300">
+            Boring Avatars
+         </a>
 
          <label for="toggleB" class="flex items-center cursor-pointer">
             <!-- toggle -->
@@ -28,7 +30,9 @@ watch(isGravatar, (newValue) => {
                   @input="() => toggleIsGravatar()"
                />
                <!-- line -->
-               <div class="block bg-rocket-metallic w-14 h-8 rounded-full"></div>
+               <div
+                  class="block bg-rocket-metallic dark:bg-old-lavender w-14 h-8 rounded-full colors-300"
+               ></div>
                <!-- dot -->
                <div
                   class="absolute left-1 top-1 bg-pastel-pink w-6 h-6 rounded-full transition-all transform duration-150 ease-out"
@@ -36,7 +40,7 @@ watch(isGravatar, (newValue) => {
                ></div>
             </div>
          </label>
-         <a class="ml-3 text-btn">Gravatar</a>
+         <a class="ml-3 text-btn border-0 border-b-1 border-dashed border-b-blue-300">Gravatar</a>
       </div>
    </div>
 </template>

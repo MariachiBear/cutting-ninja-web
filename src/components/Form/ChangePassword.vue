@@ -47,7 +47,7 @@ const requiredValidation = (value: string): boolean | string => !!value || t('la
 <template>
    <div class="container mx-auto w-full lg:w-1/2">
       <div class="text-center">
-         <h1 class="mb-2 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+         <h1 class="mb-2 text-2xl font-semibold text-gray-700 dark:text-gray-200 colors-300">
             {{ t('label.change_password') }}
          </h1>
       </div>
