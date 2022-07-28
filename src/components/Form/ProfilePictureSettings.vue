@@ -3,6 +3,8 @@ import { useUserStore } from '~/store/user';
 const userState = useUserStore.getState();
 
 const [isGravatar, toggleIsGravatar] = useToggle(userState.user?.useGravatar);
+const gravatarLink = import.meta.env.VITE_GRAVATAR_LINK;
+const boringAvatarsLink = import.meta.env.VITE_BORING_AVATARS_LINK;
 
 watch(isGravatar, (newValue) => {
    useUserStore.updateUser({ useGravatar: newValue });
@@ -14,7 +16,11 @@ watch(isGravatar, (newValue) => {
       <ProfilePicture is-from-settings :is-gravatar="isGravatar" />
 
       <div class="flex items-center justify-center w-full mb-12 text-theme text-sm">
-         <a class="mr-3 text-btn border-0 border-b-1 border-dashed border-b-blue-300">
+         <a
+            class="mr-3 text-btn border-0 border-b-1 border-dashed border-b-blue-300"
+            target="_blank"
+            :href="boringAvatarsLink"
+         >
             Boring Avatars
          </a>
 
@@ -40,7 +46,13 @@ watch(isGravatar, (newValue) => {
                ></div>
             </div>
          </label>
-         <a class="ml-3 text-btn border-0 border-b-1 border-dashed border-b-blue-300">Gravatar</a>
+         <a
+            class="ml-3 text-btn border-0 border-b-1 border-dashed border-b-blue-300"
+            target="_blank"
+            :href="gravatarLink"
+         >
+            Gravatar
+         </a>
       </div>
    </div>
 </template>
