@@ -18,13 +18,15 @@ class UserStore extends PersistentStore<User> {
 
    isUserLoggedIn = computed(() => Boolean(this.state.user && this.state.user.accessToken));
 
-   async login(email: string, password: string) {
+   async login(email: string, password: string, checkUse: boolean = false) {
       const result = await userApi
          .signIn({ email, password })
          .then(async (response) => {
             this.state.user = response.data;
             AxiosInstance.defaults.headers.common.Authorization = `Bearer ${this.state.user.accessToken}`;
-            useURLStore.takeUrls();
+
+            if (!checkUse) useURLStore.takeUrls();
+
             return true;
          })
          .catch((err) => {
@@ -40,6 +42,33 @@ class UserStore extends PersistentStore<User> {
          .signUp({ email, password, firstName, lastName })
          .then(async () => {
             this.login(email, password);
+            return true;
+         })
+         .catch((err) => {
+            console.error(err);
+            return err.response.status;
+         });
+
+      return result;
+   }
+
+   async updateUserPassword(newPassword: string) {
+      const result = await userApi.updateMe({ password: newPassword });
+
+      return result;
+   }
+
+   async updateUser(userInfo: IUserUpdate) {
+      const result: number | true = await userApi
+         .updateMe(userInfo)
+         .then(async () => {
+            const userNewInfo = await userApi.getMe();
+
+            this.state.user = {
+               ...userNewInfo.data,
+               accessToken: String(this.state.user?.accessToken),
+            };
+
             return true;
          })
          .catch((err) => {

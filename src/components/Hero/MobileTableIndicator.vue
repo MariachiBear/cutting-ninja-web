@@ -5,19 +5,7 @@ const goTo = () => document.getElementById('mobile-table')?.scrollIntoView({ beh
 
 <template>
    <button
-      class="
-         colors-300
-         max-w-10/12
-         opacity-50
-         text-center
-         absolute
-         bottom-0
-         text-theme
-         flex flex-row
-         items-center
-         justify-center
-         mb-10
-      "
+      class="colors-300 max-w-10/12 opacity-50 text-center absolute bottom-0 text-theme flex flex-row items-center justify-center mb-10"
       @click="goTo"
    >
       <p class="w-full flex-grow text-left text-sm md:text-lg">

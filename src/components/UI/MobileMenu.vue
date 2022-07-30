@@ -66,14 +66,14 @@ const logout = async () => await useUserStore.logout().then(() => location.reloa
             </button>
          </div>
          <div class="py-1 text-theme">
-            <router-link
+            <!-- <router-link
                to="/dashboard"
                class="flex justify-between px-4 py-2 text-btn text-left text-sm w-full colors-300"
                role="menuitem"
                :title="t('button.dashboard')"
             >
                {{ t('button.dashboard') }} <ic-baseline-dashboard />
-            </router-link>
+            </router-link> -->
             <router-link
                to="/settings"
                class="flex items-center justify-between px-4 py-2 text-btn text-left text-sm w-full colors-300"
