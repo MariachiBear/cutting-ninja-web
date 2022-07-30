@@ -1,6 +1,7 @@
 button:
   about: About
   account_settings: Account settings
+  apply: Apply
   back: Back
   close: Close
   dashboard: Dashboard
@@ -14,18 +15,21 @@ button:
   sign_up: Sign up
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+  update: Update
 label:
   about: About
   actions: Actions
   already_account_question: Don have an account already?
   blog: Blog
   cancel: Cancel
+  change_password: Change your password
   close_in: Close in
   confirm: Confirm
   contact: Contact
   copied_success: '{url} copied successfully'
   copy: Copy
   copy_fail: '{url} copy failed'
+  current_password: Current password
   delete: Delete
   delete_question: Are you sure you want to delete this URL?
   delete_suggestion: This cannot be undone after confirmation.
@@ -40,9 +44,15 @@ label:
   go_to: Go to
   invalid_email: Invalid email
   is_required: Is required
+  is_not_identical: The new password should be identical in both fields
+  is_old_identical: The new password should be different from the old one
   last_name: Last name
-  main_phrase: It's easy to get tired of long URLs. It's a pain to have to write a link as long as a book. For this and more, shorten your URLs and everything will be better.
+  main_phrase: >-
+    It's easy to get tired of long URLs. It's a pain to have to write a link as
+    long as a book. For this and more, shorten your URLs and everything will be
+    better.
   new_content: New content available, click on the reload button to update.
+  new_password: New password
   'no': 'No'
   no_account_question: Don't have an account yet?
   not_found: Not found
@@ -51,7 +61,9 @@ label:
   page_name: Page name
   page_not_found: Page not found
   password: Password
+  password_changed: Password changed successfully
   password_placeholder: I hope isn't "password"
+  password_length: Password length should be at least 10 characters
   reload_in: Reload in
   short_name: Short name
   shorted_fail: URL shorting failed
@@ -67,7 +79,11 @@ label:
   source_code: Source code
   still_valid: Expires in
   to_access: to access your account
+  update_info: Update your information
+  update_success: Information updated successfully
+  verif_new_password: Verify the new password
   visits: Visits
+  wrong_password: Wrong password
   'yes': 'Yes'
 path:
   /: Default
@@ -128,9 +144,16 @@ phrases:
 sign_in_info:
   advantages_a: Urls visit counter
   advantages_b: Detailed dashboard access
-  complement: Besides, links created from outside an account are only valid for 90 days. With an account you can keep your links active indefinitely.
-  main: 'Using Cutting Ninja with an account has several advantages in terms of functionality. Some of these are:'
-  suggestion: If you have shortened links on the page and they are present in the general table, when logging in or registering they will be automatically added to the account that enters the system.
+  complement: >-
+    Besides, links created from outside an account are only valid for 90 days.
+    With an account you can keep your links active indefinitely.
+  main: >-
+    Using Cutting Ninja with an account has several advantages in terms of
+    functionality. Some of these are:
+  suggestion: >-
+    If you have shortened links on the page and they are present in the general
+    table, when logging in or registering they will be automatically added to
+    the account that enters the system.
   title: Why to sign in / sign up ?
 unit:
   day: day | days

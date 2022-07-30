@@ -22,7 +22,7 @@ export default class User {
       return Repository.get(`${resource}/me`);
    }
 
-   updateMe(data: IUser) {
+   updateMe(data: IUserUpdate) {
       return Repository.put(`${resource}/me`, data);
    }
 
