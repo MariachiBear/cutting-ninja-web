@@ -6,26 +6,7 @@ const notificationState = useNotificationStore.getState();
 
 <template>
    <div
-      class="
-         all-300
-         bg-english-lavender
-         bottom-0
-         fixed
-         flex flex-row
-         h-12
-         items-center
-         justify-between
-         left-0
-         lg:bottom-5 lg:rounded-r-sm lg:max-w-1/5
-         mx-auto
-         overflow-hidden
-         px-2
-         shadow-2xl
-         text-warm-gray-800
-         transform
-         w-full
-         z-9999
-      "
+      class="all-300 bg-english-lavender bottom-0 fixed flex flex-row h-12 items-center justify-between left-0 lg:bottom-5 lg:rounded-r-sm lg:max-w-1/5 mx-auto overflow-hidden px-2 shadow-2xl text-warm-gray-800 transform w-full z-9999"
       :class="[
          notificationState.isOpen
             ? 'translate-y-0 lg:translate-x-0 pointer-events-auto'

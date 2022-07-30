@@ -31,21 +31,7 @@ whenever(
 <template>
    <div
       id="reload_prompt"
-      class="
-         4k:bottom-4 4k:right-4
-         4xl:bottom-3 4xl:right-3
-         all-300
-         bg-warm-gray-100
-         bottom-0
-         dark:bg-warm-gray-600
-         fixed
-         lg:bottom-2 lg:right-2 lg:w-1/4 lg:rounded lg:shadow-2xl
-         right-0
-         section-padding
-         shadow-inner
-         w-full
-         z-9999
-      "
+      class="4k:bottom-4 4k:right-4 4xl:bottom-3 4xl:right-3 all-300 bg-warm-gray-100 bottom-0 dark:bg-warm-gray-600 fixed lg:bottom-2 lg:right-2 lg:w-1/4 lg:rounded lg:shadow-2xl right-0 section-padding shadow-inner w-full z-9999"
       :class="[isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none']"
       role="alert"
    >
