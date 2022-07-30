@@ -42,7 +42,7 @@ specifiers:
   unplugin-vue-components: 0.21.2
   vite: 3.0.3
   vite-plugin-inspect: 0.6.0
-  vite-plugin-md: 0.20.0
+  vite-plugin-md: 0.20.2
   vite-plugin-pages: 0.25.0
   vite-plugin-pwa: 0.12.3
   vite-plugin-vue-layouts: 0.7.0
@@ -102,7 +102,7 @@ devDependencies:
   unplugin-vue-components: 0.21.2_omsc5a772nntkk6kc3ihjt5a5e
   vite: 3.0.3
   vite-plugin-inspect: 0.6.0_vite@3.0.3
-  vite-plugin-md: 0.20.0_lcekyftelvx4j2sbsungwlt2ly
+  vite-plugin-md: 0.20.2_dtikue7jlytyunrqek6h42tz6e
   vite-plugin-pages: 0.25.0_fvfvl6jo25l4byabogbrrdvuya
   vite-plugin-pwa: 0.12.3_vite@3.0.3
   vite-plugin-vue-layouts: 0.7.0_tw6p5ju4spj3j5s5mofh6vogd4
@@ -1753,7 +1753,7 @@ packages:
   /@types/concat-stream/1.6.1:
     resolution: {integrity: sha512-eHE4cQPoj6ngxBZMvVf6Hw7Mh4jMW4U9lpGmS5GBPB9RYxlFg+CHaVN7ErNY4W9XfLIEn20b4VDYaIrbq0q4uA==}
     dependencies:
-      '@types/node': 8.10.66
+      '@types/node': 18.6.2
     dev: true
 
   /@types/debug/4.1.7:
@@ -1769,7 +1769,7 @@ packages:
   /@types/form-data/0.0.33:
     resolution: {integrity: sha512-8BSvG1kGm83cyJITQMZSulnl6QV8jqAGreJsc5tPu1Jq0vTSOiY/k24Wx82JRpWwZSqrala6sd5rWi6aNXvqcw==}
     dependencies:
-      '@types/node': 8.10.66
+      '@types/node': 18.6.2
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -1872,7 +1872,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 14.18.22
+      '@types/node': 18.6.2
     dev: true
     optional: true
 
@@ -2221,7 +2221,7 @@ packages:
       - supports-color
     dev: true
 
-  /@yankeeinlondon/builder-api/0.4.1_klyud4ded54juokunxx4ceyngm:
+  /@yankeeinlondon/builder-api/0.4.1_zxtewhp6waiiz3dyrytkxlusdm:
     resolution: {integrity: sha512-O6LS9Zg4xqLVpAgea72mNhZvdy9B2BuIgNdsRvNkmnACG8XvlZtEKryGt2ECI/z+dbQICbHDQFCNtZRBrfSMlA==}
     peerDependencies:
       fp-ts: ^2.12.1
@@ -2233,7 +2233,7 @@ packages:
       fp-ts: 2.12.2
       inferred-types: 0.22.0
       markdown-it: 13.0.1
-      vite-plugin-md: 0.20.0_lcekyftelvx4j2sbsungwlt2ly
+      vite-plugin-md: 0.20.2_dtikue7jlytyunrqek6h42tz6e
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -7412,16 +7412,14 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-md/0.20.0_lcekyftelvx4j2sbsungwlt2ly:
-    resolution: {integrity: sha512-koOINU9h1OIx+8PNq2++edaBevPE11tuZH2fKo91GISkXc1ITbecJQ4xzZAgnffssUbW0BOGvSR9QzFBQwtIzA==}
+  /vite-plugin-md/0.20.2_dtikue7jlytyunrqek6h42tz6e:
+    resolution: {integrity: sha512-Jkl21FPSFIJU2O1ARBK9v4A6r2Ceo4nxsSqIA+Q5SXfwIR5zjeTP+WP4swy1wSi2ju7DUkHXBVa2e4xsWjOzJA==}
     peerDependencies:
       '@rollup/pluginutils': ^4.2.1
-      '@vitejs/plugin-vue': ^3.0.1
       rollup: ^2.77.0
     dependencies:
       '@rollup/pluginutils': 4.2.1
-      '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
-      '@yankeeinlondon/builder-api': 0.4.1_klyud4ded54juokunxx4ceyngm
+      '@yankeeinlondon/builder-api': 0.4.1_zxtewhp6waiiz3dyrytkxlusdm
       '@yankeeinlondon/happy-wrapper': 2.5.0_happy-dom@6.0.4
       gray-matter: 4.0.3
       markdown-it: 13.0.1
