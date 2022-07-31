@@ -9,7 +9,7 @@ specifiers:
   '@types/base-64': 1.0.0
   '@types/luxon': 3.0.0
   '@types/markdown-it-link-attributes': 3.0.1
-  '@types/md5': ^2.3.2
+  '@types/md5': 2.3.2
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 3.0.1
   '@vue/compiler-sfc': 3.2.37
@@ -29,10 +29,10 @@ specifiers:
   happy-dom: 6.0.4
   https-localhost: 4.7.1
   idb-keyval: 6.2.0
-  luxon: ^3.0.1
+  luxon: 3.0.1
   markdown-it-link-attributes: 4.0.0
   markdown-it-prism: 2.2.4
-  md5: ^2.3.0
+  md5: 2.3.0
   nprogress: 0.2.0
   pnpm: 7.8.0
   prettier: 2.7.1
