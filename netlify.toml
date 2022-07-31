@@ -21,13 +21,13 @@
 [[redirects]]
   from = "http://uenl2w8xl6.netlify.app/*"
   to = "http://cuttingninja.mariachibear.com/:splat"
-  status = 301!
+  status = 301
   force = true
   
 [[redirects]]
   from = "https://uenl2w8xl6.netlify.app/*"
   to = "https://cuttingninja.mariachibear.com/:splat"
-  status = 301!
+  status = 301
   force = true
 
 [[redirects]]
