@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 useHead({
-   title: `Cutting Ninja | ${t('label.page_not_found')}`,
+   title: `${t('label.app_name')} | ${t('label.page_not_found')}`,
 });
 </script>
 

@@ -67,19 +67,19 @@ tryOnMounted(() => {
          />
       </div>
       <div class="relative h-full">
-         <h1 class="opacity-0">Cutting Ninja</h1>
+         <h1 class="opacity-0">{{ t('label.app_name') }}</h1>
 
          <div
             class="absolute top-0 transform transition-transform duration-300 ease-in-out h-1/2 !overflow-hidden w-full origin-left"
             :class="hasDelay ? '-rotate-0' : '-rotate-1 -translate-y-1/8'"
          >
-            <span class="absolute top-0">Cutting Ninja</span>
+            <span class="absolute top-0">{{ t('label.app_name') }}</span>
          </div>
          <div
             class="absolute bottom-0 transform transition-transform duration-300 ease-in-out h-1/2 !overflow-hidden w-full origin-left"
             :class="hasDelay ? 'rotate-0' : 'rotate-2 translate-y-1/8'"
          >
-            <span class="absolute bottom-0">Cutting Ninja</span>
+            <span class="absolute bottom-0">{{ t('label.app_name') }}</span>
          </div>
       </div>
       <div

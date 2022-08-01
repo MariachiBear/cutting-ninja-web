@@ -1,7 +1,9 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-const activePhrase = ref(t(`phrases.${Math.floor(Math.random() * 49)}`, { name: 'Cutting Ninja' }));
+const activePhrase = ref(
+   t(`phrases.${Math.floor(Math.random() * 49)}`, { name: t('label.app_name') })
+);
 </script>
 
 <template>

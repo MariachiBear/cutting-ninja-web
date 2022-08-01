@@ -10,11 +10,13 @@ const props = defineProps({
 
 const sourceImg = computed(() => {
    if (userState.user?.useGravatar)
-      return `https://s.gravatar.com/avatar/${md5(String(userState.user?.email))}?s=${
+      return `${import.meta.env.VITE_GRAVATAR_BASE_URL}${md5(String(userState.user?.email))}?s=${
          props.isFromSettings ? '300' : '80'
       }`;
    else
-      return `https://source.boringavatars.com/bauhaus/120/${userState.user?.email}?colors=E8BAA2,B5838D,4e4b53,E5989B`;
+      return `${import.meta.env.VITE_BORING_AVATARS_BASE_URL}${
+         userState.user?.email
+      }?colors=E8BAA2,B5838D,4e4b53,E5989B`;
 });
 </script>
 
