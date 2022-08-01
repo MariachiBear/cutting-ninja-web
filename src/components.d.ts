@@ -55,6 +55,7 @@ declare module '@vue/runtime-core' {
     MobileTableIndicator: typeof import('./components/Hero/MobileTableIndicator.vue')['default']
     Modal: typeof import('./components/UI/Modal.vue')['default']
     Navbar: typeof import('./components/Navbar/Navbar.vue')['default']
+    NinjaHead: typeof import('./components/UI/NinjaHead.vue')['default']
     Notification: typeof import('./components/UI/Notification.vue')['default']
     NoVisitsButton: typeof import('./components/UrlTable/NoVisitsButton.vue')['default']
     PathName: typeof import('./components/Navbar/PathName.vue')['default']
