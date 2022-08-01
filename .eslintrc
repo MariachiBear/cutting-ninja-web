@@ -1,17 +1,8 @@
 {
-  "extends": [
-    "@antfu/eslint-config",
-    "@vue/prettier",
-    "@vue/prettier/@typescript-eslint"
-  ],
-  "rules": {
-    "semi": "off",
-    "@typescript-eslint/semi": [
-      "off"
-    ],
-    "yml/indent": [
-      "error",
-      3
-    ],
-  }
+   "extends": ["@antfu/eslint-config", "@vue/prettier", "@vue/prettier/@typescript-eslint"],
+   "rules": {
+      "semi": "off",
+      "@typescript-eslint/semi": ["off"],
+      "yml/indent": ["error", 3]
+   }
 }

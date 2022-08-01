@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n();
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL;
-const twitterLink = import.meta.env.VITE_TWITTER_LINK;
-const githubLink = import.meta.env.VITE_GITHUB_LINK;
-const gitlabLink = import.meta.env.VITE_GITLAB_LINK;
-const linkedinLink = import.meta.env.VITE_LINKEDIN_LINK;
-const blogLink = import.meta.env.VITE_BLOG_LINK;
-const aboutLink = import.meta.env.VITE_ABOUT_LINK;
-const sourceCodeLink = import.meta.env.VITE_SOURCE_CODE_LINK;
+const twitterLink = import.meta.env.VITE_TWITTER_URL;
+const githubLink = import.meta.env.VITE_GITHUB_URL;
+const gitlabLink = import.meta.env.VITE_GITLAB_URL;
+const linkedinLink = import.meta.env.VITE_LINKEDIN_URL;
+const blogLink = import.meta.env.VITE_BLOG_URL;
+const aboutLink = import.meta.env.VITE_ABOUT_URL;
+const sourceCodeLink = import.meta.env.VITE_SOURCE_CODE_URL;
 </script>
 
 <template>

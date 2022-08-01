@@ -2,7 +2,7 @@
 // User Store
 const { t } = useI18n();
 useHead({
-   title: `Cutting Ninja | ${t('button.home')}`,
+   title: `${t('label.app_name')} | ${t('button.home')}`,
 });
 </script>
 

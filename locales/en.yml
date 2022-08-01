@@ -20,21 +20,22 @@ label:
   about: About
   actions: Actions
   already_account_question: Don have an account already?
+  app_name: Cutting Ninja
   blog: Blog
   cancel: Cancel
   change_password: Change your password
   close_in: Close in
   confirm: Confirm
   contact: Contact
-  copied_success: '{url} copied successfully'
+  copied_success: "{url} copied successfully"
   copy: Copy
-  copy_fail: '{url} copy failed'
+  copy_fail: "{url} copy failed"
   current_password: Current password
   delete: Delete
   delete_question: Are you sure you want to delete this URL?
   delete_suggestion: This cannot be undone after confirmation.
-  deleted_fail: '{url} deletion failed'
-  deleted_success: '{url} deleted successfully'
+  deleted_fail: "{url} deletion failed"
+  deleted_success: "{url} deleted successfully"
   dont_forget_them: Don't forget them!
   email: Email
   email_address: Email address
@@ -53,7 +54,7 @@ label:
     better.
   new_content: New content available, click on the reload button to update.
   new_password: New password
-  'no': 'No'
+  "no": "No"
   no_account_question: Don't have an account yet?
   not_found: Not found
   not_found_text: The page you’re looking for doesn’t exist.
@@ -84,63 +85,63 @@ label:
   verif_new_password: Verify the new password
   visits: Visits
   wrong_password: Wrong password
-  'yes': 'Yes'
+  "yes": "Yes"
 path:
   /: Default
   /dashboard: Dashboard
   /settings: Settings
 phrases:
-  '0': Get more from life with {name}.
-  '1': '{name} inside you.'
-  '10': Mamma Mia, That'so Spicy {name}!
-  '11': '{name}, just the best.'
-  '12': '{name}, the fresh maker.'
-  '13': Go To Work On A {name}.
-  '14': I want more, I want {name}.
-  '15': Saved by {name}
-  '16': '{name} have another serving.'
-  '17': If You Want To Get Ahead, Get A {name}.
-  '18': Sweet as the Moment When the {name} Went 'Pop'
-  '19': I'd walk a mile for {name}.
-  '2': It's time to think about {name}.
-  '20': Simple, Impartial {name}.
-  '21': I scream, You Scream, We All Scream for {name}.
-  '22': I need {name} right now.
-  '23': Get More From {name}.
-  '24': Melts In Your {name}, Not In Your Hand.
-  '25': '{name} as sure as the sun shines.'
-  '26': There's Always Room For {name}.
-  '27': '{name} opens the flood gates.'
-  '28': '{name}, try it, you''ll like it!'
-  '29': Where the hell is {name}?
-  '3': '{name}, satisfies the need.'
-  '30': The one and only {name}.
-  '31': The {name} is Mightier than the Sword.
-  '32': All you require is {name}.
-  '33': Just Like {name} Used To Make.
-  '34': '{name} groove.'
-  '35': The top pick... {name}.
-  '36': Does the Hard {name}, So You Don't Have To.
-  '37': You Can Do It When You {name} It.
-  '38': With A Name Like {name}, It Has To Be Good.
-  '39': Mama's got the Magic of {name}.
-  '4': I'm Not Going to Pay A Lot For This {name}.
-  '40': My {name}.
-  '41': The original {name}.
-  '42': Driven by {name}.
-  '43': Don't live a Little, live a {name}.
-  '44': I'd do anything for {name}.
-  '45': One {name} is better than two of something else.
-  '46': '{name}, it''s a kind of magic.'
-  '47': '{name} when only the best will do.'
-  '48': If You've Got the Time, We've Got the {name}.
-  '49': '{name}, one for all.'
-  '5': How Do You Eat Your {name}?
-  '50': Life is short, like the {name} URL's
-  '6': What's In Your {name}?
-  '7': '{name} enjoy when no-one''s around.'
-  '8': '{name} rules.'
-  '9': We Bring {name} to Life.
+  "0": Get more from life with {name}.
+  "1": "{name} inside you."
+  "10": Mamma Mia, That'so Spicy {name}!
+  "11": "{name}, just the best."
+  "12": "{name}, the fresh maker."
+  "13": Go To Work On A {name}.
+  "14": I want more, I want {name}.
+  "15": Saved by {name}
+  "16": "{name} have another serving."
+  "17": If You Want To Get Ahead, Get A {name}.
+  "18": Sweet as the Moment When the {name} Went 'Pop'
+  "19": I'd walk a mile for {name}.
+  "2": It's time to think about {name}.
+  "20": Simple, Impartial {name}.
+  "21": I scream, You Scream, We All Scream for {name}.
+  "22": I need {name} right now.
+  "23": Get More From {name}.
+  "24": Melts In Your {name}, Not In Your Hand.
+  "25": "{name} as sure as the sun shines."
+  "26": There's Always Room For {name}.
+  "27": "{name} opens the flood gates."
+  "28": "{name}, try it, you'll like it!"
+  "29": Where the hell is {name}?
+  "3": "{name}, satisfies the need."
+  "30": The one and only {name}.
+  "31": The {name} is Mightier than the Sword.
+  "32": All you require is {name}.
+  "33": Just Like {name} Used To Make.
+  "34": "{name} groove."
+  "35": The top pick... {name}.
+  "36": Does the Hard {name}, So You Don't Have To.
+  "37": You Can Do It When You {name} It.
+  "38": With A Name Like {name}, It Has To Be Good.
+  "39": Mama's got the Magic of {name}.
+  "4": I'm Not Going to Pay A Lot For This {name}.
+  "40": My {name}.
+  "41": The original {name}.
+  "42": Driven by {name}.
+  "43": Don't live a Little, live a {name}.
+  "44": I'd do anything for {name}.
+  "45": One {name} is better than two of something else.
+  "46": "{name}, it's a kind of magic."
+  "47": "{name} when only the best will do."
+  "48": If You've Got the Time, We've Got the {name}.
+  "49": "{name}, one for all."
+  "5": How Do You Eat Your {name}?
+  "50": Life is short, like the {name} URL's
+  "6": What's In Your {name}?
+  "7": "{name} enjoy when no-one's around."
+  "8": "{name} rules."
+  "9": We Bring {name} to Life.
 sign_in_info:
   advantages_a: Urls visit counter
   advantages_b: Detailed dashboard access

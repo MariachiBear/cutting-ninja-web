@@ -3,8 +3,8 @@ import { useUserStore } from '~/store/user';
 const userState = useUserStore.getState();
 
 const [isGravatar, toggleIsGravatar] = useToggle(userState.user?.useGravatar);
-const gravatarLink = import.meta.env.VITE_GRAVATAR_LINK;
-const boringAvatarsLink = import.meta.env.VITE_BORING_AVATARS_LINK;
+const gravatarLink = import.meta.env.VITE_GRAVATAR_URL;
+const boringAvatarsLink = import.meta.env.VITE_BORING_AVATARS_URL;
 
 watch(isGravatar, (newValue) => {
    useUserStore.updateUser({ useGravatar: newValue });
