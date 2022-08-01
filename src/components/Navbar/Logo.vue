@@ -56,7 +56,7 @@ tryOnMounted(() => {
       :title="t('button.home')"
       aria-label="logo"
    >
-      <img src="/assets/ninjahead.svg" class="w-8 h-8 z-10" />
+      <NinjaHead class="w-8 h-8 z-10" />
       <div
          class="transform translate-x-5 translate-y-3 rounded-full absolute flex flex-col justify-center items-center all-300 text-sm"
          :class="showStar ? 'scale-110 z-0' : 'scale-0 z-0'"
