@@ -42,7 +42,9 @@ const minCharacters = (value: string): boolean | string =>
 
 const sourceImg = computed(
    () =>
-      `https://source.boringavatars.com/bauhaus/120/${email.value}?colors=E8BAA2,B5838D,4e4b53,E5989B`
+      `${import.meta.env.VITE_BORING_AVATARS_BASE_URL}${
+         email.value
+      }?colors=E8BAA2,B5838D,4e4b53,E5989B`
 );
 </script>
 
