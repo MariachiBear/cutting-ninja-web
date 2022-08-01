@@ -1,1 +1,1 @@
-# Cutting Ninja Web [![Netlify Status](https://api.netlify.com/api/v1/badges/766a14b2-5095-432b-874e-49856448da96/deploy-status)](https://app.netlify.com/sites/cuttingninja/deploys)
+# Cutting Ninja Web [![Netlify Status](https://api.netlify.com/api/v1/badges/e61629c5-5103-4877-87fc-14d5a4a1628e/deploy-status)](https://app.netlify.com/sites/uenl2w8xl6/deploys)
