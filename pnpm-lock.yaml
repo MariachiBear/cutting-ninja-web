@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': 0.26.1
   '@iconify-json/carbon': 1.1.7
   '@iconify-json/ic': 1.1.9
-  '@iconify-json/mdi': 1.1.30
+  '@iconify-json/mdi': 1.1.31
   '@intlify/vite-plugin-vue-i18n': 6.0.1
   '@types/base-64': 1.0.0
   '@types/luxon': 3.0.0
@@ -75,7 +75,7 @@ devDependencies:
   '@antfu/eslint-config': 0.26.1_sorwav4hsh5vncerguqybud76i
   '@iconify-json/carbon': 1.1.7
   '@iconify-json/ic': 1.1.9
-  '@iconify-json/mdi': 1.1.30
+  '@iconify-json/mdi': 1.1.31
   '@intlify/vite-plugin-vue-i18n': 6.0.1_vite@3.0.9+vue-i18n@9.2.2
   '@types/base-64': 1.0.0
   '@types/luxon': 3.0.0
@@ -1485,8 +1485,8 @@ packages:
       '@iconify/types': 1.1.0
     dev: true
 
-  /@iconify-json/mdi/1.1.30:
-    resolution: {integrity: sha512-mNhZT/14mReJRNDd//cs3oJ2RQq3nBkYj1fcDFr8sgYce4k8Br3CsOC61SIPsdw5rfNBMsXEpfJ4AOry36i0XQ==}
+  /@iconify-json/mdi/1.1.31:
+    resolution: {integrity: sha512-2lUKoj6tqvVQ6q8XmhxfeqWdC34IhUpjz6eYMvwLLEgF+0cIL0ANLqBL7+/Vklt7Ugv5vJ0btJBHvW5Ij9Ikyw==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
