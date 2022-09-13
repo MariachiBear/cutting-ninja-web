@@ -22,7 +22,7 @@ specifiers:
   axios: 0.27.2
   critters: 0.0.16
   cross-env: 7.0.3
-  cypress: 10.6.0
+  cypress: 10.8.0
   eslint: 8.23.0
   eslint-plugin-cypress: 2.12.1
   eslint-plugin-prettier: 4.2.1
@@ -89,7 +89,7 @@ devDependencies:
   '@windicss/plugin-question-mark': 0.1.1
   critters: 0.0.16
   cross-env: 7.0.3
-  cypress: 10.6.0
+  cypress: 10.8.0
   eslint: 8.23.0
   eslint-plugin-cypress: 2.12.1_eslint@8.23.0
   eslint-plugin-prettier: 4.2.1_bxpuzolsxufkw2ipnoyzzxnyrm
@@ -1520,8 +1520,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.1
-      '@intlify/shared': 9.3.0-beta.1
+      '@intlify/message-compiler': 9.3.0-beta.3
+      '@intlify/shared': 9.3.0-beta.3
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.2.2_vue@3.2.38
@@ -1550,11 +1550,11 @@ packages:
       '@intlify/shared': 9.2.2
       source-map: 0.6.1
 
-  /@intlify/message-compiler/9.3.0-beta.1:
-    resolution: {integrity: sha512-XHjwJB7qJciYA3T19ehBFpcmC1z+R4sMS43fEp30CLOOFLsrB0xuk0V2XeOFsHovaQ2LsK5x0qk+5+Dy6Hs7fw==}
+  /@intlify/message-compiler/9.3.0-beta.3:
+    resolution: {integrity: sha512-j8OwToBQgs01RBMX4GCDNQfcnmw3AiDG3moKIONTrfXcf+1yt/rWznLTYH/DXbKcFMAFijFpCzMYjUmH1jVFYA==}
     engines: {node: '>= 14'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.1
+      '@intlify/shared': 9.3.0-beta.3
       source-map: 0.6.1
     dev: true
 
@@ -1562,8 +1562,8 @@ packages:
     resolution: {integrity: sha512-wRwTpsslgZS5HNyM7uDQYZtxnbI12aGiBZURX3BTR9RFIKKRWpllTsgzHWvj3HKm3Y2Sh5LPC1r0PDCKEhVn9Q==}
     engines: {node: '>= 14'}
 
-  /@intlify/shared/9.3.0-beta.1:
-    resolution: {integrity: sha512-clf9EF4lY0sANjHlEndwfsR2hvYuq0TElq+gO/1xqH3FMGJwv+6lxJPOtoF4r2IE5RV3qX6YyZejZgdfbq2Yfg==}
+  /@intlify/shared/9.3.0-beta.3:
+    resolution: {integrity: sha512-Z/0TU4GhFKRxKh+0RbwJExik9zz57gXYgxSYaPn7YQdkQ/pabSioCY/SXnYxQHL6HzULF5tmqarFm6glbGqKhw==}
     engines: {node: '>= 14'}
     dev: true
 
@@ -1583,7 +1583,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.1.0_vue-i18n@9.2.2
-      '@intlify/shared': 9.3.0-beta.1
+      '@intlify/shared': 9.3.0-beta.3
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
       fast-glob: 3.2.11
@@ -1887,7 +1887,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 14.18.26
+      '@types/node': 18.7.13
     dev: true
     optional: true
 
@@ -3079,8 +3079,8 @@ packages:
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
 
-  /cypress/10.6.0:
-    resolution: {integrity: sha512-6sOpHjostp8gcLO34p6r/Ci342lBs8S5z9/eb3ZCQ22w2cIhMWGUoGKkosabPBfKcvRS9BE4UxybBtlIs8gTQA==}
+  /cypress/10.8.0:
+    resolution: {integrity: sha512-QVse0dnLm018hgti2enKMVZR9qbIO488YGX06nH5j3Dg1isL38DwrBtyrax02CANU6y8F4EJUuyW6HJKw1jsFA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
