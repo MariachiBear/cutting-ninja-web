@@ -40,7 +40,7 @@ specifiers:
   rimraf: 3.0.2
   typescript: 4.8.2
   unplugin-auto-import: 0.11.2
-  unplugin-icons: 0.14.8
+  unplugin-icons: 0.14.10
   unplugin-vue-components: 0.22.4
   vite: 3.0.9
   vite-plugin-inspect: 0.6.0
@@ -102,7 +102,7 @@ devDependencies:
   rimraf: 3.0.2
   typescript: 4.8.2
   unplugin-auto-import: 0.11.2_vw3k255d7oeh5emn3rfwvawmx4
-  unplugin-icons: 0.14.8_ta7bm6bxhg2jhfiq6lqphcwrfi
+  unplugin-icons: 0.14.10_ta7bm6bxhg2jhfiq6lqphcwrfi
   unplugin-vue-components: 0.22.4_gazf4c2f6a23aulrnk5jj3dio4
   vite: 3.0.9
   vite-plugin-inspect: 0.6.0_vite@3.0.9
@@ -1495,21 +1495,25 @@ packages:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
     dev: true
 
-  /@iconify/utils/1.0.33:
-    resolution: {integrity: sha512-vGeAqo7aGPxOQmGdVoXFUOuyN+0V7Lcrx2EvaiRjxUD1x6Om0Tvq2bdm7E24l2Pz++4S0mWMCVFXe/17EtKImQ==}
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
+
+  /@iconify/utils/2.0.0:
+    resolution: {integrity: sha512-thvwZ6m3frWJiOYwRdHPSPGC25rmyvDl0vXdQ8ocRJZx31m8Pn4y7V1mTc5UReR6MiAj+hrV2UPZQjx7zI960g==}
     dependencies:
       '@antfu/install-pkg': 0.1.0
       '@antfu/utils': 0.5.2
-      '@iconify/types': 1.1.0
+      '@iconify/types': 2.0.0
       debug: 4.3.4
-      kolorist: 1.5.1
+      kolorist: 1.6.0
       local-pkg: 0.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@intlify/bundle-utils/3.1.0_vue-i18n@9.2.2:
-    resolution: {integrity: sha512-ghlJ0kR2cCQ8D+poKknC0Xx0ncOt3J3os7CcIAqqIWVF7k6AtGoCDnIru+YzlZcvFRNmP9wEZ7jKliojCdAWNg==}
+  /@intlify/bundle-utils/3.1.2_vue-i18n@9.2.2:
+    resolution: {integrity: sha512-amgSo0NN5OKWYdcgFmfJqo2tcUcZ6C66Bxm5ALQnB0m3MUQtS9aJzKoIo+EU9XQiOVmlBFxRtNoZm+psHa5FNA==}
     engines: {node: '>= 12'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1582,7 +1586,7 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/bundle-utils': 3.1.0_vue-i18n@9.2.2
+      '@intlify/bundle-utils': 3.1.2_vue-i18n@9.2.2
       '@intlify/shared': 9.3.0-beta.3
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
@@ -1764,7 +1768,7 @@ packages:
   /@types/concat-stream/1.6.1:
     resolution: {integrity: sha512-eHE4cQPoj6ngxBZMvVf6Hw7Mh4jMW4U9lpGmS5GBPB9RYxlFg+CHaVN7ErNY4W9XfLIEn20b4VDYaIrbq0q4uA==}
     dependencies:
-      '@types/node': 8.10.66
+      '@types/node': 18.7.14
     dev: true
 
   /@types/debug/4.1.7:
@@ -1780,7 +1784,7 @@ packages:
   /@types/form-data/0.0.33:
     resolution: {integrity: sha512-8BSvG1kGm83cyJITQMZSulnl6QV8jqAGreJsc5tPu1Jq0vTSOiY/k24Wx82JRpWwZSqrala6sd5rWi6aNXvqcw==}
     dependencies:
-      '@types/node': 8.10.66
+      '@types/node': 18.7.14
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -1887,7 +1891,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.7.13
+      '@types/node': 18.7.14
     dev: true
     optional: true
 
@@ -5384,6 +5388,10 @@ packages:
     resolution: {integrity: sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==}
     dev: true
 
+  /kolorist/1.6.0:
+    resolution: {integrity: sha512-dLkz37Ab97HWMx9KTes3Tbi3D1ln9fCAy2zr2YVExJasDRPGRaKcoE4fycWNtnCAJfjFqe0cnY+f8KT2JePEXQ==}
+    dev: true
+
   /lazy-ass/1.6.0:
     resolution: {integrity: sha512-cc8oEVoctTvsFZ/Oje/kGnHbpWHYBe8IAJe4C0QNc3t8uM/0Y8+erSz/7Y1ALuXTEZTMvxXwO6YbX1ey3ujiZw==}
     engines: {node: '> 0.8'}
@@ -7250,8 +7258,8 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-icons/0.14.8_ta7bm6bxhg2jhfiq6lqphcwrfi:
-    resolution: {integrity: sha512-YxLC0Uxec+ayl8ju3CXmRX4Jg7IF8Tu2cRyq/okXwMK6fM140SPae332ByTlul1E/I7I0PXYSVVn8SlGunM/2g==}
+  /unplugin-icons/0.14.10_ta7bm6bxhg2jhfiq6lqphcwrfi:
+    resolution: {integrity: sha512-K4KTnsiBnSPDKQS4KylOxmGYp/ALPgfN520IXhOuB2OKD5Ub5N3bNmpvMZgiMK0g3kAQdZrRRNATMSM558a3Zg==}
     peerDependencies:
       '@svgr/core': '>=5.5.0'
       '@vue/compiler-sfc': ^3.0.2
@@ -7269,12 +7277,12 @@ packages:
     dependencies:
       '@antfu/install-pkg': 0.1.0
       '@antfu/utils': 0.5.2
-      '@iconify/utils': 1.0.33
+      '@iconify/utils': 2.0.0
       '@vue/compiler-sfc': 3.2.38
       debug: 4.3.4
-      kolorist: 1.5.1
+      kolorist: 1.6.0
       local-pkg: 0.4.2
-      unplugin: 0.8.1_rollup@2.78.1+vite@3.0.9
+      unplugin: 0.9.5_rollup@2.78.1+vite@3.0.9
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -7310,31 +7318,6 @@ packages:
       - supports-color
       - vite
       - webpack
-    dev: true
-
-  /unplugin/0.8.1_rollup@2.78.1+vite@3.0.9:
-    resolution: {integrity: sha512-o7rUZoPLG1fH4LKinWgb77gDtTE6mw/iry0Pq0Z5UPvZ9+HZ1/4+7fic7t58s8/CGkPrDpGq+RltO+DmswcR4g==}
-    peerDependencies:
-      esbuild: '>=0.13'
-      rollup: ^2.50.0
-      vite: ^2.3.0 || ^3.0.0-0
-      webpack: 4 || 5
-    peerDependenciesMeta:
-      esbuild:
-        optional: true
-      rollup:
-        optional: true
-      vite:
-        optional: true
-      webpack:
-        optional: true
-    dependencies:
-      acorn: 8.8.0
-      chokidar: 3.5.3
-      rollup: 2.78.1
-      vite: 3.0.9
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.4.4
     dev: true
 
   /unplugin/0.9.5_rollup@2.78.1+vite@3.0.9:
