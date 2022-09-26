@@ -22,7 +22,7 @@ specifiers:
   axios: 0.27.2
   critters: 0.0.16
   cross-env: 7.0.3
-  cypress: 10.6.0
+  cypress: 10.8.0
   eslint: 8.23.0
   eslint-plugin-cypress: 2.12.1
   eslint-plugin-prettier: 4.2.1
@@ -89,7 +89,7 @@ devDependencies:
   '@windicss/plugin-question-mark': 0.1.1
   critters: 0.0.16
   cross-env: 7.0.3
-  cypress: 10.6.0
+  cypress: 10.8.0
   eslint: 8.23.0
   eslint-plugin-cypress: 2.12.1_eslint@8.23.0
   eslint-plugin-prettier: 4.2.1_bxpuzolsxufkw2ipnoyzzxnyrm
@@ -1887,7 +1887,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 14.18.26
+      '@types/node': 18.7.13
     dev: true
     optional: true
 
@@ -3079,8 +3079,8 @@ packages:
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
 
-  /cypress/10.6.0:
-    resolution: {integrity: sha512-6sOpHjostp8gcLO34p6r/Ci342lBs8S5z9/eb3ZCQ22w2cIhMWGUoGKkosabPBfKcvRS9BE4UxybBtlIs8gTQA==}
+  /cypress/10.8.0:
+    resolution: {integrity: sha512-QVse0dnLm018hgti2enKMVZR9qbIO488YGX06nH5j3Dg1isL38DwrBtyrax02CANU6y8F4EJUuyW6HJKw1jsFA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
