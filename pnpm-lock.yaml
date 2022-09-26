@@ -44,7 +44,7 @@ specifiers:
   unplugin-vue-components: 0.22.4
   vite: 3.0.9
   vite-plugin-inspect: 0.7.3
-  vite-plugin-md: 0.20.2
+  vite-plugin-md: 0.20.4
   vite-plugin-pages: 0.26.0
   vite-plugin-pwa: 0.13.1
   vite-plugin-vue-layouts: 0.7.0
@@ -106,7 +106,7 @@ devDependencies:
   unplugin-vue-components: 0.22.4_ewchngmqoah36enyybys2apcbm
   vite: 3.0.9
   vite-plugin-inspect: 0.7.3_vite@3.0.9
-  vite-plugin-md: 0.20.2_xvmgmaojum3nxy76atfk3cnjlm
+  vite-plugin-md: 0.20.4_xvmgmaojum3nxy76atfk3cnjlm
   vite-plugin-pages: 0.26.0_wiqxe6lvsihpzczlnrpvdo52gi
   vite-plugin-pwa: 0.13.1_yny4xarjh5jmdjqikwv2mudeou
   vite-plugin-vue-layouts: 0.7.0_6mq554ppdovqha7mpqwyic5fpy
@@ -2226,7 +2226,7 @@ packages:
       - supports-color
     dev: true
 
-  /@yankeeinlondon/builder-api/0.4.1_zxtewhp6waiiz3dyrytkxlusdm:
+  /@yankeeinlondon/builder-api/0.4.1_6bcj3h7tulcurye57ocug4w7c4:
     resolution: {integrity: sha512-O6LS9Zg4xqLVpAgea72mNhZvdy9B2BuIgNdsRvNkmnACG8XvlZtEKryGt2ECI/z+dbQICbHDQFCNtZRBrfSMlA==}
     peerDependencies:
       fp-ts: ^2.12.1
@@ -2238,7 +2238,7 @@ packages:
       fp-ts: 2.12.2
       inferred-types: 0.22.0
       markdown-it: 13.0.1
-      vite-plugin-md: 0.20.2_xvmgmaojum3nxy76atfk3cnjlm
+      vite-plugin-md: 0.20.4_xvmgmaojum3nxy76atfk3cnjlm
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -7435,14 +7435,14 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-md/0.20.2_xvmgmaojum3nxy76atfk3cnjlm:
-    resolution: {integrity: sha512-Jkl21FPSFIJU2O1ARBK9v4A6r2Ceo4nxsSqIA+Q5SXfwIR5zjeTP+WP4swy1wSi2ju7DUkHXBVa2e4xsWjOzJA==}
+  /vite-plugin-md/0.20.4_xvmgmaojum3nxy76atfk3cnjlm:
+    resolution: {integrity: sha512-W3Z59/ROS2X6OIwPwV2PjE+QkfW0UVGxyf3Z2JR0OLqGJ+Iy2SGA503m/vmATJv+C3DjeU8Oy8diQx1R+IyRwQ==}
     peerDependencies:
       '@rollup/pluginutils': ^4.2.1
       rollup: ^2.77.0
     dependencies:
       '@rollup/pluginutils': 4.2.1
-      '@yankeeinlondon/builder-api': 0.4.1_zxtewhp6waiiz3dyrytkxlusdm
+      '@yankeeinlondon/builder-api': 0.4.1_6bcj3h7tulcurye57ocug4w7c4
       '@yankeeinlondon/happy-wrapper': 2.6.0_happy-dom@6.0.4
       gray-matter: 4.0.3
       markdown-it: 13.0.1
