@@ -58,7 +58,7 @@
       "vite-plugin-pages": "0.26.0",
       "vite-plugin-pwa": "0.13.1",
       "vite-plugin-vue-layouts": "0.7.0",
-      "vite-plugin-windicss": "1.8.7",
+      "vite-plugin-windicss": "1.8.8",
       "vite-ssg": "0.20.2",
       "vue-tsc": "0.40.13"
    },
