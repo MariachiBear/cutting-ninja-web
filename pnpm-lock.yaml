@@ -22,7 +22,7 @@ specifiers:
   axios: 1.1.2
   critters: 0.0.16
   cross-env: 7.0.3
-  cypress: 10.8.0
+  cypress: 10.10.0
   eslint: 8.25.0
   eslint-plugin-cypress: 2.12.1
   eslint-plugin-prettier: 4.2.1
@@ -89,7 +89,7 @@ devDependencies:
   '@windicss/plugin-question-mark': 0.1.1
   critters: 0.0.16
   cross-env: 7.0.3
-  cypress: 10.8.0
+  cypress: 10.10.0
   eslint: 8.25.0
   eslint-plugin-cypress: 2.12.1_eslint@8.25.0
   eslint-plugin-prettier: 4.2.1_znq2sm4m5bonjw4qqm6mwhbe2q
@@ -3075,8 +3075,8 @@ packages:
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
-  /cypress/10.8.0:
-    resolution: {integrity: sha512-QVse0dnLm018hgti2enKMVZR9qbIO488YGX06nH5j3Dg1isL38DwrBtyrax02CANU6y8F4EJUuyW6HJKw1jsFA==}
+  /cypress/10.10.0:
+    resolution: {integrity: sha512-bU8r44x1NIYAUNNXt3CwJpLOVth7HUv2hUhYCxZmgZ1IugowDvuHNpevnoZRQx1KKOEisLvIJW+Xen5Pjn41pg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
