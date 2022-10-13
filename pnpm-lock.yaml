@@ -41,7 +41,7 @@ specifiers:
   typescript: 4.8.2
   unplugin-auto-import: 0.11.2
   unplugin-icons: 0.14.10
-  unplugin-vue-components: 0.22.4
+  unplugin-vue-components: 0.22.8
   vite: 3.1.8
   vite-plugin-inspect: 0.7.3
   vite-plugin-md: 0.20.4
@@ -103,7 +103,7 @@ devDependencies:
   typescript: 4.8.2
   unplugin-auto-import: 0.11.2_@vueuse+core@9.3.0
   unplugin-icons: 0.14.10_@vue+compiler-sfc@3.2.38
-  unplugin-vue-components: 0.22.4_vue@3.2.38
+  unplugin-vue-components: 0.22.8_vue@3.2.38
   vite: 3.1.8
   vite-plugin-inspect: 0.7.3_vite@3.1.8
   vite-plugin-md: 0.20.4_fx3lxnmrnlqr2u63e7r6cdh2je
@@ -2246,7 +2246,7 @@ packages:
       '@windicss/config': 1.8.7
       debug: 4.3.4
       fast-glob: 3.2.12
-      magic-string: 0.26.4
+      magic-string: 0.26.7
       micromatch: 4.0.5
       windicss: 3.5.6
     transitivePeerDependencies:
@@ -5569,6 +5569,13 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
+  /magic-string/0.26.7:
+    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
+    engines: {node: '>=12'}
+    dependencies:
+      sourcemap-codec: 1.4.8
+    dev: true
+
   /markdown-it-link-attributes/4.0.1:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
     dev: true
@@ -7220,7 +7227,7 @@ packages:
       escape-string-regexp: 5.0.0
       fast-glob: 3.2.12
       local-pkg: 0.4.2
-      magic-string: 0.26.4
+      magic-string: 0.26.7
       mlly: 0.5.16
       pathe: 0.3.8
       scule: 0.3.2
@@ -7303,8 +7310,8 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-vue-components/0.22.4_vue@3.2.38:
-    resolution: {integrity: sha512-2rRZcM9OnJGXnYxQNfaceEYuPeVACcWySIjy8WBwIiN3onr980TmA3XE5pRJFt8zoQrUA+c46oyIq96noLqrEQ==}
+  /unplugin-vue-components/0.22.8_vue@3.2.38:
+    resolution: {integrity: sha512-Musnwdtr6uj9Zopo4oeh4lp9+fJ2ArXVDzSiZxF4YC9v+pLnasKVKEEAjdXuQQ3u3KtntVw6PCscyAt52eS75g==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -7319,7 +7326,7 @@ packages:
       debug: 4.3.4
       fast-glob: 3.2.12
       local-pkg: 0.4.2
-      magic-string: 0.26.4
+      magic-string: 0.26.7
       minimatch: 5.1.0
       resolve: 1.22.1
       unplugin: 0.9.6
