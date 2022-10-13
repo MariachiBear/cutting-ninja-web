@@ -5,7 +5,7 @@ specifiers:
   '@iconify-json/carbon': 1.1.8
   '@iconify-json/ic': 1.1.9
   '@iconify-json/mdi': 1.1.33
-  '@intlify/vite-plugin-vue-i18n': 6.0.1
+  '@intlify/vite-plugin-vue-i18n': 6.0.3
   '@types/base-64': 1.0.0
   '@types/luxon': 3.0.1
   '@types/markdown-it-link-attributes': 3.0.1
@@ -76,7 +76,7 @@ devDependencies:
   '@iconify-json/carbon': 1.1.8
   '@iconify-json/ic': 1.1.9
   '@iconify-json/mdi': 1.1.33
-  '@intlify/vite-plugin-vue-i18n': 6.0.1_vite@3.1.8+vue-i18n@9.2.2
+  '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@3.1.8+vue-i18n@9.2.2
   '@types/base-64': 1.0.0
   '@types/luxon': 3.0.1
   '@types/markdown-it-link-attributes': 3.0.1
@@ -1557,8 +1557,8 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/vite-plugin-vue-i18n/6.0.1_vite@3.1.8+vue-i18n@9.2.2:
-    resolution: {integrity: sha512-FFVcxVU4bR9vdDLNbltM5mrhndnXMErO01i0RrpdyMegEt3Nu/YLoH0sFdjRun7/RY4vaEnhTnFvVf9uO0dQvg==}
+  /@intlify/vite-plugin-vue-i18n/6.0.3_vite@3.1.8+vue-i18n@9.2.2:
+    resolution: {integrity: sha512-6SgNzPAOCR90wvt368lKzi7f/5ZEWJn22UCGvhFsP3XvKqlF3cVzojahgQ6o+LTdCkExeM6wPgd+haFf28E9VQ==}
     engines: {node: '>= 14.6'}
     peerDependencies:
       petite-vue-i18n: '*'
