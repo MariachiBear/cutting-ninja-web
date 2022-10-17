@@ -4,7 +4,7 @@
       "url": "https://github.com/MariachiBear/cutting-ninja-web/issues"
    },
    "dependencies": {
-      "@vueuse/core": "9.3.0",
+      "@vueuse/core": "9.3.1",
       "@vueuse/head": "0.9.8",
       "@vueuse/math": "9.3.0",
       "axios": "1.1.3",
