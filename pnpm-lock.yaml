@@ -17,7 +17,7 @@ specifiers:
   '@vue/server-renderer': 3.2.40
   '@vueuse/core': 9.3.0
   '@vueuse/head': 0.9.8
-  '@vueuse/math': 9.3.0
+  '@vueuse/math': 9.3.1
   '@windicss/plugin-question-mark': 0.1.1
   axios: 1.1.3
   critters: 0.0.16
@@ -59,7 +59,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 9.3.0_vue@3.2.40
   '@vueuse/head': 0.9.8_vue@3.2.40
-  '@vueuse/math': 9.3.0_vue@3.2.40
+  '@vueuse/math': 9.3.1_vue@3.2.40
   axios: 1.1.3
   idb-keyval: 6.2.0
   luxon: 3.0.4
@@ -2170,10 +2170,10 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
 
-  /@vueuse/math/9.3.0_vue@3.2.40:
-    resolution: {integrity: sha512-uCHxm9t3cNLQNKXZBHCxT9fJXDYiZcNn9PegpCei4bpxMcLR8QCbNzoAggxmI7m4M6qaFSz8am3cqAM+6Ecy8Q==}
+  /@vueuse/math/9.3.1_vue@3.2.40:
+    resolution: {integrity: sha512-6ojNHKlhs57NViEzTOQMAOZ0QpBxRalx4kFgIV5M+5DHAwi2AAwZpYwtI+PKKHrIvfdB3fx+pkz7pcjnh9GBDQ==}
     dependencies:
-      '@vueuse/shared': 9.3.0_vue@3.2.40
+      '@vueuse/shared': 9.3.1_vue@3.2.40
       vue-demi: 0.13.11_vue@3.2.40
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -2185,6 +2185,14 @@ packages:
 
   /@vueuse/shared/9.3.0_vue@3.2.40:
     resolution: {integrity: sha512-caGUWLY0DpPC6l31KxeUy6vPVNA0yKxx81jFYLoMpyP6cF84FG5Dkf69DfSUqL57wX8JcUkJDMnQaQIZPWFEQQ==}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.40
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+
+  /@vueuse/shared/9.3.1_vue@3.2.40:
+    resolution: {integrity: sha512-YFu3qcnVeu0S2L4XdQJtBpDcjz6xwqHZtTv/XRhu66/yge1XVhxskUcc7VZbX52xF9A34V6KCfwncP9YDqYFiw==}
     dependencies:
       vue-demi: 0.13.11_vue@3.2.40
     transitivePeerDependencies:
@@ -2276,7 +2284,7 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@vueuse/shared': 9.3.0_vue@3.2.40
+      '@vueuse/shared': 9.3.1_vue@3.2.40
       '@zhead/schema': 0.8.5
       '@zhead/schema-raw': 0.8.5
       vue: 3.2.40
