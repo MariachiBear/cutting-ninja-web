@@ -26,7 +26,7 @@ specifiers:
   eslint: 8.25.0
   eslint-plugin-cypress: 2.12.1
   eslint-plugin-prettier: 4.2.1
-  happy-dom: 7.5.12
+  happy-dom: 7.5.13
   https-localhost: 4.7.1
   idb-keyval: 6.2.0
   luxon: 3.0.4
@@ -93,7 +93,7 @@ devDependencies:
   eslint: 8.25.0
   eslint-plugin-cypress: 2.12.1_eslint@8.25.0
   eslint-plugin-prettier: 4.2.1_znq2sm4m5bonjw4qqm6mwhbe2q
-  happy-dom: 7.5.12
+  happy-dom: 7.5.13
   https-localhost: 4.7.1
   markdown-it-link-attributes: 4.0.1
   markdown-it-prism: 2.3.0
@@ -106,7 +106,7 @@ devDependencies:
   unplugin-vue-components: 0.22.8_vue@3.2.40
   vite: 3.1.8
   vite-plugin-inspect: 0.7.5_vite@3.1.8
-  vite-plugin-md: 0.20.4_q3xjaetydk535atjmkd3vuahcm
+  vite-plugin-md: 0.20.4_mansd4mefeflqzqygh6wkzzs3a
   vite-plugin-pages: 0.26.0_3wx2cuqoomdy5nuogdesbbnqtu
   vite-plugin-pwa: 0.13.1_2txo4viysstjrz5b6oxcrxybay
   vite-plugin-vue-layouts: 0.7.0_ilgc2hbueo5jnriamewoy7jlua
@@ -2219,7 +2219,7 @@ packages:
       - supports-color
     dev: true
 
-  /@yankeeinlondon/builder-api/0.4.1_po3qghepymk5tui2ey5c7hekva:
+  /@yankeeinlondon/builder-api/0.4.1_jhcpb3k2hwnc4djvosesbqcubu:
     resolution: {integrity: sha512-O6LS9Zg4xqLVpAgea72mNhZvdy9B2BuIgNdsRvNkmnACG8XvlZtEKryGt2ECI/z+dbQICbHDQFCNtZRBrfSMlA==}
     peerDependencies:
       fp-ts: ^2.12.1
@@ -2227,11 +2227,11 @@ packages:
       markdown-it: ^13.0.1
       vite-plugin-md: '*'
     dependencies:
-      '@yankeeinlondon/happy-wrapper': 2.6.0_happy-dom@7.5.12
+      '@yankeeinlondon/happy-wrapper': 2.6.0_happy-dom@7.5.13
       fp-ts: 2.12.3
       inferred-types: 0.22.0
       markdown-it: 13.0.1
-      vite-plugin-md: 0.20.4_q3xjaetydk535atjmkd3vuahcm
+      vite-plugin-md: 0.20.4_mansd4mefeflqzqygh6wkzzs3a
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -2246,13 +2246,13 @@ packages:
       - terser
     dev: true
 
-  /@yankeeinlondon/happy-wrapper/2.6.0_happy-dom@7.5.12:
+  /@yankeeinlondon/happy-wrapper/2.6.0_happy-dom@7.5.13:
     resolution: {integrity: sha512-az+gEjG4Jl4GbM35ID5pn4v7FwfrgeA1br/B9STXlDLvIsV8q7mCxQ1oYa8bR1iHtNQg7kgW6s9DYheaTemrHQ==}
     peerDependencies:
       happy-dom: ^6.0.4
     dependencies:
-      happy-dom: 7.5.12
-      native-dash: 1.23.2_happy-dom@7.5.12
+      happy-dom: 7.5.13
+      native-dash: 1.23.2_happy-dom@7.5.13
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -2632,14 +2632,14 @@ packages:
       fill-range: 7.0.1
     dev: true
 
-  /brilliant-errors/0.6.0_happy-dom@7.5.12:
+  /brilliant-errors/0.6.0_happy-dom@7.5.13:
     resolution: {integrity: sha512-4+Va/hdXk7tROAmnZ8Vp9D23oOMg6IBJAiZdhRCufMApH0NIFLsvtTb7sL8YuV6gWdLsiXxzR834bh05lC8r8Q==}
     engines: {node: '>=12.0.0'}
     dependencies:
       callsites: 3.1.0
       common-types: 1.31.1
       inferred-types: 0.22.0
-      vitest: 0.19.1_happy-dom@7.5.12
+      vitest: 0.19.1_happy-dom@7.5.13
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -4626,8 +4626,8 @@ packages:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
     dev: true
 
-  /happy-dom/7.5.12:
-    resolution: {integrity: sha512-Q4JE09CMWHptj1bvtoeYqUmdhj/5cuZqj0O60xs/9NgfyxL3YEVKJ588uBcLnCAkBiUvZnAJB6T+6IzbOSMSRA==}
+  /happy-dom/7.5.13:
+    resolution: {integrity: sha512-J8OehFPl71FtmkifnxqUpFWHA9jJ5pIwnEAFdZvZnXexev6RIgtkB6H/pTEHhBp7qCGUPHhkjvF3gqKxlBTeLg==}
     dependencies:
       css.escape: 1.5.1
       he: 1.2.0
@@ -5674,10 +5674,10 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /native-dash/1.23.2_happy-dom@7.5.12:
+  /native-dash/1.23.2_happy-dom@7.5.13:
     resolution: {integrity: sha512-Ev5OPB5vDZ+HLj4MXfAwZRHJV/LJr2LHjsIr1UN7jZigMS2JRpF7Qy77t66GURhtzp7GSWLNSLeRwXOg1iwJkQ==}
     dependencies:
-      brilliant-errors: 0.6.0_happy-dom@7.5.12
+      brilliant-errors: 0.6.0_happy-dom@7.5.13
       inferred-types: 0.22.0
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -7295,15 +7295,15 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-md/0.20.4_q3xjaetydk535atjmkd3vuahcm:
+  /vite-plugin-md/0.20.4_mansd4mefeflqzqygh6wkzzs3a:
     resolution: {integrity: sha512-W3Z59/ROS2X6OIwPwV2PjE+QkfW0UVGxyf3Z2JR0OLqGJ+Iy2SGA503m/vmATJv+C3DjeU8Oy8diQx1R+IyRwQ==}
     peerDependencies:
       '@rollup/pluginutils': ^4.2.1
       rollup: ^2.77.0
     dependencies:
       '@rollup/pluginutils': 4.2.1
-      '@yankeeinlondon/builder-api': 0.4.1_po3qghepymk5tui2ey5c7hekva
-      '@yankeeinlondon/happy-wrapper': 2.6.0_happy-dom@7.5.12
+      '@yankeeinlondon/builder-api': 0.4.1_jhcpb3k2hwnc4djvosesbqcubu
+      '@yankeeinlondon/happy-wrapper': 2.6.0_happy-dom@7.5.13
       gray-matter: 4.0.3
       markdown-it: 13.0.1
       rollup: 2.79.1
@@ -7459,7 +7459,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.19.1_happy-dom@7.5.12:
+  /vitest/0.19.1_happy-dom@7.5.13:
     resolution: {integrity: sha512-E/ZXpFMUahn731wzhMBNzWRp4mGgiZFT0xdHa32cbNO0CSaHpE9hTfteEU247Gi2Dula8uXo5vvrNB6dtszmQA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -7489,7 +7489,7 @@ packages:
       '@types/node': 18.8.5
       chai: 4.3.6
       debug: 4.3.4
-      happy-dom: 7.5.12
+      happy-dom: 7.5.13
       local-pkg: 0.4.2
       tinypool: 0.2.4
       tinyspy: 1.0.2
