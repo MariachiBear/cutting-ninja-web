@@ -40,7 +40,7 @@ specifiers:
   rimraf: 3.0.2
   typescript: 4.8.4
   unplugin-auto-import: 0.11.2
-  unplugin-icons: 0.14.11
+  unplugin-icons: 0.14.12
   unplugin-vue-components: 0.22.8
   vite: 3.1.8
   vite-plugin-inspect: 0.7.5
@@ -102,7 +102,7 @@ devDependencies:
   rimraf: 3.0.2
   typescript: 4.8.4
   unplugin-auto-import: 0.11.2_@vueuse+core@9.3.1
-  unplugin-icons: 0.14.11_@vue+compiler-sfc@3.2.40
+  unplugin-icons: 0.14.12_@vue+compiler-sfc@3.2.40
   unplugin-vue-components: 0.22.8_vue@3.2.40
   vite: 3.1.8
   vite-plugin-inspect: 0.7.5_vite@3.1.8
@@ -7150,8 +7150,8 @@ packages:
       unplugin: 0.9.6
     dev: true
 
-  /unplugin-icons/0.14.11_@vue+compiler-sfc@3.2.40:
-    resolution: {integrity: sha512-szr6QA1ILT4RrJCmtvW41m2KPwUCCIx8QNgwEmTehvzEkSLDrdEaBhKGMWb/qTe5/zwnfwrDGcFT/6pGOSHJcA==}
+  /unplugin-icons/0.14.12_@vue+compiler-sfc@3.2.40:
+    resolution: {integrity: sha512-FdkjDnUnc8/75OT8Ywwm8iDyG6kO8w1uHfFbnO2Jh7JhpE0odKhCqaAOmEE/UlvYDYSm5D4X1DKdWMwpAxj07Q==}
     peerDependencies:
       '@svgr/core': '>=5.5.0'
       '@vue/compiler-sfc': ^3.0.2
